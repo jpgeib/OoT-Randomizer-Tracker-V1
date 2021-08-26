@@ -6,6 +6,9 @@ import LocationList from "../../containers/LocationList";
 
 class Home extends Component {
     render() {
+
+        const { trackerStyle, itemStyle, locationStyle } = this.props.styles;
+
         return (
             <Grid>
                 <Grid.Row>
@@ -13,18 +16,18 @@ class Home extends Component {
                         <Grid>
                             <Grid.Row>
                                 <Grid.Column>
-                                    <ItemTracker />
+                                    <ItemTracker tracker={trackerStyle} />
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
                                 <Grid.Column>
-                                     <LocationItems />
+                                     <LocationItems items={itemStyle} />
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
                     </Grid.Column>
                     <Grid.Column width={8}>
-                        <LocationList />
+                        <LocationList locations={locationStyle} />
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

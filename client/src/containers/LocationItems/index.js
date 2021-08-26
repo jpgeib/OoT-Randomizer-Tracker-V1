@@ -3,8 +3,11 @@ import { Grid, Header } from "semantic-ui-react";
 
 class LocationItems extends Component {
     render() {
+
+        const { items } = this.props;
+
         return (
-            <div>
+            <div style={items}>
                 <Header as="h1">List of Items per Location</Header>
             </div>
         );
