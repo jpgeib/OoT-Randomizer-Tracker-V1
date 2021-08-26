@@ -1,22 +1,27 @@
 const trackerStyle = {
-    height: "200px",
-    width: "300px",
+    marginTop: "2%",
+    marginLeft: "2%",
+    height: "500px",
+    width: "800px",
     backgroundColor: "green",
-    border: "solid 1px black"
+    border: "solid 2px black"
 };
 
 const locationStyle = {
-    height: "800px",
-    width: "300px",
+    marginTop: "2%",
+    marginLeft: "-1%",
+    height: "828px",
+    width: "800px",
     backgroundColor: "yellow",
-    border: "solid 1px black"
+    border: "solid 2px black"
 };
 
 const itemStyle = {
-    height: "500px",
-    width: "300px",
+    marginLeft: "2%",
+    height: "300px",
+    width: "800px",
     backgroundColor: "red",
-    border: "solid 1px black"
+    border: "solid 2px black"
 };
 
 export const webStyle = {
