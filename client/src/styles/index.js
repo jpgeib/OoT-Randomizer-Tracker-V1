@@ -2,7 +2,7 @@ const trackerStyle = {
     marginTop: "2%",
     marginLeft: "2%",
     height: "500px",
-    width: "1000px",
+    width: "900px",
     backgroundColor: "green",
     border: "solid 2px black"
 };

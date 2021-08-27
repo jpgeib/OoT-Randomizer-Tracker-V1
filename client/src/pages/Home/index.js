@@ -12,7 +12,7 @@ class Home extends Component {
         return (
             <Grid>
                 <Grid.Row>
-                    <Grid.Column width={10}>
+                    <Grid.Column width={11}>
                         <Grid>
                             <Grid.Row>
                                 <Grid.Column>
@@ -26,7 +26,7 @@ class Home extends Component {
                             </Grid.Row>
                         </Grid>
                     </Grid.Column>
-                    <Grid.Column width={6}>
+                    <Grid.Column width={5}>
                         <LocationList locations={locationStyle} />
                     </Grid.Column>
                 </Grid.Row>
