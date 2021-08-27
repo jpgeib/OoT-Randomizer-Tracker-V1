@@ -19,6 +19,8 @@ const locationStyle = {
 };
 
 const itemStyle = {
+    padding: "1%",
+    marginTop: "1%",
     marginLeft: "2%",
     height: "200px",
     width: "800px",

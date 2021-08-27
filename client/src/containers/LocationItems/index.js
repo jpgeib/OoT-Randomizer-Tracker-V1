@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Grid, Header } from "semantic-ui-react";
+import { Grid, List } from "semantic-ui-react";
 
 class LocationItems extends Component {
     render() {
@@ -7,9 +7,54 @@ class LocationItems extends Component {
         const { items } = this.props;
 
         return (
-            <div style={items}>
-                <Header as="h1">List of Items per Location</Header>
-            </div>
+            <Grid style={items}>
+                <List divided relaxed>
+                    <List.Item>
+                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Content>
+                            <List.Header>Kokiri's Sword Chest</List.Header>
+                        </List.Content>
+                    </List.Item>
+                    <List.Item>
+                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Content>
+                            <List.Header>Link's House</List.Header>
+                        </List.Content>
+                    </List.Item>
+                    <List.Item>
+                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Content>
+                            <List.Header>Mido's House</List.Header>
+                        </List.Content>
+                        <List.List>
+                            <List.Item>
+                                <List.Icon name="check" size="small" verticalAlign="middle" />
+                                <List.Content>
+                                    <List.Header>Mido's House Chest 1</List.Header>
+                                </List.Content>
+                            </List.Item>
+                            <List.Item>
+                                <List.Icon name="check" size="small" verticalAlign="middle" />
+                                <List.Content>
+                                    <List.Header>Mido's House Chest 2</List.Header>
+                                </List.Content>
+                            </List.Item>
+                            <List.Item>
+                                <List.Icon name="check" size="small" verticalAlign="middle" />
+                                <List.Content>
+                                    <List.Header>Mido's House Chest 3</List.Header>
+                                </List.Content>
+                            </List.Item>
+                            <List.Item>
+                                <List.Icon name="check" size="small" verticalAlign="middle" />
+                                <List.Content>
+                                    <List.Header>Mido's House Chest 4</List.Header>
+                                </List.Content>
+                            </List.Item>
+                        </List.List>
+                    </List.Item>
+                </List>
+            </Grid>
         );
     }
 }
