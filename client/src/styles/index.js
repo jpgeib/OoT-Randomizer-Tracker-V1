@@ -2,16 +2,17 @@ const trackerStyle = {
     marginTop: "2%",
     marginLeft: "2%",
     height: "500px",
-    width: "800px",
+    width: "1000px",
     backgroundColor: "green",
     border: "solid 2px black"
 };
 
 const locationStyle = {
+    padding: "1%",
     marginTop: "2%",
     marginLeft: "-1%",
     height: "828px",
-    width: "800px",
+    width: "600px",
     backgroundColor: "yellow",
     border: "solid 2px black"
 };
