@@ -20,7 +20,10 @@ class Home extends Component {
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
-                                <Grid.Column>
+                                <Grid.Column width={11}>
+                                    
+                                </Grid.Column>
+                                <Grid.Column width={5}>
                                      <LocationItems items={itemStyle} />
                                 </Grid.Column>
                             </Grid.Row>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Grid, List } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 class LocationList extends Component {
     render() {
@@ -11,7 +12,7 @@ class LocationList extends Component {
                 <Grid.Row>
                 <Grid.Column width={8}>
                     <List divided relaxed >
-                        <List.Item>
+                        <List.Item as={Link} to="/kokiriforest">
                             <List.Icon name="check" size="small" verticalAlign="middle" />
                             <List.Content>
                                 <List.Header>Kokiri Forest</List.Header>
