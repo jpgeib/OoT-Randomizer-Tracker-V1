@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Grid, Header } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
+import HookShot from "../../components/HookShot";
+import MasterSword from "../../components/MasterSword";
 
 class ItemTracker extends Component {
     render() {
@@ -7,9 +9,79 @@ class ItemTracker extends Component {
         const { tracker } = this.props;
 
         return (
-            <div style={tracker}>
-                <Header as="h1">Item Tracker</Header>
-            </div>
+            <Grid style={tracker}>
+                <Grid.Row>
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                </Grid.Row>
+                <Grid.Row>
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                </Grid.Row>
+                <Grid.Row>
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                </Grid.Row>
+                <Grid.Row>
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                </Grid.Row>
+                <Grid.Row>
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                </Grid.Row>
+                <Grid.Row>
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                </Grid.Row>
+                <Grid.Row>
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                </Grid.Row>
+                
+            </Grid>
         );
     }
 }
