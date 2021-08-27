@@ -10,9 +10,9 @@ const trackerStyle = {
 const locationStyle = {
     padding: "1%",
     marginTop: "2%",
-    marginLeft: "-1%",
-    height: "828px",
-    width: "600px",
+    // marginLeft: "-1%",
+    height: "750px",
+    width: "500px",
     backgroundColor: "yellow",
     border: "solid 2px black"
 };
