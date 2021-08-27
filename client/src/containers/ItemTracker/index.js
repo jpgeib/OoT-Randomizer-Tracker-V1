@@ -80,7 +80,6 @@ class ItemTracker extends Component {
                     <HookShot />
                     <MasterSword />
                 </Grid.Row>
-                
             </Grid>
         );
     }
