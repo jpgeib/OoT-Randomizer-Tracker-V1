@@ -8,6 +8,16 @@ const trackerStyle = {
     border: "solid 2px black"
 };
 
+const dungeonStyle = {
+    padding: "1%",
+    marginTop: "5%",
+    height: "70%",
+    overflowY: "auto",
+    width: "100%",
+    backgroundColor: "orange",
+    border: "solid 2px black"
+};
+
 const locationStyle = {
     padding: "0.2%",
     marginTop: "2%",
@@ -31,6 +41,7 @@ const itemStyle = {
 
 export const webStyle = {
     trackerStyle,
+    dungeonStyle,
     locationStyle,
     itemStyle
 };

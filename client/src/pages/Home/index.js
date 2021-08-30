@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import ItemTracker from "../../containers/ItemTracker";
+import DungeonItems from "../../containers/DungeonItems";
 import LocationItems from "../../containers/LocationItems";
 import LocationList from "../../containers/LocationList";
 
 class Home extends Component {
     render() {
 
-        const { trackerStyle, itemStyle, locationStyle } = this.props.styles;
+        const { trackerStyle, itemStyle, locationStyle, dungeonStyle } = this.props.styles;
 
         return (
             <Grid>
@@ -21,7 +22,7 @@ class Home extends Component {
                             </Grid.Row>
                             <Grid.Row>
                                 <Grid.Column width={11}>
-                                    
+                                    <DungeonItems dungeons={dungeonStyle} />
                                 </Grid.Column>
                                 <Grid.Column width={5}>
                                      <LocationItems items={itemStyle} />
