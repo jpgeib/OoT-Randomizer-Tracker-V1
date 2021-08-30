@@ -257,7 +257,6 @@ class LocationList extends Component {
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
-
         );
     }
 }
