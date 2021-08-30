@@ -1,7 +1,7 @@
 const trackerStyle = {
     padding: "0.2%",
     marginTop: "2%",
-    marginLeft: "2%",
+    marginLeft: "3%",
     height: "100%",
     width: "96.5%",
     backgroundColor: "green",
@@ -11,10 +11,10 @@ const trackerStyle = {
 const dungeonStyle = {
     padding: "1%",
     marginTop: "2.5%",
-    marginLeft: "3%",
+    marginLeft: "4.5%",
     height: "70%",
     overflowY: "auto",
-    width: "97%",
+    width: "98%",
     backgroundColor: "orange",
     border: "solid 2px black"
 };
@@ -30,8 +30,8 @@ const locationStyle = {
 
 const itemStyle = {
     padding: "1%",
-    marginTop: "5%",
-    marginLeft: "",
+    marginTop: "4%",
+    marginLeft: "1%",
     maxHeight: "70%",
     overflowY: "auto",
     width: "100%",

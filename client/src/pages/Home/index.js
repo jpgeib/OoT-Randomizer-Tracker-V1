@@ -16,15 +16,15 @@ class Home extends Component {
                     <Grid.Column width={11}>
                         <Grid>
                             <Grid.Row>
-                                <Grid.Column>
+                                <Grid.Column width={16}>
                                     <ItemTracker tracker={trackerStyle} />
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
-                                <Grid.Column width={11}>
+                                <Grid.Column width={10}>
                                     <DungeonItems dungeons={dungeonStyle} />
                                 </Grid.Column>
-                                <Grid.Column width={5}>
+                                <Grid.Column width={6}>
                                      <LocationItems items={itemStyle} />
                                 </Grid.Column>
                             </Grid.Row>
