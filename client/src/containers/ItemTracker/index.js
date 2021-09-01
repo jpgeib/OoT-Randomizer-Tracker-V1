@@ -70,6 +70,16 @@ class ItemTracker extends Component {
                     <HookShot />
                     <MasterSword />
                 </Grid.Row>
+                <Grid.Row>
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                    <HookShot />
+                    <MasterSword />
+                </Grid.Row>
             </Grid>
         );
     }

@@ -2,18 +2,17 @@ import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import ItemTracker from "../../containers/ItemTracker";
 import DungeonItems from "../../containers/DungeonItems";
-import LocationItems from "../../containers/LocationItems";
 import LocationList from "../../containers/LocationList";
 
 class Home extends Component {
     render() {
 
-        const { trackerStyle, itemStyle, locationStyle, dungeonStyle } = this.props.styles;
+        const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
 
         return (
             <Grid>
                 <Grid.Row>
-                    <Grid.Column width={11}>
+                    <Grid.Column width={8}>
                         <Grid>
                             <Grid.Row>
                                 <Grid.Column width={16}>
@@ -21,18 +20,15 @@ class Home extends Component {
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
-                                <Grid.Column width={10}>
+                                <Grid.Column>
                                     <DungeonItems dungeons={dungeonStyle} />
-                                </Grid.Column>
-                                <Grid.Column width={6}>
-                                     <LocationItems items={itemStyle} />
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
                     </Grid.Column>
-                    <Grid.Column width={5}>
+                    <Grid.Column width={6}>
                         <Grid.Row>
-                            <Grid.Column width={16}>
+                            <Grid.Column>
                                 <LocationList locations={locationStyle} />
                             </Grid.Column>
                         </Grid.Row>

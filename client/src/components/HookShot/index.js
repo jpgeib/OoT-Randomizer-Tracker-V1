@@ -4,7 +4,7 @@ import HookShotIcon from "../../assets/images/Hookshot.png";
 
 const HookShot = () => {
     return (
-        <Grid.Column width={1}>
+        <Grid.Column width={2}>
             <Image size="mini" src={HookShotIcon} />
         </Grid.Column>
     );
