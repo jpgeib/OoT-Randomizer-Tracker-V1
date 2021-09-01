@@ -32,7 +32,7 @@ class Home extends Component {
                     </Grid.Column>
                     <Grid.Column width={5}>
                         <Grid.Row>
-                            <Grid.Column>
+                            <Grid.Column width={16}>
                                 <LocationList locations={locationStyle} />
                             </Grid.Column>
                         </Grid.Row>
