@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Header } from "semantic-ui-react";
 
-class DungeonItems extends Component {
+class DungeonItemTracker extends Component {
     render() {
         
         const { dungeons } = this.props;
@@ -14,4 +14,4 @@ class DungeonItems extends Component {
     }
 }
 
-export default DungeonItems;
+export default DungeonItemTracker;

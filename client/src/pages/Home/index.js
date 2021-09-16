@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import ItemTracker from "../../containers/ItemTracker";
-import DungeonItems from "../../containers/DungeonItems";
+import DungeonItemTracker from "../../containers/DungeonItemTracker";
 import LocationList from "../../containers/LocationList";
 
 class Home extends Component {
@@ -21,7 +21,7 @@ class Home extends Component {
                             </Grid.Row>
                             <Grid.Row>
                                 <Grid.Column>
-                                    <DungeonItems dungeons={dungeonStyle} />
+                                    <DungeonItemTracker dungeons={dungeonStyle} />
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
