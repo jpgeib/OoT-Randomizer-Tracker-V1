@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import HookShotIcon from "../../assets/images/Hookshot.png";
+import HookShotIcon from "../../../assets/images/Hookshot.png";
 
 const HookShot = () => {
     return (

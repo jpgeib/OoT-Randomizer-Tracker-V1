@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
-import HookShot from "../../components/HookShot";
-import MasterSword from "../../components/MasterSword";
+import HookShot from "../../components/Items/HookShot";
+import MasterSword from "../../components/Items/MasterSword";
 
 class ItemTracker extends Component {
     render() {
