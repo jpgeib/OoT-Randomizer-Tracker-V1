@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, List } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import KokiriForestModal from "../Modals/KokiriForestModal";
 
 class LocationList extends Component {
     render() {
@@ -12,12 +12,8 @@ class LocationList extends Component {
                 <Grid.Row>
                     <Grid.Column width={8}>
                         <List divided relaxed >
-                            <List.Item as={Link} to="/kokiriforest">
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Kokiri Forest</List.Header>
-                                    <List.Description>Available Items: 9</List.Description>
-                                </List.Content>
+                            <List.Item>
+                                <KokiriForestModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
