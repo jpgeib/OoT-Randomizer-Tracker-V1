@@ -16,6 +16,7 @@ import Bombchus from "../../components/Items/Bombchus";
 import IceArrows from "../../components/Items/IceArrows";
 import FaroresWind from "../../components/Items/FaroresWind";
 import DekuShield from "../../components/Items/DekuShield";
+import HylianShield from "../../components/Items/HylianShield";
 
 class ItemTracker extends Component {
     render() {
@@ -45,7 +46,7 @@ class ItemTracker extends Component {
                     <DekuShield />
                 </Grid.Row>
                 <Grid.Row>
-                    <HookShot />
+                    <HylianShield />
                     <MasterSword />
                     <HookShot />
                     <MasterSword />
