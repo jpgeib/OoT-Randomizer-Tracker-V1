@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import FirstRow from "./FirstRow";
 import SecondRow from "./SecondRow";
+import ThirdRow from "./ThirdRow";
 import MasterSword from "../../components/Items/MasterSword";
 import HookShot from "../../components/Items/HookShot";
-import HylianShield from "../../components/Items/HylianShield";
 
 class ItemTracker extends Component {
     render() {
@@ -15,16 +15,7 @@ class ItemTracker extends Component {
             <Grid style={tracker}>
                 <FirstRow />
                 <SecondRow />
-                <Grid.Row>
-                    <HylianShield />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                </Grid.Row>
+                <ThirdRow />
                 <Grid.Row>
                     <HookShot />
                     <MasterSword />
