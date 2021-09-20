@@ -3,6 +3,7 @@ import { Grid } from "semantic-ui-react";
 import FirstRow from "./FirstRow";
 import SecondRow from "./SecondRow";
 import ThirdRow from "./ThirdRow";
+import FourthRow from "./FourthRow";
 import MasterSword from "../../components/Items/MasterSword";
 import HookShot from "../../components/Items/HookShot";
 
@@ -16,16 +17,7 @@ class ItemTracker extends Component {
                 <FirstRow />
                 <SecondRow />
                 <ThirdRow />
-                <Grid.Row>
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                </Grid.Row>
+                <FourthRow />
                 <Grid.Row>
                     <HookShot />
                     <MasterSword />
