@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, List } from "semantic-ui-react";
-import KokiriForestModal from "../Modals/KokiriForestModal";
+import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
 
 class LocationList extends Component {
     render() {

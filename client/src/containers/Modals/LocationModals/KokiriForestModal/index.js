@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button, Modal } from "semantic-ui-react";
-import KokiriForest from "../../../components/Locations/KokiriForest";
+import KokiriForest from "../../../../components/Locations/KokiriForest";
 
 class KokiriForestModal extends Component {
 
