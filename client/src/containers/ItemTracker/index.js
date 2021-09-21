@@ -5,6 +5,7 @@ import SecondRow from "./SecondRow";
 import ThirdRow from "./ThirdRow";
 import FourthRow from "./FourthRow";
 import FifthRow from "./FifthRow";
+import SixthRow from "./SixthRow";
 import MasterSword from "../../components/Items/MasterSword";
 import HookShot from "../../components/Items/HookShot";
 
@@ -20,6 +21,7 @@ class ItemTracker extends Component {
                 <ThirdRow />
                 <FourthRow />
                 <FifthRow />
+                <SixthRow />
                 <Grid.Row>
                     <HookShot />
                     <MasterSword />
