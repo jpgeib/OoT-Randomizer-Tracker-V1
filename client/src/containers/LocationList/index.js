@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Grid, List } from "semantic-ui-react";
+import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
 import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
 import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
 
@@ -20,11 +21,7 @@ class LocationList extends Component {
                                 <LostWoodsModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Great Deku Tree</List.Header>
-                                    <List.Description>Available Items: 11</List.Description>
-                                </List.Content>
+                                <GreatDekuTreeModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />

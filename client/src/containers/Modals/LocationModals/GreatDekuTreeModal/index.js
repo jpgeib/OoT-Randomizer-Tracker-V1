@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Button, Modal } from "semantic-ui-react";
-import LostWoods from "../../../../components/Locations/LostWoods";
+import GreatDekuTree from "../../../../components/Locations/GreatDekuTree";
 
-class LostWoodsModal extends Component {
+class GreatDekuTreeModal extends Component {
 
     state = {
         open: false
@@ -18,17 +18,17 @@ class LostWoodsModal extends Component {
 
         return (
             <Modal
-                trigger={<Button fluid content="Lost Woods" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Great Deku Tree" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >
-                <Modal.Header>Lost Woods Items</Modal.Header>
+                <Modal.Header>Great Deku Tree Items</Modal.Header>
                 <Modal.Content>
-                    <LostWoods />
+                    <GreatDekuTree />
                 </Modal.Content>
             </Modal>
         );
     }
 };
 
-export default LostWoodsModal;
+export default GreatDekuTreeModal;
