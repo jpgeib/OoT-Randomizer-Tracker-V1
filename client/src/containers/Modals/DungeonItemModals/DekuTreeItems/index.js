@@ -20,7 +20,7 @@ class DekuTreeItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Great Deku Tree" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Great Deku Tree" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

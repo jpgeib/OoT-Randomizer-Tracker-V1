@@ -20,7 +20,7 @@ class Home extends Component {
                                 </Grid.Column>
                             </Grid.Row>
                             <Grid.Row>
-                                <Grid.Column>
+                                <Grid.Column width={16}>
                                     <DungeonItemTracker dungeons={dungeonStyle} />
                                 </Grid.Column>
                             </Grid.Row>

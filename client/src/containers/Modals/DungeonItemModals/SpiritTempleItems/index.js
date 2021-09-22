@@ -22,7 +22,7 @@ class SpiritTempleItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Spirit Temple" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Spirit Temple" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

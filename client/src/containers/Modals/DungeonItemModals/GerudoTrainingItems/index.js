@@ -18,7 +18,7 @@ class GerudoTrainingItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Gerudo Training Grounds" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Gerudo Training Grounds" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

@@ -20,7 +20,7 @@ class BottomOfTheWellItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Bottom of the Well" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Bottom of the Well" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

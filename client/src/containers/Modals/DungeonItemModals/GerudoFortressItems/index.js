@@ -18,7 +18,7 @@ class GerudoFortressItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Gerudo Fortress" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Gerudo Fortress" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

@@ -22,7 +22,7 @@ class ShadowTempleItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Shadow Temple" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Shadow Temple" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

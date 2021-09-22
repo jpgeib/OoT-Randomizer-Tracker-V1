@@ -22,7 +22,7 @@ class WaterTempleItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Water Temple" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Water Temple" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

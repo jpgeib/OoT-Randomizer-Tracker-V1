@@ -18,7 +18,7 @@ class DefaultItem extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Default" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Default" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

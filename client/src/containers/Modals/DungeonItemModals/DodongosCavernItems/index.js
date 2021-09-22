@@ -20,7 +20,7 @@ class DodongosCavernItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Dodongo's Cavern" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Dodongo's Cavern" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

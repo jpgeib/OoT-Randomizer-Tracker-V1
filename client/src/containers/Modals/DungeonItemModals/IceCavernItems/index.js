@@ -19,7 +19,7 @@ class IceCavernItems extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Ice Cavern" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Ice Cavern" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >

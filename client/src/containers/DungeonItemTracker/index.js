@@ -25,49 +25,53 @@ class DungeonItemTracker extends Component {
         return (
             <Grid style={dungeons}>
                 <Grid.Row centered>
-                    <Grid.Column width={2}>
+                    <Grid.Column width={8}>
                         <DefaultItem />
                     </Grid.Column>
-                    <Grid.Column width={2}>
-                        <DekuTreeItems />
-                    </Grid.Column>
-                    <Grid.Column width={2}>
-                        <DodongosCavernItems />
-                    </Grid.Column>
-                    <Grid.Column width={2}>
-                        <JabuJabuItems />
-                    </Grid.Column>
-                    <Grid.Column width={2}>
-                        <ForestTempleItems />
-                    </Grid.Column>
-                    <Grid.Column width={2}>
-                        <FireTempleItems />
-                    </Grid.Column>
-                    <Grid.Column width={2}>
-                        <WaterTempleItems />
+                    <Grid.Column width={8}>
+                        <GanonsCastleItems />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
-                    <Grid.Column width={2}>
+                    <Grid.Column width={4}>
+                        <DekuTreeItems />
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <DodongosCavernItems />
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <JabuJabuItems />
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <ForestTempleItems />
+                    </Grid.Column>
+                </Grid.Row>
+                <Grid.Row centered>
+                    <Grid.Column width={4}>
+                        <FireTempleItems />
+                    </Grid.Column>
+                    <Grid.Column width={4}>
+                        <WaterTempleItems />
+                    </Grid.Column>
+                    <Grid.Column width={4}>
                         <ShadowTempleItems />
                     </Grid.Column>
-                    <Grid.Column width={2}>
+                    <Grid.Column width={4}>
                         <SpiritTempleItems />
                     </Grid.Column>
-                    <Grid.Column width={2}>
+                </Grid.Row>
+                <Grid.Row centered>
+                    <Grid.Column width={4}>
                         <BottomOfTheWellItems />
                     </Grid.Column>
-                    <Grid.Column width={2}>
+                    <Grid.Column width={4}>
                         <IceCavernItems />
                     </Grid.Column>
-                    <Grid.Column width={2}>
+                    <Grid.Column width={4}>
                         <GerudoFortressItems />
                     </Grid.Column>
-                    <Grid.Column width={2}>
+                    <Grid.Column width={4}>
                         <GerudoTrainingItems />
-                    </Grid.Column>
-                    <Grid.Column width={2}>
-                        <GanonsCastleItems />
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
