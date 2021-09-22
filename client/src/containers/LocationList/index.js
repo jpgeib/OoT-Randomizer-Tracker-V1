@@ -1,11 +1,14 @@
 import React, { Component } from "react";
 import { Grid, List } from "semantic-ui-react";
+import CastleTownModal from "../Modals/LocationModals/CastleTownModal";
 import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
 import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
 import HyruleFieldModal from "../Modals/LocationModals/HyruleFieldModal";
 import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
+import LonLonRanchModal from "../Modals/LocationModals/LonLonRanchModal";
 import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
 import SacredMeadowModal from "../Modals/LocationModals/SacredMeadowModal";
+import TempleOfTimeModal from "../Modals/LocationModals/TempleOfTimeModal";
 
 class LocationList extends Component {
     render() {
@@ -36,25 +39,13 @@ class LocationList extends Component {
                                 <HyruleFieldModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Lon Lon Ranch</List.Header>
-                                    <List.Description>Available Items: 9</List.Description>
-                                </List.Content>
+                                <LonLonRanchModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Castle Town</List.Header>
-                                    <List.Description>Available Items: 7</List.Description>
-                                </List.Content>
+                                <CastleTownModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Temple of Time</List.Header>
-                                    <List.Description>Available Items: 3</List.Description>
-                                </List.Content>
+                                <TempleOfTimeModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
