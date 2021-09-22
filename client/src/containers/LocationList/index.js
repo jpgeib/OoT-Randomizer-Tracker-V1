@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import { Grid, List } from "semantic-ui-react";
+import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
 import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
+import HyruleFieldModal from "../Modals/LocationModals/HyruleFieldModal";
 import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
 import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
+import SacredMeadowModal from "../Modals/LocationModals/SacredMeadowModal";
 
 class LocationList extends Component {
     render() {
@@ -24,25 +27,13 @@ class LocationList extends Component {
                                 <GreatDekuTreeModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Sacred Forest Meadow</List.Header>
-                                    <List.Description>Available Items: 5</List.Description>
-                                </List.Content>
+                                <SacredMeadowModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Forest Temple</List.Header>
-                                    <List.Description>Available Items: 19</List.Description>
-                                </List.Content>
+                                <ForestTempleModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Hyrule Field</List.Header>
-                                    <List.Description>Available Items: 9</List.Description>
-                                </List.Content>
+                                <HyruleFieldModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />

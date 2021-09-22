@@ -11,7 +11,7 @@ const SacredForestMeadow = () => {
                 </List.Content>
                 <List.List>
                     <List.Item>
-                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header>Wolfos Grotto Chest</List.Header>
                         </List.Content>

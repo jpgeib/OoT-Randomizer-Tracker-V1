@@ -23,7 +23,7 @@ const HyruleField = () => {
                 </List.Content>
                 <List.List>
                     <List.Item>
-                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header>Hyrule Field Near Kakariko Skulltula</List.Header>
                         </List.Content>
@@ -37,7 +37,7 @@ const HyruleField = () => {
                 </List.Content>
                 <List.List>
                     <List.Item>
-                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header>Hyrule Field Deku Salesman Grotto</List.Header>
                         </List.Content>
@@ -51,7 +51,7 @@ const HyruleField = () => {
                 </List.Content>
                 <List.List>
                     <List.Item>
-                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header>Hyrule Field South Grotto</List.Header>
                         </List.Content>
@@ -65,7 +65,7 @@ const HyruleField = () => {
                 </List.Content>
                 <List.List>
                     <List.Item>
-                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header>Diving Heart Piece Grotto</List.Header>
                         </List.Content>
@@ -79,7 +79,7 @@ const HyruleField = () => {
                 </List.Content>
                 <List.List>
                     <List.Item>
-                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header>Hyrule Field Near Gerudo Valley Skulltula</List.Header>
                         </List.Content>
@@ -93,7 +93,7 @@ const HyruleField = () => {
                 </List.Content>
                 <List.List>
                     <List.Item>
-                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header>Hyrule Field North Grotto</List.Header>
                         </List.Content>
@@ -107,7 +107,7 @@ const HyruleField = () => {
                 </List.Content>
                 <List.List>
                     <List.Item>
-                        <List.Icon name="check" size="large" verticalAlign="middle" />
+                        <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header>Hyrule Field Forest Grotto</List.Header>
                         </List.Content>
