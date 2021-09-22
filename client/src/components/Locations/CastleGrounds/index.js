@@ -67,7 +67,7 @@ const CastleGrounds = () => {
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Outside Ganon's Castle</List.Header>
+                    <List.Header>Outside Ganon's Castle Skulltula</List.Header>
                 </List.Content>
             </List.Item>
         </List>
