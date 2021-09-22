@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Grid, List } from "semantic-ui-react";
 import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
+import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
 
 class LocationList extends Component {
     render() {
@@ -11,16 +12,12 @@ class LocationList extends Component {
             <Grid style={locations}>
                 <Grid.Row>
                     <Grid.Column width={8}>
-                        <List divided relaxed >
+                        <List relaxed >
                             <List.Item>
                                 <KokiriForestModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Lost Woods</List.Header>
-                                    <List.Description>Available Items: 11</List.Description>
-                                </List.Content>
+                                <LostWoodsModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
@@ -123,7 +120,7 @@ class LocationList extends Component {
                         </List>
                     </Grid.Column>
                     <Grid.Column width={8}>
-                        <List divided relaxed>
+                        <List relaxed>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
                                 <List.Content>
@@ -241,7 +238,7 @@ class LocationList extends Component {
                 </Grid.Row>
                 <Grid.Row centered>
                     <Grid.Column width={7}>
-                        <List divided relaxed>
+                        <List relaxed>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
                                 <List.Content>

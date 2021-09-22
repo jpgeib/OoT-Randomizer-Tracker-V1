@@ -18,7 +18,7 @@ class KokiriForestModal extends Component {
 
         return (
             <Modal
-                trigger={<Button content="Kokiri Forest" onClick={this.closeConfigShow} />}
+                trigger={<Button fluid content="Kokiri Forest" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >
