@@ -3,7 +3,9 @@ import { Grid, List } from "semantic-ui-react";
 import BottomOfTheWellModal from "../Modals/LocationModals/BottomOfTheWellModal";
 import CastleGroundsModal from "../Modals/LocationModals/CastleGroundsModal";
 import CastleTownModal from "../Modals/LocationModals/CastleTownModal";
+import DeathMountainModal from "../Modals/LocationModals/DeathMountainModal";
 import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
+import GoronCityModal from "../Modals/LocationModals/GoronCityModal";
 import GraveyardModal from "../Modals/LocationModals/GraveyardModal";
 import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
 import HyruleFieldModal from "../Modals/LocationModals/HyruleFieldModal";
@@ -68,18 +70,10 @@ class LocationList extends Component {
                                 <ShadowTempleModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Death Mountain</List.Header>
-                                    <List.Description>Available Items: 10</List.Description>
-                                </List.Content>
+                                <DeathMountainModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Goron City</List.Header>
-                                    <List.Description>Available Items: 10</List.Description>
-                                </List.Content>
+                                <GoronCityModal />
                             </List.Item>
                         </List>
                     </Grid.Column>
