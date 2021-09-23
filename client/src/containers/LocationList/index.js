@@ -5,6 +5,7 @@ import CastleGroundsModal from "../Modals/LocationModals/CastleGroundsModal";
 import CastleTownModal from "../Modals/LocationModals/CastleTownModal";
 import DeathMountainCraterModal from "../Modals/LocationModals/DeathMountainCraterModal";
 import DeathMountainModal from "../Modals/LocationModals/DeathMountainModal";
+import DodongosCavernModal from "../Modals/LocationModals/DodongosCavernModal";
 import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
 import GoronCityModal from "../Modals/LocationModals/GoronCityModal";
 import GraveyardModal from "../Modals/LocationModals/GraveyardModal";
@@ -84,11 +85,7 @@ class LocationList extends Component {
                                 <DeathMountainCraterModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Dodongo's Cavern</List.Header>
-                                    <List.Description>Available Items: 12</List.Description>
-                                </List.Content>
+                                <DodongosCavernModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
