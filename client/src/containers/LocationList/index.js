@@ -3,6 +3,7 @@ import { Grid, List } from "semantic-ui-react";
 import BottomOfTheWellModal from "../Modals/LocationModals/BottomOfTheWellModal";
 import CastleGroundsModal from "../Modals/LocationModals/CastleGroundsModal";
 import CastleTownModal from "../Modals/LocationModals/CastleTownModal";
+import DeathMountainCraterModal from "../Modals/LocationModals/DeathMountainCraterModal";
 import DeathMountainModal from "../Modals/LocationModals/DeathMountainModal";
 import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
 import GoronCityModal from "../Modals/LocationModals/GoronCityModal";
@@ -80,11 +81,7 @@ class LocationList extends Component {
                     <Grid.Column width={8}>
                         <List relaxed>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Death Mountain Crater</List.Header>
-                                    <List.Description>Available Items: 8</List.Description>
-                                </List.Content>
+                                <DeathMountainCraterModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
