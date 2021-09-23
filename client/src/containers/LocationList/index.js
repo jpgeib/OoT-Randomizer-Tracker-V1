@@ -12,6 +12,7 @@ import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
 import LonLonRanchModal from "../Modals/LocationModals/LonLonRanchModal";
 import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
 import SacredMeadowModal from "../Modals/LocationModals/SacredMeadowModal";
+import ShadowTempleModal from "../Modals/LocationModals/ShadowTempleModal";
 import TempleOfTimeModal from "../Modals/LocationModals/TempleOfTimeModal";
 
 class LocationList extends Component {
@@ -64,11 +65,7 @@ class LocationList extends Component {
                                 <GraveyardModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Shadow Temple</List.Header>
-                                    <List.Description>Available Items: 23</List.Description>
-                                </List.Content>
+                                <ShadowTempleModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
