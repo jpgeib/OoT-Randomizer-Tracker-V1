@@ -4,6 +4,7 @@ import BottomOfTheWellModal from "../Modals/LocationModals/BottomOfTheWellModal"
 import CastleGroundsModal from "../Modals/LocationModals/CastleGroundsModal";
 import CastleTownModal from "../Modals/LocationModals/CastleTownModal";
 import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
+import GraveyardModal from "../Modals/LocationModals/GraveyardModal";
 import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
 import HyruleFieldModal from "../Modals/LocationModals/HyruleFieldModal";
 import KakarikoVillageModal from "../Modals/LocationModals/KakarikoVillageModal";
@@ -60,11 +61,7 @@ class LocationList extends Component {
                                 <BottomOfTheWellModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Graveyard</List.Header>
-                                    <List.Description>Available Items: 10</List.Description>
-                                </List.Content>
+                                <GraveyardModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
