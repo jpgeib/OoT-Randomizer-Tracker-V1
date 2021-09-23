@@ -19,6 +19,7 @@ import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
 import SacredMeadowModal from "../Modals/LocationModals/SacredMeadowModal";
 import ShadowTempleModal from "../Modals/LocationModals/ShadowTempleModal";
 import TempleOfTimeModal from "../Modals/LocationModals/TempleOfTimeModal";
+import ZoraRiverModal from "../Modals/LocationModals/ZoraRiverModal";
 
 class LocationList extends Component {
     render() {
@@ -92,11 +93,7 @@ class LocationList extends Component {
                                 <FireTempleModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Zora River</List.Header>
-                                    <List.Description>Available Items: 10</List.Description>
-                                </List.Content>
+                                <ZoraRiverModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
