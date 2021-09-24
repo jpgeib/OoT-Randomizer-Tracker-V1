@@ -12,6 +12,7 @@ import GoronCityModal from "../Modals/LocationModals/GoronCityModal";
 import GraveyardModal from "../Modals/LocationModals/GraveyardModal";
 import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
 import HyruleFieldModal from "../Modals/LocationModals/HyruleFieldModal";
+import IceCavernModal from "../Modals/LocationModals/IceCavernModal";
 import JabuJabusBellyModal from "../Modals/LocationModals/JabuJabusBellyModal";
 import KakarikoVillageModal from "../Modals/LocationModals/KakarikoVillageModal";
 import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
@@ -108,11 +109,7 @@ class LocationList extends Component {
                                 <JabuJabusBellyModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Ice Cavern</List.Header>
-                                    <List.Description>Available Items: 8</List.Description>
-                                </List.Content>
+                                <IceCavernModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
