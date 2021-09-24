@@ -5,6 +5,7 @@ import CastleGroundsModal from "../Modals/LocationModals/CastleGroundsModal";
 import CastleTownModal from "../Modals/LocationModals/CastleTownModal";
 import DeathMountainCraterModal from "../Modals/LocationModals/DeathMountainCraterModal";
 import DeathMountainModal from "../Modals/LocationModals/DeathMountainModal";
+import DesertColossusModal from "../Modals/LocationModals/DesertColossusModal";
 import DodongosCavernModal from "../Modals/LocationModals/DodongosCavernModal";
 import FireTempleModal from "../Modals/LocationModals/FireTempleModal";
 import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
@@ -136,11 +137,7 @@ class LocationList extends Component {
                                 <HauntedWastelandModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Desert Colossus</List.Header>
-                                    <List.Description>Available Items: 7</List.Description>
-                                </List.Content>
+                                <DesertColossusModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
