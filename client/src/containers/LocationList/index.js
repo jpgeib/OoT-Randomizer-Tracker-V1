@@ -14,6 +14,7 @@ import GerudoValleyModal from "../Modals/LocationModals/GerudoValleyModal";
 import GoronCityModal from "../Modals/LocationModals/GoronCityModal";
 import GraveyardModal from "../Modals/LocationModals/GraveyardModal";
 import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
+import HauntedWastelandModal from "../Modals/LocationModals/HauntedWastelandModal";
 import HyruleFieldModal from "../Modals/LocationModals/HyruleFieldModal";
 import IceCavernModal from "../Modals/LocationModals/IceCavernModal";
 import JabuJabusBellyModal from "../Modals/LocationModals/JabuJabusBellyModal";
@@ -132,11 +133,7 @@ class LocationList extends Component {
                                 <GerudoTrainingModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Haunted Wasteland</List.Header>
-                                    <List.Description>Available Items: 2</List.Description>
-                                </List.Content>
+                                <HauntedWastelandModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
