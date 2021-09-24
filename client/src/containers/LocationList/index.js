@@ -9,6 +9,7 @@ import DesertColossusModal from "../Modals/LocationModals/DesertColossusModal";
 import DodongosCavernModal from "../Modals/LocationModals/DodongosCavernModal";
 import FireTempleModal from "../Modals/LocationModals/FireTempleModal";
 import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
+import GanonsCastleModal from "../Modals/LocationModals/GanonsCastleModal";
 import GerudoFortressModal from "../Modals/LocationModals/GerudoFortressModal";
 import GerudoTrainingModal from "../Modals/LocationModals/GerudoTrainingModal";
 import GerudoValleyModal from "../Modals/LocationModals/GerudoValleyModal";
@@ -150,11 +151,7 @@ class LocationList extends Component {
                     <Grid.Column width={7}>
                         <List relaxed>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Ganon's Castle</List.Header>
-                                    <List.Description>Available Items: 17</List.Description>
-                                </List.Content>
+                                <GanonsCastleModal />
                             </List.Item>
                         </List>
                     </Grid.Column>
