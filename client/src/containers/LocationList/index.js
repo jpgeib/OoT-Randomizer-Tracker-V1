@@ -12,6 +12,7 @@ import GoronCityModal from "../Modals/LocationModals/GoronCityModal";
 import GraveyardModal from "../Modals/LocationModals/GraveyardModal";
 import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
 import HyruleFieldModal from "../Modals/LocationModals/HyruleFieldModal";
+import JabuJabusBellyModal from "../Modals/LocationModals/JabuJabusBellyModal";
 import KakarikoVillageModal from "../Modals/LocationModals/KakarikoVillageModal";
 import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
 import LonLonRanchModal from "../Modals/LocationModals/LonLonRanchModal";
@@ -104,11 +105,7 @@ class LocationList extends Component {
                                 <ZoraFountainModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Jabu Jabu's Belly</List.Header>
-                                    <List.Description>Available Items: 8</List.Description>
-                                </List.Content>
+                                <JabuJabusBellyModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
