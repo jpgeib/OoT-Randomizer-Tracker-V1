@@ -8,6 +8,7 @@ import DeathMountainModal from "../Modals/LocationModals/DeathMountainModal";
 import DodongosCavernModal from "../Modals/LocationModals/DodongosCavernModal";
 import FireTempleModal from "../Modals/LocationModals/FireTempleModal";
 import ForestTempleModal from "../Modals/LocationModals/ForestTempleModal";
+import GerudoValleyModal from "../Modals/LocationModals/GerudoValleyModal";
 import GoronCityModal from "../Modals/LocationModals/GoronCityModal";
 import GraveyardModal from "../Modals/LocationModals/GraveyardModal";
 import GreatDekuTreeModal from "../Modals/LocationModals/GreatDekuTreeModal";
@@ -120,11 +121,7 @@ class LocationList extends Component {
                                 <WaterTempleModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Gerudo Valley</List.Header>
-                                    <List.Description>Available Items: 8</List.Description>
-                                </List.Content>
+                                <GerudoValleyModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
