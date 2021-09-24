@@ -22,6 +22,7 @@ import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
 import SacredMeadowModal from "../Modals/LocationModals/SacredMeadowModal";
 import ShadowTempleModal from "../Modals/LocationModals/ShadowTempleModal";
 import TempleOfTimeModal from "../Modals/LocationModals/TempleOfTimeModal";
+import WaterTempleModal from "../Modals/LocationModals/WaterTempleModal";
 import ZoraFountainModal from "../Modals/LocationModals/ZoraFountainModal";
 import ZoraRiverModal from "../Modals/LocationModals/ZoraRiverModal";
 import ZorasDomainModal from "../Modals/LocationModals/ZorasDomainModal";
@@ -116,11 +117,7 @@ class LocationList extends Component {
                                 <LakeHyliaModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Water Temple</List.Header>
-                                    <List.Description>Available Items: 16</List.Description>
-                                </List.Content>
+                                <WaterTempleModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
