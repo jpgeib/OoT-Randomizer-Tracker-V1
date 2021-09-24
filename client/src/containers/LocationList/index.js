@@ -16,6 +16,7 @@ import IceCavernModal from "../Modals/LocationModals/IceCavernModal";
 import JabuJabusBellyModal from "../Modals/LocationModals/JabuJabusBellyModal";
 import KakarikoVillageModal from "../Modals/LocationModals/KakarikoVillageModal";
 import KokiriForestModal from "../Modals/LocationModals/KokiriForestModal";
+import LakeHyliaModal from "../Modals/LocationModals/LakeHyliaModal";
 import LonLonRanchModal from "../Modals/LocationModals/LonLonRanchModal";
 import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
 import SacredMeadowModal from "../Modals/LocationModals/SacredMeadowModal";
@@ -112,11 +113,7 @@ class LocationList extends Component {
                                 <IceCavernModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Lake Hylia</List.Header>
-                                    <List.Description>Available Items: 12</List.Description>
-                                </List.Content>
+                                <LakeHyliaModal />
                             </List.Item>
                             <List.Item>
                                 <List.Icon name="check" size="large" verticalAlign="middle" />
