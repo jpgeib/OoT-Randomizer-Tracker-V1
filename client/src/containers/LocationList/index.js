@@ -26,6 +26,7 @@ import LonLonRanchModal from "../Modals/LocationModals/LonLonRanchModal";
 import LostWoodsModal from "../Modals/LocationModals/LostWoodsModal";
 import SacredMeadowModal from "../Modals/LocationModals/SacredMeadowModal";
 import ShadowTempleModal from "../Modals/LocationModals/ShadowTempleModal";
+import SpiritTempleModal from "../Modals/LocationModals/SpiritTempleModal";
 import TempleOfTimeModal from "../Modals/LocationModals/TempleOfTimeModal";
 import WaterTempleModal from "../Modals/LocationModals/WaterTempleModal";
 import ZoraFountainModal from "../Modals/LocationModals/ZoraFountainModal";
@@ -140,11 +141,7 @@ class LocationList extends Component {
                                 <DesertColossusModal />
                             </List.Item>
                             <List.Item>
-                                <List.Icon name="check" size="large" verticalAlign="middle" />
-                                <List.Content>
-                                    <List.Header>Spirit Temple</List.Header>
-                                    <List.Description>Available Items: 25</List.Description>
-                                </List.Content>
+                                <SpiritTempleModal />
                             </List.Item>
                         </List>
                     </Grid.Column>
