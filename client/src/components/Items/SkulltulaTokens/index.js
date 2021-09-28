@@ -13,7 +13,7 @@ const SkulltulaTokens = (props) => {
 
     return (
         <Grid.Column width={2}>
-            <Image as="Button" onClick={increment} onContextMenu={rightClick} size="mini" src={SkulltulaTokensIcon} />
+            <Image onClick={increment} onContextMenu={rightClick} size="mini" src={SkulltulaTokensIcon} />
             <Header color="red" as="h1"><span>{counter}</span></Header>
         </Grid.Column>
     );
