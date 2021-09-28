@@ -1,2 +1,2 @@
-export const INCREMENT = "INCREMENT";
-export const DECREMENT = "DECREMENT";
+export const ADD_SKULLTULA = "ADD_SKULLTULA";
+export const REMOVE_SKULLTULA = "REMOVE_SKULLTULA";

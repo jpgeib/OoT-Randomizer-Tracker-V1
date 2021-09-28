@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import counterReducer from "./counterReducer";
+import skulltulaCounterReducer from "./skulltulaCounterReducer";
 
 export default combineReducers({
-    counter: counterReducer
+    skulltulaCounter: skulltulaCounterReducer
 });
