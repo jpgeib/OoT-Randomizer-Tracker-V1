@@ -9,10 +9,13 @@ import DinsFire from "../../../components/Items/DinsFire";
 import KokiriSword from "../../../components/Items/KokiriSword";
 import MasterSword from "../../../components/Items/MasterSword";
 
-const FirstRow = () => {
+const FirstRow = (props) => {
+
+    const { counter, increment, decrement } = props;
+    
     return (
         <Grid.Row>
-            <DekuSticks />
+            <DekuSticks counter={counter} increment={increment} decrement={decrement} />
             <DekuNuts />
             <BombBag />
             <FairyBow />
