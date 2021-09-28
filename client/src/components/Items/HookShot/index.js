@@ -4,12 +4,12 @@ import HookShotIcon from "../../../assets/images/Hookshot.png";
 
 const HookShot = (props) => {
 
-    const { removeHookshot, gotHookshot, hasHookshot, notFound } = props;
+    const { removeHookshot, gotHookshot, hasHookshot, notFound, hasLongshot, gotLongshot } = props;
 
     return (
         <Grid.Column width={2}>
             <Image
-                onClick={gotHookshot}
+                onClick={(hasHookshot === true && hasLongshot === false) ? gotLongshot : gotHookshot}
                 onContextMenu={removeHookshot} 
                 style={(hasHookshot === false && notFound === true) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
                 size="mini" 
