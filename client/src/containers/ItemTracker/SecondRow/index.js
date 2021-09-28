@@ -20,7 +20,6 @@ class SecondRow extends Component {
 
     componentDidMount() {
         const trackerData = JSON.parse(window.localStorage.getItem("state"));
-        console.log(trackerData);
         this.setState(trackerData);
     }
 
