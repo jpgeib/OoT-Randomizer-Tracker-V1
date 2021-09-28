@@ -9,14 +9,17 @@ import EmptyBottle from "../../../components/Items/EmptyBottle";
 import RutosLetter from "../../../components/Items/RutosLetter";
 import PocketEgg from "../../../components/Items/PocketEgg";
 
-const FourthRow = () => {
+const FourthRow = (props) => {
+
+    const { counter, increment, decrement } = props;
+
     return (
         <Grid.Row>
             <KokiriTunic />
             <GoronTunic />
             <ZoraTunic />
             <Wallet />
-            <SkulltulaTokens />
+            <SkulltulaTokens counter={counter} increment={increment} decrement={decrement} />
             <EmptyBottle />
             <RutosLetter />
             <PocketEgg />

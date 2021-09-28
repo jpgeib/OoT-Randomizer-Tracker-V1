@@ -9,17 +9,21 @@ import SixthRow from "./SixthRow";
 import MasterSword from "../../components/Items/MasterSword";
 import HookShot from "../../components/Items/HookShot";
 
+import { connect } from "react-redux";
+import { compose } from "redux";
+import { increment, decrement } from "../../actions/counter";
+
 class ItemTracker extends Component {
     render() {
 
-        const { tracker } = this.props;
+        const { tracker, counter, increment, decrement } = this.props;
 
         return (
             <Grid style={tracker}>
                 <FirstRow />
                 <SecondRow />
                 <ThirdRow />
-                <FourthRow />
+                <FourthRow counter={counter} increment={increment} decrement={decrement} />
                 <FifthRow />
                 <SixthRow />
                 <Grid.Row>
@@ -47,4 +51,8 @@ class ItemTracker extends Component {
     }
 }
 
-export default ItemTracker;
+function mapStateToProps(state) {
+    return { counter: state.counter }
+};
+
+export default compose(connect(mapStateToProps, { increment, decrement }))(ItemTracker);
