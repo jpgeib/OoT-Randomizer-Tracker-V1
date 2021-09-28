@@ -11,7 +11,7 @@ const HookShot = (props) => {
             <Image
                 onClick={(hasHookshot === true && hasLongshot === false) ? gotLongshot : gotHookshot}
                 onContextMenu={removeHookshot} 
-                style={(hasHookshot === false && notFound === true) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
+                style={(hasHookshot === false && notFound === true) ? { filter: "grayscale(50%)"} : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={HookShotIcon} 
             />

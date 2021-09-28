@@ -18,6 +18,16 @@ class SecondRow extends Component {
         notFound: true
     }
 
+    componentDidMount() {
+        const trackerData = JSON.parse(window.localStorage.getItem("state"));
+        console.log(trackerData);
+        this.setState(trackerData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("state", JSON.stringify(this.state));
+    }
+
     gotHookshot = (e) => {
         this.setState({ hasHookshot: true });
         this.setState({ notFound: false });
