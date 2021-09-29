@@ -15,7 +15,7 @@ class SecondRow extends Component {
     render() {
 
         const { hasLongshot, hasHookshot, notFound } = this.props.state;
-        const { gotHookshot,removeHookshot, gotLongshot, removeLongshot } = this.props;
+        const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
 
         return (
             <Grid.Row>

@@ -25,10 +25,7 @@ class ItemTracker extends Component {
                 addDekuSticks, 
                 removeDekuSticks,
                 state,
-                gotHookshot,
-                removeHookshot,
-                gotLongshot,
-                removeLongshot 
+                hookshot
             } = this.props;
 
         return (
@@ -36,10 +33,7 @@ class ItemTracker extends Component {
                 <FirstRow counter={sticksCounter} increment={addDekuSticks} decrement={removeDekuSticks} />
                 <SecondRow 
                     state={state} 
-                    gotHookshot={gotHookshot}
-                    removeHookshot={removeHookshot}
-                    gotLongshot={gotLongshot}
-                    removeLongshot={removeLongshot}
+                    hookshot={hookshot}
                 />
                 <ThirdRow />
                 <FourthRow counter={skulltulaCounter} increment={addSkulltula} decrement={removeSkulltula} />

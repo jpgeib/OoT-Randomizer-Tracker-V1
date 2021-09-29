@@ -21,29 +21,31 @@ class Home extends Component {
         window.localStorage.setItem("state", JSON.stringify(this.state));
     }
 
-    gotHookshot = (e) => {
-        this.setState({ hasHookshot: true });
-        this.setState({ notFound: false });
+    hookshotLogic = {
+        gotHookshot: (e) => {
+            this.setState({ hasHookshot: true });
+            this.setState({ notFound: false });
+        },
+        removeHookshot: (e) => {
+            e.preventDefault();
+            this.setState({ hasHookshot: false });
+            this.setState({ notFound: true });
+        },
+        gotLongshot: (e) => {
+            this.setState({ hasLongshot: true })
+        },
+        removeLongshot: (e) => {
+            e.preventDefault();
+            this.setState({ hasLongshot: false })
+        }
     }
 
-    removeHookshot = (e) => {
-        e.preventDefault();
-        this.setState({ hasHookshot: false });
-        this.setState({ notFound: true });
-    }
 
-    gotLongshot = (e) => {
-        this.setState({ hasLongshot: true })
-    }
-
-    removeLongshot = (e) => {
-        e.preventDefault();
-        this.setState({ hasLongshot: false })
-    }
 
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
+        // const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.hookshotLogic;
 
         return (
             <Grid>
@@ -52,13 +54,10 @@ class Home extends Component {
                         <Grid>
                             <Grid.Row>
                                 <Grid.Column width={16}>
-                                    <ItemTracker 
-                                        state={this.state} 
+                                    <ItemTracker
+                                        state={this.state}
                                         tracker={trackerStyle}
-                                        gotHookshot={this.gotHookshot}
-                                        removeHookshot={this.removeHookshot}
-                                        gotLongshot={this.gotLongshot}
-                                        removeLongshot={this.removeLongshot}
+                                        hookshot={this.hookshotLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
