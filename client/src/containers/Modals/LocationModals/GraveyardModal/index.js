@@ -15,16 +15,17 @@ class GraveyardModal extends Component {
     render() {
 
         const { open } = this.state;
+        const { hasLongshot } = this.props.state;
 
         return (
             <Modal
-                trigger={<Button fluid content="Graveyard" onClick={this.closeConfigShow} />}
+                trigger={<Button color={(hasLongshot === true) ? "green" : "red"} fluid content="Graveyard" onClick={this.closeConfigShow} />}
                 open={open}
                 onClose={this.close}
             >
                 <Modal.Header>Graveyard Items</Modal.Header>
                 <Modal.Content>
-                    <Graveyard />
+                    <Graveyard hasLongshot={hasLongshot} />
                 </Modal.Content>
             </Modal>
         );

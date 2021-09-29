@@ -1,7 +1,10 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 
-const Graveyard = () => {
+const Graveyard = (props) => {
+
+    const { hasLongshot } = props;
+
     return (
         <List divided relaxed>
             <List.Item>
@@ -78,10 +81,10 @@ const Graveyard = () => {
                     </List.Item>
                 </List.List>
             </List.Item>
-            <List.Item>
+            <List.Item >
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Magic Bean Heart Piece</List.Header>
+                    <List.Header style={(hasLongshot === true) ? { color: "green" } : { color: "red" }}>Magic Bean Heart Piece</List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>

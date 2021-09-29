@@ -10,13 +10,12 @@ class Home extends Component {
         skulltulaCounter: 0,
         hasHookshot: false,
         hasLongshot: false,
-        noHookshot: true,
+        noHookshot: true
     }
 
     componentDidMount() {
         const trackerData = JSON.parse(window.localStorage.getItem("state"));
         this.setState(trackerData);
-        console.log(trackerData);
     }
 
     componentDidUpdate() {
@@ -56,8 +55,6 @@ class Home extends Component {
         }
     }
 
-
-
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
@@ -87,7 +84,10 @@ class Home extends Component {
                     <Grid.Column width={6}>
                         <Grid.Row>
                             <Grid.Column>
-                                <LocationList locations={locationStyle} />
+                                <LocationList 
+                                    state={this.state} 
+                                    locations={locationStyle} 
+                                />
                             </Grid.Column>
                         </Grid.Row>
                     </Grid.Column>
