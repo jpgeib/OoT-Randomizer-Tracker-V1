@@ -3,7 +3,10 @@ import { List } from "semantic-ui-react";
 
 const Graveyard = (props) => {
 
-    const { hasLongshot } = props;
+    const { hasLongshot, obtainedItem } = props;
+    const { obtainItem, unobtainItem } = props.items;
+    const beanAvailable = (hasLongshot === true && obtainedItem === false);
+    const beanUnavailable = (hasLongshot === false && obtainedItem === false);
 
     return (
         <List divided relaxed>
@@ -84,7 +87,13 @@ const Graveyard = (props) => {
             <List.Item >
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header style={(hasLongshot === true) ? { color: "green" } : { color: "red" }}>Magic Bean Heart Piece</List.Header>
+                    <List.Header 
+                        style={(beanAvailable && {color: "green"}) || (beanUnavailable && { color: "red" }) || {color: "gray"}}
+                        onClick={obtainItem}
+                        onContextMenu={unobtainItem}
+                    >
+                        Magic Bean Heart Piece
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>

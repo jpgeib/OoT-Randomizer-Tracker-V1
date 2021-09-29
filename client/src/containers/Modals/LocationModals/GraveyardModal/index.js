@@ -15,7 +15,8 @@ class GraveyardModal extends Component {
     render() {
 
         const { open } = this.state;
-        const { hasLongshot } = this.props.state;
+        const { hasLongshot, obtainedItem } = this.props.state;
+        const { items } = this.props;
 
         return (
             <Modal
@@ -25,7 +26,7 @@ class GraveyardModal extends Component {
             >
                 <Modal.Header>Graveyard Items</Modal.Header>
                 <Modal.Content>
-                    <Graveyard hasLongshot={hasLongshot} />
+                    <Graveyard items={items} obtainedItem={obtainedItem} hasLongshot={hasLongshot} />
                 </Modal.Content>
             </Modal>
         );

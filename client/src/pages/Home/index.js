@@ -10,7 +10,8 @@ class Home extends Component {
         skulltulaCounter: 0,
         hasHookshot: false,
         hasLongshot: false,
-        noHookshot: true
+        noHookshot: true,
+        obtainedItem: false
     }
 
     componentDidMount() {
@@ -20,6 +21,16 @@ class Home extends Component {
 
     componentDidUpdate() {
         window.localStorage.setItem("state", JSON.stringify(this.state));
+    }
+
+    itemLogic = {
+        obtainItem: (e) => {
+            this.setState({ obtainedItem: true });
+        },
+        unobtainItem: (e) => {
+            e.preventDefault();
+            this.setState({ obtainedItem: false });
+        }
     }
 
     skulltulaLogic = {
@@ -87,6 +98,7 @@ class Home extends Component {
                                 <LocationList 
                                     state={this.state} 
                                     locations={locationStyle} 
+                                    items={this.itemLogic}
                                 />
                             </Grid.Column>
                         </Grid.Row>
