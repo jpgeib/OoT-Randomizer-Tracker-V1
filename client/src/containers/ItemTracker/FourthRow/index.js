@@ -11,7 +11,8 @@ import PocketEgg from "../../../components/Items/PocketEgg";
 
 const FourthRow = (props) => {
 
-    const { counter, increment, decrement } = props;
+    const { skulltulaCounter } = props.state;
+    const { addSkulltula, removeSkulltula } = props.skulltulas;
 
     return (
         <Grid.Row>
@@ -19,7 +20,7 @@ const FourthRow = (props) => {
             <GoronTunic />
             <ZoraTunic />
             <Wallet />
-            <SkulltulaTokens counter={counter} increment={increment} decrement={decrement} />
+            <SkulltulaTokens counter={skulltulaCounter} increment={addSkulltula} decrement={removeSkulltula} />
             <EmptyBottle />
             <RutosLetter />
             <PocketEgg />

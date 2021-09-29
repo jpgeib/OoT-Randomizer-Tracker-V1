@@ -11,16 +11,16 @@ import HookShot from "../../components/Items/HookShot";
 
 import { connect } from "react-redux";
 import { compose } from "redux";
-import { addSkulltula, removeSkulltula } from "../../actions/skulltulaCounter";
+// import { addSkulltula, removeSkulltula } from "../../actions/skulltulaCounter";
 import { addDekuSticks, removeDekuSticks } from "../../actions/sticksCounter";
 
 class ItemTracker extends Component {
     render() {
 
         const { tracker, 
-                skulltulaCounter,  
-                addSkulltula, 
-                removeSkulltula, 
+                skulltulas,  
+                // addSkulltula, 
+                // removeSkulltula, 
                 sticksCounter, 
                 addDekuSticks, 
                 removeDekuSticks,
@@ -36,7 +36,10 @@ class ItemTracker extends Component {
                     hookshot={hookshot}
                 />
                 <ThirdRow />
-                <FourthRow counter={skulltulaCounter} increment={addSkulltula} decrement={removeSkulltula} />
+                <FourthRow 
+                    state={state}
+                    skulltulas={skulltulas} 
+                />
                 <FifthRow />
                 <SixthRow />
                 <Grid.Row>
@@ -66,9 +69,9 @@ class ItemTracker extends Component {
 
 function mapStateToProps(state) {
     return { 
-        skulltulaCounter: state.skulltulaCounter,
+        // skulltulaCounter: state.skulltulaCounter,
         sticksCounter: state.sticksCounter
      }
 };
 
-export default compose(connect(mapStateToProps, { addSkulltula, removeSkulltula, addDekuSticks, removeDekuSticks }))(ItemTracker);
+export default compose(connect(mapStateToProps, { addDekuSticks, removeDekuSticks }))(ItemTracker);

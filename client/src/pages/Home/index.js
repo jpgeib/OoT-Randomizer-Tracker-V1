@@ -7,6 +7,13 @@ import LocationList from "../../containers/LocationList";
 class Home extends Component {
 
     state = {
+        skulltulaCounter: 0,
+        hasSkulltula: false,
+        has10Skulltulas: false,
+        has20Skulltulas: false,
+        has30Skulltulas: false,
+        has40Skulltulas: false,
+        has50Skulltulas: false,
         hasHookshot: false,
         hasLongshot: false,
         notFound: true
@@ -19,6 +26,20 @@ class Home extends Component {
 
     componentDidUpdate() {
         window.localStorage.setItem("state", JSON.stringify(this.state));
+    }
+
+    skulltulaLogic = {
+        addSkulltula: (e) => {
+            this.setState(prevState => ({
+                skulltulaCounter: Math.min(100, prevState.skulltulaCounter + 1)
+            }));
+        },
+        removeSkulltula: (e) => {
+            e.preventDefault();
+            this.setState(prevState => ({
+                skulltulaCounter: Math.max(0, prevState.skulltulaCounter - 1)
+            }));
+        }
     }
 
     hookshotLogic = {
@@ -45,7 +66,6 @@ class Home extends Component {
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
-        // const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.hookshotLogic;
 
         return (
             <Grid>
@@ -58,6 +78,7 @@ class Home extends Component {
                                         state={this.state}
                                         tracker={trackerStyle}
                                         hookshot={this.hookshotLogic}
+                                        skulltulas={this.skulltulaLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
