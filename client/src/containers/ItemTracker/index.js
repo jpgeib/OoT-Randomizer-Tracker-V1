@@ -23,12 +23,24 @@ class ItemTracker extends Component {
                 removeSkulltula, 
                 sticksCounter, 
                 addDekuSticks, 
-                removeDekuSticks } = this.props;
+                removeDekuSticks,
+                state,
+                gotHookshot,
+                removeHookshot,
+                gotLongshot,
+                removeLongshot 
+            } = this.props;
 
         return (
             <Grid style={tracker}>
                 <FirstRow counter={sticksCounter} increment={addDekuSticks} decrement={removeDekuSticks} />
-                <SecondRow />
+                <SecondRow 
+                    state={state} 
+                    gotHookshot={gotHookshot}
+                    removeHookshot={removeHookshot}
+                    gotLongshot={gotLongshot}
+                    removeLongshot={removeLongshot}
+                />
                 <ThirdRow />
                 <FourthRow counter={skulltulaCounter} increment={addSkulltula} decrement={removeSkulltula} />
                 <FifthRow />

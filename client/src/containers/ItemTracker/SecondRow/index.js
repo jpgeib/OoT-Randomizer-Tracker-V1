@@ -12,44 +12,10 @@ import DekuShield from "../../../components/Items/DekuShield";
 
 class SecondRow extends Component {
 
-    state = {
-        hasHookshot: false,
-        hasLongshot: false,
-        notFound: true
-    }
-
-    componentDidMount() {
-        const trackerData = JSON.parse(window.localStorage.getItem("state"));
-        this.setState(trackerData);
-    }
-
-    componentDidUpdate() {
-        window.localStorage.setItem("state", JSON.stringify(this.state));
-    }
-
-    gotHookshot = (e) => {
-        this.setState({ hasHookshot: true });
-        this.setState({ notFound: false });
-    }
-
-    removeHookshot = (e) => {
-        e.preventDefault();
-        this.setState({ hasHookshot: false });
-        this.setState({ notFound: true });
-    }
-
-    gotLongshot = (e) => {
-        this.setState({ hasLongshot: true })
-    }
-
-    removeLongshot = (e) => {
-        e.preventDefault();
-        this.setState({ hasLongshot: false })
-    }
-
     render() {
 
-        const { hasLongshot, hasHookshot, notFound } = this.state;
+        const { hasLongshot, hasHookshot, notFound } = this.props.state;
+        const { gotHookshot,removeHookshot, gotLongshot, removeLongshot } = this.props;
 
         return (
             <Grid.Row>
@@ -60,13 +26,13 @@ class SecondRow extends Component {
                 {hasLongshot === true ?
                     <LongShot
                         hasLongshot={hasLongshot}
-                        removeLongshot={this.removeLongshot}
+                        removeLongshot={removeLongshot}
                     /> :
                     <HookShot
                         hasLongshot={hasLongshot}
-                        gotLongshot={this.gotLongshot}
-                        gotHookshot={this.gotHookshot}
-                        removeHookshot={this.removeHookshot}
+                        gotLongshot={gotLongshot}
+                        gotHookshot={gotHookshot}
+                        removeHookshot={removeHookshot}
                         hasHookshot={hasHookshot}
                         notFound={notFound} />}
                 <IceArrows />
