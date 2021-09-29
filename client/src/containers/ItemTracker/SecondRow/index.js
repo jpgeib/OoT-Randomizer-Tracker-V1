@@ -14,7 +14,7 @@ class SecondRow extends Component {
 
     render() {
 
-        const { hasLongshot, hasHookshot, notFound } = this.props.state;
+        const { hasLongshot, hasHookshot, noHookshot } = this.props.state;
         const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
 
         return (
@@ -34,7 +34,7 @@ class SecondRow extends Component {
                         gotHookshot={gotHookshot}
                         removeHookshot={removeHookshot}
                         hasHookshot={hasHookshot}
-                        notFound={notFound} />}
+                        noHookshot={noHookshot} />}
                 <IceArrows />
                 <FaroresWind />
                 <DekuShield />

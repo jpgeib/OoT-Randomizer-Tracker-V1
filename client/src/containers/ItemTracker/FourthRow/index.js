@@ -20,7 +20,11 @@ const FourthRow = (props) => {
             <GoronTunic />
             <ZoraTunic />
             <Wallet />
-            <SkulltulaTokens counter={skulltulaCounter} increment={addSkulltula} decrement={removeSkulltula} />
+            <SkulltulaTokens 
+                counter={skulltulaCounter}  
+                increment={addSkulltula} 
+                decrement={removeSkulltula}
+            />
             <EmptyBottle />
             <RutosLetter />
             <PocketEgg />

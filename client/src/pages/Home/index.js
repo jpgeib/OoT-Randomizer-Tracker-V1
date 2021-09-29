@@ -8,20 +8,15 @@ class Home extends Component {
 
     state = {
         skulltulaCounter: 0,
-        hasSkulltula: false,
-        has10Skulltulas: false,
-        has20Skulltulas: false,
-        has30Skulltulas: false,
-        has40Skulltulas: false,
-        has50Skulltulas: false,
         hasHookshot: false,
         hasLongshot: false,
-        notFound: true
+        noHookshot: true,
     }
 
     componentDidMount() {
         const trackerData = JSON.parse(window.localStorage.getItem("state"));
         this.setState(trackerData);
+        console.log(trackerData);
     }
 
     componentDidUpdate() {
@@ -45,12 +40,12 @@ class Home extends Component {
     hookshotLogic = {
         gotHookshot: (e) => {
             this.setState({ hasHookshot: true });
-            this.setState({ notFound: false });
+            this.setState({ noHookshot: false });
         },
         removeHookshot: (e) => {
             e.preventDefault();
             this.setState({ hasHookshot: false });
-            this.setState({ notFound: true });
+            this.setState({ noHookshot: true });
         },
         gotLongshot: (e) => {
             this.setState({ hasLongshot: true })

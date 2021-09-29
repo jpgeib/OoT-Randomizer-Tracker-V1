@@ -8,8 +8,14 @@ const SkulltulaTokens = (props) => {
 
     return (
         <Grid.Column width={2}>
-            <Image onClick={increment} onContextMenu={decrement} size="mini" src={SkulltulaTokensIcon} />
-            <Header color="red" as="h1"><span>{counter}</span></Header>
+            <Image 
+                onClick={increment} 
+                onContextMenu={decrement}
+                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(50%)"} } 
+                size="mini" 
+                src={SkulltulaTokensIcon} 
+            />
+            <Header style={(counter >= 50) ? { color: "red" } : { color: "white" } } as="h1"><span>{counter}</span></Header>
         </Grid.Column>
     );
 }
