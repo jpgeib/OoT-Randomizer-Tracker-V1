@@ -1,7 +1,27 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 
-const KakarikoVillage = () => {
+const KakarikoVillage = (props) => {
+
+    const { skulltulaCounter, obtainedItem } = props;
+    const { obtainItem, unobtainItem } = props.items;
+
+    const skulltulaHouseAvailable = {
+        ten: (skulltulaCounter >= 10 && obtainedItem === false),
+        twenty: (skulltulaCounter >= 20 && obtainedItem === false),
+        thirty: (skulltulaCounter >= 30 && obtainedItem === false),
+        forty: (skulltulaCounter >= 40 && obtainedItem === false),
+        fifty: (skulltulaCounter >= 50 && obtainedItem === false)
+    };
+
+    const skulltulaHouseUnavailable = {
+        ten: (skulltulaCounter < 10 && obtainedItem === false),
+        twenty: (skulltulaCounter < 20 && obtainedItem === false),
+        thirty: (skulltulaCounter < 30 && obtainedItem === false),
+        forty: (skulltulaCounter < 40 && obtainedItem === false),
+        fifty: (skulltulaCounter < 50 && obtainedItem === false)
+    };
+
     return (
         <List divided relaxed>
             <List.Item>
@@ -105,7 +125,11 @@ const KakarikoVillage = () => {
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Skulltula House 10 Tokens</List.Header>
+                            <List.Header
+                                style={(skulltulaHouseAvailable.ten && {color: "green"}) || (skulltulaHouseUnavailable.ten && { color: "red" }) || {color: "gray"}}
+                                onClick={obtainItem}
+                                onContextMenu={unobtainItem}
+                            >Skulltula House 10 Tokens</List.Header>
                         </List.Content>
                     </List.Item>
                     <List.Item>

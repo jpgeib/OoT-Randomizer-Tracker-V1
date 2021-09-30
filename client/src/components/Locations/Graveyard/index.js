@@ -5,6 +5,7 @@ const Graveyard = (props) => {
 
     const { hasLongshot, obtainedItem } = props;
     const { obtainItem, unobtainItem } = props.items;
+    
     const beanAvailable = (hasLongshot === true && obtainedItem === false);
     const beanUnavailable = (hasLongshot === false && obtainedItem === false);
 
