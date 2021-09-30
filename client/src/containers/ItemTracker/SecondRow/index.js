@@ -14,8 +14,8 @@ class SecondRow extends Component {
 
     render() {
 
-        const { hasLongshot, hasHookshot, noHookshot } = this.props.state;
-        const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
+        // const { hasLongshot, hasHookshot, noHookshot } = this.props.state;
+        // const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
         const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
 
         return (
@@ -28,18 +28,19 @@ class SecondRow extends Component {
                     removeFairyOcarina={removeFairyOcarina}
                 />
                 <Bombchus />
-                {hasLongshot === true ?
+                {/* {hasLongshot === true ?
                     <LongShot
-                        hasLongshot={hasLongshot}
-                        removeLongshot={removeLongshot}
-                    /> :
+                        // hasLongshot={hasLongshot}
+                        // removeLongshot={removeLongshot}
+                    /> : */}
                     <HookShot
-                        hasLongshot={hasLongshot}
-                        gotLongshot={gotLongshot}
-                        gotHookshot={gotHookshot}
-                        removeHookshot={removeHookshot}
-                        hasHookshot={hasHookshot}
-                        noHookshot={noHookshot} />}
+                        // hasLongshot={hasLongshot}
+                        // gotLongshot={gotLongshot}
+                        // gotHookshot={gotHookshot}
+                        // removeHookshot={removeHookshot}
+                        // hasHookshot={hasHookshot}
+                        // noHookshot={noHookshot} 
+                    />
                 <IceArrows />
                 <FaroresWind />
                 <DekuShield />
