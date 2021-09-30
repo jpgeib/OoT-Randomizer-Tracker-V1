@@ -4,6 +4,10 @@ import ItemTracker from "../../containers/ItemTracker";
 import DungeonItemTracker from "../../containers/DungeonItemTracker";
 import LocationList from "../../containers/LocationList";
 
+import { connect } from "react-redux";
+import { compose } from "redux";
+import { addFairyOcarina, removeFairyOcarina } from "../../actions/ocarinas";
+
 class Home extends Component {
 
     state = {
@@ -69,6 +73,7 @@ class Home extends Component {
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
+        const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
 
         return (
             <Grid>
@@ -82,6 +87,9 @@ class Home extends Component {
                                         tracker={trackerStyle}
                                         hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
+                                        fairyOcarina={fairyOcarina}
+                                        addFairyOcarina={addFairyOcarina}
+                                        removeFairyOcarina={removeFairyOcarina}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -106,7 +114,13 @@ class Home extends Component {
                 </Grid.Row>
             </Grid>
         );
-    }
+    }   
 }
 
-export default Home;
+function mapStateToProps(state) {
+    return { fairyOcarina: state.fairyOcarina }
+};
+
+export default compose(
+    connect(mapStateToProps, { addFairyOcarina, removeFairyOcarina })
+)(Home);

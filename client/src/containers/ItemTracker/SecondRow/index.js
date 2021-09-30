@@ -16,12 +16,17 @@ class SecondRow extends Component {
 
         const { hasLongshot, hasHookshot, noHookshot } = this.props.state;
         const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
+        const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
 
         return (
             <Grid.Row>
                 <BigGoronSword />
                 <FairySlingshot />
-                <FairyOcarina />
+                <FairyOcarina 
+                    fairyOcarina={fairyOcarina}
+                    addFairyOcarina={addFairyOcarina}
+                    removeFairyOcarina={removeFairyOcarina}
+                />
                 <Bombchus />
                 {hasLongshot === true ?
                     <LongShot
