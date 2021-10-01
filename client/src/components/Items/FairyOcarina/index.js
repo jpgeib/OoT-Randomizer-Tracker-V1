@@ -11,7 +11,7 @@ const FairyOcarina = (props) => {
             <Image
                 onClick={addFairyOcarina}
                 onContextMenu={removeFairyOcarina} 
-                style={(fairyOcarina === false || fairyOcarina === null) ? { filter: "grayscale(50%)"} : { filter: "grayscale(0%)" }}
+                style={(fairyOcarina === null || fairyOcarina === false) ? { filter: "grayscale(50%)"} : { filter: "grayscale(0%)" }}
                 size="mini" 
                 src={FairyOcarinaIcon} 
             />

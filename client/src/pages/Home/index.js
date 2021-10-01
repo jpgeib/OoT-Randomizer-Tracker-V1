@@ -18,9 +18,10 @@ class Home extends Component {
     //     obtainedItem: false
     // }
 
-    componentDidMount() {
+    async componentDidMount() {
         const trackerData = JSON.parse(window.localStorage.getItem("state"));
         this.setState(trackerData);
+        console.log(trackerData);
     }
 
     componentDidUpdate(state) {
@@ -118,7 +119,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    return { fairyOcarina: state.ocarinas.fairyOcarina }
+    return { fairyOcarina: state.ocarinas }
 };
 
 export default compose(

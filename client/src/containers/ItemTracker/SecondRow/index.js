@@ -5,7 +5,7 @@ import FairySlingshot from "../../../components/Items/FairySlingshot";
 import FairyOcarina from "../../../components/Items/FairyOcarina";
 import Bombchus from "../../../components/Items/Bombchus";
 import HookShot from "../../../components/Items/HookShot";
-import LongShot from "../../../components/Items/LongShot";
+// import LongShot from "../../../components/Items/LongShot";
 import IceArrows from "../../../components/Items/IceArrows";
 import FaroresWind from "../../../components/Items/FaroresWind";
 import DekuShield from "../../../components/Items/DekuShield";

@@ -5,31 +5,28 @@ import {
     REMOVE_OCARINA_OF_TIME
 } from "../types";
 
-export const addFairyOcarina = (e) => {
-    return {
-        type: ADD_FAIRY_OCARINA,
-        payload: true
-    };
+export const addFairyOcarina = (e) => dispatch => {
+    // e.preventDefault();
+    dispatch({
+        type: ADD_FAIRY_OCARINA
+    });
 };
 
-export const removeFairyOcarina = (e) => {
-    e.preventDefault();
-    return {
-        type: REMOVE_FAIRY_OCARINA,
-        payload: false
-    };
+export const removeFairyOcarina = (e) => dispatch => {
+    // e.preventDefault();
+    dispatch({
+        type: REMOVE_FAIRY_OCARINA
+    });
 };
 
 export const addOcarinaOfTime = () => {
     return {
-        type: ADD_OCARINA_OF_TIME,
-        payload: true
+        type: ADD_OCARINA_OF_TIME
     };
 };
 
 export const removeOcarinaOfTime = () => {
     return {
-        type: REMOVE_OCARINA_OF_TIME,
-        payload: false     
+        type: REMOVE_OCARINA_OF_TIME     
     };
 };
