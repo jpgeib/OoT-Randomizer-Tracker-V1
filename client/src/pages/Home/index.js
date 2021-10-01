@@ -11,11 +11,17 @@ import LocationList from "../../containers/LocationList";
 class Home extends Component {
 
     state = {
-        skulltulaCounter: 0,
-        hasHookshot: false,
-        hasLongshot: false,
-        noHookshot: true,
-        obtainedItem: false
+        items: {
+            skulltulaCounter: 0,
+            hasHookshot: false,
+            hasLongshot: false,
+            smallKeys: {
+                forestTemple: 0
+            }
+        },
+        locations: {
+            obtainedItem: false
+        }
     }
 
     async componentDidMount() {
@@ -38,6 +44,20 @@ class Home extends Component {
         }
     }
 
+    smallKeyLogic = {
+        addForestTempleKey: (e) => {
+            this.setState(prevState => ({
+                forestTemple: Math.min(100, prevState.smallKeys.forestTemple + 1)
+            }));
+        },
+        removeForestTempleKey: (e) => {
+            e.preventDefault();
+            this.setState(prevState => ({
+                forestTemple: Math.max(0, prevState.smallKeys.forestTemple - 1)
+            }));
+        }
+    }
+
     skulltulaLogic = {
         addSkulltula: (e) => {
             this.setState(prevState => ({
@@ -55,12 +75,10 @@ class Home extends Component {
     hookshotLogic = {
         gotHookshot: (e) => {
             this.setState({ hasHookshot: true });
-            this.setState({ noHookshot: false });
         },
         removeHookshot: (e) => {
             e.preventDefault();
             this.setState({ hasHookshot: false });
-            this.setState({ noHookshot: true });
         },
         gotLongshot: (e) => {
             this.setState({ hasLongshot: true })
@@ -93,7 +111,11 @@ class Home extends Component {
                             </Grid.Row>
                             <Grid.Row>
                                 <Grid.Column width={16}>
-                                    <DungeonItemTracker dungeons={dungeonStyle} />
+                                    <DungeonItemTracker 
+                                        dungeons={dungeonStyle}
+                                        state={this.state}
+                                        smallKeys={this.smallKeyLogic} 
+                                    />
                                 </Grid.Column>
                             </Grid.Row>
                         </Grid>
@@ -101,9 +123,9 @@ class Home extends Component {
                     <Grid.Column width={6}>
                         <Grid.Row>
                             <Grid.Column>
-                                <LocationList 
-                                    state={this.state} 
-                                    locations={locationStyle} 
+                                <LocationList
+                                    state={this.state}
+                                    locations={locationStyle}
                                     items={this.itemLogic}
                                 />
                             </Grid.Column>
@@ -112,7 +134,7 @@ class Home extends Component {
                 </Grid.Row>
             </Grid>
         );
-    }   
+    }
 }
 
 // function mapStateToProps(state) {
