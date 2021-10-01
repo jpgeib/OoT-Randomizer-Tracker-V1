@@ -4,19 +4,19 @@ import ItemTracker from "../../containers/ItemTracker";
 import DungeonItemTracker from "../../containers/DungeonItemTracker";
 import LocationList from "../../containers/LocationList";
 
-import { connect } from "react-redux";
-import { compose } from "redux";
-import { addFairyOcarina, removeFairyOcarina } from "../../actions/ocarinas";
+// import { connect } from "react-redux";
+// import { compose } from "redux";
+// import { addFairyOcarina, removeFairyOcarina } from "../../actions/ocarinas";
 
 class Home extends Component {
 
-    // state = {
-    //     skulltulaCounter: 0,
-    //     hasHookshot: false,
-    //     hasLongshot: false,
-    //     noHookshot: true,
-    //     obtainedItem: false
-    // }
+    state = {
+        skulltulaCounter: 0,
+        hasHookshot: false,
+        hasLongshot: false,
+        noHookshot: true,
+        obtainedItem: false
+    }
 
     async componentDidMount() {
         const trackerData = JSON.parse(window.localStorage.getItem("state"));
@@ -24,57 +24,57 @@ class Home extends Component {
         console.log(trackerData);
     }
 
-    componentDidUpdate(state) {
-        window.localStorage.setItem("state", JSON.stringify(state));
+    componentDidUpdate() {
+        window.localStorage.setItem("state", JSON.stringify(this.state));
     }
 
-    // itemLogic = {
-    //     obtainItem: (e) => {
-    //         this.setState({ obtainedItem: true });
-    //     },
-    //     unobtainItem: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ obtainedItem: false });
-    //     }
-    // }
+    itemLogic = {
+        obtainItem: (e) => {
+            this.setState({ obtainedItem: true });
+        },
+        unobtainItem: (e) => {
+            e.preventDefault();
+            this.setState({ obtainedItem: false });
+        }
+    }
 
-    // skulltulaLogic = {
-    //     addSkulltula: (e) => {
-    //         this.setState(prevState => ({
-    //             skulltulaCounter: Math.min(100, prevState.skulltulaCounter + 1)
-    //         }));
-    //     },
-    //     removeSkulltula: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             skulltulaCounter: Math.max(0, prevState.skulltulaCounter - 1)
-    //         }));
-    //     }
-    // }
+    skulltulaLogic = {
+        addSkulltula: (e) => {
+            this.setState(prevState => ({
+                skulltulaCounter: Math.min(100, prevState.skulltulaCounter + 1)
+            }));
+        },
+        removeSkulltula: (e) => {
+            e.preventDefault();
+            this.setState(prevState => ({
+                skulltulaCounter: Math.max(0, prevState.skulltulaCounter - 1)
+            }));
+        }
+    }
 
-    // hookshotLogic = {
-    //     gotHookshot: (e) => {
-    //         this.setState({ hasHookshot: true });
-    //         this.setState({ noHookshot: false });
-    //     },
-    //     removeHookshot: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasHookshot: false });
-    //         this.setState({ noHookshot: true });
-    //     },
-    //     gotLongshot: (e) => {
-    //         this.setState({ hasLongshot: true })
-    //     },
-    //     removeLongshot: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasLongshot: false })
-    //     }
-    // }
+    hookshotLogic = {
+        gotHookshot: (e) => {
+            this.setState({ hasHookshot: true });
+            this.setState({ noHookshot: false });
+        },
+        removeHookshot: (e) => {
+            e.preventDefault();
+            this.setState({ hasHookshot: false });
+            this.setState({ noHookshot: true });
+        },
+        gotLongshot: (e) => {
+            this.setState({ hasLongshot: true })
+        },
+        removeLongshot: (e) => {
+            e.preventDefault();
+            this.setState({ hasLongshot: false })
+        }
+    }
 
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
-        const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
+        // const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
 
         return (
             <Grid>
@@ -84,13 +84,10 @@ class Home extends Component {
                             <Grid.Row>
                                 <Grid.Column width={16}>
                                     <ItemTracker
-                                        // state={this.state}
+                                        state={this.state}
                                         tracker={trackerStyle}
-                                        // hookshot={this.hookshotLogic}
-                                        // skulltulas={this.skulltulaLogic}
-                                        fairyOcarina={fairyOcarina}
-                                        addFairyOcarina={addFairyOcarina}
-                                        removeFairyOcarina={removeFairyOcarina}
+                                        hookshot={this.hookshotLogic}
+                                        skulltulas={this.skulltulaLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -105,9 +102,9 @@ class Home extends Component {
                         <Grid.Row>
                             <Grid.Column>
                                 <LocationList 
-                                    // state={this.state} 
+                                    state={this.state} 
                                     locations={locationStyle} 
-                                    // items={this.itemLogic}
+                                    items={this.itemLogic}
                                 />
                             </Grid.Column>
                         </Grid.Row>
@@ -118,10 +115,8 @@ class Home extends Component {
     }   
 }
 
-function mapStateToProps(state) {
-    return { fairyOcarina: state.ocarinas }
-};
+// function mapStateToProps(state) {
+//     return { fairyOcarina: state.ocarinas }
+// };
 
-export default compose(
-    connect(mapStateToProps, { addFairyOcarina, removeFairyOcarina })
-)(Home);
+export default (Home);

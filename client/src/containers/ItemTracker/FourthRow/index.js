@@ -11,8 +11,8 @@ import PocketEgg from "../../../components/Items/PocketEgg";
 
 const FourthRow = (props) => {
 
-    // const { skulltulaCounter } = props.state;
-    // const { addSkulltula, removeSkulltula } = props.skulltulas;
+    const { skulltulaCounter } = props.state;
+    const { addSkulltula, removeSkulltula } = props.skulltulas;
 
     return (
         <Grid.Row>
@@ -21,9 +21,9 @@ const FourthRow = (props) => {
             <ZoraTunic />
             <Wallet />
             <SkulltulaTokens 
-                // counter={skulltulaCounter}  
-                // increment={addSkulltula} 
-                // decrement={removeSkulltula}
+                counter={skulltulaCounter}  
+                increment={addSkulltula} 
+                decrement={removeSkulltula}
             />
             <EmptyBottle />
             <RutosLetter />

@@ -17,9 +17,9 @@ class ItemTracker extends Component {
             tracker, 
             skulltulas,  
             hookshot,
-            fairyOcarina,
-            addFairyOcarina,
-            removeFairyOcarina
+            // fairyOcarina,
+            // addFairyOcarina,
+            // removeFairyOcarina
         } = this.props;
 
         return (
@@ -28,9 +28,9 @@ class ItemTracker extends Component {
                 <SecondRow 
                     state={state} 
                     hookshot={hookshot}
-                    fairyOcarina={fairyOcarina}
-                    addFairyOcarina={addFairyOcarina}
-                    removeFairyOcarina={removeFairyOcarina}
+                    // fairyOcarina={fairyOcarina}
+                    // addFairyOcarina={addFairyOcarina}
+                    // removeFairyOcarina={removeFairyOcarina}
                 />
                 <ThirdRow />
                 <FourthRow 

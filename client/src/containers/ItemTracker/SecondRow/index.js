@@ -5,7 +5,7 @@ import FairySlingshot from "../../../components/Items/FairySlingshot";
 import FairyOcarina from "../../../components/Items/FairyOcarina";
 import Bombchus from "../../../components/Items/Bombchus";
 import HookShot from "../../../components/Items/HookShot";
-// import LongShot from "../../../components/Items/LongShot";
+import LongShot from "../../../components/Items/LongShot";
 import IceArrows from "../../../components/Items/IceArrows";
 import FaroresWind from "../../../components/Items/FaroresWind";
 import DekuShield from "../../../components/Items/DekuShield";
@@ -14,33 +14,33 @@ class SecondRow extends Component {
 
     render() {
 
-        // const { hasLongshot, hasHookshot, noHookshot } = this.props.state;
-        // const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
-        const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
+        const { hasLongshot, hasHookshot, noHookshot } = this.props.state;
+        const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
+        // const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
 
         return (
             <Grid.Row>
                 <BigGoronSword />
                 <FairySlingshot />
                 <FairyOcarina 
-                    fairyOcarina={fairyOcarina}
-                    addFairyOcarina={addFairyOcarina}
-                    removeFairyOcarina={removeFairyOcarina}
+                    // fairyOcarina={fairyOcarina}
+                    // addFairyOcarina={addFairyOcarina}
+                    // removeFairyOcarina={removeFairyOcarina}
                 />
                 <Bombchus />
-                {/* {hasLongshot === true ?
+                {hasLongshot === true ?
                     <LongShot
-                        // hasLongshot={hasLongshot}
-                        // removeLongshot={removeLongshot}
-                    /> : */}
+                        hasLongshot={hasLongshot}
+                        removeLongshot={removeLongshot}
+                    /> :
                     <HookShot
-                        // hasLongshot={hasLongshot}
-                        // gotLongshot={gotLongshot}
-                        // gotHookshot={gotHookshot}
-                        // removeHookshot={removeHookshot}
-                        // hasHookshot={hasHookshot}
-                        // noHookshot={noHookshot} 
-                    />
+                        hasLongshot={hasLongshot}
+                        gotLongshot={gotLongshot}
+                        gotHookshot={gotHookshot}
+                        removeHookshot={removeHookshot}
+                        hasHookshot={hasHookshot}
+                        noHookshot={noHookshot} 
+                    />}
                 <IceArrows />
                 <FaroresWind />
                 <DekuShield />

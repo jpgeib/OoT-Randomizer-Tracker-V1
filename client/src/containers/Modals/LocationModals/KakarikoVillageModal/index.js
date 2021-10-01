@@ -15,16 +15,16 @@ class KakarikoVillageModal extends Component {
     render() {
 
         const { open } = this.state;
-        // const { skulltulaCounter, obtainedItem } = this.props.state;
-        // const { items } = this.props;
+        const { skulltulaCounter, obtainedItem } = this.props.state;
+        const { items } = this.props;
 
         return (
             <Modal
                 trigger={<Button 
-                        //     color={((skulltulaCounter >= 10 || skulltulaCounter >= 20 || skulltulaCounter >= 30 || skulltulaCounter >= 40 || skulltulaCounter >= 50) && "green")
-                        //             || ((skulltulaCounter < 10 || skulltulaCounter < 20 || skulltulaCounter < 30 || skulltulaCounter < 40 || skulltulaCounter < 50) && "red")
-                        //             || "gray"
-                        // } 
+                            color={((skulltulaCounter >= 10 || skulltulaCounter >= 20 || skulltulaCounter >= 30 || skulltulaCounter >= 40 || skulltulaCounter >= 50) && "green")
+                                    || ((skulltulaCounter < 10 || skulltulaCounter < 20 || skulltulaCounter < 30 || skulltulaCounter < 40 || skulltulaCounter < 50) && "red")
+                                    || "gray"
+                        } 
                             fluid 
                             content="Kakariko Village" 
                             onClick={this.closeConfigShow} 
@@ -35,9 +35,9 @@ class KakarikoVillageModal extends Component {
                 <Modal.Header>Kakariko Village Items</Modal.Header>
                 <Modal.Content>
                     <KakarikoVillage 
-                        // items={items} 
-                        // obtainedItem={obtainedItem} 
-                        // skulltulaCounter={skulltulaCounter} 
+                        items={items} 
+                        obtainedItem={obtainedItem} 
+                        skulltulaCounter={skulltulaCounter} 
                     />
                 </Modal.Content>
             </Modal>
