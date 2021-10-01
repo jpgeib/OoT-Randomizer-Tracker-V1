@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Button, Modal } from "semantic-ui-react";
-import DungeonMap from "../../../../components/DungeonItems/DungeonMap";
-import Compass from "../../../../components/DungeonItems/Compass";
+import DungeonMap from "../../../../components/DungeonItems/DodongosCavern/DungeonMap";
+import Compass from "../../../../components/DungeonItems/DodongosCavern/Compass";
 import GoronRuby from "../../../../components/DungeonItems/DodongosCavern/GoronRuby";
 
 class DodongosCavernItems extends Component {

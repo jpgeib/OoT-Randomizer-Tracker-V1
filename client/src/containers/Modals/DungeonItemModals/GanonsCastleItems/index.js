@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Button, Modal } from "semantic-ui-react";
-import SmallKey from "../../../../components/DungeonItems/ForestTemple/SmallKey";
-import BossKey from "../../../../components/DungeonItems/ForestTemple/BossKey";
+import SmallKey from "../../../../components/DungeonItems/GanonsCastle/SmallKey";
+import BossKey from "../../../../components/DungeonItems/GanonsCastle/BossKey";
 
 class GanonsCastleItems extends Component {
 

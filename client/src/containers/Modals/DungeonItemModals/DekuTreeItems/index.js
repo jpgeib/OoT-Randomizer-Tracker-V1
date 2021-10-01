@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Button, Modal } from "semantic-ui-react";
-import DungeonMap from "../../../../components/DungeonItems/DungeonMap";
-import Compass from "../../../../components/DungeonItems/Compass";
+import DungeonMap from "../../../../components/DungeonItems/GreatDekuTree/DungeonMap";
+import Compass from "../../../../components/DungeonItems/GreatDekuTree/Compass";
 import KokiriEmerald from "../../../../components/DungeonItems/GreatDekuTree/KokiriEmerald";
 
 class DekuTreeItems extends Component {

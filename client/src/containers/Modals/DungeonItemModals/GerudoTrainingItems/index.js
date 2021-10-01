@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Button, Modal } from "semantic-ui-react";
-import SmallKey from "../../../../components/DungeonItems/ForestTemple/SmallKey";
+import SmallKey from "../../../../components/DungeonItems/GerudoFortress/SmallKey";
 
 class GerudoTrainingItems extends Component {
 

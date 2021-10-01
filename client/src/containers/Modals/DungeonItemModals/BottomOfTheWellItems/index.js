@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Grid, Button, Modal } from "semantic-ui-react";
-import SmallKey from "../../../../components/DungeonItems/ForestTemple/SmallKey";
-import DungeonMap from "../../../../components/DungeonItems/DungeonMap";
-import Compass from "../../../../components/DungeonItems/Compass";
+import SmallKey from "../../../../components/DungeonItems/BottomOfTheWell/SmallKey";
+import DungeonMap from "../../../../components/DungeonItems/BottomOfTheWell/DungeonMap";
+import Compass from "../../../../components/DungeonItems/BottomOfTheWell/Compass";
 
 class BottomOfTheWellItems extends Component {
 

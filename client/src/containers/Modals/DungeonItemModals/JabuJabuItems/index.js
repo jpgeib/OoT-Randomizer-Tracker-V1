@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Button, Modal } from "semantic-ui-react";
-import DungeonMap from "../../../../components/DungeonItems/DungeonMap";
-import Compass from "../../../../components/DungeonItems/Compass";
+import DungeonMap from "../../../../components/DungeonItems/JabuJabusBelly/DungeonMap";
+import Compass from "../../../../components/DungeonItems/JabuJabusBelly/Compass";
 import ZoraSapphire from "../../../../components/DungeonItems/JabuJabusBelly/ZoraSapphire";
 
 class JabuJabuItems extends Component {
