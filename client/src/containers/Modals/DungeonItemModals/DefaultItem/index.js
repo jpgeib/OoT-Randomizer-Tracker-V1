@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Button, Modal } from "semantic-ui-react";
-import LightMedallion from "../../../../components/DungeonItems/LightMedallion";
+import LightMedallion from "../../../../components/DungeonItems/Default/LightMedallion";
 
 class DefaultItem extends Component {
 

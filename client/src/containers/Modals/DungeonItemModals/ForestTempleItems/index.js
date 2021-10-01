@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Grid, Button, Modal } from "semantic-ui-react";
-import SmallKey from "../../../../components/DungeonItems/SmallKey";
-import BossKey from "../../../../components/DungeonItems/BossKey";
+import SmallKey from "../../../../components/DungeonItems/ForestTemple/SmallKey";
+import BossKey from "../../../../components/DungeonItems/ForestTemple/BossKey";
 import DungeonMap from "../../../../components/DungeonItems/DungeonMap";
 import Compass from "../../../../components/DungeonItems/Compass";
-import ForestMedallion from "../../../../components/DungeonItems/ForestMedallion";
+import ForestMedallion from "../../../../components/DungeonItems/ForestTemple/ForestMedallion";
 
 class ForestTempleItems extends Component {
 
