@@ -11,7 +11,7 @@ const SkulltulaTokens = (props) => {
             <Image 
                 onClick={increment} 
                 onContextMenu={decrement}
-                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(50%)"} } 
+                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} } 
                 size="mini" 
                 src={SkulltulaTokensIcon} 
             />

@@ -11,17 +11,70 @@ import LocationList from "../../containers/LocationList";
 class Home extends Component {
 
     state = {
-        items: {
-            skulltulaCounter: 0,
-            hasHookshot: false,
-            hasLongshot: false,
-            smallKeys: {
-                forestTemple: 0
-            }
-        },
-        locations: {
-            obtainedItem: false
-        }
+        skulltulaCounter: 0,
+        dekuStickCounter: 0,
+        dekuNutCounter: 0,
+        bombCounter: 0,
+        fairyBowCounter: 0,
+        fairySlingshotCounter: 0,
+        beanCounter: 0,
+        bottleCounter: 0,
+        walletCounter: 99,
+        pieceOfHeartCounter: 0,
+        heartContainerCounter: 0,
+        hasKokiriTunic: true,
+        hasGoronTunic: false,
+        hasZoraTunic: false,
+        hasKokiriBoots: true,
+        hasIronBoots: false,
+        hasHoverBoots: false,
+        hasFireArrows: false,
+        hasIceArrows: false,
+        hasLightArrows: false,
+        hasDinsFire: false,
+        hasFaroresWind: false,
+        hasNayrusLove: false,
+        hasKokiriSword: false,
+        hasMasterSword: false,
+        hasBigGoronSword: false,
+        hasOcarina: false,
+        hasBombchus: false,
+        hasHookshot: false,
+        hasLongshot: false,
+        hasDekuShield: false,
+        hasHylianShield: false,
+        hasMirrorShield: false,
+        hasBoomerang: false,
+        hasLensOfTruth: false,
+        hasMegatonHammer: false,
+        hasRutosLetter: false,
+        hasMalonsEgg: false,
+        hasPocketCucco: false,
+        hasZeldasLetter: false,
+        hasClaimCheck: false,
+        hasSilverScale: false,
+        hasGoldenScale: false,
+        hasMagic: false,
+        hasGoronBracelet: false,
+        hasSilverGauntlets: false,
+        hasGoldenGauntlets: false,
+        hasGerudoCard: false,
+        hasStoneOfAgony: false,
+        hasDoubleDefense: false,
+        hasZeldasLullaby: false,
+        hasEponasSong: false,
+        hasSariasSong: false,
+        hasSunsSong: false,
+        hasSongOfTime: false,
+        hasSongOfStorms: false,
+        hasScarecrowSong: false,
+        hasPrelude: false,
+        hasMinuet: false,
+        hasBolero: false,
+        hasSerenade: false,
+        hasNocturne: false,
+        hasRequiem: false,
+        obtainedItem: false
     }
 
     async componentDidMount() {
@@ -111,10 +164,10 @@ class Home extends Component {
                             </Grid.Row>
                             <Grid.Row>
                                 <Grid.Column width={16}>
-                                    <DungeonItemTracker 
+                                    <DungeonItemTracker
                                         dungeons={dungeonStyle}
                                         state={this.state}
-                                        smallKeys={this.smallKeyLogic} 
+                                        smallKeys={this.smallKeyLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
