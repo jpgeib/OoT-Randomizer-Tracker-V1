@@ -19,6 +19,7 @@ class ForestTempleItems extends Component {
     render() {
 
         const { open } = this.state;
+        const { smallKeys, state } = this.props;
 
         return (
             <Modal
@@ -30,7 +31,7 @@ class ForestTempleItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <SmallKey />
+                            <SmallKey addForestKey={smallKeys.addForestTempleKey} removeForestKey={smallKeys.removeForestTempleKey} counter={state.forestKeys} />
                             <BossKey />
                             <DungeonMap />
                             <Compass />

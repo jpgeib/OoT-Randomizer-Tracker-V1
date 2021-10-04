@@ -20,7 +20,7 @@ import GanonsCastleItems from "../Modals/DungeonItemModals/GanonsCastleItems";
 class DungeonItemTracker extends Component {
     render() {
 
-        const { dungeons } = this.props;
+        const { dungeons, smallKeys, state } = this.props;
 
         return (
             <Grid style={dungeons}>
@@ -43,7 +43,7 @@ class DungeonItemTracker extends Component {
                         <JabuJabuItems />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <ForestTempleItems />
+                        <ForestTempleItems state={state} smallKeys={smallKeys} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>

@@ -22,6 +22,8 @@ class Home extends Component {
         walletCounter: 99,
         pieceOfHeartCounter: 0,
         heartContainerCounter: 0,
+        forestKeys: 0,
+        fireKeys: 0,
         hasKokiriTunic: true,
         hasGoronTunic: false,
         hasZoraTunic: false,
@@ -100,13 +102,13 @@ class Home extends Component {
     smallKeyLogic = {
         addForestTempleKey: (e) => {
             this.setState(prevState => ({
-                forestTemple: Math.min(100, prevState.smallKeys.forestTemple + 1)
+                forestKeys: Math.min(5, prevState.forestKeys + 1)
             }));
         },
         removeForestTempleKey: (e) => {
             e.preventDefault();
             this.setState(prevState => ({
-                forestTemple: Math.max(0, prevState.smallKeys.forestTemple - 1)
+                forestKeys: Math.max(0, prevState.forestKeys - 1)
             }));
         }
     }
