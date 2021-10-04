@@ -24,6 +24,13 @@ class Home extends Component {
         heartContainerCounter: 0,
         forestKeys: 0,
         fireKeys: 0,
+        waterKeys: 0,
+        shadowKeys: 0,
+        spiritKeys: 0,
+        wellKeys: 0,
+        fortressKeys: 0,
+        trainingKeys: 0,
+        ganonKeys: 0,
         hasKokiriTunic: true,
         hasGoronTunic: false,
         hasZoraTunic: false,
@@ -76,6 +83,12 @@ class Home extends Component {
         hasSerenade: false,
         hasNocturne: false,
         hasRequiem: false,
+        hasForestBossKey: false,
+        hasFireBossKey: false,
+        hasWaterBossKey: false,
+        hasShadowBossKey: false,
+        hasSpiritBossKey: false,
+        hasGanonBossKey: false,
         obtainedItem: false
     }
 
@@ -136,11 +149,11 @@ class Home extends Component {
             this.setState({ hasHookshot: false });
         },
         gotLongshot: (e) => {
-            this.setState({ hasLongshot: true })
+            this.setState({ hasLongshot: true });
         },
         removeLongshot: (e) => {
             e.preventDefault();
-            this.setState({ hasLongshot: false })
+            this.setState({ hasLongshot: false });
         }
     }
 
