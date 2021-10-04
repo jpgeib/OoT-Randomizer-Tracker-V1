@@ -92,7 +92,7 @@ class Home extends Component {
         obtainedItem: false
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         const trackerData = JSON.parse(window.localStorage.getItem("state"));
         this.setState(trackerData);
         console.log(trackerData);
