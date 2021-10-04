@@ -45,13 +45,13 @@ class LocationList extends Component {
                     <Grid.Column width={8}>
                         <List relaxed >
                             <List.Item>
-                                <KokiriForestModal />
+                                <KokiriForestModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <LostWoodsModal />
                             </List.Item>
                             <List.Item>
-                                <GreatDekuTreeModal />
+                                <GreatDekuTreeModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <SacredMeadowModal />
@@ -60,19 +60,19 @@ class LocationList extends Component {
                                 <ForestTempleModal />
                             </List.Item>
                             <List.Item>
-                                <HyruleFieldModal />
+                                <HyruleFieldModal state={state} />
                             </List.Item>
                             <List.Item>
-                                <LonLonRanchModal />
+                                <LonLonRanchModal state={state} />
                             </List.Item>
                             <List.Item>
-                                <CastleTownModal />
+                                <CastleTownModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <TempleOfTimeModal />
                             </List.Item>
                             <List.Item>
-                                <CastleGroundsModal />
+                                <CastleGroundsModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <KakarikoVillageModal state={state} items={items} />
@@ -87,10 +87,10 @@ class LocationList extends Component {
                                 <ShadowTempleModal />
                             </List.Item>
                             <List.Item>
-                                <DeathMountainModal />
+                                <DeathMountainModal state={state} />
                             </List.Item>
                             <List.Item>
-                                <GoronCityModal />
+                                <GoronCityModal state={state} />
                             </List.Item>
                         </List>
                     </Grid.Column>
@@ -106,7 +106,7 @@ class LocationList extends Component {
                                 <FireTempleModal />
                             </List.Item>
                             <List.Item>
-                                <ZoraRiverModal />
+                                <ZoraRiverModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <ZorasDomainModal />
@@ -121,13 +121,13 @@ class LocationList extends Component {
                                 <IceCavernModal />
                             </List.Item>
                             <List.Item>
-                                <LakeHyliaModal />
+                                <LakeHyliaModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <WaterTempleModal />
                             </List.Item>
                             <List.Item>
-                                <GerudoValleyModal />
+                                <GerudoValleyModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <GerudoFortressModal />

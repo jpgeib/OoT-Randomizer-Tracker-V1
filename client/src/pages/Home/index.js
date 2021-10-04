@@ -44,7 +44,7 @@ class Home extends Component {
         hasFaroresWind: false,
         hasNayrusLove: false,
         hasKokiriSword: false,
-        hasMasterSword: false,
+        hasMasterSword: true,
         hasBigGoronSword: false,
         hasOcarina: false,
         hasBombchus: false,
