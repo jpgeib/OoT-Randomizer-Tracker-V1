@@ -3,12 +3,11 @@ import { List } from "semantic-ui-react";
 
 const Graveyard = (props) => {
 
-    const { hasKokiriTunic, hasLongshot, obtainedItem, dampeDigging, dampeRace1, dampeRace2, shieldGrave } = props;
-    const { obtainItem, unobtainItem } = props.items;
-    const { gotDampeDigging, gotDampeRace1, gotDampeRace2, gotShieldGrave } = props.graveyardLogic;
+    const { hasKokiriTunic, hasLongshot, dampeDigging, dampeRace1, dampeRace2, shieldGrave, beanHeartPiece } = props;
+    const { gotDampeDigging, gotDampeRace1, gotDampeRace2, gotShieldGrave, gotBeanHeartPiece } = props.graveyardLogic;
     
-    const beanAvailable = (hasLongshot === true && obtainedItem === false);
-    const beanUnavailable = (hasLongshot === false && obtainedItem === false);
+    const beanHeartPieceAvailable = (hasLongshot === true && beanHeartPiece === false);
+    const beanHeartPieceUnavailable = (hasLongshot === false && beanHeartPiece === false);
     const dampeDiggingAvailable = (hasKokiriTunic === true && dampeDigging === false);
     const dampeRace1Available = (hasKokiriTunic === true && dampeRace1 === false);
     const dampeRace2Available = (hasKokiriTunic === true && dampeRace2 === false);
@@ -116,9 +115,8 @@ const Graveyard = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header 
-                        style={(beanAvailable && {color: "green"}) || (beanUnavailable && { color: "red" }) || {color: "gray"}}
-                        onClick={obtainItem}
-                        onContextMenu={unobtainItem}
+                        style={(beanHeartPieceAvailable && {color: "green"}) || (beanHeartPieceUnavailable && { color: "red" }) || {color: "gray"}}
+                        onClick={gotBeanHeartPiece}
                     >
                         Magic Bean Heart Piece
                     </List.Header>

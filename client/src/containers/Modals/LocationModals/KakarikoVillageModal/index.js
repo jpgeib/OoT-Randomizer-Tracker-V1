@@ -15,8 +15,7 @@ class KakarikoVillageModal extends Component {
     render() {
 
         const { open } = this.state;
-        const { skulltulaCounter, obtainedItem } = this.props.state;
-        const { items } = this.props;
+        const { skulltulaCounter } = this.props.state;
 
         return (
             <Modal
@@ -35,8 +34,6 @@ class KakarikoVillageModal extends Component {
                 <Modal.Header>Kakariko Village Items</Modal.Header>
                 <Modal.Content>
                     <KakarikoVillage 
-                        items={items} 
-                        obtainedItem={obtainedItem} 
                         skulltulaCounter={skulltulaCounter} 
                     />
                 </Modal.Content>

@@ -9,13 +9,14 @@ class GraveyardModal extends Component {
         dampeDigging: false,
         dampeRace1: false,
         dampeRace2: false,
-        shieldGrave: false
+        shieldGrave: false,
+        beanHeartPiece: false
     }
 
     componentDidMount() {
-        const trackerData = JSON.parse(window.localStorage.getItem("graveyard"));
-        this.setState(trackerData);
-        console.log(trackerData);
+        const graveyardData = JSON.parse(window.localStorage.getItem("graveyard"));
+        this.setState(graveyardData);
+        console.log(graveyardData);
     }
 
     componentDidUpdate() {
@@ -38,6 +39,9 @@ class GraveyardModal extends Component {
         },
         gotShieldGrave: (e) => {
             this.setState({shieldGrave: !this.state.shieldGrave});
+        },
+        gotBeanHeartPiece: (e) => {
+            this.setState({beanHeartPiece: !this.state.beanHeartPiece});
         }
     }
 
@@ -46,10 +50,8 @@ class GraveyardModal extends Component {
         const { open } = this.state;
         const { 
             hasLongshot, 
-            obtainedItem,
             hasKokiriTunic
         } = this.props.state;
-        const { items } = this.props;
 
         return (
             <Modal
@@ -63,15 +65,14 @@ class GraveyardModal extends Component {
             >
                 <Modal.Header>Graveyard Items</Modal.Header>
                 <Modal.Content>
-                    <Graveyard 
-                        items={items} 
-                        obtainedItem={obtainedItem} 
+                    <Graveyard  
                         hasLongshot={hasLongshot}
                         hasKokiriTunic={hasKokiriTunic}
                         dampeDigging={this.state.dampeDigging}
                         dampeRace1={this.state.dampeRace1}
                         dampeRace2={this.state.dampeRace2}
                         shieldGrave={this.state.shieldGrave}
+                        beanHeartPiece={this.state.beanHeartPiece}
                         graveyardLogic={this.graveyardLogic} 
                     />
                 </Modal.Content>

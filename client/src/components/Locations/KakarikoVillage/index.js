@@ -4,7 +4,6 @@ import { List } from "semantic-ui-react";
 const KakarikoVillage = (props) => {
 
     const { skulltulaCounter, obtainedItem } = props;
-    const { obtainItem, unobtainItem } = props.items;
 
     const skulltulaHouseAvailable = {
         ten: (skulltulaCounter >= 10 && obtainedItem === false),
@@ -127,8 +126,6 @@ const KakarikoVillage = (props) => {
                         <List.Content>
                             <List.Header
                                 style={(skulltulaHouseAvailable.ten && {color: "green"}) || (skulltulaHouseUnavailable.ten && { color: "red" }) || {color: "gray"}}
-                                onClick={obtainItem}
-                                onContextMenu={unobtainItem}
                             >Skulltula House 10 Tokens</List.Header>
                         </List.Content>
                     </List.Item>

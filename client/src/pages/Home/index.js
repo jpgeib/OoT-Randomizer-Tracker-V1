@@ -88,8 +88,7 @@ class Home extends Component {
         hasWaterBossKey: false,
         hasShadowBossKey: false,
         hasSpiritBossKey: false,
-        hasGanonBossKey: false,
-        obtainedItem: false
+        hasGanonBossKey: false
     }
 
     componentDidMount() {
@@ -100,16 +99,6 @@ class Home extends Component {
 
     componentDidUpdate() {
         window.localStorage.setItem("state", JSON.stringify(this.state));
-    }
-
-    itemLogic = {
-        obtainItem: (e) => {
-            this.setState({ obtainedItem: true });
-        },
-        unobtainItem: (e) => {
-            e.preventDefault();
-            this.setState({ obtainedItem: false });
-        }
     }
 
     smallKeyLogic = {
@@ -194,7 +183,6 @@ class Home extends Component {
                                 <LocationList
                                     state={this.state}
                                     locations={locationStyle}
-                                    items={this.itemLogic}
                                 />
                             </Grid.Column>
                         </Grid.Row>

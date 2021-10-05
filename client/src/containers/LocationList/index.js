@@ -37,7 +37,7 @@ import ZorasDomainModal from "../Modals/LocationModals/ZorasDomainModal";
 class LocationList extends Component {
     render() {
 
-        const { locations, state, items } = this.props;
+        const { locations, state } = this.props;
 
         return (
             <Grid style={locations}>
@@ -75,13 +75,13 @@ class LocationList extends Component {
                                 <CastleGroundsModal state={state} />
                             </List.Item>
                             <List.Item>
-                                <KakarikoVillageModal state={state} items={items} />
+                                <KakarikoVillageModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <BottomOfTheWellModal />
                             </List.Item>
                             <List.Item>
-                                <GraveyardModal state={state} items={items} />
+                                <GraveyardModal state={state} />
                             </List.Item>
                             <List.Item>
                                 <ShadowTempleModal />
