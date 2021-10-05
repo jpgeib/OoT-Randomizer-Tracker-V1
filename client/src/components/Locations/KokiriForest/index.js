@@ -21,12 +21,24 @@ const KokiriForest = (props) => {
         gotSariasOcarina 
     } = props.kokiriForestLogic;
 
+    const kokiriSwordChestAvailable = (hasKokiriTunic === true && kokiriSwordChest === false);
+    const midoChest1Available = (hasKokiriTunic === true && midoChest1 === false);
+    const midoChest2Available = (hasKokiriTunic === true && midoChest2 === false);
+    const midoChest3Available = (hasKokiriTunic === true && midoChest3 === false);
+    const midoChest4Available = (hasKokiriTunic === true && midoChest4 === false);
+    const sariasOcarinaAvailable = (hasKokiriTunic === true && sariasOcarina === false);
+
     return (
         <List divided relaxed>
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Kokiri's Sword Chest</List.Header>
+                    <List.Header
+                        style={(kokiriSwordChestAvailable && {color: "green"}) || {color: "gray"}}
+                        onClick={gotKokiriSwordChest}
+                    >
+                        Kokiri's Sword Chest
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>
@@ -44,25 +56,45 @@ const KokiriForest = (props) => {
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Mido's House Chest 1</List.Header>
+                            <List.Header
+                                style={(midoChest1Available && {color: "green"}) || {color: "gray"}}
+                                onClick={gotMidoChest1}
+                            >
+                                Mido's House Chest 1
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Mido's House Chest 2</List.Header>
+                            <List.Header
+                                style={(midoChest2Available && {color: "green"}) || {color: "gray"}}
+                                onClick={gotMidoChest2}
+                            >
+                                Mido's House Chest 2
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Mido's House Chest 3</List.Header>
+                            <List.Header
+                                style={(midoChest3Available && {color: "green"}) || {color: "gray"}}
+                                onClick={gotMidoChest3}
+                            >
+                                Mido's House Chest 3
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Mido's House Chest 4</List.Header>
+                            <List.Header
+                                style={(midoChest4Available && {color: "green"}) || {color: "gray"}}
+                                onClick={gotMidoChest4}
+                            >
+                                Mido's House Chest 4
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                 </List.List>
@@ -70,7 +102,12 @@ const KokiriForest = (props) => {
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Saria's Ocarina</List.Header>
+                    <List.Header
+                        style={(sariasOcarinaAvailable && {color: "green"}) || {color: "gray"}}
+                        onClick={gotSariasOcarina}
+                    >
+                        Saria's Ocarina
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>

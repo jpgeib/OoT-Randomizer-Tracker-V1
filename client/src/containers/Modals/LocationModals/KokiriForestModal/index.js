@@ -64,7 +64,12 @@ class KokiriForestModal extends Component {
 
         return (
             <Modal
-                trigger={<Button fluid content="Kokiri Forest" onClick={this.closeConfigShow} />}
+                trigger={<Button 
+                            fluid
+                            color={((kokiriSwordChest && midoChest1 && midoChest2 && midoChest3 && midoChest4 && sariasOcarina) === false) ? "green" : "gray"} 
+                            content="Kokiri Forest" 
+                            onClick={this.closeConfigShow} 
+                        />}
                 open={open}
                 onClose={this.close}
             >
