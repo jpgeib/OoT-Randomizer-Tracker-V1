@@ -1,7 +1,26 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 
-const KokiriForest = () => {
+const KokiriForest = (props) => {
+
+    const { 
+        hasKokiriTunic, 
+        kokiriSwordChest, 
+        midoChest1, 
+        midoChest2, 
+        midoChest3, 
+        midoChest4, 
+        sariasOcarina 
+    } = props;
+    const { 
+        gotKokiriSwordChest, 
+        gotMidoChest1, 
+        gotMidoChest2, 
+        gotMidoChest3, 
+        gotMidoChest4, 
+        gotSariasOcarina 
+    } = props.kokiriForestLogic;
+
     return (
         <List divided relaxed>
             <List.Item>
