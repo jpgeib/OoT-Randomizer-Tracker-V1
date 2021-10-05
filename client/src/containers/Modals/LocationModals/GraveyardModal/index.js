@@ -12,6 +12,16 @@ class GraveyardModal extends Component {
         shieldGrave: false
     }
 
+    componentDidMount() {
+        const trackerData = JSON.parse(window.localStorage.getItem("graveyard"));
+        this.setState(trackerData);
+        console.log(trackerData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("graveyard", JSON.stringify(this.state));
+    }
+
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
@@ -20,6 +30,15 @@ class GraveyardModal extends Component {
         gotDampeDigging: (e) => {
             this.setState({dampeDigging: !this.state.dampeDigging});
         },
+        gotDampeRace1: (e) => {
+            this.setState({dampeRace1: !this.state.dampeRace1});
+        },
+        gotDampeRace2: (e) => {
+            this.setState({dampeRace2: !this.state.dampeRace2});
+        },
+        gotShieldGrave: (e) => {
+            this.setState({shieldGrave: !this.state.shieldGrave});
+        }
     }
 
     render() {
@@ -50,6 +69,9 @@ class GraveyardModal extends Component {
                         hasLongshot={hasLongshot}
                         hasKokiriTunic={hasKokiriTunic}
                         dampeDigging={this.state.dampeDigging}
+                        dampeRace1={this.state.dampeRace1}
+                        dampeRace2={this.state.dampeRace2}
+                        shieldGrave={this.state.shieldGrave}
                         graveyardLogic={this.graveyardLogic} 
                     />
                 </Modal.Content>
