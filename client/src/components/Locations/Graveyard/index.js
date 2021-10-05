@@ -3,12 +3,13 @@ import { List } from "semantic-ui-react";
 
 const Graveyard = (props) => {
 
-    const { hasKokiriTunic, hasLongshot, obtainedItem } = props;
+    const { hasKokiriTunic, hasLongshot, obtainedItem, dampeDigging } = props;
     const { obtainItem, unobtainItem } = props.items;
+    const { gotDampeDigging } = props.graveyardLogic;
     
     const beanAvailable = (hasLongshot === true && obtainedItem === false);
     const beanUnavailable = (hasLongshot === false && obtainedItem === false);
-    const defaultGraveyard = (hasKokiriTunic === true && obtainedItem === false);
+    const dampeDiggingAvailable = (hasKokiriTunic === true && dampeDigging === false);
 
     return (
         <List divided relaxed>
@@ -16,9 +17,9 @@ const Graveyard = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
-                        onClick={obtainItem}
-                        onContextMenu={unobtainItem}
+                        style={(dampeDiggingAvailable && {color: "green"}) || {color: "gray"}}
+                        onClick={gotDampeDigging}
+                        // onContextMenu={unobtainItem}
                     >
                         Dampe Digging
                     </List.Header>
@@ -34,9 +35,9 @@ const Graveyard = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
-                                onClick={obtainItem}
-                                onContextMenu={unobtainItem}
+                                // style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
+                                // onClick={obtainItem}
+                                // onContextMenu={unobtainItem}
                             >
                                 Dampe Race 1
                             </List.Header>
@@ -46,9 +47,9 @@ const Graveyard = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
-                                onClick={obtainItem}
-                                onContextMenu={unobtainItem}
+                                // style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
+                                // onClick={obtainItem}
+                                // onContextMenu={unobtainItem}
                             >
                                 Dampe Race 2
                             </List.Header>
@@ -66,12 +67,12 @@ const Graveyard = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
-                                onClick={obtainItem}
-                                onContextMenu={unobtainItem}
+                                // style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
+                                // onClick={obtainItem}
+                                // onContextMenu={unobtainItem}
                             >
                                 Shield Grave Chest
-                            </List.Header>
+                                </List.Header>
                         </List.Content>
                     </List.Item>
                 </List.List>

@@ -5,12 +5,22 @@ import Graveyard from "../../../../components/Locations/Graveyard";
 class GraveyardModal extends Component {
 
     state = {
-        open: false
+        open: false,
+        dampeDigging: false,
+        dampeRace1: false,
+        dampeRace2: false,
+        shieldGrave: false
     }
 
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
+
+    graveyardLogic = {
+        gotDampeDigging: (e) => {
+            this.setState({dampeDigging: !this.state.dampeDigging});
+        },
+    }
 
     render() {
 
@@ -38,7 +48,9 @@ class GraveyardModal extends Component {
                         items={items} 
                         obtainedItem={obtainedItem} 
                         hasLongshot={hasLongshot}
-                        hasKokiriTunic={hasKokiriTunic} 
+                        hasKokiriTunic={hasKokiriTunic}
+                        dampeDigging={this.state.dampeDigging}
+                        graveyardLogic={this.graveyardLogic} 
                     />
                 </Modal.Content>
             </Modal>
