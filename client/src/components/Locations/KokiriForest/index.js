@@ -50,7 +50,11 @@ const KokiriForest = (props) => {
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Mido's House</List.Header>
+                    <List.Header
+                        style={(midoChest1 === true && midoChest2 === true && midoChest3 === true && midoChest4 === true) ? {color: "gray"} : {color: "green"}}
+                    >
+                        Mido's House
+                    </List.Header>
                 </List.Content>
                 <List.List>
                     <List.Item>
