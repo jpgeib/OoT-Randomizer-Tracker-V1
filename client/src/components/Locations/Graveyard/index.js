@@ -3,18 +3,25 @@ import { List } from "semantic-ui-react";
 
 const Graveyard = (props) => {
 
-    const { hasLongshot, obtainedItem } = props;
+    const { hasKokiriTunic, hasLongshot, obtainedItem } = props;
     const { obtainItem, unobtainItem } = props.items;
     
     const beanAvailable = (hasLongshot === true && obtainedItem === false);
     const beanUnavailable = (hasLongshot === false && obtainedItem === false);
+    const defaultGraveyard = (hasKokiriTunic === true && obtainedItem === false);
 
     return (
         <List divided relaxed>
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Dampe Digging</List.Header>
+                    <List.Header
+                        style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
+                        onClick={obtainItem}
+                        onContextMenu={unobtainItem}
+                    >
+                        Dampe Digging
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>
@@ -26,13 +33,25 @@ const Graveyard = (props) => {
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Dampe Race 1</List.Header>
+                            <List.Header
+                                style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
+                                onClick={obtainItem}
+                                onContextMenu={unobtainItem}
+                            >
+                                Dampe Race 1
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Dampe Race 2</List.Header>
+                            <List.Header
+                                style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
+                                onClick={obtainItem}
+                                onContextMenu={unobtainItem}
+                            >
+                                Dampe Race 2
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                 </List.List>
@@ -46,7 +65,13 @@ const Graveyard = (props) => {
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Shield Grave Chest</List.Header>
+                            <List.Header
+                                style={(defaultGraveyard && {color: "green"}) || {color: "gray"}}
+                                onClick={obtainItem}
+                                onContextMenu={unobtainItem}
+                            >
+                                Shield Grave Chest
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                 </List.List>
