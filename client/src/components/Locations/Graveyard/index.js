@@ -3,14 +3,14 @@ import { List } from "semantic-ui-react";
 
 const Graveyard = (props) => {
 
-    const { hasKokiriTunic, hasLongshot, dampeDigging, dampeRace1, dampeRace2, shieldGrave, beanHeartPiece } = props;
+    const { hasKokiriTunic, hasMasterSword, hasLongshot, dampeDigging, dampeRace1, dampeRace2, shieldGrave, beanHeartPiece } = props;
     const { gotDampeDigging, gotDampeRace1, gotDampeRace2, gotShieldGrave, gotBeanHeartPiece } = props.graveyardLogic;
     
     const beanHeartPieceAvailable = (hasLongshot === true && beanHeartPiece === false);
     const beanHeartPieceUnavailable = (hasLongshot === false && beanHeartPiece === false);
     const dampeDiggingAvailable = (hasKokiriTunic === true && dampeDigging === false);
-    const dampeRace1Available = (hasKokiriTunic === true && dampeRace1 === false);
-    const dampeRace2Available = (hasKokiriTunic === true && dampeRace2 === false);
+    const dampeRace1Available = (hasMasterSword === true && dampeRace1 === false);
+    const dampeRace2Available = (hasMasterSword === true && dampeRace2 === false);
     const shieldGraveAvailable = (hasKokiriTunic === true && shieldGrave === false);
 
     return (

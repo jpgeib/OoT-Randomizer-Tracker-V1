@@ -50,7 +50,8 @@ class GraveyardModal extends Component {
         const { open } = this.state;
         const { 
             hasLongshot, 
-            hasKokiriTunic
+            hasKokiriTunic,
+            hasMasterSword
         } = this.props.state;
 
         return (
@@ -68,6 +69,7 @@ class GraveyardModal extends Component {
                     <Graveyard  
                         hasLongshot={hasLongshot}
                         hasKokiriTunic={hasKokiriTunic}
+                        hasMasterSword={hasMasterSword}
                         dampeDigging={this.state.dampeDigging}
                         dampeRace1={this.state.dampeRace1}
                         dampeRace2={this.state.dampeRace2}
