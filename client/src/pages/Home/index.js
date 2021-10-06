@@ -83,6 +83,15 @@ class Home extends Component {
         hasSerenade: false,
         hasNocturne: false,
         hasRequiem: false,
+        hasKokiriEmerald: false,
+        hasGoronRuby: false,
+        hasZoraSapphire: false,
+        hasLightMedallion: false,
+        hasForestMedallion: false,
+        hasFireMedallion: false,
+        hasWaterMedallion: false,
+        hasShadowMedallion: false,
+        hasSpiritMedallion: false,
         hasForestBossKey: false,
         hasFireBossKey: false,
         hasWaterBossKey: false,
@@ -92,13 +101,13 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        const trackerData = JSON.parse(window.localStorage.getItem("state"));
+        const trackerData = JSON.parse(window.localStorage.getItem("main"));
         this.setState(trackerData);
         console.log(trackerData);
     }
 
     componentDidUpdate() {
-        window.localStorage.setItem("state", JSON.stringify(this.state));
+        window.localStorage.setItem("main", JSON.stringify(this.state));
     }
 
     smallKeyLogic = {
