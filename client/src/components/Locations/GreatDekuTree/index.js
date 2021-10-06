@@ -16,7 +16,7 @@ const GreatDekuTree = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(lobbyChestAvailable && {color: "green"}) || {color: "gray"}}
+                        style={(lobbyChestAvailable && {color: "green"}) || {color: "grey"}}
                         onClick={gotLobbyChest}
                     >
                         Lobby Chest
@@ -39,7 +39,7 @@ const GreatDekuTree = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(compassChestAvailable && {color: "green"}) || {color: "gray"}}
+                        style={(compassChestAvailable && {color: "green"}) || {color: "grey"}}
                         onClick={gotCompassChest}
                     >
                         Compass Chest
@@ -50,7 +50,7 @@ const GreatDekuTree = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(compassSideChestAvailable && {color: "green"}) || {color: "gray"}}
+                        style={(compassSideChestAvailable && {color: "green"}) || {color: "grey"}}
                         onClick={gotCompassSideChest}
                     >
                         Compass Room Side Chest

@@ -19,7 +19,7 @@ const Graveyard = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(dampeDiggingAvailable && {color: "green"}) || {color: "gray"}}
+                        style={(dampeDiggingAvailable && {color: "green"}) || {color: "grey"}}
                         onClick={gotDampeDigging}
                     >
                         Dampe Digging
@@ -30,7 +30,7 @@ const Graveyard = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(dampeRace1 === true && dampeRace2 === true) ? {color: "gray"} : {color: "green"}}
+                        style={(dampeRace1 === true && dampeRace2 === true) ? {color: "grey"} : {color: "green"}}
                     >Dampe's Grave</List.Header>
                 </List.Content>
                 <List.List>
@@ -38,7 +38,7 @@ const Graveyard = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(dampeRace1Available && {color: "green"}) || {color: "gray"}}
+                                style={(dampeRace1Available && {color: "green"}) || {color: "grey"}}
                                 onClick={gotDampeRace1}
                             >
                                 Dampe Race 1
@@ -49,7 +49,7 @@ const Graveyard = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(dampeRace2Available && {color: "green"}) || {color: "gray"}}
+                                style={(dampeRace2Available && {color: "green"}) || {color: "grey"}}
                                 onClick={gotDampeRace2}
                             >
                                 Dampe Race 2
@@ -61,14 +61,14 @@ const Graveyard = (props) => {
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header style={(shieldGrave === true) ? {color: "gray"} : { color: "green" }} >Shield Grave</List.Header>
+                    <List.Header style={(shieldGrave === true) ? {color: "grey"} : { color: "green" }} >Shield Grave</List.Header>
                 </List.Content>
                 <List.List>
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(shieldGraveAvailable && {color: "green"}) || {color: "gray"}}
+                                style={(shieldGraveAvailable && {color: "green"}) || {color: "grey"}}
                                 onClick={gotShieldGrave}
                             >
                                 Shield Grave Chest
@@ -115,7 +115,7 @@ const Graveyard = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header 
-                        style={(beanHeartPieceAvailable && {color: "green"}) || (beanHeartPieceUnavailable && { color: "red" }) || {color: "gray"}}
+                        style={(beanHeartPieceAvailable && {color: "green"}) || (beanHeartPieceUnavailable && { color: "red" }) || {color: "grey"}}
                         onClick={gotBeanHeartPiece}
                     >
                         Magic Bean Heart Piece

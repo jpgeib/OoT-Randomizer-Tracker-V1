@@ -22,7 +22,7 @@ class KakarikoVillageModal extends Component {
                 trigger={<Button 
                             color={((skulltulaCounter >= 10 || skulltulaCounter >= 20 || skulltulaCounter >= 30 || skulltulaCounter >= 40 || skulltulaCounter >= 50) && "green")
                                     || ((skulltulaCounter < 10 || skulltulaCounter < 20 || skulltulaCounter < 30 || skulltulaCounter < 40 || skulltulaCounter < 50) && "red")
-                                    || "gray"
+                                    || "grey"
                         } 
                             fluid 
                             content="Kakariko Village" 

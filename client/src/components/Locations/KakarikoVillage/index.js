@@ -125,7 +125,7 @@ const KakarikoVillage = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(skulltulaHouseAvailable.ten && {color: "green"}) || (skulltulaHouseUnavailable.ten && { color: "red" }) || {color: "gray"}}
+                                style={(skulltulaHouseAvailable.ten && {color: "green"}) || (skulltulaHouseUnavailable.ten && { color: "red" }) || {color: "grey"}}
                             >Skulltula House 10 Tokens</List.Header>
                         </List.Content>
                     </List.Item>

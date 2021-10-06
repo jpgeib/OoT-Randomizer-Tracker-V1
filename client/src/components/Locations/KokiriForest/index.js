@@ -34,7 +34,7 @@ const KokiriForest = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(kokiriSwordChestAvailable && {color: "green"}) || {color: "gray"}}
+                        style={(kokiriSwordChestAvailable && {color: "green"}) || {color: "grey"}}
                         onClick={gotKokiriSwordChest}
                     >
                         Kokiri's Sword Chest
@@ -51,7 +51,7 @@ const KokiriForest = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(midoChest1 === true && midoChest2 === true && midoChest3 === true && midoChest4 === true) ? {color: "gray"} : {color: "green"}}
+                        style={(midoChest1 === true && midoChest2 === true && midoChest3 === true && midoChest4 === true) ? {color: "grey"} : {color: "green"}}
                     >
                         Mido's House
                     </List.Header>
@@ -61,7 +61,7 @@ const KokiriForest = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(midoChest1Available && {color: "green"}) || {color: "gray"}}
+                                style={(midoChest1Available && {color: "green"}) || {color: "grey"}}
                                 onClick={gotMidoChest1}
                             >
                                 Mido's House Chest 1
@@ -72,7 +72,7 @@ const KokiriForest = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(midoChest2Available && {color: "green"}) || {color: "gray"}}
+                                style={(midoChest2Available && {color: "green"}) || {color: "grey"}}
                                 onClick={gotMidoChest2}
                             >
                                 Mido's House Chest 2
@@ -83,7 +83,7 @@ const KokiriForest = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(midoChest3Available && {color: "green"}) || {color: "gray"}}
+                                style={(midoChest3Available && {color: "green"}) || {color: "grey"}}
                                 onClick={gotMidoChest3}
                             >
                                 Mido's House Chest 3
@@ -94,7 +94,7 @@ const KokiriForest = (props) => {
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
                             <List.Header
-                                style={(midoChest4Available && {color: "green"}) || {color: "gray"}}
+                                style={(midoChest4Available && {color: "green"}) || {color: "grey"}}
                                 onClick={gotMidoChest4}
                             >
                                 Mido's House Chest 4
@@ -107,7 +107,7 @@ const KokiriForest = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(sariasOcarinaAvailable && {color: "green"}) || {color: "gray"}}
+                        style={(sariasOcarinaAvailable && {color: "green"}) || {color: "grey"}}
                         onClick={gotSariasOcarina}
                     >
                         Saria's Ocarina
