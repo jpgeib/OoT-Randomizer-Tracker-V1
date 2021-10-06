@@ -4,13 +4,16 @@ import { List } from "semantic-ui-react";
 const KokiriForest = (props) => {
 
     const { 
-        hasKokiriTunic, 
+        hasKokiriTunic,
+        hasOcarina,
+        hasSongOfStorms, 
         kokiriSwordChest, 
         midoChest1, 
         midoChest2, 
         midoChest3, 
         midoChest4, 
-        sariasOcarina 
+        sariasOcarina,
+        kokiriStormsGrotto 
     } = props;
     const { 
         gotKokiriSwordChest, 
@@ -18,7 +21,8 @@ const KokiriForest = (props) => {
         gotMidoChest2, 
         gotMidoChest3, 
         gotMidoChest4, 
-        gotSariasOcarina 
+        gotSariasOcarina,
+        gotKokiriStormsGrotto 
     } = props.kokiriForestLogic;
 
     const kokiriSwordChestAvailable = (hasKokiriTunic === true && kokiriSwordChest === false);

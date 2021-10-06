@@ -138,6 +138,18 @@ class Home extends Component {
         }
     }
 
+    ocarinaLogic = {
+        gotFairyOcarina: (e) => {
+            this.setState({ hasOcarina: true });
+            this.setState({ hasSongOfStorms: true });
+        },
+        removeFairyOcarina: (e) => {
+            e.preventDefault();
+            this.setState({ hasOcarina: false });
+            this.setState({ hasSongOfStorms: false });
+        }
+    }
+
     hookshotLogic = {
         gotHookshot: (e) => {
             this.setState({ hasHookshot: true });
@@ -170,6 +182,7 @@ class Home extends Component {
                                     <ItemTracker
                                         state={this.state}
                                         tracker={trackerStyle}
+                                        ocarina={this.ocarinaLogic}
                                         hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
                                     />

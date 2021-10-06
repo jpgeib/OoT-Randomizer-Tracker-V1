@@ -11,7 +11,8 @@ class KokiriForestModal extends Component {
         midoChest2: false,
         midoChest3: false,
         midoChest4: false,
-        sariasOcarina: false
+        sariasOcarina: false,
+        kokiriStormsGrotto: false
     }
 
     componentDidMount() {
@@ -47,6 +48,9 @@ class KokiriForestModal extends Component {
         gotSariasOcarina: (e) => {
             this.setState({ sariasOcarina: !this.state.sariasOcarina });
         },
+        gotKokiriStormsGrotto: (e) => {
+            this.setState({ kokiriStormsGrotto: !this.state.kokiriStormsGrotto });
+        }
     }
 
     render() {
@@ -58,9 +62,10 @@ class KokiriForestModal extends Component {
             midoChest2,
             midoChest3,
             midoChest4,
-            sariasOcarina 
+            sariasOcarina,
+            kokiriStormsGrotto 
         } = this.state;
-        const { hasKokiriTunic } = this.props.state;
+        const { hasKokiriTunic, hasOcarina, hasSongOfStorms } = this.props.state;
         const kokiriForestItemsAvailable = (kokiriSwordChest && midoChest1 && midoChest2 && midoChest3 && midoChest4 && sariasOcarina);
 
         return (
@@ -78,12 +83,15 @@ class KokiriForestModal extends Component {
                 <Modal.Content>
                     <KokiriForest
                         hasKokiriTunic={hasKokiriTunic}
+                        hasOcarina={hasOcarina}
+                        hasSongOfStorms={hasSongOfStorms}
                         kokiriSwordChest={kokiriSwordChest}
                         midoChest1={midoChest1}
                         midoChest2={midoChest2}
                         midoChest3={midoChest3}
                         midoChest4={midoChest4}
                         sariasOcarina={sariasOcarina}
+                        kokiriStormsGrotto={kokiriStormsGrotto}
                         kokiriForestLogic={this.kokiriForestLogic}
                     />
                 </Modal.Content>
