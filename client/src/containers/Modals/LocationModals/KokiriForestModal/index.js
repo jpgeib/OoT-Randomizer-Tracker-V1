@@ -67,7 +67,9 @@ class KokiriForestModal extends Component {
         } = this.state;
         const { hasKokiriTunic, hasOcarina, hasSongOfStorms } = this.props.state;
         const kokiriForestItemsAvailable = (
+            //Items available by default
             (kokiriSwordChest === false || midoChest1 === false || midoChest2 === false || midoChest3 === false || midoChest4 === false || sariasOcarina === false) ||
+            //Item that require an Ocarina and the Song of Storms
             ((hasOcarina === true && hasSongOfStorms === true) && (kokiriStormsGrotto === false))
         );
         const kokiriForestItemsUnavailable = (
