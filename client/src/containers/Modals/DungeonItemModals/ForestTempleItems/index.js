@@ -15,13 +15,13 @@ class ForestTempleItems extends Component {
     }
 
     componentDidMount() {
-        const forestTempleData = JSON.parse(window.localStorage.getItem("forestTemple"));
-        this.setState(forestTempleData);
-        console.log(forestTempleData);
+        const forestTempleItemsData = JSON.parse(window.localStorage.getItem("forestTempleItems"));
+        this.setState(forestTempleItemsData);
+        console.log(forestTempleItemsData);
     }
 
     componentDidUpdate() {
-        window.localStorage.setItem("forestTemple", JSON.stringify(this.state));
+        window.localStorage.setItem("forestTempleItems", JSON.stringify(this.state));
     }
 
     closeConfigShow = () => this.setState({ open: true });

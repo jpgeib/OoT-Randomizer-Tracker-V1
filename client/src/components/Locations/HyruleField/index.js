@@ -1,7 +1,13 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 
-const HyruleField = () => {
+const HyruleField = (props) => {
+
+    const { hasKokiriTunic, southOpenGrotto } = props;
+    const { gotSouthOpenGrotto } = props.hyruleFieldLogic;
+
+    const southOpenGrottoAvailable = (hasKokiriTunic === true && southOpenGrotto === false);
+
     return (
         <List divided relaxed>
             <List.Item>
@@ -47,13 +53,20 @@ const HyruleField = () => {
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Field Open Grotto</List.Header>
+                    <List.Header
+                        style={southOpenGrotto === true ? { color: "grey" } : { color: "green" }}
+                    >Field Open Grotto</List.Header>
                 </List.Content>
                 <List.List>
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Hyrule Field South Grotto</List.Header>
+                            <List.Header
+                                style={(southOpenGrottoAvailable && {color: "green"}) || {color: "grey"}}
+                                onClick={gotSouthOpenGrotto}
+                            >
+                                Hyrule Field South Grotto
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                 </List.List>
