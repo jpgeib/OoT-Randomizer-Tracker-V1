@@ -61,12 +61,13 @@ class KokiriForestModal extends Component {
             sariasOcarina 
         } = this.state;
         const { hasKokiriTunic } = this.props.state;
+        const kokiriForestItemsAvailable = (kokiriSwordChest && midoChest1 && midoChest2 && midoChest3 && midoChest4 && sariasOcarina);
 
         return (
             <Modal
                 trigger={<Button 
                             fluid
-                            color={((kokiriSwordChest && midoChest1 && midoChest2 && midoChest3 && midoChest4 && sariasOcarina) === false) ? "green" : "gray"} 
+                            color={(kokiriForestItemsAvailable === false) ? "green" : "grey"} 
                             content="Kokiri Forest" 
                             onClick={this.closeConfigShow} 
                         />}

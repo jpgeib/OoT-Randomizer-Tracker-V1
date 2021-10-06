@@ -1,13 +1,26 @@
 import React from "react";
 import { List } from "semantic-ui-react";
 
-const GreatDekuTree = () => {
+const GreatDekuTree = (props) => {
+
+    const { hasKokiriTunic, lobbyChest, compassChest, compassSideChest } = props;
+    const { gotLobbyChest, gotCompassChest, gotCompassSideChest } = props.dekuTreeLogic;
+
+    const lobbyChestAvailable = (hasKokiriTunic === true && lobbyChest === false);
+    const compassChestAvailable = (hasKokiriTunic === true && compassChest === false);
+    const compassSideChestAvailable = (hasKokiriTunic === true && compassSideChest === false);
+    
     return (
         <List divided relaxed>
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Lobby Chest</List.Header>
+                    <List.Header
+                        style={(lobbyChestAvailable && {color: "green"}) || {color: "gray"}}
+                        onClick={gotLobbyChest}
+                    >
+                        Lobby Chest
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>
@@ -25,13 +38,23 @@ const GreatDekuTree = () => {
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Compass Chest</List.Header>
+                    <List.Header
+                        style={(compassChestAvailable && {color: "green"}) || {color: "gray"}}
+                        onClick={gotCompassChest}
+                    >
+                        Compass Chest
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Compass Room Side Chest</List.Header>
+                    <List.Header
+                        style={(compassSideChestAvailable && {color: "green"}) || {color: "gray"}}
+                        onClick={gotCompassSideChest}
+                    >
+                        Compass Room Side Chest
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>
