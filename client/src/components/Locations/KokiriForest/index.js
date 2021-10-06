@@ -31,6 +31,8 @@ const KokiriForest = (props) => {
     const midoChest3Available = (hasKokiriTunic === true && midoChest3 === false);
     const midoChest4Available = (hasKokiriTunic === true && midoChest4 === false);
     const sariasOcarinaAvailable = (hasKokiriTunic === true && sariasOcarina === false);
+    const kokiriStormsGrottoAvailable = ((hasOcarina && hasSongOfStorms) === true && kokiriStormsGrotto === false);
+    const kokiriStormsGrottoUnavailable = ((hasOcarina && hasSongOfStorms) === false && kokiriStormsGrotto === false);
 
     return (
         <List divided relaxed>
@@ -121,13 +123,22 @@ const KokiriForest = (props) => {
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Kokiri Storms Grotto</List.Header>
+                    <List.Header
+                        style={(kokiriStormsGrottoAvailable && {color: "green"}) || (kokiriStormsGrottoUnavailable && {color: "red"}) || {color: "grey"}}
+                    >
+                        Kokiri Storms Grotto
+                    </List.Header>
                 </List.Content>
                 <List.List>
                     <List.Item>
                         <List.Icon name="check" size="small" verticalAlign="middle" />
                         <List.Content>
-                            <List.Header>Kokiri Storms Grotto Chest</List.Header>
+                            <List.Header
+                                style={(kokiriStormsGrottoAvailable && {color: "green"}) || (kokiriStormsGrottoUnavailable && {color: "red"}) || {color: "grey"}}
+                                onClick={gotKokiriStormsGrotto}
+                            >
+                                Kokiri Storms Grotto Chest
+                            </List.Header>
                         </List.Content>
                     </List.Item>
                 </List.List>

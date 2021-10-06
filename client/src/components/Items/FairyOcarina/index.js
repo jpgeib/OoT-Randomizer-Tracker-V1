@@ -4,14 +4,14 @@ import FairyOcarinaIcon from "../../../assets/images/FairyOcarina.png";
 
 const FairyOcarina = (props) => {
 
-    const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = props;
+    const { hasOcarina, gotFairyOcarina, removeFairyOcarina } = props;
 
     return (
         <Grid.Column width={2}>
             <Image
-                onClick={addFairyOcarina}
+                onClick={gotFairyOcarina}
                 onContextMenu={removeFairyOcarina} 
-                style={(fairyOcarina === null || fairyOcarina === false) ? { filter: "grayscale(50%)"} : { filter: "grayscale(0%)" }}
+                style={(hasOcarina === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
                 size="mini" 
                 src={FairyOcarinaIcon} 
             />
