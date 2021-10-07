@@ -11,17 +11,18 @@ import MasterSword from "../../../components/Items/MasterSword";
 
 const FirstRow = (props) => {
 
-    const { counter, increment, decrement } = props;
+    const { gotKokiriSword, removeKokiriSword } = props.kokiriSword;
+    const { hasKokiriSword } = props.state;
     
     return (
         <Grid.Row>
-            <DekuSticks counter={counter} increment={increment} decrement={decrement} />
+            <DekuSticks />
             <DekuNuts />
             <BombBag />
             <FairyBow />
             <FireArrows />
             <DinsFire />
-            <KokiriSword />
+            <KokiriSword hasKokiriSword={hasKokiriSword} gotKokiriSword={gotKokiriSword} removeKokiriSword={removeKokiriSword} />
             <MasterSword />
         </Grid.Row>
     );

@@ -17,7 +17,9 @@ class ItemTracker extends Component {
             tracker, 
             skulltulas,  
             hookshot,
-            ocarina
+            ocarina,
+            kokiriSword,
+            emptyBottles
             // fairyOcarina,
             // addFairyOcarina,
             // removeFairyOcarina
@@ -25,7 +27,10 @@ class ItemTracker extends Component {
 
         return (
             <Grid style={tracker}>
-                <FirstRow />
+                <FirstRow
+                    state={state} 
+                    kokiriSword={kokiriSword}
+                />
                 <SecondRow 
                     state={state} 
                     hookshot={hookshot}
@@ -37,7 +42,8 @@ class ItemTracker extends Component {
                 <ThirdRow />
                 <FourthRow 
                     state={state}
-                    skulltulas={skulltulas} 
+                    skulltulas={skulltulas}
+                    emptyBottles={emptyBottles} 
                 />
                 <FifthRow />
                 <SixthRow />

@@ -18,7 +18,7 @@ class Home extends Component {
         fairyBowCounter: 0,
         fairySlingshotCounter: 0,
         beanCounter: 0,
-        bottleCounter: 0,
+        emptyBottles: 0,
         walletCounter: 99,
         pieceOfHeartCounter: 0,
         heartContainerCounter: 0,
@@ -138,6 +138,30 @@ class Home extends Component {
         }
     }
 
+    emptyBottleLogic = {
+        addBottle: (e) => {
+            this.setState(prevState => ({
+                emptyBottles: Math.min(4, prevState.emptyBottles + 1)
+            }));
+        },
+        removeBottle: (e) => {
+            e.preventDefault();
+            this.setState(prevState => ({
+                emptyBottles: Math.max(0, prevState.emptyBottles - 1)
+            }));
+        }
+    }
+
+    kokiriSwordLogic = {
+        gotKokiriSword: (e) => {
+            this.setState({ hasKokiriSword: true });
+        },
+        removeKokiriSword: (e) => {
+            e.preventDefault();
+            this.setState({ hasKokiriSword: false });
+        }
+    }
+
     ocarinaLogic = {
         gotFairyOcarina: (e) => {
             this.setState({ hasOcarina: true });
@@ -182,6 +206,8 @@ class Home extends Component {
                                     <ItemTracker
                                         state={this.state}
                                         tracker={trackerStyle}
+                                        emptyBottles={this.emptyBottleLogic}
+                                        kokiriSword={this.kokiriSwordLogic}
                                         ocarina={this.ocarinaLogic}
                                         hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
