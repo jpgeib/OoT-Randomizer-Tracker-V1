@@ -48,7 +48,7 @@ const KokiriForest = (props) => {
     const twinsSkulltulaAvailable = ((hasHookshot === true) && twinsSkulltula === false);
     const twinsSkulltulaUnavailable = ((hasHookshot === false) && twinsSkulltula === false);
     const beanSkulltulaAvailable = ((hasKokiriSword === true) && emptyBottles > 0 && beanSkulltula === false);
-    const beanSkulltulaUnavailable = ((hasKokiriSword === false) && emptyBottles < 1 && beanSkulltula === false);
+    // const beanSkulltulaUnavailable = ((hasKokiriSword === false) && emptyBottles < 1 && beanSkulltula === false);
 
     return (
         <List divided relaxed>
@@ -185,7 +185,7 @@ const KokiriForest = (props) => {
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
                     <List.Header
-                        style={(beanSkulltulaAvailable && {color: "green"}) || (beanSkulltula === true) && {color: "grey"} || {color: "red"}}
+                        style={(beanSkulltulaAvailable && {color: "green"}) || (beanSkulltula === true && {color: "grey"}) || {color: "red"}}
                         onClick={gotBeanSkulltula}
                     >
                         Kokiri Bean Patch Skulltula

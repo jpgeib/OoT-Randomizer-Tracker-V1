@@ -80,24 +80,39 @@ class KokiriForestModal extends Component {
             twinsSkulltula,
             beanSkulltula 
         } = this.state;
+
         const { hasKokiriTunic, hasOcarina, hasSongOfStorms, hasKokiriSword, emptyBottles, hasHookshot } = this.props.state;
+
         const kokiriForestItemsAvailable = (
             //Items available by default
             (kokiriSwordChest === false || midoChest1 === false || midoChest2 === false || midoChest3 === false || midoChest4 === false || sariasOcarina === false) ||
-            //Item that requires an Ocarina and the Song of Storms
+            //Kokiri Storms Grotto Available
             ((hasOcarina === true && hasSongOfStorms === true) && (kokiriStormsGrotto === false)) ||
             //Know It All House Skulltula Available
-            ((hasKokiriSword === true) && (knowItAllSkulltula === false))
+            ((hasKokiriSword === true) && (knowItAllSkulltula === false)) ||
+            //Twins House Skulltula Available
+            ((hasHookshot === true) && (twinsSkulltula === false)) ||
+            //Bean Patch Skulltula Available
+            ((hasKokiriSword === true && emptyBottles > 0) && beanSkulltula === false)
         );
         const kokiriForestItemsUnavailable = (
-            (hasOcarina === false && hasSongOfStorms === false)
+            //Kokiri Storms Grotto Unavailable
+            (hasOcarina === false || hasSongOfStorms === false)
+        );
+
+        const kokiriForestItemsCollected = (
+                (
+            kokiriSwordChest && midoChest1 && midoChest2 && midoChest3 && midoChest4
+            && sariasOcarina && kokiriStormsGrotto && knowItAllSkulltula &&
+            twinsSkulltula && beanSkulltula
+            ) === true
         );
 
         return (
             <Modal
                 trigger={<Button 
                             fluid
-                            color={(kokiriForestItemsAvailable && "green") || (kokiriForestItemsUnavailable && "red")} 
+                            color={(kokiriForestItemsAvailable && "green") || (kokiriForestItemsUnavailable && "red") || (kokiriForestItemsCollected && "grey")} 
                             content="Kokiri Forest" 
                             onClick={this.closeConfigShow} 
                         />}
