@@ -6,15 +6,22 @@ const KokiriForest = (props) => {
     const { 
         hasKokiriTunic,
         hasOcarina,
-        hasSongOfStorms, 
+        hasSongOfStorms,
+        hasKokiriSword,
+        emptyBottles,
+        hasHookshot, 
         kokiriSwordChest, 
         midoChest1, 
         midoChest2, 
         midoChest3, 
         midoChest4, 
         sariasOcarina,
-        kokiriStormsGrotto 
+        kokiriStormsGrotto,
+        knowItAllSkulltula,
+        twinsSkulltula,
+        beanSkulltula 
     } = props;
+
     const { 
         gotKokiriSwordChest, 
         gotMidoChest1, 
@@ -22,7 +29,10 @@ const KokiriForest = (props) => {
         gotMidoChest3, 
         gotMidoChest4, 
         gotSariasOcarina,
-        gotKokiriStormsGrotto 
+        gotKokiriStormsGrotto,
+        gotKnowItAllSkulltula,
+        gotTwinsSkulltula,
+        gotBeanSkulltula 
     } = props.kokiriForestLogic;
 
     const kokiriSwordChestAvailable = (hasKokiriTunic === true && kokiriSwordChest === false);
@@ -33,6 +43,12 @@ const KokiriForest = (props) => {
     const sariasOcarinaAvailable = (hasKokiriTunic === true && sariasOcarina === false);
     const kokiriStormsGrottoAvailable = ((hasOcarina && hasSongOfStorms) === true && kokiriStormsGrotto === false);
     const kokiriStormsGrottoUnavailable = ((hasOcarina && hasSongOfStorms) === false && kokiriStormsGrotto === false);
+    const knowItAllSkulltulaAvailable = (hasKokiriSword === true && knowItAllSkulltula === false);
+    const knowItAllSkulltulaUnavailable = (hasKokiriSword === false && knowItAllSkulltula === false);
+    const twinsSkulltulaAvailable = ((hasHookshot === true) && twinsSkulltula === false);
+    const twinsSkulltulaUnavailable = ((hasHookshot === false) && twinsSkulltula === false);
+    const beanSkulltulaAvailable = ((hasKokiriSword === true) && emptyBottles > 0 && beanSkulltula === false);
+    const beanSkulltulaUnavailable = ((hasKokiriSword === false) && emptyBottles < 1 && beanSkulltula === false);
 
     return (
         <List divided relaxed>
@@ -146,19 +162,34 @@ const KokiriForest = (props) => {
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Kokiri Know It All House Skulltula</List.Header>
+                    <List.Header
+                        style={(knowItAllSkulltulaAvailable && {color: "green"}) || (knowItAllSkulltulaUnavailable && {color: "red"}) || {color: "grey"}}
+                        onClick={gotKnowItAllSkulltula}
+                    >
+                        Kokiri Know It All House Skulltula
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Kokiri House of Twins Skulltula</List.Header>
+                    <List.Header
+                        style={(twinsSkulltulaAvailable && {color: "green"}) || (twinsSkulltulaUnavailable && {color: "red"}) || {color: "grey"}}
+                        onClick={gotTwinsSkulltula}
+                    >
+                        Kokiri House of Twins Skulltula
+                    </List.Header>
                 </List.Content>
             </List.Item>
             <List.Item>
                 <List.Icon name="check" size="large" verticalAlign="middle" />
                 <List.Content>
-                    <List.Header>Kokiri Bean Patch Skulltula</List.Header>
+                    <List.Header
+                        style={(beanSkulltulaAvailable && {color: "green"}) || (beanSkulltula === true) && {color: "grey"} || {color: "red"}}
+                        onClick={gotBeanSkulltula}
+                    >
+                        Kokiri Bean Patch Skulltula
+                    </List.Header>
                 </List.Content>
             </List.Item>
         </List>

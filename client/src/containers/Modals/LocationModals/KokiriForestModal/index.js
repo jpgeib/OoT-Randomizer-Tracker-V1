@@ -12,7 +12,10 @@ class KokiriForestModal extends Component {
         midoChest3: false,
         midoChest4: false,
         sariasOcarina: false,
-        kokiriStormsGrotto: false
+        kokiriStormsGrotto: false,
+        knowItAllSkulltula: false,
+        twinsSkulltula: false,
+        beanSkulltula: false
     }
 
     componentDidMount() {
@@ -50,6 +53,15 @@ class KokiriForestModal extends Component {
         },
         gotKokiriStormsGrotto: (e) => {
             this.setState({ kokiriStormsGrotto: !this.state.kokiriStormsGrotto });
+        },
+        gotKnowItAllSkulltula: (e) => {
+            this.setState({ knowItAllSkulltula: !this.state.knowItAllSkulltula });
+        },
+        gotTwinsSkulltula: (e) => {
+            this.setState({ twinsSkulltula: !this.state.twinsSkulltula });
+        },
+        gotBeanSkulltula: (e) => {
+            this.setState({ beanSkulltula: !this.state.beanSkulltula });
         }
     }
 
@@ -63,14 +75,19 @@ class KokiriForestModal extends Component {
             midoChest3,
             midoChest4,
             sariasOcarina,
-            kokiriStormsGrotto 
+            kokiriStormsGrotto,
+            knowItAllSkulltula,
+            twinsSkulltula,
+            beanSkulltula 
         } = this.state;
-        const { hasKokiriTunic, hasOcarina, hasSongOfStorms } = this.props.state;
+        const { hasKokiriTunic, hasOcarina, hasSongOfStorms, hasKokiriSword, emptyBottles, hasHookshot } = this.props.state;
         const kokiriForestItemsAvailable = (
             //Items available by default
             (kokiriSwordChest === false || midoChest1 === false || midoChest2 === false || midoChest3 === false || midoChest4 === false || sariasOcarina === false) ||
             //Item that requires an Ocarina and the Song of Storms
-            ((hasOcarina === true && hasSongOfStorms === true) && (kokiriStormsGrotto === false))
+            ((hasOcarina === true && hasSongOfStorms === true) && (kokiriStormsGrotto === false)) ||
+            //Know It All House Skulltula Available
+            ((hasKokiriSword === true) && (knowItAllSkulltula === false))
         );
         const kokiriForestItemsUnavailable = (
             (hasOcarina === false && hasSongOfStorms === false)
@@ -91,8 +108,11 @@ class KokiriForestModal extends Component {
                 <Modal.Content>
                     <KokiriForest
                         hasKokiriTunic={hasKokiriTunic}
+                        hasKokiriSword={hasKokiriSword}
                         hasOcarina={hasOcarina}
                         hasSongOfStorms={hasSongOfStorms}
+                        hasHookshot={hasHookshot}
+                        emptyBottles={emptyBottles}
                         kokiriSwordChest={kokiriSwordChest}
                         midoChest1={midoChest1}
                         midoChest2={midoChest2}
@@ -100,6 +120,9 @@ class KokiriForestModal extends Component {
                         midoChest4={midoChest4}
                         sariasOcarina={sariasOcarina}
                         kokiriStormsGrotto={kokiriStormsGrotto}
+                        knowItAllSkulltula={knowItAllSkulltula}
+                        twinsSkulltula={twinsSkulltula}
+                        beanSkulltula={beanSkulltula}
                         kokiriForestLogic={this.kokiriForestLogic}
                     />
                 </Modal.Content>
