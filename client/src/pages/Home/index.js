@@ -124,6 +124,51 @@ class Home extends Component {
         }
     }
 
+    bossKeyLogic = {
+        addForestBossKey: (e) => {
+            this.setState({ hasForestBossKey: true });
+        },
+        removeForestBossKey: (e) => {
+            e.preventDefault();
+            this.setState({ hasForestBossKey: false });
+        },
+        addFireBossKey: (e) => {
+            this.setState({ hasFireBossKey: true });
+        },
+        removeFireBossKey: (e) => {
+            e.preventDefault();
+            this.setState({ hasFireBossKey: false });
+        },
+        addWaterBossKey: (e) => {
+            this.setState({ hasWaterBossKey: true });
+        },
+        removeWaterBossKey: (e) => {
+            e.preventDefault();
+            this.setState({ hasWaterBossKey: false });
+        },
+        addShadowBossKey: (e) => {
+            this.setState({ hasShadowBossKey: true });
+        },
+        removeShadowBossKey: (e) => {
+            e.preventDefault();
+            this.setState({ hasShadowBossKey: false });
+        },
+        addSpiritBossKey: (e) => {
+            this.setState({ hasSpiritBossKey: true });
+        },
+        removeSpiritBossKey: (e) => {
+            e.preventDefault();
+            this.setState({ hasSpiritBossKey: false });
+        },
+        addGanonBossKey: (e) => {
+            this.setState({ hasGanonBossKey: true });
+        },
+        removeGanonBossKey: (e) => {
+            e.preventDefault();
+            this.setState({ hasGanonBossKey: false });
+        } 
+    }
+
     skulltulaLogic = {
         addSkulltula: (e) => {
             this.setState(prevState => ({
@@ -220,6 +265,7 @@ class Home extends Component {
                                         dungeons={dungeonStyle}
                                         state={this.state}
                                         smallKeys={this.smallKeyLogic}
+                                        bossKeys={this.bossKeyLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
