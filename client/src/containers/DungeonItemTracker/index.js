@@ -20,7 +20,7 @@ import GanonsCastleItems from "../Modals/DungeonItemModals/GanonsCastleItems";
 class DungeonItemTracker extends Component {
     render() {
 
-        const { dungeons, smallKeys, state } = this.props;
+        const { dungeons, smallKeys, bossKeys, state } = this.props;
 
         return (
             <Grid style={dungeons}>
@@ -29,7 +29,7 @@ class DungeonItemTracker extends Component {
                         <DefaultItem />
                     </Grid.Column>
                     <Grid.Column width={8}>
-                        <GanonsCastleItems />
+                        <GanonsCastleItems state={state} bossKeys={bossKeys} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
@@ -43,21 +43,21 @@ class DungeonItemTracker extends Component {
                         <JabuJabuItems />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <ForestTempleItems state={state} smallKeys={smallKeys} />
+                        <ForestTempleItems state={state} bossKeys={bossKeys} smallKeys={smallKeys} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
                     <Grid.Column width={4}>
-                        <FireTempleItems />
+                        <FireTempleItems state={state} bossKeys={bossKeys} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <WaterTempleItems />
+                        <WaterTempleItems state={state} bossKeys={bossKeys} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <ShadowTempleItems />
+                        <ShadowTempleItems state={state} bossKeys={bossKeys} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <SpiritTempleItems />
+                        <SpiritTempleItems state={state} bossKeys={bossKeys} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>

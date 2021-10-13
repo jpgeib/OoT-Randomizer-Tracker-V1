@@ -12,6 +12,16 @@ class FireTempleItems extends Component {
         open: false
     }
 
+    componentDidMount() {
+        const fireTempleItemsData = JSON.parse(window.localStorage.getItem("fireTempleItems"));
+        this.setState(fireTempleItemsData);
+        console.log(fireTempleItemsData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("fireTempleItems", JSON.stringify(this.state));
+    }
+
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
@@ -19,6 +29,7 @@ class FireTempleItems extends Component {
     render() {
 
         const { open } = this.state;
+        const { state, bossKeys } = this.props;
 
         return (
             <Modal
@@ -31,7 +42,7 @@ class FireTempleItems extends Component {
                     <Grid>
                         <Grid.Row>
                             <SmallKey />
-                            <BossKey />
+                            <BossKey hasFireBossKey={state.hasFireBossKey} bossKeys={bossKeys} />
                             <DungeonMap />
                             <Compass />
                             <FireMedallion />
