@@ -49,7 +49,7 @@ class ForestTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { smallKeys, state, bossKeys } = this.props;
+        const { smallKeys, state, bossKeys, medallions } = this.props;
 
         return (
             <Modal
@@ -80,7 +80,10 @@ class ForestTempleItems extends Component {
                                 gotCompass={this.gotCompass} 
                                 removeCompass={this.removeCompass} 
                             />
-                            <ForestMedallion />
+                            <ForestMedallion 
+                                hasForestMedallion={state.hasForestMedallion}
+                                medallions={medallions}
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>

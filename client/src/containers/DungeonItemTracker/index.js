@@ -20,13 +20,13 @@ import GanonsCastleItems from "../Modals/DungeonItemModals/GanonsCastleItems";
 class DungeonItemTracker extends Component {
     render() {
 
-        const { dungeons, smallKeys, bossKeys, state } = this.props;
+        const { dungeons, smallKeys, bossKeys, medallions, state } = this.props;
 
         return (
             <Grid style={dungeons}>
                 <Grid.Row centered>
                     <Grid.Column width={8}>
-                        <DefaultItem />
+                        <DefaultItem medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={8}>
                         <GanonsCastleItems state={state} bossKeys={bossKeys} />
@@ -43,21 +43,21 @@ class DungeonItemTracker extends Component {
                         <JabuJabuItems />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <ForestTempleItems state={state} bossKeys={bossKeys} smallKeys={smallKeys} />
+                        <ForestTempleItems state={state} bossKeys={bossKeys} medallions={medallions} smallKeys={smallKeys} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
                     <Grid.Column width={4}>
-                        <FireTempleItems state={state} bossKeys={bossKeys} />
+                        <FireTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <WaterTempleItems state={state} bossKeys={bossKeys} />
+                        <WaterTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <ShadowTempleItems state={state} bossKeys={bossKeys} />
+                        <ShadowTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <SpiritTempleItems state={state} bossKeys={bossKeys} />
+                        <SpiritTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
