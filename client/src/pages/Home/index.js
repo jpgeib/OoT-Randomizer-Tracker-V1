@@ -169,6 +169,51 @@ class Home extends Component {
         } 
     }
 
+    medallionLogic = {
+        addLightMedallion: (e) => {
+            this.setState({ hasLightMedallion: true });
+        },
+        removeLightMedallion: (e) => {
+            e.preventDefault();
+            this.setState({ hasLightMedallion: false });
+        },
+        addForestMedallion: (e) => {
+            this.setState({ hasForestMedallion: true });
+        },
+        removeForestMedallion: (e) => {
+            e.preventDefault();
+            this.setState({ hasForestMedallion: false });
+        },
+        addFireMedallion: (e) => {
+            this.setState({ hasFireMedallion: true });
+        },
+        removeFireMedallion: (e) => {
+            e.preventDefault();
+            this.setState({ hasFireMedallion: false });
+        },
+        addWaterMedallion: (e) => {
+            this.setState({ hasWaterMedallion: true });
+        },
+        removeWaterMedallion: (e) => {
+            e.preventDefault();
+            this.setState({ hasWaterMedallion: false });
+        },
+        addShadowMedallion: (e) => {
+            this.setState({ hasShadowMedallion: true });
+        },
+        removeShadowMedallion: (e) => {
+            e.preventDefault();
+            this.setState({ hasShadowMedallion: false });
+        },
+        addSpiritMedallion: (e) => {
+            this.setState({ hasSpiritMedallion: true });
+        },
+        removeSpiritMedallion: (e) => {
+            e.preventDefault();
+            this.setState({ hasSpiritMedallion: false });
+        }
+    }
+
     skulltulaLogic = {
         addSkulltula: (e) => {
             this.setState(prevState => ({
@@ -266,6 +311,7 @@ class Home extends Component {
                                         state={this.state}
                                         smallKeys={this.smallKeyLogic}
                                         bossKeys={this.bossKeyLogic}
+                                        medallions={this.medallionLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
