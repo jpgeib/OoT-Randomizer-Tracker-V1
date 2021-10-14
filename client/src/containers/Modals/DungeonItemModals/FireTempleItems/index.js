@@ -9,7 +9,9 @@ import FireMedallion from "../../../../components/DungeonItems/FireTemple/FireMe
 class FireTempleItems extends Component {
 
     state = {
-        open: false
+        open: false,
+        hasDungeonMap: false,
+        hasCompass: false
     }
 
     componentDidMount() {
@@ -25,6 +27,24 @@ class FireTempleItems extends Component {
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
+
+    gotDungeonMap = (e) => {
+        this.setState({ hasDungeonMap: true });
+    }
+
+    removeDungeonMap = (e) => {
+        e.preventDefault();
+        this.setState({ hasDungeonMap: false });
+    }
+
+    gotCompass = (e) => {
+        this.setState({ hasCompass: true });
+    }
+
+    removeCompass = (e) => {
+        e.preventDefault();
+        this.setState({ hasCompass: false });
+    }
 
     render() {
 
@@ -42,9 +62,20 @@ class FireTempleItems extends Component {
                     <Grid>
                         <Grid.Row>
                             <SmallKey />
-                            <BossKey hasFireBossKey={state.hasFireBossKey} bossKeys={bossKeys} />
-                            <DungeonMap />
-                            <Compass />
+                            <BossKey 
+                                hasFireBossKey={state.hasFireBossKey} 
+                                bossKeys={bossKeys} 
+                            />
+                            <DungeonMap 
+                                hasDungeonMap={this.state.hasDungeonMap}
+                                gotDungeonMap={this.gotDungeonMap}
+                                removeDungeonMap={this.removeDungeonMap}
+                            />
+                            <Compass 
+                                hasCompass={this.state.hasCompass}
+                                gotCompass={this.gotCompass}
+                                removeCompass={this.removeCompass}
+                            />
                             <FireMedallion />
                         </Grid.Row>
                     </Grid>
