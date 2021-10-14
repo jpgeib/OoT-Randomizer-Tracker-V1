@@ -121,6 +121,17 @@ class Home extends Component {
             this.setState(prevState => ({
                 forestKeys: Math.max(0, prevState.forestKeys - 1)
             }));
+        },
+        addFireTempleKey: (e) => {
+            this.setState(prevState => ({
+                fireKeys: Math.min(8, prevState.fireKeys + 1)
+            }));
+        },
+        removeFireTempleKey: (e) => {
+            e.preventDefault();
+            this.setState(prevState => ({
+                fireKeys: Math.max(0, prevState.fireKeys - 1)
+            }));
         }
     }
 

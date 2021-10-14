@@ -2,10 +2,20 @@ import React from "react";
 import { Grid, Image } from "semantic-ui-react";
 import FireMedallionIcon from "../../../../assets/images/FireMedallion.png";
 
-const FireMedallion = () => {
+const FireMedallion = (props) => {
+
+    const { hasFireMedallion } = props;
+    const { addFireMedallion, removeFireMedallion } = props.medallions;
+
     return (
         <Grid.Column width={2}>
-            <Image size="mini" src={FireMedallionIcon} />
+            <Image
+                onClick={addFireMedallion}
+                onContextMenu={removeFireMedallion} 
+                style={(hasFireMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}
+                size="mini" 
+                src={FireMedallionIcon} 
+            />
         </Grid.Column>
     );
 }

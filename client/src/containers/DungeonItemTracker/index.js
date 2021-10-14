@@ -43,12 +43,12 @@ class DungeonItemTracker extends Component {
                         <JabuJabuItems />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <ForestTempleItems state={state} bossKeys={bossKeys} medallions={medallions} smallKeys={smallKeys} />
+                        <ForestTempleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
                     <Grid.Column width={4}>
-                        <FireTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />
+                        <FireTempleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <WaterTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />

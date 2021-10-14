@@ -49,7 +49,7 @@ class FireTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, bossKeys } = this.props;
+        const { state, bossKeys, smallKeys, medallions } = this.props;
 
         return (
             <Modal
@@ -61,7 +61,11 @@ class FireTempleItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <SmallKey />
+                            <SmallKey 
+                                counter={state.fireKeys}
+                                addFireKey={smallKeys.addFireTempleKey}
+                                removeFireKey={smallKeys.removeFireTempleKey}
+                            />
                             <BossKey 
                                 hasFireBossKey={state.hasFireBossKey} 
                                 bossKeys={bossKeys} 
@@ -76,7 +80,10 @@ class FireTempleItems extends Component {
                                 gotCompass={this.gotCompass}
                                 removeCompass={this.removeCompass}
                             />
-                            <FireMedallion />
+                            <FireMedallion 
+                                hasFireMedallion={state.hasFireMedallion}
+                                medallions={medallions}
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>
