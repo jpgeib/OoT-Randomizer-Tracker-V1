@@ -62,8 +62,8 @@ class ForestTempleItems extends Component {
                     <Grid>
                         <Grid.Row>
                             <SmallKey 
-                                addForestKey={smallKeys.addForestTempleKey} 
-                                removeForestKey={smallKeys.removeForestTempleKey} 
+                                addForestKey={smallKeys.addForestKey} 
+                                removeForestKey={smallKeys.removeForestKey} 
                                 counter={state.forestKeys} 
                             />
                             <BossKey 

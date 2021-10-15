@@ -111,23 +111,23 @@ class Home extends Component {
     }
 
     smallKeyLogic = {
-        addForestTempleKey: (e) => {
+        addForestKey: (e) => {
             this.setState(prevState => ({
                 forestKeys: Math.min(5, prevState.forestKeys + 1)
             }));
         },
-        removeForestTempleKey: (e) => {
+        removeForestKey: (e) => {
             e.preventDefault();
             this.setState(prevState => ({
                 forestKeys: Math.max(0, prevState.forestKeys - 1)
             }));
         },
-        addFireTempleKey: (e) => {
+        addFireKey: (e) => {
             this.setState(prevState => ({
                 fireKeys: Math.min(8, prevState.fireKeys + 1)
             }));
         },
-        removeFireTempleKey: (e) => {
+        removeFireKey: (e) => {
             e.preventDefault();
             this.setState(prevState => ({
                 fireKeys: Math.max(0, prevState.fireKeys - 1)

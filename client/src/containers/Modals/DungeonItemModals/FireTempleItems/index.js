@@ -63,8 +63,8 @@ class FireTempleItems extends Component {
                         <Grid.Row>
                             <SmallKey 
                                 counter={state.fireKeys}
-                                addFireKey={smallKeys.addFireTempleKey}
-                                removeFireKey={smallKeys.removeFireTempleKey}
+                                addFireKey={smallKeys.addFireKey}
+                                removeFireKey={smallKeys.removeFireKey}
                             />
                             <BossKey 
                                 hasFireBossKey={state.hasFireBossKey} 
