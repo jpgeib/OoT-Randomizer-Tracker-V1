@@ -7,16 +7,47 @@ import KokiriEmerald from "../../../../components/DungeonItems/GreatDekuTree/Kok
 class DekuTreeItems extends Component {
 
     state = {
-        open: false
+        open: false,
+        hasDungeonMap: false,
+        hasCompass: false
+    }
+
+    componentDidMount() {
+        const dekuTreeItemsData = JSON.parse(window.localStorage.getItem("dekuTreeItems"));
+        this.setState(dekuTreeItemsData);
+        console.log(dekuTreeItemsData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("dekuTreeItems", JSON.stringify(this.state));
     }
 
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
 
+    gotDungeonMap = (e) => {
+        this.setState({ hasDungeonMap: true });
+    }
+
+    removeDungeonMap = (e) => {
+        e.preventDefault();
+        this.setState({ hasDungeonMap: false });
+    }
+
+    gotCompass = (e) => {
+        this.setState({ hasCompass: true });
+    }
+
+    removeCompass = (e) => {
+        e.preventDefault();
+        this.setState({ hasCompass: false });
+    }
+
     render() {
 
         const { open } = this.state;
+        const { hasKokiriEmerald } = this.props.state;
 
         return (
             <Modal
@@ -28,9 +59,17 @@ class DekuTreeItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <DungeonMap />
-                            <Compass />
-                            <KokiriEmerald />
+                            <DungeonMap 
+                                hasDungeonMap={this.state.hasDungeonMap}
+                                gotDungeonMap={this.gotDungeonMap}
+                                removeDungeonMap={this.removeDungeonMap}
+                            />
+                            <Compass 
+                                hasCompass={this.state.hasCompass}
+                                gotCompass={this.gotCompass}
+                                removeCompass={this.removeCompass}
+                            />
+                            <KokiriEmerald hasKokiriEmerald={hasKokiriEmerald} />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>

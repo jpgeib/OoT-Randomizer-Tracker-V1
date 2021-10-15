@@ -180,6 +180,30 @@ class Home extends Component {
         } 
     }
 
+    jewelLogic = {
+        addKokiriEmerald: (e) => {
+            this.setState({ hasKokiriEmerald: true });
+        },
+        removeKokiriEmerald: (e) => {
+            e.preventDefault();
+            this.setState({ hasKokiriEmerald: false });
+        },
+        addGoronRuby: (e) => {
+            this.setState({ hasGoronRuby: true });
+        },
+        removeGoronRuby: (e) => {
+            e.preventDefault();
+            this.setState({ hasGoronRuby: false });
+        },
+        addZoraSapphire: (e) => {
+            this.setState({ hasZoraSapphire: true });
+        },
+        removeZoraSapphire: (e) => {
+            e.preventDefault();
+            this.setState({ hasZoraSapphire: false });
+        }
+    }
+
     medallionLogic = {
         addLightMedallion: (e) => {
             this.setState({ hasLightMedallion: true });
@@ -305,8 +329,8 @@ class Home extends Component {
                             <Grid.Row>
                                 <Grid.Column width={16}>
                                     <ItemTracker
-                                        state={this.state}
                                         tracker={trackerStyle}
+                                        state={this.state}
                                         emptyBottles={this.emptyBottleLogic}
                                         kokiriSword={this.kokiriSwordLogic}
                                         ocarina={this.ocarinaLogic}
@@ -322,6 +346,7 @@ class Home extends Component {
                                         state={this.state}
                                         smallKeys={this.smallKeyLogic}
                                         bossKeys={this.bossKeyLogic}
+                                        jewels={this.jewelLogic}
                                         medallions={this.medallionLogic}
                                     />
                                 </Grid.Column>
@@ -332,8 +357,8 @@ class Home extends Component {
                         <Grid.Row>
                             <Grid.Column>
                                 <LocationList
-                                    state={this.state}
                                     locations={locationStyle}
+                                    state={this.state}
                                 />
                             </Grid.Column>
                         </Grid.Row>
