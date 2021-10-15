@@ -11,7 +11,7 @@ const DungeonMap = (props) => {
             <Image
                 onClick={gotDungeonMap} 
                 onContextMenu={removeDungeonMap}
-                style={(hasDungeonMap === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
+                style={(hasDungeonMap === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}
                 size="mini" 
                 src={DungeonMapIcon} 
             />

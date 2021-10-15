@@ -6,12 +6,42 @@ import Compass from "../../../../components/DungeonItems/IceCavern/Compass";
 class IceCavernItems extends Component {
 
     state = {
-        open: false
+        open: false,
+        hasDungeonMap: false,
+        hasCompass: false
+    }
+
+    componentDidMount() {
+        const iceCavernItemsData = JSON.parse(window.localStorage.getItem("iceCavernItems"));
+        this.setState(iceCavernItemsData);
+        console.log(iceCavernItemsData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("iceCavernItems", JSON.stringify(this.state));
     }
 
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
+
+    gotDungeonMap = (e) => {
+        this.setState({ hasDungeonMap: true });
+    }
+
+    removeDungeonMap = (e) => {
+        e.preventDefault();
+        this.setState({ hasDungeonMap: false });
+    }
+
+    gotCompass = (e) => {
+        this.setState({ hasCompass: true });
+    }
+
+    removeCompass = (e) => {
+        e.preventDefault();
+        this.setState({ hasCompass: false });
+    }
 
     render() {
 
@@ -27,8 +57,16 @@ class IceCavernItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <DungeonMap />
-                            <Compass />
+                            <DungeonMap 
+                                hasDungeonMap={this.state.hasDungeonMap}
+                                gotDungeonMap={this.gotDungeonMap}
+                                removeDungeonMap={this.removeDungeonMap}
+                            />
+                            <Compass 
+                                hasCompass={this.state.hasCompass}
+                                gotCompass={this.gotCompass}
+                                removeCompass={this.removeCompass}
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>
