@@ -11,7 +11,7 @@ const BossKey = (props) => {
             <Image
                 onClick={addSpiritBossKey}
                 onContextMenu={removeSpiritBossKey}
-                style={(hasSpiritBossKey === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
+                style={(hasSpiritBossKey === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={BossKeyIcon} 
             />

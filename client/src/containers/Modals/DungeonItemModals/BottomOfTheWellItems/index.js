@@ -7,16 +7,47 @@ import Compass from "../../../../components/DungeonItems/BottomOfTheWell/Compass
 class BottomOfTheWellItems extends Component {
 
     state = {
-        open: false
+        open: false,
+        hasDungeonMap: false,
+        hasCompass: false
+    }
+
+    componentDidMount() {
+        const wellItemsData = JSON.parse(window.localStorage.getItem("wellItems"));
+        this.setState(wellItemsData);
+        console.log(wellItemsData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("wellItems", JSON.stringify(this.state));
     }
 
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
 
+    gotDungeonMap = (e) => {
+        this.setState({ hasDungeonMap: true });
+    }
+
+    removeDungeonMap = (e) => {
+        e.preventDefault();
+        this.setState({ hasDungeonMap: false });
+    }
+
+    gotCompass = (e) => {
+        this.setState({ hasCompass: true });
+    }
+
+    removeCompass = (e) => {
+        e.preventDefault();
+        this.setState({ hasCompass: false });
+    }
+
     render() {
 
         const { open } = this.state;
+        const { state, smallKeys } = this.props;
 
         return (
             <Modal
@@ -28,9 +59,21 @@ class BottomOfTheWellItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <SmallKey />
-                            <DungeonMap />
-                            <Compass />
+                            <SmallKey 
+                                counter={state.wellKeys}
+                                addWellKey={smallKeys.addWellKey}
+                                removeWellKey={smallKeys.removeWellKey}
+                            />
+                            <DungeonMap 
+                                hasDungeonMap={this.state.hasDungeonMap}
+                                gotDungeonMap={this.gotDungeonMap}
+                                removeDungeonMap={this.removeDungeonMap}
+                            />
+                            <Compass 
+                                hasCompass={this.state.hasCompass}
+                                gotCompass={this.gotCompass}
+                                removeCompass={this.removeCompass}
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>
