@@ -2,10 +2,19 @@ import React from "react";
 import { Grid, Image } from "semantic-ui-react";
 import GoronRubyIcon from "../../../../assets/images/Goron's_Ruby.png";
 
-const GoronRuby = () => {
+const GoronRuby = (props) => {
+
+    const { hasGoronRuby, addGoronRuby, removeGoronRuby } = props;
+
     return (
         <Grid.Column width={2}>
-            <Image size="mini" src={GoronRubyIcon} />
+            <Image
+                onClick={addGoronRuby}
+                onContextMenu={removeGoronRuby}
+                style={(hasGoronRuby === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
+                size="mini" 
+                src={GoronRubyIcon} 
+            />
         </Grid.Column>
     );
 }
