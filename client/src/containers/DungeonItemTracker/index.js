@@ -26,21 +26,21 @@ class DungeonItemTracker extends Component {
             <Grid style={dungeons}>
                 <Grid.Row centered>
                     <Grid.Column width={8}>
-                        <DefaultItem medallions={medallions} />
+                        <DefaultItem state={state} medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={8}>
-                        <GanonsCastleItems state={state} bossKeys={bossKeys} />
+                        <GanonsCastleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
                     <Grid.Column width={4}>
-                        <DekuTreeItems />
+                        <DekuTreeItems state={state} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <DodongosCavernItems />
+                        <DodongosCavernItems state={state} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <JabuJabuItems />
+                        <JabuJabuItems state={state} />
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <ForestTempleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} medallions={medallions} />
@@ -51,27 +51,27 @@ class DungeonItemTracker extends Component {
                         <FireTempleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <WaterTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />
+                        <WaterTempleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <ShadowTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />
+                        <ShadowTempleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <SpiritTempleItems state={state} bossKeys={bossKeys} medallions={medallions} />
+                        <SpiritTempleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} medallions={medallions} />
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row centered>
                     <Grid.Column width={4}>
-                        <BottomOfTheWellItems />
+                        <BottomOfTheWellItems state={state} smallKeys={smallKeys} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <IceCavernItems />
+                        <IceCavernItems state={state} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <GerudoFortressItems />
+                        <GerudoFortressItems state={state} smallKeys={smallKeys} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <GerudoTrainingItems />
+                        <GerudoTrainingItems state={state} smallKeys={smallKeys} />
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
