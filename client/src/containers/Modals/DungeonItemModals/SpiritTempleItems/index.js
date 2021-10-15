@@ -9,16 +9,47 @@ import SpiritMedallion from "../../../../components/DungeonItems/SpiritTemple/Sp
 class SpiritTempleItems extends Component {
 
     state = {
-        open: false
+        open: false,
+        hasDungeonMap: false,
+        hasCompass: false
+    }
+
+    componentDidMount() {
+        const spiritTempleItemsData = JSON.parse(window.localStorage.getItem("spiritTempleItems"));
+        this.setState(spiritTempleItemsData);
+        console.log(spiritTempleItemsData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("spiritTempleItems", JSON.stringify(this.state));
     }
 
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
 
+    gotDungeonMap = (e) => {
+        this.setState({ hasDungeonMap: true });
+    }
+
+    removeDungeonMap = (e) => {
+        e.preventDefault();
+        this.setState({ hasDungeonMap: false });
+    }
+
+    gotCompass = (e) => {
+        this.setState({ hasCompass: true });
+    }
+
+    removeCompass = (e) => {
+        e.preventDefault();
+        this.setState({ hasCompass: false });
+    }
+
     render() {
 
         const { open } = this.state;
+        const { state, smallKeys, bossKeys, medallions } = this.props;
 
         return (
             <Modal
@@ -30,11 +61,31 @@ class SpiritTempleItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <SmallKey />
-                            <BossKey />
-                            <DungeonMap />
-                            <Compass />
-                            <SpiritMedallion />
+                            <SmallKey 
+                                counter={state.spiritKeys}
+                                addSpiritKey={smallKeys.addSpiritKey}
+                                removeSpiritKey={smallKeys.removeSpiritKey}
+                            />
+                            <BossKey 
+                                hasSpiritBossKey={state.hasSpiritBossKey}
+                                addSpiritBossKey={bossKeys.addSpiritBossKey}
+                                removeSpiritBossKey={bossKeys.removeSpiritBossKey}
+                            />
+                            <DungeonMap 
+                                hasDungeonMap={this.state.hasDungeonMap}
+                                gotDungeonMap={this.gotDungeonMap}
+                                removeDungeonMap={this.removeDungeonMap}
+                            />
+                            <Compass 
+                                hasCompass={this.state.hasCompass}
+                                gotCompass={this.gotCompass}
+                                removeCompass={this.removeCompass}
+                            />
+                            <SpiritMedallion 
+                                hasSpiritMedallion={state.hasSpiritMedallion}
+                                addSpiritMedallion={medallions.addSpiritMedallion}
+                                removeSpiritMedallion={medallions.removeSpiritMedallion}
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>

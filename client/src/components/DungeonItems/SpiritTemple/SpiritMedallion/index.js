@@ -2,10 +2,19 @@ import React from "react";
 import { Grid, Image } from "semantic-ui-react";
 import SpiritMedallionIcon from "../../../../assets/images/SpiritMedallion.png";
 
-const SpiritMedallion = () => {
+const SpiritMedallion = (props) => {
+    
+    const { hasSpiritMedallion, addSpiritMedallion, removeSpiritMedallion} = props;
+    
     return (
         <Grid.Column width={2}>
-            <Image size="mini" src={SpiritMedallionIcon} />
+            <Image
+                onClick={addSpiritMedallion}
+                onContextMenu={removeSpiritMedallion}
+                style={(hasSpiritMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}} 
+                size="mini" 
+                src={SpiritMedallionIcon} 
+            />
         </Grid.Column>
     );
 }
