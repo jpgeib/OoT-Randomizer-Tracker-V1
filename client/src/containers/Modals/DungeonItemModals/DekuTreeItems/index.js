@@ -48,6 +48,7 @@ class DekuTreeItems extends Component {
 
         const { open } = this.state;
         const { hasKokiriEmerald } = this.props.state;
+        const { addKokiriEmerald, removeKokiriEmerald } = this.props.jewels;
 
         return (
             <Modal
@@ -69,7 +70,11 @@ class DekuTreeItems extends Component {
                                 gotCompass={this.gotCompass}
                                 removeCompass={this.removeCompass}
                             />
-                            <KokiriEmerald hasKokiriEmerald={hasKokiriEmerald} />
+                            <KokiriEmerald 
+                                hasKokiriEmerald={hasKokiriEmerald}
+                                addKokiriEmerald={addKokiriEmerald}
+                                removeKokiriEmerald={removeKokiriEmerald} 
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>
