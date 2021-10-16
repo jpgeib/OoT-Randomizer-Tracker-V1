@@ -9,6 +9,15 @@ class GanonsCastleItems extends Component {
         open: false
     }
 
+    componentDidMount() {
+        const ganonsCastleItemsData = JSON.parse(window.localStorage.getItem("ganonsCastleItems"));
+        this.setState(ganonsCastleItemsData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("ganonsCastleItems", JSON.stringify(this.state));
+    }
+
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });

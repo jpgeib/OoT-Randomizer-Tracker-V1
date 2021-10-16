@@ -24,8 +24,7 @@ class GerudoTrainingItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state } = this.props;
-        const { addTrainingKey, removeTrainingKey } = this.props.smallKeys;
+        const { state, smallKeys } = this.props;
 
         return (
             <Modal
@@ -39,8 +38,8 @@ class GerudoTrainingItems extends Component {
                         <Grid.Row>
                             <SmallKey 
                                 counter={state.trainingKeys}
-                                addTrainingKey={addTrainingKey}
-                                removeTrainingKey={removeTrainingKey}
+                                addTrainingKey={smallKeys.addTrainingKey}
+                                removeTrainingKey={smallKeys.removeTrainingKey}
                             />
                         </Grid.Row>
                     </Grid>
