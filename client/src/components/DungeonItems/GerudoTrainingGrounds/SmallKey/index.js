@@ -11,11 +11,11 @@ const SmallKey = (props) => {
             <Image 
                 onClick={addTrainingKey}
                 onContextMenu={removeTrainingKey}
-                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)" }}
+                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
                 size="mini" 
                 src={SmallKeyIcon} 
             />
-            <Header style={(counter === 9) ? { color: "red" } : { color: "black" }} as="h1"><span>{counter}</span></Header>
+            <Header style={(counter === 9) ? { color: "red" } : { color: "black" } } as="h1"><span>{counter}</span></Header>
         </Grid.Column>
     );
 }

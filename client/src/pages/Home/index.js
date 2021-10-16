@@ -192,25 +192,27 @@ class Home extends Component {
             this.setState(prevState => ({
                 trainingKeys: Math.min(9, prevState.trainingKeys + 1)
             }));
-            console.log(this.state.trainingKeys);
+            console.log("It works!");
         },
         removeTrainingKey: (e) => {
             e.preventDefault();
             this.setState(prevState => ({
                 trainingKeys: Math.max(0, prevState.trainingKeys - 1)
             }));
-            console.log(this.state.trainingKeys);
+            console.log("It also works!");
         },
         addGanonKey: (e) => {
             this.setState(prevState => ({
                 ganonKeys: Math.min(2, prevState.ganonKeys + 1)
             }));
+            console.log("It works!");
         },
         removeGanonKey: (e) => {
             e.preventDefault();
             this.setState(prevState => ({
                 ganonKeys: Math.max(0, prevState.ganonKeys - 1)
             }));
+            console.log("It also works!");
         }
     }
 
