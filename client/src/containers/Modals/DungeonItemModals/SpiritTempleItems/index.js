@@ -17,7 +17,6 @@ class SpiritTempleItems extends Component {
     componentDidMount() {
         const spiritTempleItemsData = JSON.parse(window.localStorage.getItem("spiritTempleItems"));
         this.setState(spiritTempleItemsData);
-        console.log(spiritTempleItemsData);
     }
 
     componentDidUpdate() {

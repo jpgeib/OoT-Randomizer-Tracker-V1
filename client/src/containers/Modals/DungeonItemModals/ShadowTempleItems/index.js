@@ -17,7 +17,6 @@ class ShadowTempleItems extends Component {
     componentDidMount() {
         const shadowTempleItemsData = JSON.parse(window.localStorage.getItem("shadowTempleItems"));
         this.setState(shadowTempleItemsData);
-        console.log(shadowTempleItemsData);
     }
 
     componentDidUpdate() {

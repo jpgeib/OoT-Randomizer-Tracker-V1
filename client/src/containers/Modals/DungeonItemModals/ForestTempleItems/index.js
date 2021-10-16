@@ -17,7 +17,6 @@ class ForestTempleItems extends Component {
     componentDidMount() {
         const forestTempleItemsData = JSON.parse(window.localStorage.getItem("forestTempleItems"));
         this.setState(forestTempleItemsData);
-        console.log(forestTempleItemsData);
     }
 
     componentDidUpdate() {

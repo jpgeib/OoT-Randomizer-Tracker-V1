@@ -15,7 +15,6 @@ class DodongosCavernItems extends Component {
     componentDidMount() {
         const dodongosCavernItemsData = JSON.parse(window.localStorage.getItem("dodongosCavernItems"));
         this.setState(dodongosCavernItemsData);
-        console.log(dodongosCavernItemsData);
     }
 
     componentDidUpdate() {

@@ -15,7 +15,6 @@ class DekuTreeItems extends Component {
     componentDidMount() {
         const dekuTreeItemsData = JSON.parse(window.localStorage.getItem("dekuTreeItems"));
         this.setState(dekuTreeItemsData);
-        console.log(dekuTreeItemsData);
     }
 
     componentDidUpdate() {

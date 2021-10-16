@@ -14,7 +14,6 @@ class IceCavernItems extends Component {
     componentDidMount() {
         const iceCavernItemsData = JSON.parse(window.localStorage.getItem("iceCavernItems"));
         this.setState(iceCavernItemsData);
-        console.log(iceCavernItemsData);
     }
 
     componentDidUpdate() {

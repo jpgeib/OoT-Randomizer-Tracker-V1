@@ -17,7 +17,6 @@ class FireTempleItems extends Component {
     componentDidMount() {
         const fireTempleItemsData = JSON.parse(window.localStorage.getItem("fireTempleItems"));
         this.setState(fireTempleItemsData);
-        console.log(fireTempleItemsData);
     }
 
     componentDidUpdate() {

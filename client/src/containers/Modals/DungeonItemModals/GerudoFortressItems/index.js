@@ -8,6 +8,15 @@ class GerudoFortressItems extends Component {
         open: false
     }
 
+    componentDidMount() {
+        const gerudoFortressItemsData = JSON.parse(window.localStorage.getItem("gerudoFortressItems"));
+        this.setState(gerudoFortressItemsData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("gerudoFortressItems", JSON.stringify(this.state));
+    }
+
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
@@ -15,6 +24,7 @@ class GerudoFortressItems extends Component {
     render() {
 
         const { open } = this.state;
+        const { state, smallKeys } = this.props;
 
         return (
             <Modal
@@ -26,7 +36,11 @@ class GerudoFortressItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <SmallKey />
+                            <SmallKey 
+                                counter={state.fortressKeys}
+                                addFortressKey={smallKeys.addFortressKey}
+                                removeFortressKey={smallKeys.removeFortressKey}
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>

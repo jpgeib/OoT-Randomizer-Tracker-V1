@@ -15,7 +15,6 @@ class BottomOfTheWellItems extends Component {
     componentDidMount() {
         const wellItemsData = JSON.parse(window.localStorage.getItem("wellItems"));
         this.setState(wellItemsData);
-        console.log(wellItemsData);
     }
 
     componentDidUpdate() {

@@ -17,7 +17,6 @@ class WaterTempleItems extends Component {
     componentDidMount() {
         const waterTempleItemsData = JSON.parse(window.localStorage.getItem("waterTempleItems"));
         this.setState(waterTempleItemsData);
-        console.log(waterTempleItemsData);
     }
 
     componentDidUpdate() {

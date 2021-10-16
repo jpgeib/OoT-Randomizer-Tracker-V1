@@ -15,7 +15,6 @@ class JabuJabuItems extends Component {
     componentDidMount() {
         const jabuJabuItemsData = JSON.parse(window.localStorage.getItem("jabuJabuItems"));
         this.setState(jabuJabuItemsData);
-        console.log(jabuJabuItemsData);
     }
 
     componentDidUpdate() {

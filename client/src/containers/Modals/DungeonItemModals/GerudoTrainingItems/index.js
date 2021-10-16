@@ -8,6 +8,15 @@ class GerudoTrainingItems extends Component {
         open: false
     }
 
+    componentDidMount() {
+        const gerudoTrainingItemsData = JSON.parse(window.localStorage.getItem("gerudoTrainingItems"));
+        this.setState(gerudoTrainingItemsData);
+    }
+
+    componentDidUpdate() {
+        window.localStorage.setItem("gerudoTrainingItems", JSON.stringify(this.state));
+    }
+
     closeConfigShow = () => this.setState({ open: true });
 
     close = () => this.setState({ open: false });
@@ -15,6 +24,7 @@ class GerudoTrainingItems extends Component {
     render() {
 
         const { open } = this.state;
+        const { state, smallKeys } = this.props;
 
         return (
             <Modal
@@ -26,7 +36,11 @@ class GerudoTrainingItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <SmallKey />
+                            <SmallKey 
+                                counter={state.trainingKeys}
+                                addTrainingKey={smallKeys.addTrainingKey}
+                                removeTrainingKey={smallKeys.removeTrainingKey}
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>
