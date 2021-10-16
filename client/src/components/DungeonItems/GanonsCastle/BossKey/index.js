@@ -2,10 +2,19 @@ import React from "react";
 import { Grid, Image } from "semantic-ui-react";
 import BossKeyIcon from "../../../../assets/images/Boss_Key.png";
 
-const BossKey = () => {
+const BossKey = (props) => {
+
+    const { hasGanonBossKey, addGanonBossKey, removeGanonBossKey } = props;
+
     return (
         <Grid.Column width={2}>
-            <Image size="mini" src={BossKeyIcon} />
+            <Image
+                onClick={addGanonBossKey}
+                onContextMenu={removeGanonBossKey}
+                style={(hasGanonBossKey === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
+                size="mini" 
+                src={BossKeyIcon} 
+            />
         </Grid.Column>
     );
 }

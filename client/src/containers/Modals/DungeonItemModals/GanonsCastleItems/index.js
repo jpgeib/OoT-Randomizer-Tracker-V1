@@ -16,6 +16,7 @@ class GanonsCastleItems extends Component {
     render() {
 
         const { open } = this.state;
+        const { state, smallKeys, bossKeys } = this.props;
 
         return (
             <Modal
@@ -27,8 +28,16 @@ class GanonsCastleItems extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <SmallKey />
-                            <BossKey />
+                            <SmallKey 
+                                counter={state.ganonKeys}
+                                addGanonKey={smallKeys.addGanonKey}
+                                removeGanonKey={smallKeys.removeGanonKey}
+                            />
+                            <BossKey 
+                                hasGanonBossKey={state.hasGanonBossKey}
+                                addGanonBossKey={bossKeys.addGanonBossKey}
+                                removeGanonBossKey={bossKeys.removeGanonBossKey}
+                            />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>
