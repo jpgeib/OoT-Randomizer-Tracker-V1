@@ -111,6 +111,8 @@ class Home extends Component {
         window.localStorage.setItem("main", JSON.stringify(this.state));
     }
 
+    //Dungeon Item Logic
+
     smallKeyLogic = {
         addForestKey: (e) => {
             this.setState(prevState => ({
@@ -324,6 +326,22 @@ class Home extends Component {
         removeSpiritMedallion: (e) => {
             e.preventDefault();
             this.setState({ hasSpiritMedallion: false });
+        }
+    }
+
+    //Standard Item Logic
+
+    dekuStickLogic = {
+        addDekuSticks: (e) => {
+            this.setState(prevState => ({
+                dekuStickCounter: Math.min(30, prevState.dekuStickCounter + 10)
+            }));
+        },
+        removeDekuSticks: (e) => {
+            e.preventDefault();
+            this.setState(prevState => ({
+                dekuStickCounter: Math.max(0, prevState.dekuStickCounter - 10)
+            }));
         }
     }
 
