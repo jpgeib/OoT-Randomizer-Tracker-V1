@@ -47,6 +47,7 @@ class Home extends Component {
         hasMasterSword: true,
         hasBigGoronSword: false,
         hasOcarina: false,
+        hasOcarinaOfTime: false,
         hasBombchus: false,
         hasHookshot: false,
         hasLongshot: false,
@@ -373,6 +374,13 @@ class Home extends Component {
             e.preventDefault();
             this.setState({ hasOcarina: false });
             this.setState({ hasSongOfStorms: false });
+        },
+        gotOcarinaOfTime: (e) => {
+            this.setState({ hasOcarinaOfTime: true });
+        },
+        removeOcarinaOfTime: (e) => {
+            e.preventDefault();
+            this.setState({ hasOcarinaOfTime: false });
         }
     }
 

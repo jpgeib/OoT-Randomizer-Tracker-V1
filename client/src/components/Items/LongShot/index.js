@@ -4,12 +4,11 @@ import LongShotIcon from "../../../assets/images/Longshot.png";
 
 const LongShot = (props) => {
 
-    const { removeLongshot, gotLongshot } = props;
+    const { removeLongshot } = props;
 
     return (
         <Grid.Column width={2}>
             <Image
-                onClick={gotLongshot}
                 onContextMenu={removeLongshot}  
                 size="mini" 
                 src={LongShotIcon} 
