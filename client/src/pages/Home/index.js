@@ -439,6 +439,7 @@ class Home extends Component {
                                         ocarina={this.ocarinaLogic}
                                         hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
+                                        dekuSticks={this.dekuStickLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
