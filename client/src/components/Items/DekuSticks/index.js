@@ -19,7 +19,7 @@ const DekuSticks = (props) => {
                 size="mini" 
                 src={DekuSticksIcon} 
             />
-            <Header color="red" as="h1"><span>{counter}</span></Header>
+            <Header style={(counter >= 30) ? { color: "red" } : { color: "white" } } as="h1"><span>{counter}</span></Header>
         </Grid.Column>
     );
 }
