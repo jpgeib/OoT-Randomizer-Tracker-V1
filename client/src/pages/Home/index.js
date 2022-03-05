@@ -331,6 +331,14 @@ class Home extends Component {
 
     //Standard Item Logic
 
+    itemLogic = {
+        fireArrowLogic: {
+            fireArrows: this.props.fireArrows,
+            addFireArrows: this.props.addFireArrows,
+            removeFireArrows: this.props.removeFireArrows
+        }
+    }
+
     dekuStickLogic = {
         addDekuSticks: (e) => {
             this.setState(prevState => ({
@@ -501,7 +509,6 @@ class Home extends Component {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
         const { fireArrows, addFireArrows, removeFireArrows } = this.props;
-        console.log(fireArrows);
 
         return (
             <Grid>
