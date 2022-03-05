@@ -371,6 +371,32 @@ class Home extends Component {
         }
     }
 
+    bombLogic = {
+        addBombs: (e) => {
+            if (this.state.bombCounter === 0) {
+                this.setState(prevState => ({
+                    bombCounter: Math.min(40, prevState.bombCounter + 20)
+                }));
+            } else {
+                this.setState(prevState => ({
+                    bombCounter: Math.min(40, prevState.bombCounter + 10)
+                }));
+            }
+        },
+        removeBombs: (e) => {
+            e.preventDefault();
+            if (this.state.bombCounter === 20) {
+                this.setState(prevState => ({
+                    bombCounter: Math.max(0, prevState.bombCounter - 20)
+                }));
+            } else {
+                this.setState(prevState => ({
+                    bombCounter: Math.max(0, prevState.bombCounter - 10)
+                }));
+            }
+        }
+    }
+
     skulltulaLogic = {
         addSkulltula: (e) => {
             this.setState(prevState => ({
@@ -467,6 +493,7 @@ class Home extends Component {
                                         skulltulas={this.skulltulaLogic}
                                         dekuSticks={this.dekuStickLogic}
                                         dekuNuts={this.dekuNutLogic}
+                                        bombs={this.bombLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
