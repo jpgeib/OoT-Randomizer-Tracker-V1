@@ -4,9 +4,9 @@ import ItemTracker from "../../containers/ItemTracker";
 import DungeonItemTracker from "../../containers/DungeonItemTracker";
 import LocationList from "../../containers/LocationList";
 
-// import { connect } from "react-redux";
-// import { compose } from "redux";
-// import { addFairyOcarina, removeFairyOcarina } from "../../actions/ocarinas";
+import { connect } from "react-redux";
+import { compose } from "redux";
+import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
 
 class Home extends Component {
 
@@ -500,7 +500,7 @@ class Home extends Component {
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
-        // const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
+        const { fireArrows, addFireArrows, removeFireArrows } = this.props;
 
         return (
             <Grid>
@@ -521,6 +521,9 @@ class Home extends Component {
                                         dekuNuts={this.dekuNutLogic}
                                         bombs={this.bombLogic}
                                         fairyBow={this.fairyBowLogic}
+                                        fireArrows={fireArrows}
+                                        addFireArrows={addFireArrows}
+                                        removeFireArrows={removeFireArrows}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -554,8 +557,8 @@ class Home extends Component {
     }
 }
 
-// function mapStateToProps(state) {
-//     return { fairyOcarina: state.ocarinas }
-// };
+function mapStateToProps(state) {
+    return { fireArrows: state.fireArrows }
+};
 
-export default (Home);
+export default compose(connect(mapStateToProps, { addFireArrows, removeFireArrows }))(Home);

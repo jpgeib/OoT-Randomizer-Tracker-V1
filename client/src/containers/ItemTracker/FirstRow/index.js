@@ -17,6 +17,7 @@ const FirstRow = (props) => {
     const { addFairyBow, removeFairyBow } = props.fairyBow;
     const { gotKokiriSword, removeKokiriSword } = props.kokiriSword;
     const { hasKokiriSword, dekuStickCounter, dekuNutCounter, bombCounter, fairyBowCounter } = props.state;
+    const { fireArrows, addFireArrows, removeFireArrows } = props;
     
     return (
         <Grid.Row>
@@ -24,7 +25,7 @@ const FirstRow = (props) => {
             <DekuNuts counter={dekuNutCounter} add={addDekuNuts} remove={removeDekuNuts} />
             <BombBag counter={bombCounter} add={addBombs} remove={removeBombs} />
             <FairyBow counter={fairyBowCounter} add={addFairyBow} remove={removeFairyBow} />
-            <FireArrows />
+            <FireArrows fireArrows={fireArrows} add={addFireArrows} remove={removeFireArrows} />
             <DinsFire />
             <KokiriSword hasKokiriSword={hasKokiriSword} gotKokiriSword={gotKokiriSword} removeKokiriSword={removeKokiriSword} />
             <MasterSword />

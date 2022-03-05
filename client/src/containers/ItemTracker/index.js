@@ -23,10 +23,13 @@ class ItemTracker extends Component {
             dekuSticks,
             dekuNuts,
             bombs,
-            fairyBow
+            fairyBow,
             // fairyOcarina,
             // addFairyOcarina,
             // removeFairyOcarina
+            fireArrows,
+            addFireArrows,
+            removeFireArrows
         } = this.props;
 
         return (
@@ -38,6 +41,9 @@ class ItemTracker extends Component {
                     dekuNuts={dekuNuts}
                     bombs={bombs}
                     fairyBow={fairyBow}
+                    fireArrows={fireArrows}
+                    addFireArrows={addFireArrows}
+                    removeFireArrows={removeFireArrows}
                 />
                 <SecondRow 
                     state={state} 
