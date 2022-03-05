@@ -501,6 +501,7 @@ class Home extends Component {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
         const { fireArrows, addFireArrows, removeFireArrows } = this.props;
+        console.log(fireArrows);
 
         return (
             <Grid>
