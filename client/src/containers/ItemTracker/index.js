@@ -20,7 +20,8 @@ class ItemTracker extends Component {
             ocarina,
             kokiriSword,
             emptyBottles,
-            dekuSticks
+            dekuSticks,
+            dekuNuts
             // fairyOcarina,
             // addFairyOcarina,
             // removeFairyOcarina
@@ -32,6 +33,7 @@ class ItemTracker extends Component {
                     state={state} 
                     kokiriSword={kokiriSword}
                     dekuSticks={dekuSticks}
+                    dekuNuts={dekuNuts}
                 />
                 <SecondRow 
                     state={state} 

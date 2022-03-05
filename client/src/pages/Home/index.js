@@ -257,7 +257,7 @@ class Home extends Component {
         removeGanonBossKey: (e) => {
             e.preventDefault();
             this.setState({ hasGanonBossKey: false });
-        } 
+        }
     }
 
     jewelLogic = {
@@ -342,6 +342,32 @@ class Home extends Component {
             this.setState(prevState => ({
                 dekuStickCounter: Math.max(0, prevState.dekuStickCounter - 10)
             }));
+        }
+    }
+
+    dekuNutLogic = {
+        addDekuNuts: (e) => {
+            if (this.state.dekuNutCounter === 0) {
+                this.setState(prevState => ({
+                    dekuNutCounter: Math.min(40, prevState.dekuNutCounter + 20)
+                }));
+            } else {
+                this.setState(prevState => ({
+                    dekuNutCounter: Math.min(40, prevState.dekuNutCounter + 10)
+                }));
+            }
+        },
+        removeDekuNuts: (e) => {
+            e.preventDefault();
+            if (this.state.dekuNutCounter === 20) {
+                this.setState(prevState => ({
+                    dekuNutCounter: Math.max(0, prevState.dekuNutCounter - 20)
+                }));
+            } else {
+                this.setState(prevState => ({
+                    dekuNutCounter: Math.max(0, prevState.dekuNutCounter - 10)
+                }));
+            }
         }
     }
 
@@ -440,6 +466,7 @@ class Home extends Component {
                                         hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
                                         dekuSticks={this.dekuStickLogic}
+                                        dekuNuts={this.dekuNutLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
