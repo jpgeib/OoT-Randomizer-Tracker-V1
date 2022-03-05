@@ -397,6 +397,32 @@ class Home extends Component {
         }
     }
 
+    fairyBowLogic = {
+        addFairyBow: (e) => {
+            if (this.state.fairyBowCounter === 0) {
+                this.setState(prevState => ({
+                    fairyBowCounter: Math.min(50, prevState.fairyBowCounter + 30)
+                }));
+            } else {
+                this.setState(prevState => ({
+                    fairyBowCounter: Math.min(50, prevState.fairyBowCounter + 10)
+                }));
+            }
+        },
+        removeFairyBow: (e) => {
+            e.preventDefault();
+            if (this.state.fairyBowCounter === 30) {
+                this.setState(prevState => ({
+                    fairyBowCounter: Math.max(0, prevState.fairyBowCounter - 30)
+                }));
+            } else {
+                this.setState(prevState => ({
+                    fairyBowCounter: Math.max(0, prevState.fairyBowCounter - 10)
+                }));
+            }
+        }
+    }
+
     skulltulaLogic = {
         addSkulltula: (e) => {
             this.setState(prevState => ({
@@ -494,6 +520,7 @@ class Home extends Component {
                                         dekuSticks={this.dekuStickLogic}
                                         dekuNuts={this.dekuNutLogic}
                                         bombs={this.bombLogic}
+                                        fairyBow={this.fairyBowLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
