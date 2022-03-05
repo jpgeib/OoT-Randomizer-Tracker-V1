@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import BigGoronSword from "../../../components/Items/BigGoronSword";
 import FairySlingshot from "../../../components/Items/FairySlingshot";
-import FairyOcarina from "../../../components/Items/FairyOcarina";
-import OcarinaOfTime from "../../../components/Items/OcarinaOfTime";
+import Ocarina from "../../../components/Items/Ocarina";
+// import OcarinaOfTime from "../../../components/Items/OcarinaOfTime";
 import Bombchus from "../../../components/Items/Bombchus";
 import HookShot from "../../../components/Items/HookShot";
 import LongShot from "../../../components/Items/LongShot";
@@ -24,20 +24,17 @@ class SecondRow extends Component {
             <Grid.Row>
                 <BigGoronSword />
                 <FairySlingshot />
-                {hasOcarinaOfTime === true ? 
-                    <OcarinaOfTime 
-                        removeOcarinaOfTime={removeOcarinaOfTime}
-                    /> :
-                    <FairyOcarina
+                <Ocarina
                     hasOcarina={hasOcarina}
                     gotFairyOcarina={gotFairyOcarina}
                     removeFairyOcarina={removeFairyOcarina}
                     hasOcarinaOfTime={hasOcarinaOfTime}
                     gotOcarinaOfTime={gotOcarinaOfTime}
+                    removeOcarinaOfTime={removeOcarinaOfTime}
                     // fairyOcarina={fairyOcarina}
                     // addFairyOcarina={addFairyOcarina}
                     // removeFairyOcarina={removeFairyOcarina}
-                />}
+                />
                 <Bombchus />
                 {hasLongshot === true ?
                     <LongShot
