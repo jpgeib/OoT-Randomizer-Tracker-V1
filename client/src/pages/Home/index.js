@@ -332,14 +332,6 @@ class Home extends Component {
 
     //Standard Item Logic
 
-    itemLogic = {
-        fireArrowLogic: {
-            fireArrows: this.props.fireArrows,
-            addFireArrows: this.props.addFireArrows,
-            removeFireArrows: this.props.removeFireArrows
-        }
-    }
-
     dekuStickLogic = {
         addDekuSticks: (e) => {
             this.setState(prevState => ({
@@ -520,6 +512,9 @@ class Home extends Component {
             addFireArrows, 
             removeFireArrows 
         } = this.props;
+        console.log(fairyOcarina);
+        // console.log(ocarinaOfTime);
+        console.log(fireArrows);
 
         return (
             <Grid>
@@ -584,8 +579,8 @@ class Home extends Component {
 
 function mapStateToProps(state) {
     return {
-        fairyOcarina: state.ocarinas.fairyOcarina,
-        ocarinaOfTime: state.ocarinas.ocarinaOfTime, 
+        fairyOcarina: state.fairyOcarina,
+        ocarinaOfTime: state.ocarinaOfTime, 
         fireArrows: state.fireArrows
     }
 };

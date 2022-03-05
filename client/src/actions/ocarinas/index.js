@@ -7,7 +7,7 @@ import {
 
 export const addFairyOcarina = (e) => {
     console.log("added fairy ocarina");
-    return{
+    return {
         type: ADD_FAIRY_OCARINA
     };
 };

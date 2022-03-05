@@ -1,12 +1,13 @@
-import { ADD_FIRE_ARROWS, REMOVE_FIRE_ARROWS } from "../actions/types";
+import { ADD_FAIRY_OCARINA, REMOVE_FAIRY_OCARINA } from "../actions/types";
 
 let INITIAL_STATE = null;
 
 export default function (state = INITIAL_STATE, action) {
+    console.log(state);
     switch (action.type) {
-        case ADD_FIRE_ARROWS:
+        case ADD_FAIRY_OCARINA:
             return state = true;
-        case REMOVE_FIRE_ARROWS:
+        case REMOVE_FAIRY_OCARINA:
             return state = false;
         default:
             return state;

@@ -11,8 +11,8 @@ const Ocarina = (props) => {
         <Grid.Column width={2}>
             <Image
                 onClick={(fairyOcarina === true && ocarinaOfTime === false) ? addOcarinaOfTime : addFairyOcarina}
-                onContextMenu={(fairyOcarina === true && ocarinaOfTime === true) ? removeOcarinaOfTime : removeFairyOcarina} 
-                style={(fairyOcarina === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
+                onContextMenu={removeFairyOcarina} 
+                style={(fairyOcarina === false || fairyOcarina === null) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
                 size="mini" 
                 src={(fairyOcarina === true && ocarinaOfTime === true) ? OcarinaOfTimeIcon : FairyOcarinaIcon} 
             />
