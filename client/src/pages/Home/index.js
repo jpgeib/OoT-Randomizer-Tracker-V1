@@ -105,7 +105,7 @@ class Home extends Component {
     componentDidMount() {
         const trackerData = JSON.parse(window.localStorage.getItem("main"));
         this.setState(trackerData);
-        console.log(trackerData);
+        // console.log(trackerData);
     }
 
     componentDidUpdate() {
@@ -512,9 +512,9 @@ class Home extends Component {
             addFireArrows, 
             removeFireArrows 
         } = this.props;
-        console.log(fairyOcarina);
+        // console.log(fairyOcarina);
         // console.log(ocarinaOfTime);
-        console.log(fireArrows);
+        // console.log(fireArrows);
 
         return (
             <Grid>
@@ -578,6 +578,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
+    console.log(state);
     return {
         fairyOcarina: state.fairyOcarina,
         ocarinaOfTime: state.ocarinaOfTime, 

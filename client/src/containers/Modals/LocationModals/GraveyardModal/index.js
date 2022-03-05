@@ -16,7 +16,7 @@ class GraveyardModal extends Component {
     componentDidMount() {
         const graveyardData = JSON.parse(window.localStorage.getItem("graveyard"));
         this.setState(graveyardData);
-        console.log(graveyardData);
+        // console.log(graveyardData);
     }
 
     componentDidUpdate() {

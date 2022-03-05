@@ -21,7 +21,7 @@ class KokiriForestModal extends Component {
     componentDidMount() {
         const kokiriForestData = JSON.parse(window.localStorage.getItem("kokiriForest"));
         this.setState(kokiriForestData);
-        console.log(kokiriForestData);
+        // console.log(kokiriForestData);
     }
 
     componentDidUpdate() {

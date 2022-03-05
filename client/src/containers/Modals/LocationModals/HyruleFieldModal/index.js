@@ -12,7 +12,7 @@ class HyruleFieldModal extends Component {
     componentDidMount() {
         const hyruleFieldData = JSON.parse(window.localStorage.getItem("hyruleField"));
         this.setState(hyruleFieldData);
-        console.log(hyruleFieldData);
+        // console.log(hyruleFieldData);
     }
 
     componentDidUpdate() {

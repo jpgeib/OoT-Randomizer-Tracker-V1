@@ -14,7 +14,7 @@ class GreatDekuTreeModal extends Component {
     componentDidMount() {
         const dekuTreeData = JSON.parse(window.localStorage.getItem("dekuTree"));
         this.setState(dekuTreeData);
-        console.log(dekuTreeData);
+        // console.log(dekuTreeData);
     }
 
     componentDidUpdate() {
