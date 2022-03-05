@@ -5,16 +5,16 @@ import OcarinaOfTimeIcon from "../../../assets/images/OcarinaofTime.png";
 
 const Ocarina = (props) => {
 
-    const { hasOcarina, gotFairyOcarina, removeFairyOcarina, hasOcarinaOfTime, gotOcarinaOfTime, removeOcarinaOfTime } = props;
+    const { fairyOcarina, addFairyOcarina, removeFairyOcarina, ocarinaOfTime, addOcarinaOfTime, removeOcarinaOfTime } = props;
 
     return (
         <Grid.Column width={2}>
             <Image
-                onClick={(hasOcarina === true && hasOcarinaOfTime === false) ? gotOcarinaOfTime : gotFairyOcarina}
-                onContextMenu={(hasOcarina === true && hasOcarinaOfTime === true) ? removeOcarinaOfTime : removeFairyOcarina} 
-                style={(hasOcarina === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
+                onClick={(fairyOcarina === true && ocarinaOfTime === false) ? addOcarinaOfTime : addFairyOcarina}
+                onContextMenu={(fairyOcarina === true && ocarinaOfTime === true) ? removeOcarinaOfTime : removeFairyOcarina} 
+                style={(fairyOcarina === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
                 size="mini" 
-                src={(hasOcarina === true && hasOcarinaOfTime === true) ? OcarinaOfTimeIcon : FairyOcarinaIcon} 
+                src={(fairyOcarina === true && ocarinaOfTime === true) ? OcarinaOfTimeIcon : FairyOcarinaIcon} 
             />
         </Grid.Column>
     );

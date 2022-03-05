@@ -24,9 +24,12 @@ class ItemTracker extends Component {
             dekuNuts,
             bombs,
             fairyBow,
-            // fairyOcarina,
-            // addFairyOcarina,
-            // removeFairyOcarina
+            fairyOcarina,
+            addFairyOcarina,
+            removeFairyOcarina,
+            ocarinaOfTime,
+            addOcarinaOfTime,
+            removeOcarinaOfTime,
             fireArrows,
             addFireArrows,
             removeFireArrows
@@ -48,10 +51,13 @@ class ItemTracker extends Component {
                 <SecondRow 
                     state={state} 
                     hookshot={hookshot}
-                    ocarina={ocarina}
-                    // fairyOcarina={fairyOcarina}
-                    // addFairyOcarina={addFairyOcarina}
-                    // removeFairyOcarina={removeFairyOcarina}
+                    // ocarina={ocarina}
+                    fairyOcarina={fairyOcarina}
+                    addFairyOcarina={addFairyOcarina}
+                    removeFairyOcarina={removeFairyOcarina}
+                    ocarinaOfTime={ocarinaOfTime}
+                    addOcarinaOfTime={addOcarinaOfTime}
+                    removeOcarinaOfTime={removeOcarinaOfTime}
                 />
                 <ThirdRow />
                 <FourthRow 

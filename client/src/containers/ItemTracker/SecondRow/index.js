@@ -17,23 +17,33 @@ class SecondRow extends Component {
 
         const { hasLongshot, hasHookshot, hasOcarina, hasOcarinaOfTime } = this.props.state;
         const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
-        const { gotFairyOcarina, removeFairyOcarina, gotOcarinaOfTime, removeOcarinaOfTime } = this.props.ocarina;
-        // const { fairyOcarina, addFairyOcarina, removeFairyOcarina } = this.props;
+        // const { gotFairyOcarina, removeFairyOcarina, gotOcarinaOfTime, removeOcarinaOfTime } = this.props.ocarina;
+        const { 
+            fairyOcarina, 
+            addFairyOcarina, 
+            removeFairyOcarina, 
+            ocarinaOfTime, 
+            addOcarinaOfTime, 
+            removeOcarinaOfTime 
+        } = this.props;
 
         return (
             <Grid.Row>
                 <BigGoronSword />
                 <FairySlingshot />
                 <Ocarina
-                    hasOcarina={hasOcarina}
-                    gotFairyOcarina={gotFairyOcarina}
-                    removeFairyOcarina={removeFairyOcarina}
-                    hasOcarinaOfTime={hasOcarinaOfTime}
-                    gotOcarinaOfTime={gotOcarinaOfTime}
-                    removeOcarinaOfTime={removeOcarinaOfTime}
-                    // fairyOcarina={fairyOcarina}
-                    // addFairyOcarina={addFairyOcarina}
+                    // hasOcarina={hasOcarina}
+                    // gotFairyOcarina={gotFairyOcarina}
                     // removeFairyOcarina={removeFairyOcarina}
+                    // hasOcarinaOfTime={hasOcarinaOfTime}
+                    // gotOcarinaOfTime={gotOcarinaOfTime}
+                    // removeOcarinaOfTime={removeOcarinaOfTime}
+                    fairyOcarina={fairyOcarina}
+                    addFairyOcarina={addFairyOcarina}
+                    removeFairyOcarina={removeFairyOcarina}
+                    ocarinaOfTime={ocarinaOfTime}
+                    addOcarinaOfTime={addOcarinaOfTime}
+                    removeOcarinaOfTime={removeOcarinaOfTime}
                 />
                 <Bombchus />
                 {hasLongshot === true ?

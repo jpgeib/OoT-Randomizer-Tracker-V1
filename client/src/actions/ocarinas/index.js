@@ -6,19 +6,22 @@ import {
 } from "../types";
 
 export const addFairyOcarina = (e) => {
-   return{
+    console.log("added fairy ocarina");
+    return{
         type: ADD_FAIRY_OCARINA
     };
 };
 
 export const removeFairyOcarina = (e) => {
     e.preventDefault();
+    console.log("removed fairy ocarina");
     return {
         type: REMOVE_FAIRY_OCARINA
     };
 };
 
 export const addOcarinaOfTime = (e) => {
+    console.log("added ocarina of time");
     return {
         type: ADD_OCARINA_OF_TIME
     };
@@ -26,6 +29,7 @@ export const addOcarinaOfTime = (e) => {
 
 export const removeOcarinaOfTime = (e) => {
     e.preventDefault();
+    console.log("removed ocarina of time");
     return {
         type: REMOVE_OCARINA_OF_TIME     
     };

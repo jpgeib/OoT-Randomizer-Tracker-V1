@@ -6,6 +6,7 @@ import LocationList from "../../containers/LocationList";
 
 import { connect } from "react-redux";
 import { compose } from "redux";
+import { addFairyOcarina, removeFairyOcarina, addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinas";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
 
 class Home extends Component {
@@ -46,8 +47,8 @@ class Home extends Component {
         hasKokiriSword: false,
         hasMasterSword: true,
         hasBigGoronSword: false,
-        hasOcarina: false,
-        hasOcarinaOfTime: false,
+        // hasOcarina: false,
+        // hasOcarinaOfTime: false,
         hasBombchus: false,
         hasHookshot: false,
         hasLongshot: false,
@@ -508,7 +509,17 @@ class Home extends Component {
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
-        const { fireArrows, addFireArrows, removeFireArrows } = this.props;
+        const {
+            fairyOcarina,
+            addFairyOcarina,
+            removeFairyOcarina,
+            ocarinaOfTime,
+            addOcarinaOfTime,
+            removeOcarinaOfTime,
+            fireArrows, 
+            addFireArrows, 
+            removeFireArrows 
+        } = this.props;
 
         return (
             <Grid>
@@ -532,6 +543,12 @@ class Home extends Component {
                                         fireArrows={fireArrows}
                                         addFireArrows={addFireArrows}
                                         removeFireArrows={removeFireArrows}
+                                        fairyOcarina={fairyOcarina}
+                                        addFairyOcarina={addFairyOcarina}
+                                        removeFairyOcarin={removeFairyOcarina}
+                                        ocarinaOfTime={ocarinaOfTime}
+                                        addOcarinaOfTime={addOcarinaOfTime}
+                                        removeOcarinaOfTime={removeOcarinaOfTime}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -566,7 +583,18 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    return { fireArrows: state.fireArrows }
+    return {
+        fairyOcarina: state.ocarinas.fairyOcarina,
+        ocarinaOfTime: state.ocarinas.ocarinaOfTime, 
+        fireArrows: state.fireArrows
+    }
 };
 
-export default compose(connect(mapStateToProps, { addFireArrows, removeFireArrows }))(Home);
+export default compose(connect(mapStateToProps, { 
+    addFireArrows, 
+    removeFireArrows,
+    addFairyOcarina,
+    removeFairyOcarina,
+    addOcarinaOfTime,
+    removeOcarinaOfTime
+}))(Home);
