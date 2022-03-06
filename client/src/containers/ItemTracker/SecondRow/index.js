@@ -19,6 +19,9 @@ class SecondRow extends Component {
         const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
         // const { gotFairyOcarina, removeFairyOcarina, gotOcarinaOfTime, removeOcarinaOfTime } = this.props.ocarina;
         const {
+            fairySlingshot,
+            addFairySlingshot,
+            removeFairySlingshot,
             fairyOcarina,
             addFairyOcarina,
             removeFairyOcarina,
@@ -33,7 +36,11 @@ class SecondRow extends Component {
         return (
             <Grid.Row>
                 <BigGoronSword />
-                <FairySlingshot />
+                <FairySlingshot 
+                    counter={fairySlingshot}
+                    add={addFairySlingshot}
+                    remove={removeFairySlingshot}
+                />
                 <Ocarina
                     fairyOcarina={fairyOcarina}
                     addFairyOcarina={addFairyOcarina}

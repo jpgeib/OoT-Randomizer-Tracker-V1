@@ -26,6 +26,9 @@ class ItemTracker extends Component {
             fireArrows,
             addFireArrows,
             removeFireArrows,
+            fairySlingshot,
+            addFairySlingshot,
+            removeFairySlingshot,
             fairyOcarina,
             addFairyOcarina,
             removeFairyOcarina,
@@ -53,6 +56,9 @@ class ItemTracker extends Component {
                 <SecondRow
                     state={state}
                     hookshot={hookshot}
+                    fairySlingshot={fairySlingshot}
+                    addFairySlingshot={addFairySlingshot}
+                    removeFairySlingshot={removeFairySlingshot}
                     fairyOcarina={fairyOcarina}
                     addFairyOcarina={addFairyOcarina}
                     removeFairyOcarina={removeFairyOcarina}
