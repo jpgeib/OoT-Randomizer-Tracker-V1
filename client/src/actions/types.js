@@ -7,6 +7,11 @@ export const REMOVE_DEKU_STICKS = "REMOVE_DEKU_STICKS";
 export const ADD_DEKU_NUTS = "ADD_DEKU_NUTS";
 export const REMOVE_DEKU_NUTS = "REMOVE_DEKU_NUTS";
 
+//Bomb Bags
+
+export const ADD_BOMBS = "ADD_BOMBS";
+export const REMOVE_BOMBS = "REMOVE_BOMBS";
+
 //Fire Arrows
 
 export const ADD_FIRE_ARROWS = "ADD_FIRE_ARROWS";

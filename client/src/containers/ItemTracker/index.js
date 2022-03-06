@@ -20,7 +20,7 @@ class ItemTracker extends Component {
             kokiriSword,
             emptyBottles,
             
-            bombs,
+            
             fairyBow,
 
             dekuSticks,
@@ -29,6 +29,9 @@ class ItemTracker extends Component {
             dekuNuts,
             addDekuNuts,
             removeDekuNuts,
+            bombs,
+            addBombs,
+            removeBombs,
             fireArrows,
             addFireArrows,
             removeFireArrows,
@@ -56,8 +59,10 @@ class ItemTracker extends Component {
                     dekuNuts={dekuNuts}
                     addDekuNuts={addDekuNuts}
                     removeDekuNuts={removeDekuNuts}
-                    kokiriSword={kokiriSword}
                     bombs={bombs}
+                    addBombs={addBombs}
+                    removeBombs={removeBombs}
+                    kokiriSword={kokiriSword}
                     fairyBow={fairyBow}
                     fireArrows={fireArrows}
                     addFireArrows={addFireArrows}

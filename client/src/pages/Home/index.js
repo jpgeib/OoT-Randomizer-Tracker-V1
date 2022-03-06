@@ -9,6 +9,7 @@ import { compose } from "redux";
 
 import { addDekuSticks, removeDekuSticks } from "../../actions/dekuSticks";
 import { addDekuNuts, removeDekuNuts } from "../../actions/dekuNuts";
+import { addBombs, removeBombs } from "../../actions/bombs";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
 import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
@@ -19,8 +20,6 @@ class Home extends Component {
 
     state = {
         skulltulaCounter: 0,
-        // dekuNutCounter: 0,
-        bombCounter: 0,
         fairyBowCounter: 0,
         fairySlingshotCounter: 0,
         beanCounter: 0,
@@ -334,57 +333,31 @@ class Home extends Component {
 
     //Standard Item Logic
 
-    // dekuNutLogic = {
-    //     addDekuNuts: (e) => {
-    //         if (this.state.dekuNutCounter === 0) {
+    // bombLogic = {
+    //     addBombs: (e) => {
+    //         if (this.state.bombCounter === 0) {
     //             this.setState(prevState => ({
-    //                 dekuNutCounter: Math.min(40, prevState.dekuNutCounter + 20)
+    //                 bombCounter: Math.min(40, prevState.bombCounter + 20)
     //             }));
     //         } else {
     //             this.setState(prevState => ({
-    //                 dekuNutCounter: Math.min(40, prevState.dekuNutCounter + 10)
+    //                 bombCounter: Math.min(40, prevState.bombCounter + 10)
     //             }));
     //         }
     //     },
-    //     removeDekuNuts: (e) => {
+    //     removeBombs: (e) => {
     //         e.preventDefault();
-    //         if (this.state.dekuNutCounter === 20) {
+    //         if (this.state.bombCounter === 20) {
     //             this.setState(prevState => ({
-    //                 dekuNutCounter: Math.max(0, prevState.dekuNutCounter - 20)
+    //                 bombCounter: Math.max(0, prevState.bombCounter - 20)
     //             }));
     //         } else {
     //             this.setState(prevState => ({
-    //                 dekuNutCounter: Math.max(0, prevState.dekuNutCounter - 10)
+    //                 bombCounter: Math.max(0, prevState.bombCounter - 10)
     //             }));
     //         }
     //     }
     // }
-
-    bombLogic = {
-        addBombs: (e) => {
-            if (this.state.bombCounter === 0) {
-                this.setState(prevState => ({
-                    bombCounter: Math.min(40, prevState.bombCounter + 20)
-                }));
-            } else {
-                this.setState(prevState => ({
-                    bombCounter: Math.min(40, prevState.bombCounter + 10)
-                }));
-            }
-        },
-        removeBombs: (e) => {
-            e.preventDefault();
-            if (this.state.bombCounter === 20) {
-                this.setState(prevState => ({
-                    bombCounter: Math.max(0, prevState.bombCounter - 20)
-                }));
-            } else {
-                this.setState(prevState => ({
-                    bombCounter: Math.max(0, prevState.bombCounter - 10)
-                }));
-            }
-        }
-    }
 
     fairyBowLogic = {
         addFairyBow: (e) => {
@@ -477,6 +450,9 @@ class Home extends Component {
             dekuNuts,
             addDekuNuts,
             removeDekuNuts,
+            bombs,
+            addBombs,
+            removeBombs,
             fireArrows, 
             addFireArrows, 
             removeFireArrows,
@@ -509,9 +485,6 @@ class Home extends Component {
                                         ocarina={this.ocarinaLogic}
                                         hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
-                                        
-                                        // dekuNuts={this.dekuNutLogic}
-                                        bombs={this.bombLogic}
                                         fairyBow={this.fairyBowLogic}
 
                                         dekuSticks={dekuSticks}
@@ -520,6 +493,9 @@ class Home extends Component {
                                         dekuNuts={dekuNuts}
                                         addDekuNuts={addDekuNuts}
                                         removeDekuNuts={removeDekuNuts}
+                                        bombs={bombs}
+                                        addBombs={addBombs}
+                                        removeBombs={removeBombs}
                                         fireArrows={fireArrows}
                                         addFireArrows={addFireArrows}
                                         removeFireArrows={removeFireArrows}
@@ -572,7 +548,8 @@ function mapStateToProps(state) {
     console.log(state);
     return {
         dekuSticks: state.dekuSticks,
-        dekuNuts: state.dekuNuts, 
+        dekuNuts: state.dekuNuts,
+        bombs: state.bombs, 
         fireArrows: state.fireArrows,
         fairySlingshot: state.fairySlingshot,
         fairyOcarina: state.fairyOcarina,
@@ -585,7 +562,9 @@ export default compose(connect(mapStateToProps, {
     addDekuSticks,
     removeDekuSticks,
     addDekuNuts,
-    removeDekuNuts, 
+    removeDekuNuts,
+    addBombs,
+    removeBombs, 
     addFireArrows, 
     removeFireArrows,
     addFairySlingshot,
