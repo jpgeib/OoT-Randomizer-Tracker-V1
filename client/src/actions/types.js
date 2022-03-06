@@ -1,8 +1,5 @@
 //Ocarinas
-export const ADD_FAIRY_OCARINA = "ADD_FAIRY_OCARINA";
-export const REMOVE_FAIRY_OCARINA = "REMOVE_FAIRY_OCARINA";
-export const ADD_OCARINA_OF_TIME = "ADD_OCARINA_OF_TIME";
-export const REMOVE_OCARINA_OF_TIME = "REMOVE_OCARINA_OF_TIME";
+
 
 //Bombchus
 

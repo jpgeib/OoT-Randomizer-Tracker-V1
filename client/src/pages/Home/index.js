@@ -6,7 +6,6 @@ import LocationList from "../../containers/LocationList";
 
 import { connect } from "react-redux";
 import { compose } from "redux";
-import { addFairyOcarina, removeFairyOcarina, addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinas";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 
@@ -53,7 +52,6 @@ class Home extends Component {
         // hasBombchus: false,
         hasHookshot: false,
         hasLongshot: false,
-        // hasDekuShield: false,
         hasHylianShield: false,
         hasMirrorShield: false,
         hasBoomerang: false,
@@ -463,24 +461,24 @@ class Home extends Component {
         }
     }
 
-    ocarinaLogic = {
-        gotFairyOcarina: (e) => {
-            this.setState({ hasOcarina: true });
-            this.setState({ hasSongOfStorms: true });
-        },
-        removeFairyOcarina: (e) => {
-            e.preventDefault();
-            this.setState({ hasOcarina: false });
-            this.setState({ hasSongOfStorms: false });
-        },
-        gotOcarinaOfTime: (e) => {
-            this.setState({ hasOcarinaOfTime: true });
-        },
-        removeOcarinaOfTime: (e) => {
-            e.preventDefault();
-            this.setState({ hasOcarinaOfTime: false });
-        }
-    }
+    // ocarinaLogic = {
+    //     gotFairyOcarina: (e) => {
+    //         this.setState({ hasOcarina: true });
+    //         this.setState({ hasSongOfStorms: true });
+    //     },
+    //     removeFairyOcarina: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasOcarina: false });
+    //         this.setState({ hasSongOfStorms: false });
+    //     },
+    //     gotOcarinaOfTime: (e) => {
+    //         this.setState({ hasOcarinaOfTime: true });
+    //     },
+    //     removeOcarinaOfTime: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasOcarinaOfTime: false });
+    //     }
+    // }
 
     hookshotLogic = {
         gotHookshot: (e) => {
@@ -503,12 +501,6 @@ class Home extends Component {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
         const {
-            fairyOcarina,
-            addFairyOcarina,
-            removeFairyOcarina,
-            ocarinaOfTime,
-            addOcarinaOfTime,
-            removeOcarinaOfTime,
             fireArrows, 
             addFireArrows, 
             removeFireArrows,
@@ -516,8 +508,6 @@ class Home extends Component {
             addDekuShield,
             removeDekuShield 
         } = this.props;
-        // console.log(fairyOcarina);
-        // console.log(ocarinaOfTime);
         console.log(fireArrows);
         console.log(dekuShield);
 
@@ -543,13 +533,6 @@ class Home extends Component {
                                         fireArrows={fireArrows}
                                         addFireArrows={addFireArrows}
                                         removeFireArrows={removeFireArrows}
-                                        fairyOcarina={fairyOcarina}
-                                        addFairyOcarina={addFairyOcarina}
-                                        removeFairyOcarin={removeFairyOcarina}
-                                        ocarinaOfTime={ocarinaOfTime}
-                                        addOcarinaOfTime={addOcarinaOfTime}
-                                        removeOcarinaOfTime={removeOcarinaOfTime}
-
                                         dekuShield={dekuShield}
                                         addDekuShield={addDekuShield}
                                         removeDekuShield={removeDekuShield}
@@ -588,9 +571,7 @@ class Home extends Component {
 
 function mapStateToProps(state) {
     console.log(state);
-    return {
-        fairyOcarina: state.fairyOcarina,
-        ocarinaOfTime: state.ocarinaOfTime, 
+    return { 
         fireArrows: state.fireArrows,
         dekuShield: state.dekuShield
     }
@@ -599,10 +580,6 @@ function mapStateToProps(state) {
 export default compose(connect(mapStateToProps, { 
     addFireArrows, 
     removeFireArrows,
-    addFairyOcarina,
-    removeFairyOcarina,
-    addOcarinaOfTime,
-    removeOcarinaOfTime,
     addDekuShield,
     removeDekuShield
 }))(Home);
