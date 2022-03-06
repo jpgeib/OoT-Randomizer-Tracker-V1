@@ -22,6 +22,11 @@ export const REMOVE_FAIRY_BOW = "REMOVE_FAIRY_BOW";
 export const ADD_FIRE_ARROWS = "ADD_FIRE_ARROWS";
 export const REMOVE_FIRE_ARROWS = "REMOVE_FIRE_ARROWS";
 
+//Kokiri Sword
+
+export const ADD_KOKIRI_SWORD = "ADD_KOKIRI_SWORD";
+export const REMOVE_KOKIRI_SWORD = "REMOVE_KOKIRI_SWORD";
+
 //Fairy Slingshot
 
 export const ADD_FAIRY_SLINGSHOT = "ADD_FAIRY_SLINGSHOT";

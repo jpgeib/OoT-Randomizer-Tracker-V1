@@ -11,8 +11,6 @@ import MasterSword from "../../../components/Items/MasterSword";
 
 const FirstRow = (props) => {
 
-    const { gotKokiriSword, removeKokiriSword } = props.kokiriSword;
-    const { hasKokiriSword } = props.state;
     const {
         dekuSticks,
         addDekuSticks,
@@ -25,7 +23,10 @@ const FirstRow = (props) => {
         removeBombs,
         fairyBow,
         addFairyBow,
-        removeFairyBow, 
+        removeFairyBow,
+        kokiriSword,
+        addKokiriSword,
+        removeKokiriSword, 
         fireArrows, 
         addFireArrows, 
         removeFireArrows 
@@ -39,7 +40,7 @@ const FirstRow = (props) => {
             <FairyBow counter={fairyBow} add={addFairyBow} remove={removeFairyBow} />
             <FireArrows fireArrows={fireArrows} add={addFireArrows} remove={removeFireArrows} />
             <DinsFire />
-            <KokiriSword hasKokiriSword={hasKokiriSword} gotKokiriSword={gotKokiriSword} removeKokiriSword={removeKokiriSword} />
+            <KokiriSword kokiriSword={kokiriSword} addKokiriSword={addKokiriSword} removeKokiriSword={removeKokiriSword} />
             <MasterSword />
         </Grid.Row>
     );
