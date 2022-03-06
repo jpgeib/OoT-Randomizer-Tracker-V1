@@ -11,9 +11,8 @@ import MasterSword from "../../../components/Items/MasterSword";
 
 const FirstRow = (props) => {
 
-    const { addFairyBow, removeFairyBow } = props.fairyBow;
     const { gotKokiriSword, removeKokiriSword } = props.kokiriSword;
-    const { hasKokiriSword, fairyBowCounter } = props.state;
+    const { hasKokiriSword } = props.state;
     const {
         dekuSticks,
         addDekuSticks,
@@ -23,7 +22,10 @@ const FirstRow = (props) => {
         removeDekuNuts,
         bombs,
         addBombs,
-        removeBombs, 
+        removeBombs,
+        fairyBow,
+        addFairyBow,
+        removeFairyBow, 
         fireArrows, 
         addFireArrows, 
         removeFireArrows 
@@ -34,7 +36,7 @@ const FirstRow = (props) => {
             <DekuSticks counter={dekuSticks} add={addDekuSticks} remove={removeDekuSticks} />
             <DekuNuts counter={dekuNuts} add={addDekuNuts} remove={removeDekuNuts} />
             <BombBag counter={bombs} add={addBombs} remove={removeBombs} />
-            <FairyBow counter={fairyBowCounter} add={addFairyBow} remove={removeFairyBow} />
+            <FairyBow counter={fairyBow} add={addFairyBow} remove={removeFairyBow} />
             <FireArrows fireArrows={fireArrows} add={addFireArrows} remove={removeFireArrows} />
             <DinsFire />
             <KokiriSword hasKokiriSword={hasKokiriSword} gotKokiriSword={gotKokiriSword} removeKokiriSword={removeKokiriSword} />

@@ -12,6 +12,11 @@ export const REMOVE_DEKU_NUTS = "REMOVE_DEKU_NUTS";
 export const ADD_BOMBS = "ADD_BOMBS";
 export const REMOVE_BOMBS = "REMOVE_BOMBS";
 
+//Fairy Bow
+
+export const ADD_FAIRY_BOW = "ADD_FAIRY_BOW";
+export const REMOVE_FAIRY_BOW = "REMOVE_FAIRY_BOW";
+
 //Fire Arrows
 
 export const ADD_FIRE_ARROWS = "ADD_FIRE_ARROWS";

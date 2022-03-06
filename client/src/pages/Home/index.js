@@ -10,6 +10,7 @@ import { compose } from "redux";
 import { addDekuSticks, removeDekuSticks } from "../../actions/dekuSticks";
 import { addDekuNuts, removeDekuNuts } from "../../actions/dekuNuts";
 import { addBombs, removeBombs } from "../../actions/bombs";
+import { addFairyBow, removeFairyBow } from "../../actions/fairyBow";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
 import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
@@ -20,8 +21,8 @@ class Home extends Component {
 
     state = {
         skulltulaCounter: 0,
-        fairyBowCounter: 0,
-        fairySlingshotCounter: 0,
+        
+        
         beanCounter: 0,
         emptyBottles: 0,
         walletCounter: 99,
@@ -333,57 +334,31 @@ class Home extends Component {
 
     //Standard Item Logic
 
-    // bombLogic = {
-    //     addBombs: (e) => {
-    //         if (this.state.bombCounter === 0) {
+    // fairyBowLogic = {
+    //     addFairyBow: (e) => {
+    //         if (this.state.fairyBowCounter === 0) {
     //             this.setState(prevState => ({
-    //                 bombCounter: Math.min(40, prevState.bombCounter + 20)
+    //                 fairyBowCounter: Math.min(50, prevState.fairyBowCounter + 30)
     //             }));
     //         } else {
     //             this.setState(prevState => ({
-    //                 bombCounter: Math.min(40, prevState.bombCounter + 10)
+    //                 fairyBowCounter: Math.min(50, prevState.fairyBowCounter + 10)
     //             }));
     //         }
     //     },
-    //     removeBombs: (e) => {
+    //     removeFairyBow: (e) => {
     //         e.preventDefault();
-    //         if (this.state.bombCounter === 20) {
+    //         if (this.state.fairyBowCounter === 30) {
     //             this.setState(prevState => ({
-    //                 bombCounter: Math.max(0, prevState.bombCounter - 20)
+    //                 fairyBowCounter: Math.max(0, prevState.fairyBowCounter - 30)
     //             }));
     //         } else {
     //             this.setState(prevState => ({
-    //                 bombCounter: Math.max(0, prevState.bombCounter - 10)
+    //                 fairyBowCounter: Math.max(0, prevState.fairyBowCounter - 10)
     //             }));
     //         }
     //     }
     // }
-
-    fairyBowLogic = {
-        addFairyBow: (e) => {
-            if (this.state.fairyBowCounter === 0) {
-                this.setState(prevState => ({
-                    fairyBowCounter: Math.min(50, prevState.fairyBowCounter + 30)
-                }));
-            } else {
-                this.setState(prevState => ({
-                    fairyBowCounter: Math.min(50, prevState.fairyBowCounter + 10)
-                }));
-            }
-        },
-        removeFairyBow: (e) => {
-            e.preventDefault();
-            if (this.state.fairyBowCounter === 30) {
-                this.setState(prevState => ({
-                    fairyBowCounter: Math.max(0, prevState.fairyBowCounter - 30)
-                }));
-            } else {
-                this.setState(prevState => ({
-                    fairyBowCounter: Math.max(0, prevState.fairyBowCounter - 10)
-                }));
-            }
-        }
-    }
 
     skulltulaLogic = {
         addSkulltula: (e) => {
@@ -453,6 +428,9 @@ class Home extends Component {
             bombs,
             addBombs,
             removeBombs,
+            fairyBow,
+            addFairyBow,
+            removeFairyBow,
             fireArrows, 
             addFireArrows, 
             removeFireArrows,
@@ -482,10 +460,8 @@ class Home extends Component {
                                         state={this.state}
                                         emptyBottles={this.emptyBottleLogic}
                                         kokiriSword={this.kokiriSwordLogic}
-                                        ocarina={this.ocarinaLogic}
                                         hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
-                                        fairyBow={this.fairyBowLogic}
 
                                         dekuSticks={dekuSticks}
                                         addDekuSticks={addDekuSticks}
@@ -496,6 +472,9 @@ class Home extends Component {
                                         bombs={bombs}
                                         addBombs={addBombs}
                                         removeBombs={removeBombs}
+                                        fairyBow={fairyBow}
+                                        addFairyBow={addFairyBow}
+                                        removeFairyBow={removeFairyBow}
                                         fireArrows={fireArrows}
                                         addFireArrows={addFireArrows}
                                         removeFireArrows={removeFireArrows}
@@ -549,7 +528,8 @@ function mapStateToProps(state) {
     return {
         dekuSticks: state.dekuSticks,
         dekuNuts: state.dekuNuts,
-        bombs: state.bombs, 
+        bombs: state.bombs,
+        fairyBow: state.fairyBow, 
         fireArrows: state.fireArrows,
         fairySlingshot: state.fairySlingshot,
         fairyOcarina: state.fairyOcarina,
@@ -564,7 +544,9 @@ export default compose(connect(mapStateToProps, {
     addDekuNuts,
     removeDekuNuts,
     addBombs,
-    removeBombs, 
+    removeBombs,
+    addFairyBow,
+    removeFairyBow, 
     addFireArrows, 
     removeFireArrows,
     addFairySlingshot,
