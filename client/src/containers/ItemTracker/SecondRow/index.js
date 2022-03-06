@@ -18,7 +18,10 @@ class SecondRow extends Component {
         const { hasLongshot, hasHookshot } = this.props.state;
         const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
         // const { gotFairyOcarina, removeFairyOcarina, gotOcarinaOfTime, removeOcarinaOfTime } = this.props.ocarina;
-        const { 
+        const {
+            fairyOcarina,
+            addFairyOcarina,
+            removeFairyOcarina, 
             dekuShield,
             addDekuShield,
             removeDekuShield 
@@ -29,7 +32,9 @@ class SecondRow extends Component {
                 <BigGoronSword />
                 <FairySlingshot />
                 <Ocarina
-            
+                    fairyOcarina={fairyOcarina}
+                    addFairyOcarina={addFairyOcarina}
+                    removeFairyOcarina={removeFairyOcarina}
                 />
                 <Bombchus />
                 {hasLongshot === true ?

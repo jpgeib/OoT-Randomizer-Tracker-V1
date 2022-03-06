@@ -1,6 +1,7 @@
 //Ocarinas
-
-
+export const ADD_FAIRY_OCARINA = "ADD_FAIRY_OCARINA";
+export const REMOVE_FAIRY_OCARINA = "REMOVE_FAIRY_OCARINA";
+ 
 //Bombchus
 
 export const ADD_BOMBCHUS = "ADD_BOMBCHUS";

@@ -7,6 +7,7 @@ import LocationList from "../../containers/LocationList";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
+import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 
 class Home extends Component {
@@ -504,12 +505,16 @@ class Home extends Component {
             fireArrows, 
             addFireArrows, 
             removeFireArrows,
+            fairyOcarina,
+            addFairyOcarina,
+            removeFairyOcarina,
             dekuShield,
             addDekuShield,
             removeDekuShield 
         } = this.props;
         console.log(fireArrows);
         console.log(dekuShield);
+        console.log(fairyOcarina);
 
         return (
             <Grid>
@@ -533,6 +538,9 @@ class Home extends Component {
                                         fireArrows={fireArrows}
                                         addFireArrows={addFireArrows}
                                         removeFireArrows={removeFireArrows}
+                                        fairyOcarina={fairyOcarina}
+                                        addFairyOcarina={addFairyOcarina}
+                                        removeFairyOcarina={removeFairyOcarina}
                                         dekuShield={dekuShield}
                                         addDekuShield={addDekuShield}
                                         removeDekuShield={removeDekuShield}
@@ -573,6 +581,7 @@ function mapStateToProps(state) {
     console.log(state);
     return { 
         fireArrows: state.fireArrows,
+        fairyOcarina: state.fairyOcarina,
         dekuShield: state.dekuShield
     }
 };
@@ -580,6 +589,8 @@ function mapStateToProps(state) {
 export default compose(connect(mapStateToProps, { 
     addFireArrows, 
     removeFireArrows,
+    addFairyOcarina,
+    removeFairyOcarina,
     addDekuShield,
     removeDekuShield
 }))(Home);
