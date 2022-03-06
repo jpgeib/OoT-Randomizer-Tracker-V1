@@ -19,10 +19,13 @@ class ItemTracker extends Component {
             hookshot,
             kokiriSword,
             emptyBottles,
-            dekuSticks,
             dekuNuts,
             bombs,
             fairyBow,
+
+            dekuSticks,
+            addDekuSticks,
+            removeDekuSticks,
             fireArrows,
             addFireArrows,
             removeFireArrows,
@@ -44,8 +47,10 @@ class ItemTracker extends Component {
             <Grid style={tracker}>
                 <FirstRow
                     state={state}
-                    kokiriSword={kokiriSword}
                     dekuSticks={dekuSticks}
+                    addDekuSticks={addDekuSticks}
+                    removeDekuSticks={removeDekuSticks}
+                    kokiriSword={kokiriSword}
                     dekuNuts={dekuNuts}
                     bombs={bombs}
                     fairyBow={fairyBow}

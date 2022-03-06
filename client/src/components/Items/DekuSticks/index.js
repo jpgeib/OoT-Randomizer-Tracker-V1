@@ -6,11 +6,6 @@ const DekuSticks = (props) => {
 
     const { counter, add, remove } = props;
 
-    // const rightClick = (e) => {
-    //     e.preventDefault();
-    //     decrement();
-    // }
-
     return (
         <Grid.Column width={2}>
             <Image 

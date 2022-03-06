@@ -6,6 +6,8 @@ import LocationList from "../../containers/LocationList";
 
 import { connect } from "react-redux";
 import { compose } from "redux";
+
+import { addDekuSticks, removeDekuSticks } from "../../actions/dekuSticks";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
 import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
@@ -16,7 +18,7 @@ class Home extends Component {
 
     state = {
         skulltulaCounter: 0,
-        dekuStickCounter: 0,
+        // dekuStickCounter: 0,
         dekuNutCounter: 0,
         bombCounter: 0,
         fairyBowCounter: 0,
@@ -334,19 +336,19 @@ class Home extends Component {
 
     //Standard Item Logic
 
-    dekuStickLogic = {
-        addDekuSticks: (e) => {
-            this.setState(prevState => ({
-                dekuStickCounter: Math.min(30, prevState.dekuStickCounter + 10)
-            }));
-        },
-        removeDekuSticks: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                dekuStickCounter: Math.max(0, prevState.dekuStickCounter - 10)
-            }));
-        }
-    }
+    // dekuStickLogic = {
+    //     addDekuSticks: (e) => {
+    //         this.setState(prevState => ({
+    //             dekuStickCounter: Math.min(30, prevState.dekuStickCounter + 10)
+    //         }));
+    //     },
+    //     removeDekuSticks: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             dekuStickCounter: Math.max(0, prevState.dekuStickCounter - 10)
+    //         }));
+    //     }
+    // }
 
     dekuNutLogic = {
         addDekuNuts: (e) => {
@@ -464,25 +466,6 @@ class Home extends Component {
         }
     }
 
-    // ocarinaLogic = {
-    //     gotFairyOcarina: (e) => {
-    //         this.setState({ hasOcarina: true });
-    //         this.setState({ hasSongOfStorms: true });
-    //     },
-    //     removeFairyOcarina: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasOcarina: false });
-    //         this.setState({ hasSongOfStorms: false });
-    //     },
-    //     gotOcarinaOfTime: (e) => {
-    //         this.setState({ hasOcarinaOfTime: true });
-    //     },
-    //     removeOcarinaOfTime: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasOcarinaOfTime: false });
-    //     }
-    // }
-
     hookshotLogic = {
         gotHookshot: (e) => {
             this.setState({ hasHookshot: true });
@@ -504,6 +487,9 @@ class Home extends Component {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
         const {
+            dekuSticks,
+            addDekuSticks,
+            removeDekuSticks,
             fireArrows, 
             addFireArrows, 
             removeFireArrows,
@@ -520,10 +506,6 @@ class Home extends Component {
             addDekuShield,
             removeDekuShield 
         } = this.props;
-        // console.log(fireArrows);
-        // console.log(dekuShield);
-        // console.log(fairyOcarina);
-        // console.log(ocarinaOfTime);
 
         return (
             <Grid>
@@ -540,10 +522,14 @@ class Home extends Component {
                                         ocarina={this.ocarinaLogic}
                                         hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
-                                        dekuSticks={this.dekuStickLogic}
+                                        // dekuSticks={this.dekuStickLogic}
                                         dekuNuts={this.dekuNutLogic}
                                         bombs={this.bombLogic}
                                         fairyBow={this.fairyBowLogic}
+
+                                        dekuSticks={dekuSticks}
+                                        addDekuSticks={addDekuSticks}
+                                        removeDekuSticks={removeDekuSticks}
                                         fireArrows={fireArrows}
                                         addFireArrows={addFireArrows}
                                         removeFireArrows={removeFireArrows}
@@ -594,7 +580,8 @@ class Home extends Component {
 
 function mapStateToProps(state) {
     console.log(state);
-    return { 
+    return {
+        dekuSticks: state.dekuSticks, 
         fireArrows: state.fireArrows,
         fairySlingshot: state.fairySlingshot,
         fairyOcarina: state.fairyOcarina,
@@ -603,7 +590,9 @@ function mapStateToProps(state) {
     }
 };
 
-export default compose(connect(mapStateToProps, { 
+export default compose(connect(mapStateToProps, {
+    addDekuSticks,
+    removeDekuSticks, 
     addFireArrows, 
     removeFireArrows,
     addFairySlingshot,

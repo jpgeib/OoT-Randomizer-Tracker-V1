@@ -1,19 +1,19 @@
 import { combineReducers } from "redux";
-import skulltulaCounterReducer from "./skulltulaCounterReducer";
-import sticksCounterReducer from "./sticksCounterReducer";
+
+import dekuSticksReducer from "./dekuSticksReducer";
 import fairySlingshotReducer from "./fairySlingshotReducer";
 import fairyOcarinaReducer from "./fairyOcarinaReducer";
 import ocarinaOfTimeReducer from "./ocarinaOfTimeReducer";
 import fireArrowsReducer from "./fireArrowsReducer";
 import dekuShieldReducer from "./dekuShieldReducer";
-
+import skulltulaCounterReducer from "./skulltulaCounterReducer";
 
 export default combineReducers({
-    skulltulaCounter: skulltulaCounterReducer,
-    sticksCounter: sticksCounterReducer,
+    dekuSticks: dekuSticksReducer,
     fairySlingshot: fairySlingshotReducer,
     fairyOcarina: fairyOcarinaReducer,
     ocarinaOfTime: ocarinaOfTimeReducer,
     fireArrows: fireArrowsReducer,
-    dekuShield: dekuShieldReducer
+    dekuShield: dekuShieldReducer,
+    skulltulaCounter: skulltulaCounterReducer
 });
