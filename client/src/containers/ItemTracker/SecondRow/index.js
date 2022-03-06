@@ -24,7 +24,10 @@ class SecondRow extends Component {
             removeFairyOcarina, 
             ocarinaOfTime, 
             addOcarinaOfTime, 
-            removeOcarinaOfTime 
+            removeOcarinaOfTime,
+            dekuShield,
+            addDekuShield,
+            removeDekuShield 
         } = this.props;
 
         return (
@@ -53,7 +56,11 @@ class SecondRow extends Component {
                     />}
                 <IceArrows />
                 <FaroresWind />
-                <DekuShield />
+                <DekuShield 
+                    dekuShield={dekuShield}
+                    addDekuShield={addDekuShield}
+                    removeDekuShield={removeDekuShield}
+                />
             </Grid.Row>
         );
     }

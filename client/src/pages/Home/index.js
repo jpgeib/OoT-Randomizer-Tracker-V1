@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { addFairyOcarina, removeFairyOcarina, addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinas";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
+import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 
 class Home extends Component {
 
@@ -49,10 +50,10 @@ class Home extends Component {
         hasBigGoronSword: false,
         // hasOcarina: false,
         // hasOcarinaOfTime: false,
-        hasBombchus: false,
+        // hasBombchus: false,
         hasHookshot: false,
         hasLongshot: false,
-        hasDekuShield: false,
+        // hasDekuShield: false,
         hasHylianShield: false,
         hasMirrorShield: false,
         hasBoomerang: false,
@@ -510,11 +511,15 @@ class Home extends Component {
             removeOcarinaOfTime,
             fireArrows, 
             addFireArrows, 
-            removeFireArrows 
+            removeFireArrows,
+            dekuShield,
+            addDekuShield,
+            removeDekuShield 
         } = this.props;
         // console.log(fairyOcarina);
         // console.log(ocarinaOfTime);
-        // console.log(fireArrows);
+        console.log(fireArrows);
+        console.log(dekuShield);
 
         return (
             <Grid>
@@ -544,6 +549,10 @@ class Home extends Component {
                                         ocarinaOfTime={ocarinaOfTime}
                                         addOcarinaOfTime={addOcarinaOfTime}
                                         removeOcarinaOfTime={removeOcarinaOfTime}
+
+                                        dekuShield={dekuShield}
+                                        addDekuShield={addDekuShield}
+                                        removeDekuShield={removeDekuShield}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -582,7 +591,8 @@ function mapStateToProps(state) {
     return {
         fairyOcarina: state.fairyOcarina,
         ocarinaOfTime: state.ocarinaOfTime, 
-        fireArrows: state.fireArrows
+        fireArrows: state.fireArrows,
+        dekuShield: state.dekuShield
     }
 };
 
@@ -592,5 +602,7 @@ export default compose(connect(mapStateToProps, {
     addFairyOcarina,
     removeFairyOcarina,
     addOcarinaOfTime,
-    removeOcarinaOfTime
+    removeOcarinaOfTime,
+    addDekuShield,
+    removeDekuShield
 }))(Home);

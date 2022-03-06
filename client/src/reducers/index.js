@@ -4,11 +4,13 @@ import sticksCounterReducer from "./sticksCounterReducer";
 import fairyOcarinaReducer from "./fairyOcarinaReducer";
 import ocarinaOfTimeReducer from "./ocarinaOfTimeReducer";
 import fireArrowsReducer from "./fireArrowsReducer";
+import dekuShieldReducer from "./dekuShieldReducer";
 
 export default combineReducers({
     fairyOcarina: fairyOcarinaReducer,
     ocarinaOfTime: ocarinaOfTimeReducer,
     skulltulaCounter: skulltulaCounterReducer,
     sticksCounter: sticksCounterReducer,
-    fireArrows: fireArrowsReducer
+    fireArrows: fireArrowsReducer,
+    dekuShield: dekuShieldReducer
 });

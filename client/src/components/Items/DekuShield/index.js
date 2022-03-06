@@ -2,10 +2,19 @@ import React from "react";
 import { Grid, Image } from "semantic-ui-react";
 import DekuShieldIcon from "../../../assets/images/Deku_Shield.png";
 
-const DekuShield = () => {
+const DekuShield = (props) => {
+
+    const { dekuShield, addDekuShield, removeDekuShield } = props;
+
     return (
         <Grid.Column width={2}>
-            <Image size="mini" src={DekuShieldIcon} />
+            <Image
+                onClick={addDekuShield}
+                onContextMenu={removeDekuShield} 
+                size="mini" 
+                src={DekuShieldIcon}
+                style={(dekuShield === false || dekuShield === null) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
+            />
         </Grid.Column>
     );
 }

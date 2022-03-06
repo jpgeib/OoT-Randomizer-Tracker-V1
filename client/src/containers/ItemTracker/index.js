@@ -31,7 +31,10 @@ class ItemTracker extends Component {
             removeOcarinaOfTime,
             fireArrows,
             addFireArrows,
-            removeFireArrows
+            removeFireArrows,
+            dekuShield,
+            addDekuShield,
+            removeDekuShield
         } = this.props;
 
         return (
@@ -56,6 +59,10 @@ class ItemTracker extends Component {
                     ocarinaOfTime={ocarinaOfTime}
                     addOcarinaOfTime={addOcarinaOfTime}
                     removeOcarinaOfTime={removeOcarinaOfTime}
+
+                    dekuShield={dekuShield}
+                    addDekuShield={addDekuShield}
+                    removeDekuShield={removeDekuShield}
                 />
                 <ThirdRow />
                 <FourthRow 

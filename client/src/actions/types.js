@@ -4,6 +4,16 @@ export const REMOVE_FAIRY_OCARINA = "REMOVE_FAIRY_OCARINA";
 export const ADD_OCARINA_OF_TIME = "ADD_OCARINA_OF_TIME";
 export const REMOVE_OCARINA_OF_TIME = "REMOVE_OCARINA_OF_TIME";
 
+//Bombchus
+
+export const ADD_BOMBCHUS = "ADD_BOMBCHUS";
+export const REMOVE_BOMBCHUS = "REMOVE_BOMBCHUS";
+
+//Deku Shield
+
+export const ADD_DEKU_SHIELD = "ADD_DEKU_SHIELD";
+export const REMOVE_DEKU_SHIELD = "REMOVE_DEKU_SHIELD";
+
 //Deku Sticks
 export const ADD_DEKU_STICKS = "ADD_DEKU_STICKS";
 export const REMOVE_DEKU_STICKS = "REMOVE_DEKU_STICKS";

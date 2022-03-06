@@ -16,7 +16,7 @@ export const removeFairyOcarina = (e) => {
     e.preventDefault();
     console.log("removed fairy ocarina");
     return {
-        type: REMOVE_FAIRY_OCARINA
+        type: REMOVE_FAIRY_OCARINA    
     };
 };
 
