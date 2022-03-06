@@ -11,7 +11,7 @@ const DekuSticks = (props) => {
             <Image 
                 onClick={add} 
                 onContextMenu={remove}
-                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} } 
+                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)" }} 
                 size="mini" 
                 src={DekuSticksIcon} 
             />

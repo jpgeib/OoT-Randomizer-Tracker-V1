@@ -11,15 +11,17 @@ import MasterSword from "../../../components/Items/MasterSword";
 
 const FirstRow = (props) => {
 
-    const { addDekuNuts, removeDekuNuts } = props.dekuNuts;
     const { addBombs, removeBombs } = props.bombs;
     const { addFairyBow, removeFairyBow } = props.fairyBow;
     const { gotKokiriSword, removeKokiriSword } = props.kokiriSword;
-    const { hasKokiriSword, dekuNutCounter, bombCounter, fairyBowCounter } = props.state;
+    const { hasKokiriSword, bombCounter, fairyBowCounter } = props.state;
     const {
         dekuSticks,
         addDekuSticks,
-        removeDekuSticks, 
+        removeDekuSticks,
+        dekuNuts,
+        addDekuNuts,
+        removeDekuNuts, 
         fireArrows, 
         addFireArrows, 
         removeFireArrows 
@@ -28,7 +30,7 @@ const FirstRow = (props) => {
     return (
         <Grid.Row>
             <DekuSticks counter={dekuSticks} add={addDekuSticks} remove={removeDekuSticks} />
-            <DekuNuts counter={dekuNutCounter} add={addDekuNuts} remove={removeDekuNuts} />
+            <DekuNuts counter={dekuNuts} add={addDekuNuts} remove={removeDekuNuts} />
             <BombBag counter={bombCounter} add={addBombs} remove={removeBombs} />
             <FairyBow counter={fairyBowCounter} add={addFairyBow} remove={removeFairyBow} />
             <FireArrows fireArrows={fireArrows} add={addFireArrows} remove={removeFireArrows} />

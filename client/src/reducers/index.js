@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
 
 import dekuSticksReducer from "./dekuSticksReducer";
+import dekuNutsReducer from "./dekuNutsReducer";
 import fairySlingshotReducer from "./fairySlingshotReducer";
 import fairyOcarinaReducer from "./fairyOcarinaReducer";
 import ocarinaOfTimeReducer from "./ocarinaOfTimeReducer";
@@ -10,6 +11,7 @@ import skulltulaCounterReducer from "./skulltulaCounterReducer";
 
 export default combineReducers({
     dekuSticks: dekuSticksReducer,
+    dekuNuts: dekuNutsReducer,
     fairySlingshot: fairySlingshotReducer,
     fairyOcarina: fairyOcarinaReducer,
     ocarinaOfTime: ocarinaOfTimeReducer,
