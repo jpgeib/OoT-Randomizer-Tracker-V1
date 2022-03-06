@@ -8,6 +8,7 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
+import { addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinaOfTime";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 
 class Home extends Component {
@@ -508,13 +509,17 @@ class Home extends Component {
             fairyOcarina,
             addFairyOcarina,
             removeFairyOcarina,
+            ocarinaOfTime,
+            addOcarinaOfTime,
+            removeOcarinaOfTime,
             dekuShield,
             addDekuShield,
             removeDekuShield 
         } = this.props;
-        console.log(fireArrows);
-        console.log(dekuShield);
+        // console.log(fireArrows);
+        // console.log(dekuShield);
         console.log(fairyOcarina);
+        console.log(ocarinaOfTime);
 
         return (
             <Grid>
@@ -541,6 +546,9 @@ class Home extends Component {
                                         fairyOcarina={fairyOcarina}
                                         addFairyOcarina={addFairyOcarina}
                                         removeFairyOcarina={removeFairyOcarina}
+                                        ocarinaOfTime={ocarinaOfTime}
+                                        addOcarinaOfTime={addOcarinaOfTime}
+                                        removeOcarinaOfTime={removeOcarinaOfTime}
                                         dekuShield={dekuShield}
                                         addDekuShield={addDekuShield}
                                         removeDekuShield={removeDekuShield}
@@ -582,6 +590,7 @@ function mapStateToProps(state) {
     return { 
         fireArrows: state.fireArrows,
         fairyOcarina: state.fairyOcarina,
+        ocarinaOfTime: state.ocarinaOfTime,
         dekuShield: state.dekuShield
     }
 };
@@ -591,6 +600,8 @@ export default compose(connect(mapStateToProps, {
     removeFireArrows,
     addFairyOcarina,
     removeFairyOcarina,
+    addOcarinaOfTime,
+    removeOcarinaOfTime,
     addDekuShield,
     removeDekuShield
 }))(Home);

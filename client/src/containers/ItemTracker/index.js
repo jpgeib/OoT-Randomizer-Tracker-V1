@@ -12,10 +12,10 @@ import HookShot from "../../components/Items/HookShot";
 class ItemTracker extends Component {
     render() {
 
-        const { 
+        const {
             state,
-            tracker, 
-            skulltulas,  
+            tracker,
+            skulltulas,
             hookshot,
             kokiriSword,
             emptyBottles,
@@ -29,6 +29,9 @@ class ItemTracker extends Component {
             fairyOcarina,
             addFairyOcarina,
             removeFairyOcarina,
+            ocarinaOfTime,
+            addOcarinaOfTime,
+            removeOcarinaOfTime,
             dekuShield,
             addDekuShield,
             removeDekuShield
@@ -37,7 +40,7 @@ class ItemTracker extends Component {
         return (
             <Grid style={tracker}>
                 <FirstRow
-                    state={state} 
+                    state={state}
                     kokiriSword={kokiriSword}
                     dekuSticks={dekuSticks}
                     dekuNuts={dekuNuts}
@@ -47,21 +50,24 @@ class ItemTracker extends Component {
                     addFireArrows={addFireArrows}
                     removeFireArrows={removeFireArrows}
                 />
-                <SecondRow 
-                    state={state} 
+                <SecondRow
+                    state={state}
                     hookshot={hookshot}
                     fairyOcarina={fairyOcarina}
                     addFairyOcarina={addFairyOcarina}
                     removeFairyOcarina={removeFairyOcarina}
+                    ocarinaOfTime={ocarinaOfTime}
+                    addOcarinaOfTime={addOcarinaOfTime}
+                    removeOcarinaOfTime={removeOcarinaOfTime}
                     dekuShield={dekuShield}
                     addDekuShield={addDekuShield}
                     removeDekuShield={removeDekuShield}
                 />
                 <ThirdRow />
-                <FourthRow 
+                <FourthRow
                     state={state}
                     skulltulas={skulltulas}
-                    emptyBottles={emptyBottles} 
+                    emptyBottles={emptyBottles}
                 />
                 <FifthRow />
                 <SixthRow />
