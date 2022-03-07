@@ -37,6 +37,9 @@ class ItemTracker extends Component {
             fireArrows,
             addFireArrows,
             removeFireArrows,
+            dinsFire,
+            addDinsFire,
+            removeDinsFire,
             fairySlingshot,
             addFairySlingshot,
             removeFairySlingshot,
@@ -67,12 +70,15 @@ class ItemTracker extends Component {
                     fairyBow={fairyBow}
                     addFairyBow={addFairyBow}
                     removeFairyBow={removeFairyBow}
-                    kokiriSword={kokiriSword}
-                    addKokiriSword={addKokiriSword}
-                    removeKokiriSword={removeKokiriSword}
                     fireArrows={fireArrows}
                     addFireArrows={addFireArrows}
                     removeFireArrows={removeFireArrows}
+                    dinsFire={dinsFire}
+                    addDinsFire={addDinsFire}
+                    removeDinsFire={removeDinsFire}
+                    kokiriSword={kokiriSword}
+                    addKokiriSword={addKokiriSword}
+                    removeKokiriSword={removeKokiriSword}
                 />
                 <SecondRow
                     state={state}

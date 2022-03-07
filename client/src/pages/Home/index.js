@@ -12,6 +12,7 @@ import { addDekuNuts, removeDekuNuts } from "../../actions/dekuNuts";
 import { addBombs, removeBombs } from "../../actions/bombs";
 import { addFairyBow, removeFairyBow } from "../../actions/fairyBow";
 import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
+import { addDinsFire, removeDinsFire } from "../../actions/dinsFire";
 import { addKokiriSword, removeKokiriSword } from "../../actions/kokiriSword";
 import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
@@ -45,7 +46,6 @@ class Home extends Component {
         hasFireArrows: false,
         hasIceArrows: false,
         hasLightArrows: false,
-        hasDinsFire: false,
         hasFaroresWind: false,
         hasNayrusLove: false,
         hasMasterSword: true,
@@ -360,16 +360,6 @@ class Home extends Component {
         }
     }
 
-    // kokiriSwordLogic = {
-    //     gotKokiriSword: (e) => {
-    //         this.setState({ hasKokiriSword: true });
-    //     },
-    //     removeKokiriSword: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasKokiriSword: false });
-    //     }
-    // }
-
     hookshotLogic = {
         gotHookshot: (e) => {
             this.setState({ hasHookshot: true });
@@ -409,6 +399,9 @@ class Home extends Component {
             fireArrows, 
             addFireArrows, 
             removeFireArrows,
+            dinsFire,
+            addDinsFire,
+            removeDinsFire,
             fairySlingshot,
             addFairySlingshot,
             removeFairySlingshot,
@@ -455,6 +448,9 @@ class Home extends Component {
                                         fireArrows={fireArrows}
                                         addFireArrows={addFireArrows}
                                         removeFireArrows={removeFireArrows}
+                                        dinsFire={dinsFire}
+                                        addDinsFire={addDinsFire}
+                                        removeDinsFire={removeDinsFire}
                                         fairySlingshot={fairySlingshot}
                                         addFairySlingshot={addFairySlingshot}
                                         removeFairySlingshot={removeFairySlingshot}
@@ -509,6 +505,7 @@ function mapStateToProps(state) {
         fairyBow: state.fairyBow,
         kokiriSword: state.kokiriSword, 
         fireArrows: state.fireArrows,
+        dinsFire: state.dinsFire,
         fairySlingshot: state.fairySlingshot,
         fairyOcarina: state.fairyOcarina,
         ocarinaOfTime: state.ocarinaOfTime,
@@ -529,6 +526,8 @@ export default compose(connect(mapStateToProps, {
     removeKokiriSword, 
     addFireArrows, 
     removeFireArrows,
+    addDinsFire,
+    removeDinsFire,
     addFairySlingshot,
     removeFairySlingshot,
     addFairyOcarina,

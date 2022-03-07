@@ -22,6 +22,11 @@ export const REMOVE_FAIRY_BOW = "REMOVE_FAIRY_BOW";
 export const ADD_FIRE_ARROWS = "ADD_FIRE_ARROWS";
 export const REMOVE_FIRE_ARROWS = "REMOVE_FIRE_ARROWS";
 
+//Dins's Fire
+
+export const ADD_DINS_FIRE = "ADD_DINS_FIRE";
+export const REMOVE_DINS_FIRE = "REMOVE_DINS_FIRE";
+
 //Kokiri Sword
 
 export const ADD_KOKIRI_SWORD = "ADD_KOKIRI_SWORD";

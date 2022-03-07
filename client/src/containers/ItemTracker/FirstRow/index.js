@@ -24,12 +24,15 @@ const FirstRow = (props) => {
         fairyBow,
         addFairyBow,
         removeFairyBow,
-        kokiriSword,
-        addKokiriSword,
-        removeKokiriSword, 
         fireArrows, 
         addFireArrows, 
-        removeFireArrows 
+        removeFireArrows,
+        dinsFire,
+        addDinsFire,
+        removeDinsFire,
+        kokiriSword,
+        addKokiriSword,
+        removeKokiriSword  
     } = props;
     
     return (
@@ -39,7 +42,7 @@ const FirstRow = (props) => {
             <BombBag counter={bombs} add={addBombs} remove={removeBombs} />
             <FairyBow counter={fairyBow} add={addFairyBow} remove={removeFairyBow} />
             <FireArrows fireArrows={fireArrows} add={addFireArrows} remove={removeFireArrows} />
-            <DinsFire />
+            <DinsFire dinsFire={dinsFire} add={addDinsFire} remove={removeDinsFire} />
             <KokiriSword kokiriSword={kokiriSword} addKokiriSword={addKokiriSword} removeKokiriSword={removeKokiriSword} />
             <MasterSword />
         </Grid.Row>
