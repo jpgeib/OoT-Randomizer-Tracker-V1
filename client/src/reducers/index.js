@@ -7,6 +7,7 @@ import fairyBowReducer from "./fairyBowReducer";
 import fireArrowsReducer from "./fireArrowsReducer";
 import dinsFireReducer from "./dinsFireReducer";
 import kokiriSwordReducer from "./kokiriSwordReducer";
+import biggoronSwordReducer from "./biggoronSwordReducer";
 import fairySlingshotReducer from "./fairySlingshotReducer";
 import fairyOcarinaReducer from "./fairyOcarinaReducer";
 import ocarinaOfTimeReducer from "./ocarinaOfTimeReducer";
@@ -21,6 +22,7 @@ export default combineReducers({
     fireArrows: fireArrowsReducer,
     dinsFire: dinsFireReducer,
     kokiriSword: kokiriSwordReducer,
+    biggoronSword: biggoronSwordReducer,
     fairySlingshot: fairySlingshotReducer,
     fairyOcarina: fairyOcarinaReducer,
     ocarinaOfTime: ocarinaOfTimeReducer,

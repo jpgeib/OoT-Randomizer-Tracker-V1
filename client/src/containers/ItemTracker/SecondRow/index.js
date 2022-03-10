@@ -3,7 +3,6 @@ import { Grid } from "semantic-ui-react";
 import BigGoronSword from "../../../components/Items/BigGoronSword";
 import FairySlingshot from "../../../components/Items/FairySlingshot";
 import Ocarina from "../../../components/Items/Ocarina";
-// import OcarinaOfTime from "../../../components/Items/OcarinaOfTime";
 import Bombchus from "../../../components/Items/Bombchus";
 import HookShot from "../../../components/Items/HookShot";
 import LongShot from "../../../components/Items/LongShot";
@@ -17,8 +16,10 @@ class SecondRow extends Component {
 
         const { hasLongshot, hasHookshot } = this.props.state;
         const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
-        // const { gotFairyOcarina, removeFairyOcarina, gotOcarinaOfTime, removeOcarinaOfTime } = this.props.ocarina;
         const {
+            biggoronSword,
+            addBiggoronSword,
+            removeBiggoronSword,
             fairySlingshot,
             addFairySlingshot,
             removeFairySlingshot,
@@ -35,7 +36,11 @@ class SecondRow extends Component {
 
         return (
             <Grid.Row>
-                <BigGoronSword />
+                <BigGoronSword 
+                    biggoronSword={biggoronSword}
+                    addBiggoronSword={addBiggoronSword}
+                    removeBiggoronSword={removeBiggoronSword}
+                />
                 <FairySlingshot 
                     counter={fairySlingshot}
                     add={addFairySlingshot}
