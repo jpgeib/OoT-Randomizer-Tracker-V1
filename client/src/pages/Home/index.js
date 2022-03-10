@@ -18,6 +18,7 @@ import { addBiggoronSword, removeBiggoronSword } from "../../actions/biggoronSwo
 import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
 import { addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinaOfTime";
+import { addBombchus, removeBombchus } from "../../actions/bombchus";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 
 class Home extends Component {
@@ -50,8 +51,6 @@ class Home extends Component {
         hasFaroresWind: false,
         hasNayrusLove: false,
         hasMasterSword: true,
-        // hasBigGoronSword: false,
-        // hasBombchus: false,
         hasHookshot: false,
         hasLongshot: false,
         hasHylianShield: false,
@@ -415,6 +414,9 @@ class Home extends Component {
             ocarinaOfTime,
             addOcarinaOfTime,
             removeOcarinaOfTime,
+            bombchus,
+            addBombchus,
+            removeBombchus,
             dekuShield,
             addDekuShield,
             removeDekuShield 
@@ -437,36 +439,50 @@ class Home extends Component {
                                         dekuSticks={dekuSticks}
                                         addDekuSticks={addDekuSticks}
                                         removeDekuSticks={removeDekuSticks}
+
                                         dekuNuts={dekuNuts}
                                         addDekuNuts={addDekuNuts}
                                         removeDekuNuts={removeDekuNuts}
+
                                         bombs={bombs}
                                         addBombs={addBombs}
                                         removeBombs={removeBombs}
+
                                         fairyBow={fairyBow}
                                         addFairyBow={addFairyBow}
                                         removeFairyBow={removeFairyBow}
+
                                         fireArrows={fireArrows}
                                         addFireArrows={addFireArrows}
                                         removeFireArrows={removeFireArrows}
+
                                         dinsFire={dinsFire}
                                         addDinsFire={addDinsFire}
                                         removeDinsFire={removeDinsFire}
+
                                         kokiriSword={kokiriSword}
                                         addKokiriSword={addKokiriSword}
                                         removeKokiriSword={removeKokiriSword}
+
                                         biggoronSword={biggoronSword}
                                         addBiggoronSword={addBiggoronSword}
                                         removeBiggoronSword={removeBiggoronSword}
+
                                         fairySlingshot={fairySlingshot}
                                         addFairySlingshot={addFairySlingshot}
                                         removeFairySlingshot={removeFairySlingshot}
+
                                         fairyOcarina={fairyOcarina}
                                         addFairyOcarina={addFairyOcarina}
                                         removeFairyOcarina={removeFairyOcarina}
                                         ocarinaOfTime={ocarinaOfTime}
                                         addOcarinaOfTime={addOcarinaOfTime}
                                         removeOcarinaOfTime={removeOcarinaOfTime}
+
+                                        bombchus={bombchus}
+                                        addBombchus={addBombchus}
+                                        removeBombchus={removeBombchus}
+
                                         dekuShield={dekuShield}
                                         addDekuShield={addDekuShield}
                                         removeDekuShield={removeDekuShield}
@@ -517,6 +533,7 @@ function mapStateToProps(state) {
         fairySlingshot: state.fairySlingshot,
         fairyOcarina: state.fairyOcarina,
         ocarinaOfTime: state.ocarinaOfTime,
+        bombchus: state.bombchus,
         dekuShield: state.dekuShield
     }
 };
@@ -530,20 +547,22 @@ export default compose(connect(mapStateToProps, {
     removeBombs,
     addFairyBow,
     removeFairyBow,
-    addBiggoronSword,
-    removeBiggoronSword,
     addFireArrows, 
     removeFireArrows,
     addDinsFire,
     removeDinsFire,
     addKokiriSword,
     removeKokiriSword,
+    addBiggoronSword,
+    removeBiggoronSword,
     addFairySlingshot,
     removeFairySlingshot,
     addFairyOcarina,
     removeFairyOcarina,
     addOcarinaOfTime,
     removeOcarinaOfTime,
+    addBombchus,
+    removeBombchus,
     addDekuShield,
     removeDekuShield
 }))(Home);

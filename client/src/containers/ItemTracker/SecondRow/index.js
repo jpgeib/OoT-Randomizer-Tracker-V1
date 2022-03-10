@@ -29,6 +29,9 @@ class SecondRow extends Component {
             ocarinaOfTime,
             addOcarinaOfTime,
             removeOcarinaOfTime,
+            bombchus,
+            addBombchus,
+            removeBombchus,
             dekuShield,
             addDekuShield,
             removeDekuShield
@@ -54,7 +57,11 @@ class SecondRow extends Component {
                     addOcarinaOfTime={addOcarinaOfTime}
                     removeOcarinaOfTime={removeOcarinaOfTime}
                 />
-                <Bombchus />
+                <Bombchus
+                    counter={bombchus}
+                    add={addBombchus}
+                    remove={removeBombchus}
+                />
                 {hasLongshot === true ?
                     <LongShot
                         removeLongshot={removeLongshot}

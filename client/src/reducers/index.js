@@ -11,6 +11,7 @@ import biggoronSwordReducer from "./biggoronSwordReducer";
 import fairySlingshotReducer from "./fairySlingshotReducer";
 import fairyOcarinaReducer from "./fairyOcarinaReducer";
 import ocarinaOfTimeReducer from "./ocarinaOfTimeReducer";
+import bombchusReducer from "./bombchusReducer";
 import dekuShieldReducer from "./dekuShieldReducer";
 import skulltulaCounterReducer from "./skulltulaCounterReducer";
 
@@ -26,6 +27,7 @@ export default combineReducers({
     fairySlingshot: fairySlingshotReducer,
     fairyOcarina: fairyOcarinaReducer,
     ocarinaOfTime: ocarinaOfTimeReducer,
+    bombchus: bombchusReducer,
     dekuShield: dekuShieldReducer,
     skulltulaCounter: skulltulaCounterReducer
 });

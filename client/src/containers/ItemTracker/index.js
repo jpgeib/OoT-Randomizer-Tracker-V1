@@ -52,6 +52,9 @@ class ItemTracker extends Component {
             ocarinaOfTime,
             addOcarinaOfTime,
             removeOcarinaOfTime,
+            bombchus,
+            addBombchus,
+            removeBombchus,
             dekuShield,
             addDekuShield,
             removeDekuShield
@@ -98,6 +101,9 @@ class ItemTracker extends Component {
                     ocarinaOfTime={ocarinaOfTime}
                     addOcarinaOfTime={addOcarinaOfTime}
                     removeOcarinaOfTime={removeOcarinaOfTime}
+                    bombchus={bombchus}
+                    addBombchus={addBombchus}
+                    removeBombchus={removeBombchus}
                     dekuShield={dekuShield}
                     addDekuShield={addDekuShield}
                     removeDekuShield={removeDekuShield}
