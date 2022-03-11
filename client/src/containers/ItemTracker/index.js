@@ -17,6 +17,7 @@ class ItemTracker extends Component {
             tracker,
             skulltulas,
             emptyBottles,
+            firstRowLogic,
             
             dekuSticks,
             addDekuSticks,
@@ -30,9 +31,9 @@ class ItemTracker extends Component {
             fairyBow,
             addFairyBow,
             removeFairyBow,
-            fireArrows,
-            addFireArrows,
-            removeFireArrows,
+            // fireArrows,
+            // addFireArrows,
+            // removeFireArrows,
             dinsFire,
             addDinsFire,
             removeDinsFire,
@@ -74,6 +75,7 @@ class ItemTracker extends Component {
         return (
             <Grid style={tracker}>
                 <FirstRow
+                    firstRowLogic={firstRowLogic}
                     dekuSticks={dekuSticks}
                     addDekuSticks={addDekuSticks}
                     removeDekuSticks={removeDekuSticks}
@@ -86,9 +88,9 @@ class ItemTracker extends Component {
                     fairyBow={fairyBow}
                     addFairyBow={addFairyBow}
                     removeFairyBow={removeFairyBow}
-                    fireArrows={fireArrows}
-                    addFireArrows={addFireArrows}
-                    removeFireArrows={removeFireArrows}
+                    // fireArrows={fireArrows}
+                    // addFireArrows={addFireArrows}
+                    // removeFireArrows={removeFireArrows}
                     dinsFire={dinsFire}
                     addDinsFire={addDinsFire}
                     removeDinsFire={removeDinsFire}

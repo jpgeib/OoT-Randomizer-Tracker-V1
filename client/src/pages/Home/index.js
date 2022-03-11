@@ -380,9 +380,9 @@ class Home extends Component {
             kokiriSword,
             addKokiriSword,
             removeKokiriSword,
-            fireArrows,
-            addFireArrows,
-            removeFireArrows,
+            // fireArrows,
+            // addFireArrows,
+            // removeFireArrows,
             dinsFire,
             addDinsFire,
             removeDinsFire,
@@ -418,6 +418,14 @@ class Home extends Component {
             removeDekuShield
         } = this.props;
 
+        const firstRowLogic = {
+            fireArrowLogic: {
+                fireArrows: this.props.fireArrows,
+                addFireArrows: this.props.addFireArrows,
+                removeFireArrows: this.props.removeFireArrows
+            }
+        }
+
         return (
             <Grid>
                 <Grid.Row>
@@ -430,6 +438,7 @@ class Home extends Component {
                                         state={this.state}
                                         emptyBottles={this.emptyBottleLogic}
                                         skulltulas={this.skulltulaLogic}
+                                        firstRowLogic={firstRowLogic}
 
                                         dekuSticks={dekuSticks}
                                         addDekuSticks={addDekuSticks}
@@ -447,9 +456,9 @@ class Home extends Component {
                                         addFairyBow={addFairyBow}
                                         removeFairyBow={removeFairyBow}
 
-                                        fireArrows={fireArrows}
-                                        addFireArrows={addFireArrows}
-                                        removeFireArrows={removeFireArrows}
+                                        // fireArrows={fireArrows}
+                                        // addFireArrows={addFireArrows}
+                                        // removeFireArrows={removeFireArrows}
 
                                         dinsFire={dinsFire}
                                         addDinsFire={addDinsFire}

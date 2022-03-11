@@ -24,9 +24,9 @@ const FirstRow = (props) => {
         fairyBow,
         addFairyBow,
         removeFairyBow,
-        fireArrows, 
-        addFireArrows, 
-        removeFireArrows,
+        // fireArrows, 
+        // addFireArrows, 
+        // removeFireArrows,
         dinsFire,
         addDinsFire,
         removeDinsFire,
@@ -34,6 +34,8 @@ const FirstRow = (props) => {
         addKokiriSword,
         removeKokiriSword  
     } = props;
+
+    const { fireArrows, addFireArrows, removeFireArrows } = props.firstRowLogic.fireArrowLogic;
     
     return (
         <Grid.Row>
