@@ -362,23 +362,6 @@ class Home extends Component {
         }
     }
 
-    // hookshotLogic = {
-    //     gotHookshot: (e) => {
-    //         this.setState({ hasHookshot: true });
-    //     },
-    //     removeHookshot: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasHookshot: false });
-    //     },
-    //     gotLongshot: (e) => {
-    //         this.setState({ hasLongshot: true });
-    //     },
-    //     removeLongshot: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasLongshot: false });
-    //     }
-    // }
-
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
@@ -444,7 +427,6 @@ class Home extends Component {
                                         tracker={trackerStyle}
                                         state={this.state}
                                         emptyBottles={this.emptyBottleLogic}
-                                        // hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
 
                                         dekuSticks={dekuSticks}

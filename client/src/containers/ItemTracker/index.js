@@ -8,7 +8,6 @@ import FifthRow from "./FifthRow";
 import SixthRow from "./SixthRow";
 import MasterSword from "../../components/Items/MasterSword";
 import HookShot from "../../components/Items/HookShot";
-import { addHookshot } from "../../actions/hookshot";
 
 class ItemTracker extends Component {
     render() {
@@ -95,8 +94,6 @@ class ItemTracker extends Component {
                     removeKokiriSword={removeKokiriSword}
                 />
                 <SecondRow
-                    state={state}
-                    
                     biggoronSword={biggoronSword}
                     addBiggoronSword={addBiggoronSword}
                     removeBiggoronSword={removeBiggoronSword}
