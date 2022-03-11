@@ -53,6 +53,13 @@ export const REMOVE_OCARINA_OF_TIME = "REMOVE_OCARINA_OF_TIME";
 export const ADD_BOMBCHUS = "ADD_BOMBCHUS";
 export const REMOVE_BOMBCHUS = "REMOVE_BOMBCHUS";
 
+//Hookshot
+
+export const ADD_HOOKSHOT = "ADD_HOOKSHOT";
+export const REMOVE_HOOKSHOT = "REMOVE_HOOKSHOT";
+export const ADD_LONGSHOT = "ADD_LONGSHOT";
+export const REMOVE_LONGSHOT = "REMOVE_LONGSHOT";
+
 //Ice Arrows
 
 export const ADD_ICE_ARROWS = "ADD_ICE_ARROWS";
