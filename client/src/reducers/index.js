@@ -15,6 +15,7 @@ import bombchusReducer from "./bombchusReducer";
 import hookshotReducer from "./hookshotReducer";
 import longshotReducer from "./longshotReducer";
 import iceArrowsReducer from "./iceArrowsReducer";
+import faroresWindReducer from "./faroresWindReducer";
 import dekuShieldReducer from "./dekuShieldReducer";
 import skulltulaCounterReducer from "./skulltulaCounterReducer";
 
@@ -34,6 +35,7 @@ export default combineReducers({
     hookshot: hookshotReducer,
     longshot: longshotReducer,
     iceArrows: iceArrowsReducer,
+    faroresWind: faroresWindReducer,
     dekuShield: dekuShieldReducer,
     skulltulaCounter: skulltulaCounterReducer
 });

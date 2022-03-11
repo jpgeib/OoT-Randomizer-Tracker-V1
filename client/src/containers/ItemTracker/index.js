@@ -63,6 +63,9 @@ class ItemTracker extends Component {
             iceArrows,
             addIceArrows,
             removeIceArrows,
+            faroresWind,
+            addFaroresWind,
+            removeFaroresWind,
             dekuShield,
             addDekuShield,
             removeDekuShield
@@ -118,6 +121,9 @@ class ItemTracker extends Component {
                     iceArrows={iceArrows}
                     addIceArrows={addIceArrows}
                     removeIceArrows={removeIceArrows}
+                    faroresWind={faroresWind}
+                    addFaroresWind={addFaroresWind}
+                    removeFaroresWind={removeFaroresWind}
                     dekuShield={dekuShield}
                     addDekuShield={addDekuShield}
                     removeDekuShield={removeDekuShield}

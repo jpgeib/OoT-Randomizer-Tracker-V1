@@ -22,6 +22,7 @@ import { addBombchus, removeBombchus } from "../../actions/bombchus";
 import { addHookshot, removeHookshot } from "../../actions/hookshot";
 import { addLongshot, removeLongshot } from "../../actions/longshot";
 import { addIceArrows, removeIceArrows } from "../../actions/iceArrows";
+import { addFaroresWind, removeFaroresWind } from "../../actions/faroresWind";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 
 class Home extends Component {
@@ -53,8 +54,6 @@ class Home extends Component {
         hasFaroresWind: false,
         hasNayrusLove: false,
         hasMasterSword: true,
-        // hasHookshot: false,
-        // hasLongshot: false,
         hasHylianShield: false,
         hasMirrorShield: false,
         hasBoomerang: false,
@@ -411,6 +410,9 @@ class Home extends Component {
             iceArrows,
             addIceArrows,
             removeIceArrows,
+            faroresWind,
+            addFaroresWind,
+            removeFaroresWind,
             dekuShield,
             addDekuShield,
             removeDekuShield
@@ -487,6 +489,10 @@ class Home extends Component {
                                         addIceArrows={addIceArrows}
                                         removeIceArrows={removeIceArrows}
 
+                                        faroresWind={faroresWind}
+                                        addFaroresWind={addFaroresWind}
+                                        removeFaroresWind={removeFaroresWind}
+
                                         dekuShield={dekuShield}
                                         addDekuShield={addDekuShield}
                                         removeDekuShield={removeDekuShield}
@@ -541,6 +547,7 @@ function mapStateToProps(state) {
         hookshot: state.hookshot,
         longshot: state.longshot,
         iceArrows: state.iceArrows,
+        faroresWind: state.faroresWind,
         dekuShield: state.dekuShield
     }
 };
@@ -576,6 +583,8 @@ export default compose(connect(mapStateToProps, {
     removeLongshot,
     addIceArrows,
     removeIceArrows,
+    addFaroresWind,
+    removeFaroresWind,
     addDekuShield,
     removeDekuShield
 }))(Home);

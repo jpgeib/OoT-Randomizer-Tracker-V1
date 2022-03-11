@@ -65,6 +65,11 @@ export const REMOVE_LONGSHOT = "REMOVE_LONGSHOT";
 export const ADD_ICE_ARROWS = "ADD_ICE_ARROWS";
 export const REMOVE_ICE_ARROWS = "REMOVE_ICE_ARROWS";
 
+//Farore's Wind
+
+export const ADD_FARORES_WIND = "ADD_FARORES_WIND";
+export const REMOVE_FARORES_WIND = "REMOVE_FARORES_WIND";
+
 //Deku Shield
 
 export const ADD_DEKU_SHIELD = "ADD_DEKU_SHIELD";

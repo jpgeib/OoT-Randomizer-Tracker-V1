@@ -38,6 +38,9 @@ class SecondRow extends Component {
             iceArrows,
             addIceArrows,
             removeIceArrows,
+            faroresWind,
+            addFaroresWind,
+            removeFaroresWind,
             dekuShield,
             addDekuShield,
             removeDekuShield
@@ -81,7 +84,11 @@ class SecondRow extends Component {
                     addIceArrows={addIceArrows}
                     removeIceArrows={removeIceArrows}
                 />
-                <FaroresWind />
+                <FaroresWind 
+                    faroresWind={faroresWind}
+                    addFaroresWind={addFaroresWind}
+                    removeFaroresWind={removeFaroresWind}
+                />
                 <DekuShield
                     dekuShield={dekuShield}
                     addDekuShield={addDekuShield}
