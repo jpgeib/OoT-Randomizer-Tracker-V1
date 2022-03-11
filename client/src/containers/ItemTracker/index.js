@@ -19,27 +19,25 @@ class ItemTracker extends Component {
             emptyBottles,
             firstRowLogic,
             
-            dekuSticks,
-            addDekuSticks,
-            removeDekuSticks,
-            dekuNuts,
-            addDekuNuts,
-            removeDekuNuts,
-            bombs,
-            addBombs,
-            removeBombs,
-            fairyBow,
-            addFairyBow,
-            removeFairyBow,
-            // fireArrows,
-            // addFireArrows,
-            // removeFireArrows,
-            dinsFire,
-            addDinsFire,
-            removeDinsFire,
-            kokiriSword,
-            addKokiriSword,
-            removeKokiriSword,
+            // dekuSticks,
+            // addDekuSticks,
+            // removeDekuSticks,
+            // dekuNuts,
+            // addDekuNuts,
+            // removeDekuNuts,
+            // bombs,
+            // addBombs,
+            // removeBombs,
+            // fairyBow,
+            // addFairyBow,
+            // removeFairyBow,
+        
+            // dinsFire,
+            // addDinsFire,
+            // removeDinsFire,
+            // kokiriSword,
+            // addKokiriSword,
+            // removeKokiriSword,
             biggoronSword,
             addBiggoronSword,
             removeBiggoronSword,
@@ -76,27 +74,27 @@ class ItemTracker extends Component {
             <Grid style={tracker}>
                 <FirstRow
                     firstRowLogic={firstRowLogic}
-                    dekuSticks={dekuSticks}
-                    addDekuSticks={addDekuSticks}
-                    removeDekuSticks={removeDekuSticks}
-                    dekuNuts={dekuNuts}
-                    addDekuNuts={addDekuNuts}
-                    removeDekuNuts={removeDekuNuts}
-                    bombs={bombs}
-                    addBombs={addBombs}
-                    removeBombs={removeBombs}
-                    fairyBow={fairyBow}
-                    addFairyBow={addFairyBow}
-                    removeFairyBow={removeFairyBow}
+                    // dekuSticks={dekuSticks}
+                    // addDekuSticks={addDekuSticks}
+                    // removeDekuSticks={removeDekuSticks}
+                    // dekuNuts={dekuNuts}
+                    // addDekuNuts={addDekuNuts}
+                    // removeDekuNuts={removeDekuNuts}
+                    // bombs={bombs}
+                    // addBombs={addBombs}
+                    // removeBombs={removeBombs}
+                    // fairyBow={fairyBow}
+                    // addFairyBow={addFairyBow}
+                    // removeFairyBow={removeFairyBow}
                     // fireArrows={fireArrows}
                     // addFireArrows={addFireArrows}
                     // removeFireArrows={removeFireArrows}
-                    dinsFire={dinsFire}
-                    addDinsFire={addDinsFire}
-                    removeDinsFire={removeDinsFire}
-                    kokiriSword={kokiriSword}
-                    addKokiriSword={addKokiriSword}
-                    removeKokiriSword={removeKokiriSword}
+                    // dinsFire={dinsFire}
+                    // addDinsFire={addDinsFire}
+                    // removeDinsFire={removeDinsFire}
+                    // kokiriSword={kokiriSword}
+                    // addKokiriSword={addKokiriSword}
+                    // removeKokiriSword={removeKokiriSword}
                 />
                 <SecondRow
                     biggoronSword={biggoronSword}

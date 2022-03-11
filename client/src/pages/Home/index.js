@@ -365,27 +365,24 @@ class Home extends Component {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
         const {
-            dekuSticks,
-            addDekuSticks,
-            removeDekuSticks,
-            dekuNuts,
-            addDekuNuts,
-            removeDekuNuts,
-            bombs,
-            addBombs,
-            removeBombs,
-            fairyBow,
-            addFairyBow,
-            removeFairyBow,
-            kokiriSword,
-            addKokiriSword,
-            removeKokiriSword,
-            // fireArrows,
-            // addFireArrows,
-            // removeFireArrows,
-            dinsFire,
-            addDinsFire,
-            removeDinsFire,
+            // dekuSticks,
+            // addDekuSticks,
+            // removeDekuSticks,
+            // dekuNuts,
+            // addDekuNuts,
+            // removeDekuNuts,
+            // bombs,
+            // addBombs,
+            // removeBombs,
+            // fairyBow,
+            // addFairyBow,
+            // removeFairyBow,
+            // kokiriSword,
+            // addKokiriSword,
+            // removeKokiriSword,
+            // dinsFire,
+            // addDinsFire,
+            // removeDinsFire,
             biggoronSword,
             addBiggoronSword,
             removeBiggoronSword,
@@ -419,12 +416,42 @@ class Home extends Component {
         } = this.props;
 
         const firstRowLogic = {
+            dekuSticksLogic : {
+                dekuSticks: this.props.dekuSticks,
+                addDekuSticks: this.props.addDekuSticks,
+                removeDekuSticks: this.props.removeDekuSticks
+            },
+            dekuNutsLogic: {
+                dekuNuts: this.props.dekuNuts,
+                addDekuNuts: this.props.addDekuNuts,
+                removeDekuNuts: this.props.removeDekuNuts
+            },
+            bombsLogic: {
+                bombs: this.props.bombs,
+                addBombs: this.props.addBombs,
+                removeBombs: this.props.removeBombs
+            },
+            fairyBowLogic: {
+                fairyBow: this.props.fairyBow,
+                addFairyBow: this.props.addFairyBow,
+                removeFairyBow: this.props.removeFairyBow
+            },
             fireArrowLogic: {
                 fireArrows: this.props.fireArrows,
                 addFireArrows: this.props.addFireArrows,
                 removeFireArrows: this.props.removeFireArrows
+            },
+            dinsFireLogic: {
+                dinsFire: this.props.dinsFire,
+                addDinsFire: this.props.addDinsFire,
+                removeDinsFire: this.props.removeDinsFire
+            },
+            kokiriSwordLogic: {
+                kokiriSword: this.props.kokiriSword,
+                addKokiriSword: this.props.addKokiriSword,
+                removeKokiriSword: this.props.removeKokiriSword
             }
-        }
+        };
 
         return (
             <Grid>
@@ -440,33 +467,29 @@ class Home extends Component {
                                         skulltulas={this.skulltulaLogic}
                                         firstRowLogic={firstRowLogic}
 
-                                        dekuSticks={dekuSticks}
-                                        addDekuSticks={addDekuSticks}
-                                        removeDekuSticks={removeDekuSticks}
+                                        // dekuSticks={dekuSticks}
+                                        // addDekuSticks={addDekuSticks}
+                                        // removeDekuSticks={removeDekuSticks}
 
-                                        dekuNuts={dekuNuts}
-                                        addDekuNuts={addDekuNuts}
-                                        removeDekuNuts={removeDekuNuts}
+                                        // dekuNuts={dekuNuts}
+                                        // addDekuNuts={addDekuNuts}
+                                        // removeDekuNuts={removeDekuNuts}
 
-                                        bombs={bombs}
-                                        addBombs={addBombs}
-                                        removeBombs={removeBombs}
+                                        // bombs={bombs}
+                                        // addBombs={addBombs}
+                                        // removeBombs={removeBombs}
 
-                                        fairyBow={fairyBow}
-                                        addFairyBow={addFairyBow}
-                                        removeFairyBow={removeFairyBow}
+                                        // fairyBow={fairyBow}
+                                        // addFairyBow={addFairyBow}
+                                        // removeFairyBow={removeFairyBow}
 
-                                        // fireArrows={fireArrows}
-                                        // addFireArrows={addFireArrows}
-                                        // removeFireArrows={removeFireArrows}
+                                        // dinsFire={dinsFire}
+                                        // addDinsFire={addDinsFire}
+                                        // removeDinsFire={removeDinsFire}
 
-                                        dinsFire={dinsFire}
-                                        addDinsFire={addDinsFire}
-                                        removeDinsFire={removeDinsFire}
-
-                                        kokiriSword={kokiriSword}
-                                        addKokiriSword={addKokiriSword}
-                                        removeKokiriSword={removeKokiriSword}
+                                        // kokiriSword={kokiriSword}
+                                        // addKokiriSword={addKokiriSword}
+                                        // removeKokiriSword={removeKokiriSword}
 
                                         biggoronSword={biggoronSword}
                                         addBiggoronSword={addBiggoronSword}

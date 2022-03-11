@@ -11,31 +11,13 @@ import MasterSword from "../../../components/Items/MasterSword";
 
 const FirstRow = (props) => {
 
-    const {
-        dekuSticks,
-        addDekuSticks,
-        removeDekuSticks,
-        dekuNuts,
-        addDekuNuts,
-        removeDekuNuts,
-        bombs,
-        addBombs,
-        removeBombs,
-        fairyBow,
-        addFairyBow,
-        removeFairyBow,
-        // fireArrows, 
-        // addFireArrows, 
-        // removeFireArrows,
-        dinsFire,
-        addDinsFire,
-        removeDinsFire,
-        kokiriSword,
-        addKokiriSword,
-        removeKokiriSword  
-    } = props;
-
+    const { dekuSticks, addDekuSticks, removeDekuSticks } = props.firstRowLogic.dekuSticksLogic;
+    const { dekuNuts, addDekuNuts, removeDekuNuts } = props.firstRowLogic.dekuNutsLogic;
+    const { bombs, addBombs, removeBombs } = props.firstRowLogic.bombsLogic;
+    const { fairyBow, addFairyBow, removeFairyBow } = props.firstRowLogic.fairyBowLogic;
     const { fireArrows, addFireArrows, removeFireArrows } = props.firstRowLogic.fireArrowLogic;
+    const { dinsFire, addDinsFire, removeDinsFire } = props.firstRowLogic.dinsFireLogic;
+    const { kokiriSword, addKokiriSword, removeKokiriSword } = props.firstRowLogic.kokiriSwordLogic;
     
     return (
         <Grid.Row>
