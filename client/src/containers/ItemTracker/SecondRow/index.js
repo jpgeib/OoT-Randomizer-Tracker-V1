@@ -5,7 +5,6 @@ import FairySlingshot from "../../../components/Items/FairySlingshot";
 import Ocarina from "../../../components/Items/Ocarina";
 import Bombchus from "../../../components/Items/Bombchus";
 import HookShot from "../../../components/Items/HookShot";
-import LongShot from "../../../components/Items/LongShot";
 import IceArrows from "../../../components/Items/IceArrows";
 import FaroresWind from "../../../components/Items/FaroresWind";
 import DekuShield from "../../../components/Items/DekuShield";
@@ -14,8 +13,6 @@ class SecondRow extends Component {
 
     render() {
 
-        const { hasLongshot, hasHookshot } = this.props.state;
-        const { gotHookshot, removeHookshot, gotLongshot, removeLongshot } = this.props.hookshot;
         const {
             biggoronSword,
             addBiggoronSword,
@@ -32,6 +29,12 @@ class SecondRow extends Component {
             bombchus,
             addBombchus,
             removeBombchus,
+            hookshot,
+            addHookshot,
+            removeHookshot,
+            longshot,
+            addLongshot,
+            removeLongshot,
             iceArrows,
             addIceArrows,
             removeIceArrows,
@@ -65,17 +68,14 @@ class SecondRow extends Component {
                     add={addBombchus}
                     remove={removeBombchus}
                 />
-                {hasLongshot === true ?
-                    <LongShot
-                        removeLongshot={removeLongshot}
-                    /> :
-                    <HookShot
-                        hasLongshot={hasLongshot}
-                        gotLongshot={gotLongshot}
-                        gotHookshot={gotHookshot}
+                <HookShot
+                        hookshot={hookshot}
+                        addHookshot={addHookshot}
                         removeHookshot={removeHookshot}
-                        hasHookshot={hasHookshot}
-                    />}
+                        longshot={longshot}
+                        addLongshot={addLongshot}
+                        removeLongshot={removeLongshot}    
+                />
                 <IceArrows 
                     iceArrows={iceArrows}
                     addIceArrows={addIceArrows}

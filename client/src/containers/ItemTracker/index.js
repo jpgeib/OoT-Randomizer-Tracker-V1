@@ -8,6 +8,7 @@ import FifthRow from "./FifthRow";
 import SixthRow from "./SixthRow";
 import MasterSword from "../../components/Items/MasterSword";
 import HookShot from "../../components/Items/HookShot";
+import { addHookshot } from "../../actions/hookshot";
 
 class ItemTracker extends Component {
     render() {
@@ -16,7 +17,6 @@ class ItemTracker extends Component {
             state,
             tracker,
             skulltulas,
-            hookshot,
             emptyBottles,
             
             dekuSticks,
@@ -55,6 +55,12 @@ class ItemTracker extends Component {
             bombchus,
             addBombchus,
             removeBombchus,
+            hookshot,
+            addHookshot,
+            removeHookshot,
+            longshot,
+            addLongshot,
+            removeLongshot,
             iceArrows,
             addIceArrows,
             removeIceArrows,
@@ -90,7 +96,7 @@ class ItemTracker extends Component {
                 />
                 <SecondRow
                     state={state}
-                    hookshot={hookshot}
+                    
                     biggoronSword={biggoronSword}
                     addBiggoronSword={addBiggoronSword}
                     removeBiggoronSword={removeBiggoronSword}
@@ -106,6 +112,12 @@ class ItemTracker extends Component {
                     bombchus={bombchus}
                     addBombchus={addBombchus}
                     removeBombchus={removeBombchus}
+                    hookshot={hookshot}
+                    addHookshot={addHookshot}
+                    removeHookshot={removeHookshot}
+                    longshot={longshot}
+                    addLongshot={addLongshot}
+                    removeLongshot={removeLongshot}
                     iceArrows={iceArrows}
                     addIceArrows={addIceArrows}
                     removeIceArrows={removeIceArrows}

@@ -19,6 +19,8 @@ import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlin
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
 import { addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinaOfTime";
 import { addBombchus, removeBombchus } from "../../actions/bombchus";
+import { addHookshot, removeHookshot } from "../../actions/hookshot";
+import { addLongshot, removeLongshot } from "../../actions/longshot";
 import { addIceArrows, removeIceArrows } from "../../actions/iceArrows";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 
@@ -51,8 +53,8 @@ class Home extends Component {
         hasFaroresWind: false,
         hasNayrusLove: false,
         hasMasterSword: true,
-        hasHookshot: false,
-        hasLongshot: false,
+        // hasHookshot: false,
+        // hasLongshot: false,
         hasHylianShield: false,
         hasMirrorShield: false,
         hasBoomerang: false,
@@ -360,22 +362,22 @@ class Home extends Component {
         }
     }
 
-    hookshotLogic = {
-        gotHookshot: (e) => {
-            this.setState({ hasHookshot: true });
-        },
-        removeHookshot: (e) => {
-            e.preventDefault();
-            this.setState({ hasHookshot: false });
-        },
-        gotLongshot: (e) => {
-            this.setState({ hasLongshot: true });
-        },
-        removeLongshot: (e) => {
-            e.preventDefault();
-            this.setState({ hasLongshot: false });
-        }
-    }
+    // hookshotLogic = {
+    //     gotHookshot: (e) => {
+    //         this.setState({ hasHookshot: true });
+    //     },
+    //     removeHookshot: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasHookshot: false });
+    //     },
+    //     gotLongshot: (e) => {
+    //         this.setState({ hasLongshot: true });
+    //     },
+    //     removeLongshot: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasLongshot: false });
+    //     }
+    // }
 
     render() {
 
@@ -396,8 +398,8 @@ class Home extends Component {
             kokiriSword,
             addKokiriSword,
             removeKokiriSword,
-            fireArrows, 
-            addFireArrows, 
+            fireArrows,
+            addFireArrows,
             removeFireArrows,
             dinsFire,
             addDinsFire,
@@ -417,12 +419,18 @@ class Home extends Component {
             bombchus,
             addBombchus,
             removeBombchus,
+            hookshot,
+            addHookshot,
+            removeHookshot,
+            longshot,
+            addLongshot,
+            removeLongshot,
             iceArrows,
             addIceArrows,
             removeIceArrows,
             dekuShield,
             addDekuShield,
-            removeDekuShield 
+            removeDekuShield
         } = this.props;
 
         return (
@@ -436,7 +444,7 @@ class Home extends Component {
                                         tracker={trackerStyle}
                                         state={this.state}
                                         emptyBottles={this.emptyBottleLogic}
-                                        hookshot={this.hookshotLogic}
+                                        // hookshot={this.hookshotLogic}
                                         skulltulas={this.skulltulaLogic}
 
                                         dekuSticks={dekuSticks}
@@ -485,6 +493,13 @@ class Home extends Component {
                                         bombchus={bombchus}
                                         addBombchus={addBombchus}
                                         removeBombchus={removeBombchus}
+
+                                        hookshot={hookshot}
+                                        addHookshot={addHookshot}
+                                        removeHookshot={removeHookshot}
+                                        longshot={longshot}
+                                        addLongshot={addLongshot}
+                                        removeLongshot={removeLongshot}
 
                                         iceArrows={iceArrows}
                                         addIceArrows={addIceArrows}
@@ -541,6 +556,8 @@ function mapStateToProps(state) {
         fairyOcarina: state.fairyOcarina,
         ocarinaOfTime: state.ocarinaOfTime,
         bombchus: state.bombchus,
+        hookshot: state.hookshot,
+        longshot: state.longshot,
         iceArrows: state.iceArrows,
         dekuShield: state.dekuShield
     }
@@ -555,7 +572,7 @@ export default compose(connect(mapStateToProps, {
     removeBombs,
     addFairyBow,
     removeFairyBow,
-    addFireArrows, 
+    addFireArrows,
     removeFireArrows,
     addDinsFire,
     removeDinsFire,
@@ -571,6 +588,10 @@ export default compose(connect(mapStateToProps, {
     removeOcarinaOfTime,
     addBombchus,
     removeBombchus,
+    addHookshot,
+    removeHookshot,
+    addLongshot,
+    removeLongshot,
     addIceArrows,
     removeIceArrows,
     addDekuShield,
