@@ -53,6 +53,11 @@ export const REMOVE_OCARINA_OF_TIME = "REMOVE_OCARINA_OF_TIME";
 export const ADD_BOMBCHUS = "ADD_BOMBCHUS";
 export const REMOVE_BOMBCHUS = "REMOVE_BOMBCHUS";
 
+//Ice Arrows
+
+export const ADD_ICE_ARROWS = "ADD_ICE_ARROWS";
+export const REMOVE_ICE_ARROWS = "REMOVE_ICE_ARROWS";
+
 //Deku Shield
 
 export const ADD_DEKU_SHIELD = "ADD_DEKU_SHIELD";

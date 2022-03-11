@@ -19,6 +19,7 @@ import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlin
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
 import { addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinaOfTime";
 import { addBombchus, removeBombchus } from "../../actions/bombchus";
+import { addIceArrows, removeIceArrows } from "../../actions/iceArrows";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 
 class Home extends Component {
@@ -46,7 +47,6 @@ class Home extends Component {
         hasIronBoots: false,
         hasHoverBoots: false,
         hasFireArrows: false,
-        hasIceArrows: false,
         hasLightArrows: false,
         hasFaroresWind: false,
         hasNayrusLove: false,
@@ -417,6 +417,9 @@ class Home extends Component {
             bombchus,
             addBombchus,
             removeBombchus,
+            iceArrows,
+            addIceArrows,
+            removeIceArrows,
             dekuShield,
             addDekuShield,
             removeDekuShield 
@@ -483,6 +486,10 @@ class Home extends Component {
                                         addBombchus={addBombchus}
                                         removeBombchus={removeBombchus}
 
+                                        iceArrows={iceArrows}
+                                        addIceArrows={addIceArrows}
+                                        removeIceArrows={removeIceArrows}
+
                                         dekuShield={dekuShield}
                                         addDekuShield={addDekuShield}
                                         removeDekuShield={removeDekuShield}
@@ -534,6 +541,7 @@ function mapStateToProps(state) {
         fairyOcarina: state.fairyOcarina,
         ocarinaOfTime: state.ocarinaOfTime,
         bombchus: state.bombchus,
+        iceArrows: state.iceArrows,
         dekuShield: state.dekuShield
     }
 };
@@ -563,6 +571,8 @@ export default compose(connect(mapStateToProps, {
     removeOcarinaOfTime,
     addBombchus,
     removeBombchus,
+    addIceArrows,
+    removeIceArrows,
     addDekuShield,
     removeDekuShield
 }))(Home);

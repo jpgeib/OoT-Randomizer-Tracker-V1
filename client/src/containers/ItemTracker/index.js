@@ -55,6 +55,9 @@ class ItemTracker extends Component {
             bombchus,
             addBombchus,
             removeBombchus,
+            iceArrows,
+            addIceArrows,
+            removeIceArrows,
             dekuShield,
             addDekuShield,
             removeDekuShield
@@ -63,7 +66,6 @@ class ItemTracker extends Component {
         return (
             <Grid style={tracker}>
                 <FirstRow
-                    state={state}
                     dekuSticks={dekuSticks}
                     addDekuSticks={addDekuSticks}
                     removeDekuSticks={removeDekuSticks}
@@ -104,6 +106,9 @@ class ItemTracker extends Component {
                     bombchus={bombchus}
                     addBombchus={addBombchus}
                     removeBombchus={removeBombchus}
+                    iceArrows={iceArrows}
+                    addIceArrows={addIceArrows}
+                    removeIceArrows={removeIceArrows}
                     dekuShield={dekuShield}
                     addDekuShield={addDekuShield}
                     removeDekuShield={removeDekuShield}
