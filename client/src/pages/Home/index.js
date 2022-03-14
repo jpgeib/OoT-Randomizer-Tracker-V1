@@ -364,56 +364,38 @@ class Home extends Component {
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
-        const {
-            // dekuSticks,
-            // addDekuSticks,
-            // removeDekuSticks,
-            // dekuNuts,
-            // addDekuNuts,
-            // removeDekuNuts,
-            // bombs,
-            // addBombs,
-            // removeBombs,
-            // fairyBow,
-            // addFairyBow,
-            // removeFairyBow,
-            // kokiriSword,
-            // addKokiriSword,
-            // removeKokiriSword,
-            // dinsFire,
-            // addDinsFire,
-            // removeDinsFire,
-            biggoronSword,
-            addBiggoronSword,
-            removeBiggoronSword,
-            fairySlingshot,
-            addFairySlingshot,
-            removeFairySlingshot,
-            fairyOcarina,
-            addFairyOcarina,
-            removeFairyOcarina,
-            ocarinaOfTime,
-            addOcarinaOfTime,
-            removeOcarinaOfTime,
-            bombchus,
-            addBombchus,
-            removeBombchus,
-            hookshot,
-            addHookshot,
-            removeHookshot,
-            longshot,
-            addLongshot,
-            removeLongshot,
-            iceArrows,
-            addIceArrows,
-            removeIceArrows,
-            faroresWind,
-            addFaroresWind,
-            removeFaroresWind,
-            dekuShield,
-            addDekuShield,
-            removeDekuShield
-        } = this.props;
+        // const {
+        //     biggoronSword,
+        //     addBiggoronSword,
+        //     removeBiggoronSword,
+        //     fairySlingshot,
+        //     addFairySlingshot,
+        //     removeFairySlingshot,
+        //     fairyOcarina,
+        //     addFairyOcarina,
+        //     removeFairyOcarina,
+        //     ocarinaOfTime,
+        //     addOcarinaOfTime,
+        //     removeOcarinaOfTime,
+        //     bombchus,
+        //     addBombchus,
+        //     removeBombchus,
+        //     hookshot,
+        //     addHookshot,
+        //     removeHookshot,
+        //     longshot,
+        //     addLongshot,
+        //     removeLongshot,
+        //     iceArrows,
+        //     addIceArrows,
+        //     removeIceArrows,
+        //     faroresWind,
+        //     addFaroresWind,
+        //     removeFaroresWind,
+        //     dekuShield,
+        //     addDekuShield,
+        //     removeDekuShield
+        // } = this.props;
 
         const firstRowLogic = {
             dekuSticksLogic : {
@@ -453,6 +435,55 @@ class Home extends Component {
             }
         };
 
+        const secondRowLogic = {
+            biggoronSwordLogic: {
+                biggoronSword: this.props.biggoronSword,
+                addBiggoronSword: this.props.addBiggoronSword,
+                removeBiggoronSword: this.props.removeBiggoronSword
+            },
+            fairySlingshotLogic: {
+                fairySlingshot: this.props.fairySlingshot,
+                addFairySlingshot: this.props.addFairySlingshot,
+                removeFairySlingshot: this.props.removeFairySlingshot
+            },
+            ocarinaLogic: {
+                fairyOcarina: this.props.fairyOcarina,
+                addFairyOcarina: this.props.addFairyOcarina,
+                removeFairyOcarina: this.props.removeFairyOcarina,
+                ocarinaOfTime: this.props.ocarinaOfTime,
+                addOcarinaOfTime: this.props.addOcarinaOfTime,
+                removeOcarinaOfTime: this.props.removeOcarinaOfTime
+            },
+            bombchusLogic: {
+                bombchus: this.props.bombchus,
+                addBombchus: this.props.addBombchus,
+                removeBombchus: this.props.removeBombchus
+            },
+            hookshotLogic: {
+                hookshot: this.props.hookshot,
+                addHookshot: this.props.addHookshot,
+                removeHookshot: this.props.removeHookshot,
+                longshot: this.props.longshot,
+                addLongshot: this.props.addLongshot,
+                removeLongshot: this.props.removeLongshot
+            },
+            iceArrowsLogic: {
+                iceArrows: this.props.iceArrows,
+                addIceArrows: this.props.addIceArrows,
+                removeIceArrows: this.props.removeIceArrows
+            },
+            faroresWindLogic: {
+                faroresWind: this.props.faroresWind,
+                addFaroresWind: this.props.addFaroresWind,
+                removeFaroresWind: this.props.removeFaroresWind
+            },
+            dekuShieldLogic: {
+                dekuShield: this.props.dekuShield,
+                addDekuShield: this.props.addDekuShield,
+                removeDekuShield: this.props.removeDekuShield
+            }
+        };
+
         return (
             <Grid>
                 <Grid.Row>
@@ -466,68 +497,45 @@ class Home extends Component {
                                         emptyBottles={this.emptyBottleLogic}
                                         skulltulas={this.skulltulaLogic}
                                         firstRowLogic={firstRowLogic}
+                                        secondRowLogic={secondRowLogic}
 
-                                        // dekuSticks={dekuSticks}
-                                        // addDekuSticks={addDekuSticks}
-                                        // removeDekuSticks={removeDekuSticks}
+                                        // biggoronSword={biggoronSword}
+                                        // addBiggoronSword={addBiggoronSword}
+                                        // removeBiggoronSword={removeBiggoronSword}
 
-                                        // dekuNuts={dekuNuts}
-                                        // addDekuNuts={addDekuNuts}
-                                        // removeDekuNuts={removeDekuNuts}
+                                        // fairySlingshot={fairySlingshot}
+                                        // addFairySlingshot={addFairySlingshot}
+                                        // removeFairySlingshot={removeFairySlingshot}
 
-                                        // bombs={bombs}
-                                        // addBombs={addBombs}
-                                        // removeBombs={removeBombs}
+                                        // fairyOcarina={fairyOcarina}
+                                        // addFairyOcarina={addFairyOcarina}
+                                        // removeFairyOcarina={removeFairyOcarina}
+                                        // ocarinaOfTime={ocarinaOfTime}
+                                        // addOcarinaOfTime={addOcarinaOfTime}
+                                        // removeOcarinaOfTime={removeOcarinaOfTime}
 
-                                        // fairyBow={fairyBow}
-                                        // addFairyBow={addFairyBow}
-                                        // removeFairyBow={removeFairyBow}
+                                        // bombchus={bombchus}
+                                        // addBombchus={addBombchus}
+                                        // removeBombchus={removeBombchus}
 
-                                        // dinsFire={dinsFire}
-                                        // addDinsFire={addDinsFire}
-                                        // removeDinsFire={removeDinsFire}
+                                        // hookshot={hookshot}
+                                        // addHookshot={addHookshot}
+                                        // removeHookshot={removeHookshot}
+                                        // longshot={longshot}
+                                        // addLongshot={addLongshot}
+                                        // removeLongshot={removeLongshot}
 
-                                        // kokiriSword={kokiriSword}
-                                        // addKokiriSword={addKokiriSword}
-                                        // removeKokiriSword={removeKokiriSword}
+                                        // iceArrows={iceArrows}
+                                        // addIceArrows={addIceArrows}
+                                        // removeIceArrows={removeIceArrows}
 
-                                        biggoronSword={biggoronSword}
-                                        addBiggoronSword={addBiggoronSword}
-                                        removeBiggoronSword={removeBiggoronSword}
+                                        // faroresWind={faroresWind}
+                                        // addFaroresWind={addFaroresWind}
+                                        // removeFaroresWind={removeFaroresWind}
 
-                                        fairySlingshot={fairySlingshot}
-                                        addFairySlingshot={addFairySlingshot}
-                                        removeFairySlingshot={removeFairySlingshot}
-
-                                        fairyOcarina={fairyOcarina}
-                                        addFairyOcarina={addFairyOcarina}
-                                        removeFairyOcarina={removeFairyOcarina}
-                                        ocarinaOfTime={ocarinaOfTime}
-                                        addOcarinaOfTime={addOcarinaOfTime}
-                                        removeOcarinaOfTime={removeOcarinaOfTime}
-
-                                        bombchus={bombchus}
-                                        addBombchus={addBombchus}
-                                        removeBombchus={removeBombchus}
-
-                                        hookshot={hookshot}
-                                        addHookshot={addHookshot}
-                                        removeHookshot={removeHookshot}
-                                        longshot={longshot}
-                                        addLongshot={addLongshot}
-                                        removeLongshot={removeLongshot}
-
-                                        iceArrows={iceArrows}
-                                        addIceArrows={addIceArrows}
-                                        removeIceArrows={removeIceArrows}
-
-                                        faroresWind={faroresWind}
-                                        addFaroresWind={addFaroresWind}
-                                        removeFaroresWind={removeFaroresWind}
-
-                                        dekuShield={dekuShield}
-                                        addDekuShield={addDekuShield}
-                                        removeDekuShield={removeDekuShield}
+                                        // dekuShield={dekuShield}
+                                        // addDekuShield={addDekuShield}
+                                        // removeDekuShield={removeDekuShield}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
