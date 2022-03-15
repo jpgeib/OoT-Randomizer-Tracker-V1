@@ -75,6 +75,46 @@ export const REMOVE_FARORES_WIND = "REMOVE_FARORES_WIND";
 export const ADD_DEKU_SHIELD = "ADD_DEKU_SHIELD";
 export const REMOVE_DEKU_SHIELD = "REMOVE_DEKU_SHIELD";
 
+//Hylian Shield
+
+export const ADD_HYLIAN_SHIELD = "ADD_HYLIAN_SHIELD";
+export const REMOVE_HYLIAN_SHIELD = "REMOVE_HYLIAN_SHIELD";
+
+//Mirror Shield
+
+export const ADD_MIRROR_SHIELD = "ADD_MIRROR_SHIELD";
+export const REMOVE_MIRROR_SHIELD = "REMOVE_MIRROR_SHIELD";
+
+//Boomerang
+
+export const ADD_BOOMERANG = "ADD_BOOMERANG";
+export const REMOVE_BOOMERANG = "REMOVE_BOOMERANG";
+
+//Lens of Truth
+
+export const ADD_LENS_OF_TRUTH = "ADD_LENS_OF_TRUTH";
+export const REMOVE_LENS_OF_TRUTH = "REMOVE_LENS_OF_TRUTH";
+
+//Magic Beans
+
+export const ADD_MAGIC_BEANS = "ADD_MAGIC_BEANS";
+export const REMOVE_MAGIC_BEANS = "REMOVE_MAGIC_BEANS";
+
+//Megaton Hammer
+
+export const ADD_MEGATON_HAMMER = "ADD_MEGATON_HAMMER";
+export const REMOVE_MEGATON_HAMMER = "REMOVE_MEGATON_HAMMER";
+
+//Light Arrows
+
+export const ADD_LIGHT_ARROWS = "ADD_LIGHT_ARROWS";
+export const REMOVE_LIGHT_ARROWS = "REMOVE_LIGHT_ARROWS";
+
+//Nayru's Love
+
+export const ADD_NAYRUS_LOVE = "ADD_NAYRUS_LOVE";
+export const REMOVE_NAYRUS_LOVE = "REMOVE_NAYRUS_LOVE";
+
 //Skulltula Tokens
 
 export const ADD_SKULLTULA = "ADD_SKULLTULA";
