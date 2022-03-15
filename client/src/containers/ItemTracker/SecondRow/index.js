@@ -13,45 +13,12 @@ class SecondRow extends Component {
 
     render() {
 
-        // const {
-        //     biggoronSword,
-        //     addBiggoronSword,
-        //     removeBiggoronSword,
-        //     fairySlingshot,
-        //     addFairySlingshot,
-        //     removeFairySlingshot,
-        //     fairyOcarina,
-        //     addFairyOcarina,
-        //     removeFairyOcarina,
-        //     ocarinaOfTime,
-        //     addOcarinaOfTime,
-        //     removeOcarinaOfTime,
-        //     bombchus,
-        //     addBombchus,
-        //     removeBombchus,
-        //     hookshot,
-        //     addHookshot,
-        //     removeHookshot,
-        //     longshot,
-        //     addLongshot,
-        //     removeLongshot,
-        //     iceArrows,
-        //     addIceArrows,
-        //     removeIceArrows,
-        //     faroresWind,
-        //     addFaroresWind,
-        //     removeFaroresWind,
-        //     dekuShield,
-        //     addDekuShield,
-        //     removeDekuShield
-        // } = this.props;
-
         const { biggoronSword, addBiggoronSword, removeBiggoronSword } = this.props.secondRowLogic.biggoronSwordLogic;
         const { fairySlingshot, addFairySlingshot, removeFairySlingshot } = this.props.secondRowLogic.fairySlingshotLogic;
         const { fairyOcarina, addFairyOcarina, removeFairyOcarina, ocarinaOfTime, addOcarinaOfTime, removeOcarinaOfTime } = this.props.secondRowLogic.ocarinaLogic;
         const { bombchus, addBombchus, removeBombchus } = this.props.secondRowLogic.bombchusLogic;
         const { hookshot, addHookshot, removeHookshot, longshot, addLongshot, removeLongshot } = this.props.secondRowLogic.hookshotLogic;
-        const { iceArrows, addIceArrows, removeIceArrows } = this.props.secondRowLogic.iceArrowsLogic;
+        const { iceArrows, addIceArrows, removeIceArrows } = this.props.secondRowLogic.iceArrowLogic;
         const { faroresWind, addFaroresWind, removeFaroresWind } = this.props.secondRowLogic.faroresWindLogic;
         const { dekuShield, addDekuShield, removeDekuShield } = this.props.secondRowLogic.dekuShieldLogic;
 

@@ -364,38 +364,6 @@ class Home extends Component {
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
-        // const {
-        //     biggoronSword,
-        //     addBiggoronSword,
-        //     removeBiggoronSword,
-        //     fairySlingshot,
-        //     addFairySlingshot,
-        //     removeFairySlingshot,
-        //     fairyOcarina,
-        //     addFairyOcarina,
-        //     removeFairyOcarina,
-        //     ocarinaOfTime,
-        //     addOcarinaOfTime,
-        //     removeOcarinaOfTime,
-        //     bombchus,
-        //     addBombchus,
-        //     removeBombchus,
-        //     hookshot,
-        //     addHookshot,
-        //     removeHookshot,
-        //     longshot,
-        //     addLongshot,
-        //     removeLongshot,
-        //     iceArrows,
-        //     addIceArrows,
-        //     removeIceArrows,
-        //     faroresWind,
-        //     addFaroresWind,
-        //     removeFaroresWind,
-        //     dekuShield,
-        //     addDekuShield,
-        //     removeDekuShield
-        // } = this.props;
 
         const firstRowLogic = {
             dekuSticksLogic : {
@@ -467,7 +435,7 @@ class Home extends Component {
                 addLongshot: this.props.addLongshot,
                 removeLongshot: this.props.removeLongshot
             },
-            iceArrowsLogic: {
+            iceArrowLogic: {
                 iceArrows: this.props.iceArrows,
                 addIceArrows: this.props.addIceArrows,
                 removeIceArrows: this.props.removeIceArrows
@@ -498,44 +466,6 @@ class Home extends Component {
                                         skulltulas={this.skulltulaLogic}
                                         firstRowLogic={firstRowLogic}
                                         secondRowLogic={secondRowLogic}
-
-                                        // biggoronSword={biggoronSword}
-                                        // addBiggoronSword={addBiggoronSword}
-                                        // removeBiggoronSword={removeBiggoronSword}
-
-                                        // fairySlingshot={fairySlingshot}
-                                        // addFairySlingshot={addFairySlingshot}
-                                        // removeFairySlingshot={removeFairySlingshot}
-
-                                        // fairyOcarina={fairyOcarina}
-                                        // addFairyOcarina={addFairyOcarina}
-                                        // removeFairyOcarina={removeFairyOcarina}
-                                        // ocarinaOfTime={ocarinaOfTime}
-                                        // addOcarinaOfTime={addOcarinaOfTime}
-                                        // removeOcarinaOfTime={removeOcarinaOfTime}
-
-                                        // bombchus={bombchus}
-                                        // addBombchus={addBombchus}
-                                        // removeBombchus={removeBombchus}
-
-                                        // hookshot={hookshot}
-                                        // addHookshot={addHookshot}
-                                        // removeHookshot={removeHookshot}
-                                        // longshot={longshot}
-                                        // addLongshot={addLongshot}
-                                        // removeLongshot={removeLongshot}
-
-                                        // iceArrows={iceArrows}
-                                        // addIceArrows={addIceArrows}
-                                        // removeIceArrows={removeIceArrows}
-
-                                        // faroresWind={faroresWind}
-                                        // addFaroresWind={addFaroresWind}
-                                        // removeFaroresWind={removeFaroresWind}
-
-                                        // dekuShield={dekuShield}
-                                        // addDekuShield={addDekuShield}
-                                        // removeDekuShield={removeDekuShield}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
