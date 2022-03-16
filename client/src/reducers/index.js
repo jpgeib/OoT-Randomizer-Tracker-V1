@@ -17,7 +17,7 @@ import longshotReducer from "./longshotReducer";
 import iceArrowsReducer from "./iceArrowsReducer";
 import faroresWindReducer from "./faroresWindReducer";
 import dekuShieldReducer from "./dekuShieldReducer";
-import hylianShieldReducer from "./hylianShieldReducer";
+import thirdRowReducer from "./thirdRowReducer";
 import skulltulaCounterReducer from "./skulltulaCounterReducer";
 
 export default combineReducers({
@@ -38,6 +38,6 @@ export default combineReducers({
     iceArrows: iceArrowsReducer,
     faroresWind: faroresWindReducer,
     dekuShield: dekuShieldReducer,
-    shields: hylianShieldReducer,
+    thirdRow: thirdRowReducer,
     skulltulaCounter: skulltulaCounterReducer
 });

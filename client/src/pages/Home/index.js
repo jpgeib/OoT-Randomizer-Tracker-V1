@@ -24,7 +24,7 @@ import { addLongshot, removeLongshot } from "../../actions/longshot";
 import { addIceArrows, removeIceArrows } from "../../actions/iceArrows";
 import { addFaroresWind, removeFaroresWind } from "../../actions/faroresWind";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
-import { addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield } from "../../actions/hylianShield";
+import { addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield } from "../../actions/thirdRow";
 
 class Home extends Component {
 
@@ -534,8 +534,8 @@ function mapStateToProps(state) {
         iceArrows: state.iceArrows,
         faroresWind: state.faroresWind,
         dekuShield: state.dekuShield,
-        hylianShield: state.shields.hylianShield,
-        mirrorShield: state.shields.mirrorShield
+        hylianShield: state.thirdRow.hylianShield,
+        mirrorShield: state.thirdRow.mirrorShield
     }
 };
 
