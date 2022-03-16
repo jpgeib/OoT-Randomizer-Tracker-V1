@@ -7,13 +7,6 @@ import LocationList from "../../containers/LocationList";
 import { connect } from "react-redux";
 import { compose } from "redux";
 
-// import { addDekuSticks, removeDekuSticks } from "../../actions/dekuSticks";
-// import { addDekuNuts, removeDekuNuts } from "../../actions/dekuNuts";
-// import { addBombs, removeBombs } from "../../actions/bombs";
-// import { addFairyBow, removeFairyBow } from "../../actions/fairyBow";
-// import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
-// import { addDinsFire, removeDinsFire } from "../../actions/dinsFire";
-// import { addKokiriSword, removeKokiriSword } from "../../actions/kokiriSword";
 import {
     addDekuSticks,
     removeDekuSticks,
