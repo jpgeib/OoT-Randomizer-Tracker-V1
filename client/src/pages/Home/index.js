@@ -7,13 +7,29 @@ import LocationList from "../../containers/LocationList";
 import { connect } from "react-redux";
 import { compose } from "redux";
 
-import { addDekuSticks, removeDekuSticks } from "../../actions/dekuSticks";
-import { addDekuNuts, removeDekuNuts } from "../../actions/dekuNuts";
-import { addBombs, removeBombs } from "../../actions/bombs";
-import { addFairyBow, removeFairyBow } from "../../actions/fairyBow";
-import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
-import { addDinsFire, removeDinsFire } from "../../actions/dinsFire";
-import { addKokiriSword, removeKokiriSword } from "../../actions/kokiriSword";
+// import { addDekuSticks, removeDekuSticks } from "../../actions/dekuSticks";
+// import { addDekuNuts, removeDekuNuts } from "../../actions/dekuNuts";
+// import { addBombs, removeBombs } from "../../actions/bombs";
+// import { addFairyBow, removeFairyBow } from "../../actions/fairyBow";
+// import { addFireArrows, removeFireArrows } from "../../actions/fireArrows";
+// import { addDinsFire, removeDinsFire } from "../../actions/dinsFire";
+// import { addKokiriSword, removeKokiriSword } from "../../actions/kokiriSword";
+import {
+    addDekuSticks,
+    removeDekuSticks,
+    addDekuNuts,
+    removeDekuNuts,
+    addBombs,
+    removeBombs,
+    addFairyBow,
+    removeFairyBow,
+    addFireArrows,
+    removeFireArrows,
+    addDinsFire,
+    removeDinsFire,
+    addKokiriSword,
+    removeKokiriSword
+} from "../../actions/firstRow";
 import { addBiggoronSword, removeBiggoronSword } from "../../actions/biggoronSword";
 import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
 import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
@@ -517,13 +533,13 @@ class Home extends Component {
 function mapStateToProps(state) {
     console.log(state);
     return {
-        dekuSticks: state.dekuSticks,
-        dekuNuts: state.dekuNuts,
-        bombs: state.bombs,
-        fairyBow: state.fairyBow,
-        fireArrows: state.fireArrows,
-        dinsFire: state.dinsFire,
-        kokiriSword: state.kokiriSword,
+        dekuSticks: state.firstRow.dekuSticks,
+        dekuNuts: state.firstRow.dekuNuts,
+        bombs: state.firstRow.bombs,
+        fairyBow: state.firstRow.fairyBow,
+        fireArrows: state.firstRow.fireArrows,
+        dinsFire: state.firstRow.dinsFire,
+        kokiriSword: state.firstRow.kokiriSword,
         biggoronSword: state.biggoronSword,
         fairySlingshot: state.fairySlingshot,
         fairyOcarina: state.fairyOcarina,
