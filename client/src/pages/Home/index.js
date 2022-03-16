@@ -8,20 +8,13 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 
 import {
-    addDekuSticks,
-    removeDekuSticks,
-    addDekuNuts,
-    removeDekuNuts,
-    addBombs,
-    removeBombs,
-    addFairyBow,
-    removeFairyBow,
-    addFireArrows,
-    removeFireArrows,
-    addDinsFire,
-    removeDinsFire,
-    addKokiriSword,
-    removeKokiriSword
+    addDekuSticks, removeDekuSticks,
+    addDekuNuts, removeDekuNuts,
+    addBombs, removeBombs,
+    addFairyBow, removeFairyBow,
+    addFireArrows, removeFireArrows,
+    addDinsFire, removeDinsFire,
+    addKokiriSword, removeKokiriSword
 } from "../../actions/firstRow";
 import { addBiggoronSword, removeBiggoronSword } from "../../actions/biggoronSword";
 import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
