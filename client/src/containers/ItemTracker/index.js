@@ -18,14 +18,15 @@ class ItemTracker extends Component {
             skulltulas,
             emptyBottles,
             firstRowLogic,
-            secondRowLogic
+            secondRowLogic,
+            thirdRowLogic
         } = this.props;
 
         return (
             <Grid style={tracker}>
                 <FirstRow firstRowLogic={firstRowLogic} />
                 <SecondRow secondRowLogic={secondRowLogic} />
-                <ThirdRow />
+                <ThirdRow thirdRowLogic={thirdRowLogic} />
                 <FourthRow
                     state={state}
                     skulltulas={skulltulas}

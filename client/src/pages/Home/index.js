@@ -24,6 +24,7 @@ import { addLongshot, removeLongshot } from "../../actions/longshot";
 import { addIceArrows, removeIceArrows } from "../../actions/iceArrows";
 import { addFaroresWind, removeFaroresWind } from "../../actions/faroresWind";
 import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
+import { addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield } from "../../actions/hylianShield";
 
 class Home extends Component {
 
@@ -452,6 +453,19 @@ class Home extends Component {
             }
         };
 
+        const thirdRowLogic = {
+            hylianShieldLogic: {
+                hylianShield: this.props.hylianShield,
+                addHylianShield: this.props.addHylianShield,
+                removeHylianShield: this.props.removeHylianShield
+            },
+            mirrorShieldLogic: {
+                mirrorShield: this.props.mirrorShield,
+                addMirrorShield: this.props.addMirrorShield,
+                removeMirrorShield: this.props.removeMirrorShield
+            }
+        };
+
         return (
             <Grid>
                 <Grid.Row>
@@ -466,6 +480,7 @@ class Home extends Component {
                                         skulltulas={this.skulltulaLogic}
                                         firstRowLogic={firstRowLogic}
                                         secondRowLogic={secondRowLogic}
+                                        thirdRowLogic={thirdRowLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -518,7 +533,9 @@ function mapStateToProps(state) {
         longshot: state.longshot,
         iceArrows: state.iceArrows,
         faroresWind: state.faroresWind,
-        dekuShield: state.dekuShield
+        dekuShield: state.dekuShield,
+        hylianShield: state.shields.hylianShield,
+        mirrorShield: state.shields.mirrorShield
     }
 };
 
@@ -556,5 +573,9 @@ export default compose(connect(mapStateToProps, {
     addFaroresWind,
     removeFaroresWind,
     addDekuShield,
-    removeDekuShield
+    removeDekuShield,
+    addHylianShield,
+    removeHylianShield,
+    addMirrorShield,
+    removeMirrorShield
 }))(Home);

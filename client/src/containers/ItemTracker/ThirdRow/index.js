@@ -9,11 +9,23 @@ import MegatonHammer from "../../../components/Items/MegatonHammer";
 import LightArrows from "../../../components/Items/LightArrows";
 import NayrusLove from "../../../components/Items/NayrusLove";
 
-const ThirdRow = () => {
+const ThirdRow = (props) => {
+
+    const { hylianShield, addHylianShield, removeHylianShield } = props.thirdRowLogic.hylianShieldLogic;
+    const { mirrorShield, addMirrorShield, removeMirrorShield } = props.thirdRowLogic.mirrorShieldLogic;
+
     return (
         <Grid.Row>
-            <HylianShield />
-            <MirrorShield />
+            <HylianShield 
+                hylianShield={hylianShield} 
+                addHylianShield={addHylianShield} 
+                removeHylianShield={removeHylianShield} 
+            />
+            <MirrorShield 
+                mirrorShield={mirrorShield}
+                addMirrorShield={addMirrorShield}
+                removeMirrorShield={removeMirrorShield}
+            />
             <Boomerang />
             <LensOfTruth />
             <MagicBeans />
