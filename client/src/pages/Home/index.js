@@ -8,37 +8,21 @@ import { connect } from "react-redux";
 import { compose } from "redux";
 
 import {
-    addDekuSticks, removeDekuSticks,
-    addDekuNuts, removeDekuNuts,
-    addBombs, removeBombs,
-    addFairyBow, removeFairyBow,
-    addFireArrows, removeFireArrows,
-    addDinsFire, removeDinsFire,
+    addDekuSticks, removeDekuSticks, addDekuNuts, removeDekuNuts,
+    addBombs, removeBombs, addFairyBow, removeFairyBow,
+    addFireArrows, removeFireArrows, addDinsFire, removeDinsFire,
     addKokiriSword, removeKokiriSword
 } from "../../actions/firstRow";
 import {
-    addBiggoronSword, removeBiggoronSword,
-    addFairySlingshot, removeFairySlingshot,
-    addFairyOcarina, removeFairyOcarina,
-    addOcarinaOfTime, removeOcarinaOfTime,
-    addBombchus, removeBombchus,
-    addHookshot, removeHookshot,
-    addLongshot, removeLongshot,
-    addIceArrows, removeIceArrows,
-    addFaroresWind, removeFaroresWind,
-    addDekuShield, removeDekuShield
+    addBiggoronSword, removeBiggoronSword, addFairySlingshot, removeFairySlingshot,
+    addFairyOcarina, removeFairyOcarina, addOcarinaOfTime, removeOcarinaOfTime,
+    addBombchus, removeBombchus, addHookshot, removeHookshot,
+    addLongshot, removeLongshot, addIceArrows, removeIceArrows,
+    addFaroresWind, removeFaroresWind, addDekuShield, removeDekuShield
 } from "../../actions/secondRow";
-// import { addBiggoronSword, removeBiggoronSword } from "../../actions/biggoronSword";
-// import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
-// import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
-// import { addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinaOfTime";
-// import { addBombchus, removeBombchus } from "../../actions/bombchus";
-// import { addHookshot, removeHookshot } from "../../actions/hookshot";
-// import { addLongshot, removeLongshot } from "../../actions/longshot";
-// import { addIceArrows, removeIceArrows } from "../../actions/iceArrows";
-// import { addFaroresWind, removeFaroresWind } from "../../actions/faroresWind";
-// import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
-import { addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield } from "../../actions/thirdRow";
+import { 
+    addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield 
+} from "../../actions/thirdRow";
 
 class Home extends Component {
 
@@ -69,8 +53,6 @@ class Home extends Component {
         hasFaroresWind: false,
         hasNayrusLove: false,
         hasMasterSword: true,
-        hasHylianShield: false,
-        hasMirrorShield: false,
         hasBoomerang: false,
         hasLensOfTruth: false,
         hasMegatonHammer: false,
@@ -554,42 +536,14 @@ function mapStateToProps(state) {
 };
 
 export default compose(connect(mapStateToProps, {
-    addDekuSticks,
-    removeDekuSticks,
-    addDekuNuts,
-    removeDekuNuts,
-    addBombs,
-    removeBombs,
-    addFairyBow,
-    removeFairyBow,
-    addFireArrows,
-    removeFireArrows,
-    addDinsFire,
-    removeDinsFire,
-    addKokiriSword,
-    removeKokiriSword,
-    addBiggoronSword,
-    removeBiggoronSword,
-    addFairySlingshot,
-    removeFairySlingshot,
-    addFairyOcarina,
-    removeFairyOcarina,
-    addOcarinaOfTime,
-    removeOcarinaOfTime,
-    addBombchus,
-    removeBombchus,
-    addHookshot,
-    removeHookshot,
-    addLongshot,
-    removeLongshot,
-    addIceArrows,
-    removeIceArrows,
-    addFaroresWind,
-    removeFaroresWind,
-    addDekuShield,
-    removeDekuShield,
-    addHylianShield,
-    removeHylianShield,
-    addMirrorShield,
-    removeMirrorShield
+    addDekuSticks, removeDekuSticks, addDekuNuts, removeDekuNuts,
+    addBombs, removeBombs, addFairyBow, removeFairyBow,
+    addFireArrows, removeFireArrows, addDinsFire, removeDinsFire,
+    addKokiriSword, removeKokiriSword, addBiggoronSword, removeBiggoronSword,
+    addFairySlingshot, removeFairySlingshot, addFairyOcarina, removeFairyOcarina,
+    addOcarinaOfTime, removeOcarinaOfTime, addBombchus, removeBombchus,
+    addHookshot, removeHookshot, addLongshot, removeLongshot,
+    addIceArrows, removeIceArrows, addFaroresWind, removeFaroresWind,
+    addDekuShield, removeDekuShield, addHylianShield, removeHylianShield,
+    addMirrorShield, removeMirrorShield
 }))(Home);
