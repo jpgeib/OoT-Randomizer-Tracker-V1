@@ -1,3 +1,5 @@
+//First Row
+
 //Deku Sticks
 export const ADD_DEKU_STICKS = "ADD_DEKU_STICKS";
 export const REMOVE_DEKU_STICKS = "REMOVE_DEKU_STICKS";
@@ -31,6 +33,8 @@ export const REMOVE_DINS_FIRE = "REMOVE_DINS_FIRE";
 
 export const ADD_KOKIRI_SWORD = "ADD_KOKIRI_SWORD";
 export const REMOVE_KOKIRI_SWORD = "REMOVE_KOKIRI_SWORD";
+
+//Second Row
 
 //BiggoronSword
 
@@ -75,6 +79,8 @@ export const REMOVE_FARORES_WIND = "REMOVE_FARORES_WIND";
 export const ADD_DEKU_SHIELD = "ADD_DEKU_SHIELD";
 export const REMOVE_DEKU_SHIELD = "REMOVE_DEKU_SHIELD";
 
+//Third Row
+
 //Hylian Shield
 
 export const ADD_HYLIAN_SHIELD = "ADD_HYLIAN_SHIELD";
@@ -114,6 +120,8 @@ export const REMOVE_LIGHT_ARROWS = "REMOVE_LIGHT_ARROWS";
 
 export const ADD_NAYRUS_LOVE = "ADD_NAYRUS_LOVE";
 export const REMOVE_NAYRUS_LOVE = "REMOVE_NAYRUS_LOVE";
+
+//Fourth Row
 
 //Skulltula Tokens
 

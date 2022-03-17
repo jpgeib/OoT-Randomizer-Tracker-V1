@@ -1,6 +1,6 @@
 import { ADD_HYLIAN_SHIELD, REMOVE_HYLIAN_SHIELD, ADD_MIRROR_SHIELD, REMOVE_MIRROR_SHIELD } from "../types";
 
-//Hylian Shield Functions
+//Hylian Shield Actions
 export const addHylianShield = (e) => {
     console.log("added hylian shield");
     return {
@@ -16,7 +16,7 @@ export const removeHylianShield = (e) => {
     };
 };
 
-//Mirror Shield Functions
+//Mirror Shield Actions
 export const addMirrorShield = (e) => {
     console.log("added mirror shield");
     return {

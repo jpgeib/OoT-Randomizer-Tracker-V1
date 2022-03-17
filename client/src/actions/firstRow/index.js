@@ -15,7 +15,7 @@ import {
     REMOVE_KOKIRI_SWORD
 } from "../types";
 
-//Deku Sticks Functions
+//Deku Sticks Actions
 export const addDekuSticks = (e) => {
     console.log("added deku sticks");
     return {
@@ -31,7 +31,7 @@ export const removeDekuSticks = (e) => {
     };
 };
 
-//Deku Nuts Functions
+//Deku Nuts Actions
 export const addDekuNuts = (e) => {
     console.log("added deku nuts");
     return {
@@ -47,7 +47,7 @@ export const removeDekuNuts = (e) => {
     };
 };
 
-//Bomb Bag Functions
+//Bomb Bag Actions
 export const addBombs = (e) => {
     console.log("added bombs");
     return {
@@ -63,7 +63,7 @@ export const removeBombs = (e) => {
     };
 };
 
-//Fairy Bow Functions
+//Fairy Bow Actions
 export const addFairyBow = (e) => {
     console.log("added fairy bow");
     return {
@@ -79,7 +79,7 @@ export const removeFairyBow = (e) => {
     };
 };
 
-//Fire Arrows Functions
+//Fire Arrows Actions
 export const addFireArrows = (e) => {
     console.log("added fire arrows");
     return {
@@ -95,7 +95,7 @@ export const removeFireArrows = (e) => {
     };
 };
 
-//Din's Fire Functions
+//Din's Fire Actions
 export const addDinsFire = (e) => {
     console.log("added din's fire");
     return {
@@ -111,7 +111,7 @@ export const removeDinsFire = (e) => {
     };
 };
 
-//Kokiri Sword Functions
+//Kokiri Sword Actions
 export const addKokiriSword = (e) => {
     console.log("added kokiri sword");
     return {
