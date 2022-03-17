@@ -16,16 +16,28 @@ import {
     addDinsFire, removeDinsFire,
     addKokiriSword, removeKokiriSword
 } from "../../actions/firstRow";
-import { addBiggoronSword, removeBiggoronSword } from "../../actions/biggoronSword";
-import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
-import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
-import { addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinaOfTime";
-import { addBombchus, removeBombchus } from "../../actions/bombchus";
-import { addHookshot, removeHookshot } from "../../actions/hookshot";
-import { addLongshot, removeLongshot } from "../../actions/longshot";
-import { addIceArrows, removeIceArrows } from "../../actions/iceArrows";
-import { addFaroresWind, removeFaroresWind } from "../../actions/faroresWind";
-import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
+import {
+    addBiggoronSword, removeBiggoronSword,
+    addFairySlingshot, removeFairySlingshot,
+    addFairyOcarina, removeFairyOcarina,
+    addOcarinaOfTime, removeOcarinaOfTime,
+    addBombchus, removeBombchus,
+    addHookshot, removeHookshot,
+    addLongshot, removeLongshot,
+    addIceArrows, removeIceArrows,
+    addFaroresWind, removeFaroresWind,
+    addDekuShield, removeDekuShield
+} from "../../actions/secondRow";
+// import { addBiggoronSword, removeBiggoronSword } from "../../actions/biggoronSword";
+// import { addFairySlingshot, removeFairySlingshot } from "../../actions/fairySlingshot";
+// import { addFairyOcarina, removeFairyOcarina } from "../../actions/fairyOcarina";
+// import { addOcarinaOfTime, removeOcarinaOfTime } from "../../actions/ocarinaOfTime";
+// import { addBombchus, removeBombchus } from "../../actions/bombchus";
+// import { addHookshot, removeHookshot } from "../../actions/hookshot";
+// import { addLongshot, removeLongshot } from "../../actions/longshot";
+// import { addIceArrows, removeIceArrows } from "../../actions/iceArrows";
+// import { addFaroresWind, removeFaroresWind } from "../../actions/faroresWind";
+// import { addDekuShield, removeDekuShield } from "../../actions/dekuShield";
 import { addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield } from "../../actions/thirdRow";
 
 class Home extends Component {
@@ -526,16 +538,16 @@ function mapStateToProps(state) {
         fireArrows: state.firstRow.fireArrows,
         dinsFire: state.firstRow.dinsFire,
         kokiriSword: state.firstRow.kokiriSword,
-        biggoronSword: state.biggoronSword,
-        fairySlingshot: state.fairySlingshot,
-        fairyOcarina: state.fairyOcarina,
-        ocarinaOfTime: state.ocarinaOfTime,
-        bombchus: state.bombchus,
-        hookshot: state.hookshot,
-        longshot: state.longshot,
-        iceArrows: state.iceArrows,
-        faroresWind: state.faroresWind,
-        dekuShield: state.dekuShield,
+        biggoronSword: state.secondRow.biggoronSword,
+        fairySlingshot: state.secondRow.fairySlingshot,
+        fairyOcarina: state.secondRow.fairyOcarina,
+        ocarinaOfTime: state.secondRow.ocarinaOfTime,
+        bombchus: state.secondRow.bombchus,
+        hookshot: state.secondRow.hookshot,
+        longshot: state.secondRow.longshot,
+        iceArrows: state.secondRow.iceArrows,
+        faroresWind: state.secondRow.faroresWind,
+        dekuShield: state.secondRow.dekuShield,
         hylianShield: state.thirdRow.hylianShield,
         mirrorShield: state.thirdRow.mirrorShield
     }
