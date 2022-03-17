@@ -40,3 +40,99 @@ export const removeMirrorShield = (e) => {
         type: REMOVE_MIRROR_SHIELD    
     };
 };
+
+//Boomerang Actions
+export const addBoomerang = (e) => {
+    console.log("added boomerang");
+    return {
+        type: ADD_BOOMERANG
+    };
+};
+
+export const removeBoomerang = (e) => {
+    e.preventDefault();
+    console.log("removed boomerang");
+    return {
+        type: REMOVE_BOOMERANG    
+    };
+};
+
+//Lens of Truth Actions
+export const addLensOfTruth = (e) => {
+    console.log("added lens of truth");
+    return {
+        type: ADD_LENS_OF_TRUTH
+    };
+};
+
+export const removeLensOfTruth = (e) => {
+    e.preventDefault();
+    console.log("removed lens of truth");
+    return {
+        type: REMOVE_LENS_OF_TRUTH    
+    };
+};
+
+//Magic Beans Actions
+export const addMagicBeans = (e) => {
+    console.log("added magic beans");
+    return {
+        type: ADD_MAGIC_BEANS
+    };
+};
+
+export const removeMagicBeans = (e) => {
+    e.preventDefault();
+    console.log("removed magic beans");
+    return {
+        type: REMOVE_MAGIC_BEANS    
+    };
+};
+
+//Megaton Hammer Actions
+export const addMegatonHammer = (e) => {
+    console.log("added megaton hammer");
+    return {
+        type: ADD_MEGATON_HAMMER
+    };
+};
+
+export const removeMegatonHammer = (e) => {
+    e.preventDefault();
+    console.log("removed megaton hammer");
+    return {
+        type: REMOVE_MEGATON_HAMMER    
+    };
+};
+
+//Light Arrows Actions
+export const addLightArrows = (e) => {
+    console.log("added light arrows");
+    return {
+        type: ADD_LIGHT_ARROWS
+    };
+};
+
+export const removeLightArrows = (e) => {
+    e.preventDefault();
+    console.log("removed light arrows");
+    return {
+        type: REMOVE_LIGHT_ARROWS    
+    };
+};
+
+//Nayru's Love Actions
+export const addNayrusLove = (e) => {
+    console.log("added nayru's love");
+    return {
+        type: ADD_NAYRUS_LOVE
+    };
+};
+
+export const removeNayrusLove = (e) => {
+    e.preventDefault();
+    console.log("removed nayru's love");
+    return {
+        type: REMOVE_NAYRUS_LOVE    
+    };
+};
