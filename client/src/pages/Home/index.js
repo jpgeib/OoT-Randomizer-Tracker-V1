@@ -21,7 +21,10 @@ import {
     addFaroresWind, removeFaroresWind, addDekuShield, removeDekuShield
 } from "../../actions/secondRow";
 import { 
-    addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield 
+    addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield,
+    addBoomerang, removeBoomerang, addLensOfTruth, removeLensOfTruth,
+    addMagicBeans, removeMagicBeans, addMegatonHammer, removeMegatonHammer,
+    addLightArrows, removeLightArrows, addNayrusLove, removeNayrusLove 
 } from "../../actions/thirdRow";
 
 class Home extends Component {
@@ -459,6 +462,36 @@ class Home extends Component {
                 mirrorShield: this.props.mirrorShield,
                 addMirrorShield: this.props.addMirrorShield,
                 removeMirrorShield: this.props.removeMirrorShield
+            },
+            boomerangLogic: {
+                boomerang: this.props.boomerang,
+                addBoomerang: this.props.addBoomerang,
+                removeBoomerang: this.props.removeBoomerang
+            },
+            lensOfTruthLogic: {
+                lensOfTruth: this.props.lensOfTruth,
+                addLensOfTruth: this.props.addLensOfTruth,
+                removeLensOfTruth: this.props.removeLensOfTruth
+            },
+            magicBeansLogic: {
+                magicBeans: this.props.magicBeans,
+                addMagicBeans: this.props.addMagicBeans,
+                removeMagicBeans: this.props.removeMagicBeans
+            },
+            megatonHammerLogic: {
+                megatonHammer: this.props.megatonHammer,
+                addMegatonHammer: this.props.addMegatonHammer,
+                removeMegatonHammer: this.props.removeMegatonHammer
+            },
+            lightArrowLogic: {
+                lightArrows: this.props.lightArrows,
+                addLightArrows: this.props.addLightArrows,
+                removeLightArrows: this.props.removeLightArrows
+            },
+            nayrusLoveLogic: {
+                nayrusLove: this.props.nayrusLove,
+                addNayrusLove: this.props.addNayrusLove,
+                removeNayrusLove: this.props.removeNayrusLove
             }
         };
 
@@ -531,7 +564,13 @@ function mapStateToProps(state) {
         faroresWind: state.secondRow.faroresWind,
         dekuShield: state.secondRow.dekuShield,
         hylianShield: state.thirdRow.hylianShield,
-        mirrorShield: state.thirdRow.mirrorShield
+        mirrorShield: state.thirdRow.mirrorShield,
+        boomerang: state.thirdRow.boomerang,
+        lensOfTruth: state.thirdRow.lensOfTruth,
+        magicBeans: state.thirdRow.magicBeans,
+        megatonHammer: state.thirdRow.megatonHammer,
+        lightArrows: state.thirdRow.lightArrows,
+        nayrusLove: state.thirdRow.nayrusLove
     }
 };
 
@@ -545,5 +584,8 @@ export default compose(connect(mapStateToProps, {
     addHookshot, removeHookshot, addLongshot, removeLongshot,
     addIceArrows, removeIceArrows, addFaroresWind, removeFaroresWind,
     addDekuShield, removeDekuShield, addHylianShield, removeHylianShield,
-    addMirrorShield, removeMirrorShield
+    addMirrorShield, removeMirrorShield, addBoomerang, removeBoomerang,
+    addLensOfTruth, removeLensOfTruth, addMagicBeans, removeMagicBeans,
+    addMegatonHammer, removeMegatonHammer, addLightArrows, removeLightArrows,
+    addNayrusLove, removeNayrusLove
 }))(Home);
