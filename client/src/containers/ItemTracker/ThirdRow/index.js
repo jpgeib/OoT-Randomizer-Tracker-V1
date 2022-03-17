@@ -13,6 +13,12 @@ const ThirdRow = (props) => {
 
     const { hylianShield, addHylianShield, removeHylianShield } = props.thirdRowLogic.hylianShieldLogic;
     const { mirrorShield, addMirrorShield, removeMirrorShield } = props.thirdRowLogic.mirrorShieldLogic;
+    const { boomerang, addBoomerang, removeBoomerang } = props.thirdRowLogic.boomerangLogic;
+    const { lensOfTruth, addLensOfTruth, removeLensOfTruth } = props.thirdRowLogic.lensOfTruthLogic;
+    const { magicBeans, addMagicBeans, removeMagicBeans } = props.thirdRowLogic.magicBeansLogic;
+    const { megatonHammer, addMegatonHammer, removeMegatonHammer } = props.thirdRowLogic.megatonHammerLogic;
+    const { lightArrows, addLightArrows, removeLightArrows } = props.thirdRowLogic.lightArrowLogic;
+    const { nayrusLove, addNayrusLove, removeNayrusLove } = props.thirdRowLogic.nayrusLoveLogic;
 
     return (
         <Grid.Row>
@@ -26,12 +32,36 @@ const ThirdRow = (props) => {
                 addMirrorShield={addMirrorShield}
                 removeMirrorShield={removeMirrorShield}
             />
-            <Boomerang />
-            <LensOfTruth />
-            <MagicBeans />
-            <MegatonHammer />
-            <LightArrows />
-            <NayrusLove />
+            <Boomerang 
+                boomerang={boomerang}
+                addBoomerang={addBoomerang}
+                removeBoomerang={removeBoomerang}
+            />
+            <LensOfTruth 
+                lensOfTruth={lensOfTruth}
+                addLensOfTruth={addLensOfTruth}
+                removeLensOfTruth={removeLensOfTruth}
+            />
+            <MagicBeans 
+                counter={magicBeans}
+                add={addMagicBeans}
+                remove={removeMagicBeans}
+            />
+            <MegatonHammer 
+                megatonHammer={megatonHammer}
+                addMegatonHammer={addMegatonHammer}
+                removeMegatonHammer={removeMegatonHammer}
+            />
+            <LightArrows 
+                lightArrows={lightArrows}
+                addLightArrows={addLightArrows}
+                removeLightArrows={removeLightArrows}
+            />
+            <NayrusLove 
+                nayrusLove={nayrusLove}
+                addNayrusLove={addNayrusLove}
+                removeNayrusLove={removeNayrusLove}
+            />
         </Grid.Row>
     );
 }
