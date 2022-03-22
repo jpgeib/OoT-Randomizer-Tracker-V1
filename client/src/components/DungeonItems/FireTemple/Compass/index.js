@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import CompassIcon from "../../../../assets/images/Compass.png";
+import CompassIcon from "../../../../assets/images/dungeon-items/Compass_3D.png";
 
 const Compass = (props) => {
 
