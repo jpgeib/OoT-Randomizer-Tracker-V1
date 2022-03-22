@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import KokiriEmeraldIcon from "../../../../assets/images/Kokiri_Emerald.png";
+import KokiriEmeraldIcon from "../../../../assets/images/dungeon-items/Kokiris-Emerald.png";
 
 const KokiriEmerald = (props) => {
 

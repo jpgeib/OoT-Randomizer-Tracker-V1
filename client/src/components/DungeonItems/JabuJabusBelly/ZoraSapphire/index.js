@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import ZoraSapphireIcon from "../../../../assets/images/Zora's_Sapphire.png";
+import ZoraSapphireIcon from "../../../../assets/images/dungeon-items/Zoras-Sapphire.png";
 
 const ZoraSapphire = (props) => {
 

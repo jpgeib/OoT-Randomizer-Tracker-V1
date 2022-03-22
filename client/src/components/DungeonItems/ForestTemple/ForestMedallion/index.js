@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import ForestMedallionIcon from "../../../../assets/images/ForestMedallion.png";
+import ForestMedallionIcon from "../../../../assets/images/dungeon-items/Forest-Medallion.png";
 
 const ForestMedallion = (props) => {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import GoronRubyIcon from "../../../../assets/images/Goron's_Ruby.png";
+import GoronRubyIcon from "../../../../assets/images/dungeon-items/Gorons-Ruby.png";
 
 const GoronRuby = (props) => {
 

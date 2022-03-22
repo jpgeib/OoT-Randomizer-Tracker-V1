@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import FireMedallionIcon from "../../../../assets/images/FireMedallion.png";
+import FireMedallionIcon from "../../../../assets/images/dungeon-items/Fire-Medallion.png";
 
 const FireMedallion = (props) => {
 

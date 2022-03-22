@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import SpiritMedallionIcon from "../../../../assets/images/SpiritMedallion.png";
+import SpiritMedallionIcon from "../../../../assets/images/dungeon-items/Spirit-Medallion.png";
 
 const SpiritMedallion = (props) => {
     

@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import WaterMedallionIcon from "../../../../assets/images/WaterMedallion.png";
+import WaterMedallionIcon from "../../../../assets/images/dungeon-items/Water-Medallion.png";
 
 const WaterMedallion = (props) => {
 
