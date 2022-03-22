@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import DungeonMapIcon from "../../../../assets/images/DungeonMap.png";
+import DungeonMapIcon from "../../../../assets/images/dungeon-items/Dungeon_Map_3D.png";
 
 const DungeonMap = (props) => {
 

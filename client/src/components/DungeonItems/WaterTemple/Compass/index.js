@@ -13,7 +13,7 @@ const Compass = (props) => {
                 onContextMenu={removeCompass}
                 style={(hasCompass === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
                 size="mini" 
-                src={CompassIcon}     
+                src={CompassIcon}
             />
         </Grid.Column>
     );
