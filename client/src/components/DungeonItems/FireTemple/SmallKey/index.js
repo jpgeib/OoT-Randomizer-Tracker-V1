@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import SmallKeyIcon from "../../../../assets/images/SmallKey.png";
+import SmallKeyIcon from "../../../../assets/images/dungeon-items/Small_Key_3D.png";
 
 const SmallKey = (props) => {
     
