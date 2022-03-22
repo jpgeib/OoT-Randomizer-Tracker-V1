@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import PocketEggIcon from "../../../assets/images/Pocket_Egg.png";
+import PocketEggIcon from "../../../assets/images/fourth-row/Pocket-Egg.png";
 
 const PocketEgg = () => {
     return (
