@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import BossKeyIcon from "../../../../assets/images/Boss_Key.png";
+import BossKeyIcon from "../../../../assets/images/dungeon-items/Boss_Key_3D.png";
 
 const BossKey = (props) => {
 
