@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import EmptyBottleIcon from "../../../assets/images/Bottle-Model.png";
+import EmptyBottleIcon from "../../../assets/images/fourth-row/Bottle-MM.png";
 
 const EmptyBottle = (props) => {
 

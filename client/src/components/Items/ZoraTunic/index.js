@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import ZoraTunicIcon from "../../../assets/images/Zora_Tunic.png";
+import ZoraTunicIcon from "../../../assets/images/fourth-row/Zora-Tunic-3D.png";
 
 const ZoraTunic = () => {
     return (

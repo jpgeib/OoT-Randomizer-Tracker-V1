@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import SkulltulaTokensIcon from "../../../assets/images/GoldSkulltula.png";
+import SkulltulaTokensIcon from "../../../assets/images/fourth-row/Gold-Skulltula-Token.png";
 
 const SkulltulaTokens = (props) => {
 

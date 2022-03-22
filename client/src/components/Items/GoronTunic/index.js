@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import GoronTunicIcon from "../../../assets/images/Goron_Tunic.png";
+import GoronTunicIcon from "../../../assets/images/fourth-row/Goron-Tunic-3D.png";
 
 const GoronTunic = () => {
     return (

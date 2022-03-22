@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import KokiriTunicIcon from "../../../assets/images/Kokiri_Tunic.png";
+import KokiriTunicIcon from "../../../assets/images/fourth-row/Kokiri-Tunic-3D.png";
 
 const KokiriTunic = () => {
     return (

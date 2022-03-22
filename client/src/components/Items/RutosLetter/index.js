@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import RutosLetterIcon from "../../../assets/images/Letter-in-a-Bottle.png";
+import RutosLetterIcon from "../../../assets/images/fourth-row/Letter-in-a-Bottle.png";
 
 const RutosLetter = () => {
     return (
