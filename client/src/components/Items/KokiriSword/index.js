@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import KokiriSwordIcon from "../../../assets/images/Kokiri_Sword.png";
+import KokiriSwordIcon from "../../../assets/images/first-row/Kokiri-Sword-3D.png";
 
 const KokiriSword = (props) => {
 

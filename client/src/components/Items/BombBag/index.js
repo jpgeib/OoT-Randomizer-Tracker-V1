@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import BombBagIcon from "../../../assets/images/BombBag.png";
-import BigBombBagIcon from "../../../assets/images/Big_Bomb_Bag.png";
-import BiggestBombBagIcon from "../../../assets/images/BiggestBombBag.png";
+import BombBagIcon from "../../../assets/images/first-row/Bomb-Bag-3D.png";
+import BigBombBagIcon from "../../../assets/images/first-row/Bomb-Big-Bag-3D.png";
+import BiggestBombBagIcon from "../../../assets/images/first-row/Bomb-Biggest-Bag-3D.png";
 
 const BombBag = (props) => {
 

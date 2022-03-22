@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import FireArrowsIcon from "../../../assets/images/Fire_Arrow.png";
+import FireArrowsIcon from "../../../assets/images/first-row/Arrow-Fire-3D.png";
 
 const FireArrows = (props) => {
 

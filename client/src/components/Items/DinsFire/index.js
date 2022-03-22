@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import DinsFireIcon from "../../../assets/images/Dins-Fire-Model.png";
+import DinsFireIcon from "../../../assets/images/first-row/Dins-Fire-3D.png";
 
 const DinsFire = (props) => {
 

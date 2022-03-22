@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import DekuNutsIcon from "../../../assets/images/Deku-Nut.png";
+import DekuNutsIcon from "../../../assets/images/first-row/Deku-Nut-3D.png";
 
 const DekuNuts = (props) => {
 

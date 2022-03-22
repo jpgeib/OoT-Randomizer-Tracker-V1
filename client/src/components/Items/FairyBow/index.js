@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import FairyBowIcon from "../../../assets/images/Bow-3D.png";
+import FairyBowIcon from "../../../assets/images/first-row/Bow-3D.png";
 
 const FairyBow = (props) => {
 
