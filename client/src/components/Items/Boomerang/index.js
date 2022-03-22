@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import BoomerangIcon from "../../../assets/images/Boomerang.png";
+import BoomerangIcon from "../../../assets/images/third-row/Boomerang-3D.png";
 
 const Boomerang = (props) => {
 

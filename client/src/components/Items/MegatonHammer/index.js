@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import MegatonHammerIcon from "../../../assets/images/Megaton_Hammer.png";
+import MegatonHammerIcon from "../../../assets/images/third-row/Megaton-Hammer-3D.png";
 
 const MegatonHammer = (props) => {
 

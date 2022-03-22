@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import MirrorShieldIcon from "../../../assets/images/Mirror_Shield.png";
+import MirrorShieldIcon from "../../../assets/images/third-row/Mirror-Shield-3D.png";
 
 const MirrorShield = (props) => {
 

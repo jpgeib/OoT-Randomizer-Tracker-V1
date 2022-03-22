@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import HylianShieldIcon from "../../../assets/images/Hylian_Shield.png";
+import HylianShieldIcon from "../../../assets/images/third-row/Hylian-Shield-3D.png";
 
 const HylianShield = (props) => {
 

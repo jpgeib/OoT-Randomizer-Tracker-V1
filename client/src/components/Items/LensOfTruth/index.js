@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import LensOfTruthIcon from "../../../assets/images/Lens-of-Truth-Model.png";
+import LensOfTruthIcon from "../../../assets/images/third-row/Lens-of-Truth-3D.png";
 
 const LensOfTruth = (props) => {
 

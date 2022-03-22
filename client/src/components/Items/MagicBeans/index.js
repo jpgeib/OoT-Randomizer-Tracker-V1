@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import MagicBeansIcon from "../../../assets/images/Magic-Bean-Model.png";
+import MagicBeansIcon from "../../../assets/images/third-row/Magic-Bean-3D.png";
 
 const MagicBeans = (props) => {
 

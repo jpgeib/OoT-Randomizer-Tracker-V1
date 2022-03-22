@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import NayrusLoveIcon from "../../../assets/images/Nayrus_Love.png";
+import NayrusLoveIcon from "../../../assets/images/third-row/Nayrus-Love-3D.png";
 
 const NayrusLove = (props) => {
 
