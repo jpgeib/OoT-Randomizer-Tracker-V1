@@ -7,7 +7,7 @@ import Wallet from "../../../components/Items/Wallet";
 import SkulltulaTokens from "../../../components/Items/SkulltulaTokens";
 import EmptyBottle from "../../../components/Items/EmptyBottle";
 import RutosLetter from "../../../components/Items/RutosLetter";
-import PocketEgg from "../../../components/Items/PocketEgg";
+import PastTradeSequence from "../../../components/Items/PastTradeSequence";
 
 const FourthRow = (props) => {
 
@@ -32,7 +32,7 @@ const FourthRow = (props) => {
                 removeBottle={removeBottle}
             />
             <RutosLetter />
-            <PocketEgg />
+            <PastTradeSequence />
         </Grid.Row>
     );
 }
