@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import PieceOfHeartIcon from "../../../assets/images/Piece_of_Heart.png";
+import PieceOfHeartIcon from "../../../assets/images/sixth-row/Piece_of_Heart_3D.png";
 
 const PieceOfHeart = () => {
     return (

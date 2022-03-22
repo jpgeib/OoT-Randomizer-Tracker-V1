@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import GoronBraceletIcon from "../../../assets/images/Goron-Bracelet-Model.png";
+import GoronBraceletIcon from "../../../assets/images/fifth-row/Gorons-Bracelet-3D.png";
 
 const GoronBracelet = () => {
     return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import HoverBootsIcon from "../../../assets/images/Hover_Boots.png";
+import HoverBootsIcon from "../../../assets/images/fifth-row/Hover-Boots-3D.png";
 
 const HoverBoots = () => {
     return (

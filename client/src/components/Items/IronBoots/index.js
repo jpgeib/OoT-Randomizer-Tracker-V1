@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import IronBootsIcon from "../../../assets/images/Iron-Boots-Model.png";
+import IronBootsIcon from "../../../assets/images/fifth-row/Iron-Boots-3D.png";
 
 const IronBoots = () => {
     return (

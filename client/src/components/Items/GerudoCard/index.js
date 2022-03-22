@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import GerudoCardIcon from "../../../assets/images/Gerudo-Membership-Card.png";
+import GerudoCardIcon from "../../../assets/images/fifth-row/Gerudo-Token.png";
 
 const GerudoCard = () => {
     return (

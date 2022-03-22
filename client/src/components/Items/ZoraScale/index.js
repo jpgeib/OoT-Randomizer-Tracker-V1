@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import ZoraScaleIcon from "../../../assets/images/Silver_Scale.png";
+import ZoraScaleIcon from "../../../assets/images/fifth-row/Silver-Scale-3D.png";
 
 const ZoraScale = () => {
     return (
