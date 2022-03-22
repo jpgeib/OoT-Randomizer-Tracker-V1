@@ -31,7 +31,6 @@ class Home extends Component {
 
     state = {
         skulltulaCounter: 0,
-        beanCounter: 0,
         emptyBottles: 0,
         walletCounter: 99,
         pieceOfHeartCounter: 0,
@@ -51,8 +50,6 @@ class Home extends Component {
         hasKokiriBoots: true,
         hasIronBoots: false,
         hasHoverBoots: false,
-        hasFireArrows: false,
-        hasLightArrows: false,
         hasFaroresWind: false,
         hasNayrusLove: false,
         hasMasterSword: true,

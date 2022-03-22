@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import HookShotIcon from "../../../assets/images/Hookshot.png";
-import LongShotIcon from "../../../assets/images/Longshot.png";
+import HookShotIcon from "../../../assets/images/second-row/Hookshot-3D.png";
+import LongShotIcon from "../../../assets/images/second-row/Longshot-3D.png";
 
 const HookShot = (props) => {
 

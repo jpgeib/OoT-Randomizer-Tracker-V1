@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import BigGoronSwordIcon from "../../../assets/images/BiggoronSword.png";
+import BigGoronSwordIcon from "../../../assets/images/second-row/Biggorons-Sword.png";
 
 const BigGoronSword = (props) => {
 

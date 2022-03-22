@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import FairySlingshotIcon from "../../../assets/images/FairySlingshot.png";
+import FairySlingshotIcon from "../../../assets/images/second-row/Slingshot-3D.png";
 
 const FairySlingshot = (props) => {
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import FaroresWindIcon from "../../../assets/images/Farores_Wind.png";
+import FaroresWindIcon from "../../../assets/images/second-row/Farores-Wind-3D.png";
 
 const FaroresWind = (props) => {
 

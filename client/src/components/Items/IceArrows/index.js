@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import IceArrowsIcon from "../../../assets/images/Ice_Arrow.png";
+import IceArrowsIcon from "../../../assets/images/second-row/Arrow-Ice-3D.png";
 
 const IceArrows = (props) => {
 

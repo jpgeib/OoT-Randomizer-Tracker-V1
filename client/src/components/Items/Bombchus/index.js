@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image, Header } from "semantic-ui-react";
-import BombchusIcon from "../../../assets/images/Bombchu.png";
+import BombchusIcon from "../../../assets/images/second-row/Bombchu-3D.png";
 
 const Bombchus = (props) => {
 
