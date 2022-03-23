@@ -13,13 +13,11 @@ class ItemTracker extends Component {
     render() {
 
         const {
-            state,
             tracker,
-            skulltulas,
-            emptyBottles,
             firstRowLogic,
             secondRowLogic,
-            thirdRowLogic
+            thirdRowLogic,
+            fourthRowLogic
         } = this.props;
 
         return (
@@ -27,11 +25,7 @@ class ItemTracker extends Component {
                 <FirstRow firstRowLogic={firstRowLogic} />
                 <SecondRow secondRowLogic={secondRowLogic} />
                 <ThirdRow thirdRowLogic={thirdRowLogic} />
-                <FourthRow
-                    state={state}
-                    skulltulas={skulltulas}
-                    emptyBottles={emptyBottles}
-                />
+                <FourthRow fourthRowLogic={fourthRowLogic} />
                 <FifthRow />
                 <SixthRow />
                 <Grid.Row>

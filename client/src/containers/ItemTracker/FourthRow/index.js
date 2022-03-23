@@ -11,25 +11,45 @@ import PastTradeSequence from "../../../components/Items/PastTradeSequence";
 
 const FourthRow = (props) => {
 
-    const { skulltulaCounter, emptyBottles } = props.state;
-    const { addSkulltula, removeSkulltula } = props.skulltulas;
-    const { addBottle, removeBottle } = props.emptyBottles;
+    const { goronTunic, addGoronTunic, removeGoronTunic } = props.fourthRowLogic.goronTunicLogic;
+    const { zoraTunic, addZoraTunic, removeZoraTunic } = props.fourthRowLogic.zoraTunicLogic;
+    const { wallet, addWallet, removeWallet } = props.fourthRowLogic.walletLogic;
+    const { skulltulas, addSkulltula, removeSkulltula } = props.fourthRowLogic.skulltulasLogic;
+    const { emptyBottles, addEmptyBottle, removeEmptyBottle } = props.fourthRowLogic.emptyBottlesLogic;
+    const { rutosLetter, addRutosLetter, removeRutosLetter } = props.fourthRowLogic.rutosLetterLogic;
+    const { 
+        weirdEggLogic, cuccoLogic, zeldasLetterLogic, keatonMaskLogic,
+        skullMaskLogic, spookyMaskLogic, bunnyHoodLogic, maskOfTruthLogic 
+    } = props.fourthRowLogic.pastTradeLogic;
+    
 
     return (
         <Grid.Row>
             <KokiriTunic />
-            <GoronTunic />
-            <ZoraTunic />
-            <Wallet />
+            <GoronTunic 
+                goronTunic={goronTunic}
+                addGoronTunic={addGoronTunic}
+                removeGoronTunic={removeGoronTunic}
+            />
+            <ZoraTunic 
+                zoraTunic={zoraTunic}
+                addZoraTunic={addZoraTunic}
+                removeZoraTunic={removeZoraTunic}
+            />
+            <Wallet 
+                counter={wallet}
+                add={addWallet}
+                remove={removeWallet}
+            />
             <SkulltulaTokens 
-                counter={skulltulaCounter}  
+                counter={skulltulas}  
                 increment={addSkulltula} 
                 decrement={removeSkulltula}
             />
             <EmptyBottle
                 emptyBottles={emptyBottles}
-                addBottle={addBottle}
-                removeBottle={removeBottle}
+                addBottle={addEmptyBottle}
+                removeBottle={removeEmptyBottle}
             />
             <RutosLetter />
             <PastTradeSequence />
