@@ -7,6 +7,11 @@ import GiantsWalletIcon from "../../../assets/images/fourth-row/Giants-Wallet.pn
 const Wallet = (props) => {
 
     const { wallet, addWallet, removeWallet } = props;
+    const walletIcons = (
+        ((wallet === 99 || wallet === 999) && ChildsWalletIcon) || 
+        (wallet === 200 && AdultsWalletIcon) || 
+        (wallet === 500 && GiantsWalletIcon)
+    );
 
     return (
         <Grid.Column width={2}>
@@ -14,7 +19,7 @@ const Wallet = (props) => {
                 onClick={addWallet}
                 onContextMenu={removeWallet} 
                 size="mini" 
-                src={(((wallet === 99 || wallet === 999) && ChildsWalletIcon) || (wallet === 200 && AdultsWalletIcon) || (wallet === 500 && GiantsWalletIcon))} 
+                src={walletIcons} 
             />
             <Header style={(wallet >= 500) ? { color: "red" } : { color: "white" } } as="h1"><span>{wallet}</span></Header>
         </Grid.Column>
