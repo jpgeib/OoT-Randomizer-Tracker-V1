@@ -580,7 +580,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state.fourthRow.wallet);
+    console.log(state.wallet);
     return {
         dekuSticks: state.firstRow.dekuSticks, dekuNuts: state.firstRow.dekuNuts, bombs: state.firstRow.bombs,
         fairyBow: state.firstRow.fairyBow, fireArrows: state.firstRow.fireArrows, dinsFire: state.firstRow.dinsFire,
@@ -591,7 +591,7 @@ function mapStateToProps(state) {
         mirrorShield: state.thirdRow.mirrorShield, boomerang: state.thirdRow.boomerang, lensOfTruth: state.thirdRow.lensOfTruth,
         magicBeans: state.thirdRow.magicBeans, megatonHammer: state.thirdRow.megatonHammer, lightArrows: state.thirdRow.lightArrows,
         nayrusLove: state.thirdRow.nayrusLove, goronTunic: state.fourthRow.goronTunic, zoraTunic: state.fourthRow.zoraTunic,
-        wallet: state.fourthRow.wallet, skulltulas: state.fourthRow.skulltulas, emptyBottles: state.fourthRow.emptyBottles,
+        wallet: state.wallet, skulltulas: state.fourthRow.skulltulas, emptyBottles: state.fourthRow.emptyBottles,
         rutosLetter: state.fourthRow.rutosLetter, weirdEgg: state.fourthRow.weirdEgg, cucco: state.fourthRow.cucco, 
         zeldasLetter: state.fourthRow.zeldasLetter, keatonMask: state.fourthRow.keatonMask, skullMask: state.fourthRow.skullMask, 
         spookyMask: state.fourthRow.spookyMask, bunnyHood: state.fourthRow.bunnyHood, maskOfTruth: state.fourthRow.maskOfTruth,

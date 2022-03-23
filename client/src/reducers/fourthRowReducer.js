@@ -1,7 +1,6 @@
 import { 
     ADD_GORON_TUNIC, REMOVE_GORON_TUNIC,
     ADD_ZORA_TUNIC, REMOVE_ZORA_TUNIC,
-    ADD_WALLET, REMOVE_WALLET,
     ADD_SKULLTULA, REMOVE_SKULLTULA,
     ADD_BOTTLE, REMOVE_BOTTLE,
     ADD_RUTOS_LETTER, REMOVE_RUTOS_LETTER,
@@ -18,7 +17,6 @@ import {
 let INITIAL_STATE = {
     goronTunic: null,
     zoraTunic: null,
-    wallet: 99,
     skulltulas: 0,
     emptyBottles: 0,
     rutosLetter: null,
@@ -42,10 +40,6 @@ export default function (state = INITIAL_STATE, action) {
             return { ...state, zoraTunic: true };
         case REMOVE_ZORA_TUNIC:
             return { ...state, zoraTunic: false };
-        case ADD_WALLET:
-            return { ...state };
-        case REMOVE_WALLET:
-            return { ...state };
         case ADD_SKULLTULA:
             return { ...state, skulltulas: Math.min(100, state.skulltulas + 1) };
         case REMOVE_SKULLTULA:
