@@ -580,7 +580,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state.wallet);
+    console.log(state);
     return {
         dekuSticks: state.firstRow.dekuSticks, dekuNuts: state.firstRow.dekuNuts, bombs: state.firstRow.bombs,
         fairyBow: state.firstRow.fairyBow, fireArrows: state.firstRow.fireArrows, dinsFire: state.firstRow.dinsFire,
