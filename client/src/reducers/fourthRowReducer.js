@@ -43,23 +43,9 @@ export default function (state = INITIAL_STATE, action) {
         case REMOVE_ZORA_TUNIC:
             return { ...state, zoraTunic: false };
         case ADD_WALLET:
-            if (state.wallet === 99) {
-                return { ...state, wallet: Math.min(999, state.wallet + 101) };
-            } else if (state.wallet === 200) {
-                return { ...state, wallet: Math.min(999, state.wallet + 300) };
-            } else if (state.wallet === 500) {
-                return { ...state, wallet: Math.min(999, state.wallet + 499) };
-            }
-            break;
+            return { ...state };
         case REMOVE_WALLET:
-            if (state.wallet === 200) {
-                return { ...state, wallet: Math.max(0, state.wallet - 101) };
-            } else if (state.wallet === 500) {
-                return { ...state, wallet: Math.max(0, state.wallet - 300) };
-            } else if (state.wallet === 999) {
-                return { ...state, wallet: Math.max(0, state.wallet - 499) };
-            }
-            break;
+            return { ...state };
         case ADD_SKULLTULA:
             return { ...state, skulltulas: Math.min(100, state.skulltulas + 1) };
         case REMOVE_SKULLTULA:

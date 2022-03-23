@@ -39,8 +39,6 @@ import {
 class Home extends Component {
 
     state = {
-        // skulltulaCounter: 0,
-        // emptyBottles: 0,
         // walletCounter: 99,
         pieceOfHeartCounter: 0,
         heartContainerCounter: 0,
@@ -54,16 +52,10 @@ class Home extends Component {
         trainingKeys: 0,
         ganonKeys: 0,
         hasKokiriTunic: true,
-        // hasGoronTunic: false,
-        // hasZoraTunic: false,
         hasKokiriBoots: true,
         hasIronBoots: false,
         hasHoverBoots: false,
         hasMasterSword: true,
-        // hasRutosLetter: false,
-        // hasMalonsEgg: false,
-        // hasPocketCucco: false,
-        // hasZeldasLetter: false,
         hasClaimCheck: false,
         hasSilverScale: false,
         hasGoldenScale: false,
@@ -332,36 +324,6 @@ class Home extends Component {
         }
     }
 
-    //Standard Item Logic
-
-    // skulltulaLogic = {
-    //     addSkulltula: (e) => {
-    //         this.setState(prevState => ({
-    //             skulltulaCounter: Math.min(100, prevState.skulltulaCounter + 1)
-    //         }));
-    //     },
-    //     removeSkulltula: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             skulltulaCounter: Math.max(0, prevState.skulltulaCounter - 1)
-    //         }));
-    //     }
-    // }
-
-    // emptyBottleLogic = {
-    //     addBottle: (e) => {
-    //         this.setState(prevState => ({
-    //             emptyBottles: Math.min(4, prevState.emptyBottles + 1)
-    //         }));
-    //     },
-    //     removeBottle: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             emptyBottles: Math.max(0, prevState.emptyBottles - 1)
-    //         }));
-    //     }
-    // }
-
     render() {
 
         const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
@@ -618,7 +580,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state);
+    console.log(state.fourthRow.wallet);
     return {
         dekuSticks: state.firstRow.dekuSticks, dekuNuts: state.firstRow.dekuNuts, bombs: state.firstRow.bombs,
         fairyBow: state.firstRow.fairyBow, fireArrows: state.firstRow.fireArrows, dinsFire: state.firstRow.dinsFire,
@@ -630,9 +592,9 @@ function mapStateToProps(state) {
         magicBeans: state.thirdRow.magicBeans, megatonHammer: state.thirdRow.megatonHammer, lightArrows: state.thirdRow.lightArrows,
         nayrusLove: state.thirdRow.nayrusLove, goronTunic: state.fourthRow.goronTunic, zoraTunic: state.fourthRow.zoraTunic,
         wallet: state.fourthRow.wallet, skulltulas: state.fourthRow.skulltulas, emptyBottles: state.fourthRow.emptyBottles,
-        weirdEgg: state.fourthRow.weirdEgg, cucco: state.fourthRow.cucco, zeldasLetter: state.fourthRow.zeldasLetter,
-        keatonMask: state.fourthRow.keatonMask, skullMask: state.fourthRow.skullMask, spookyMask: state.fourthRow.spookyMask,
-        bunnyHood: state.fourthRow.bunnyHood, maskOfTruth: state.fourthRow.maskOfTruth,
+        rutosLetter: state.fourthRow.rutosLetter, weirdEgg: state.fourthRow.weirdEgg, cucco: state.fourthRow.cucco, 
+        zeldasLetter: state.fourthRow.zeldasLetter, keatonMask: state.fourthRow.keatonMask, skullMask: state.fourthRow.skullMask, 
+        spookyMask: state.fourthRow.spookyMask, bunnyHood: state.fourthRow.bunnyHood, maskOfTruth: state.fourthRow.maskOfTruth,
     }
 };
 

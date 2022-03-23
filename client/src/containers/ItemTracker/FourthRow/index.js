@@ -22,7 +22,6 @@ const FourthRow = (props) => {
         skullMaskLogic, spookyMaskLogic, bunnyHoodLogic, maskOfTruthLogic 
     } = props.fourthRowLogic.pastTradeLogic;
     
-
     return (
         <Grid.Row>
             <KokiriTunic />
@@ -37,22 +36,35 @@ const FourthRow = (props) => {
                 removeZoraTunic={removeZoraTunic}
             />
             <Wallet 
-                counter={wallet}
-                add={addWallet}
-                remove={removeWallet}
+                wallet={wallet}
+                addWallet={addWallet}
+                removeWallet={removeWallet}
             />
             <SkulltulaTokens 
                 counter={skulltulas}  
-                increment={addSkulltula} 
-                decrement={removeSkulltula}
+                add={addSkulltula} 
+                remove={removeSkulltula}
             />
             <EmptyBottle
                 emptyBottles={emptyBottles}
                 addBottle={addEmptyBottle}
                 removeBottle={removeEmptyBottle}
             />
-            <RutosLetter />
-            <PastTradeSequence />
+            <RutosLetter 
+                rutosLetter={rutosLetter}
+                addRutosLetter={addRutosLetter}
+                removeRutosLetter={removeRutosLetter}
+            />
+            <PastTradeSequence 
+                weirdEggLogic={weirdEggLogic}
+                cuccoLogic={cuccoLogic}
+                zeldasLetterLogic={zeldasLetterLogic}
+                keatonMaskLogic={keatonMaskLogic}
+                skullMaskLogic={skullMaskLogic}
+                spookyMaskLogic={spookyMaskLogic}
+                bunnyHoodLogic={bunnyHoodLogic}
+                maskOfTruthLogic={maskOfTruthLogic}
+            />
         </Grid.Row>
     );
 }

@@ -4,13 +4,13 @@ import SkulltulaTokensIcon from "../../../assets/images/fourth-row/Gold-Skulltul
 
 const SkulltulaTokens = (props) => {
 
-    const { counter, increment, decrement } = props;
+    const { counter, add, remove } = props;
 
     return (
         <Grid.Column width={2}>
             <Image 
-                onClick={increment} 
-                onContextMenu={decrement}
+                onClick={add} 
+                onContextMenu={remove}
                 style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} } 
                 size="mini" 
                 src={SkulltulaTokensIcon} 
