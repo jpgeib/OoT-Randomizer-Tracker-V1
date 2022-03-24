@@ -39,7 +39,6 @@ import {
 class Home extends Component {
 
     state = {
-        // walletCounter: 99,
         pieceOfHeartCounter: 0,
         heartContainerCounter: 0,
         forestKeys: 0,
@@ -53,17 +52,17 @@ class Home extends Component {
         ganonKeys: 0,
         hasKokiriTunic: true,
         hasKokiriBoots: true,
-        hasIronBoots: false,
-        hasHoverBoots: false,
+        // hasIronBoots: false,
+        // hasHoverBoots: false,
         hasMasterSword: true,
-        hasClaimCheck: false,
-        hasSilverScale: false,
-        hasGoldenScale: false,
-        hasMagic: false,
-        hasGoronBracelet: false,
-        hasSilverGauntlets: false,
-        hasGoldenGauntlets: false,
-        hasGerudoCard: false,
+        // hasClaimCheck: false,
+        // hasSilverScale: false,
+        // hasGoldenScale: false,
+        // hasMagic: false,
+        // hasGoronBracelet: false,
+        // hasSilverGauntlets: false,
+        // hasGoldenGauntlets: false,
+        // hasGerudoCard: false,
         hasStoneOfAgony: false,
         hasDoubleDefense: false,
         hasZeldasLullaby: false,
@@ -582,41 +581,44 @@ class Home extends Component {
 function mapStateToProps(state) {
     console.log(state);
     return {
+        //First Row Items
         dekuSticks: state.firstRow.dekuSticks, dekuNuts: state.firstRow.dekuNuts, bombs: state.firstRow.bombs,
         fairyBow: state.firstRow.fairyBow, fireArrows: state.firstRow.fireArrows, dinsFire: state.firstRow.dinsFire,
-        kokiriSword: state.firstRow.kokiriSword, biggoronSword: state.secondRow.biggoronSword, fairySlingshot: state.secondRow.fairySlingshot,
+        kokiriSword: state.firstRow.kokiriSword,
+        //Second Row Items 
+        biggoronSword: state.secondRow.biggoronSword, fairySlingshot: state.secondRow.fairySlingshot,
         fairyOcarina: state.secondRow.fairyOcarina, ocarinaOfTime: state.secondRow.ocarinaOfTime, bombchus: state.secondRow.bombchus,
         hookshot: state.secondRow.hookshot, longshot: state.secondRow.longshot, iceArrows: state.secondRow.iceArrows,
-        faroresWind: state.secondRow.faroresWind, dekuShield: state.secondRow.dekuShield, hylianShield: state.thirdRow.hylianShield,
-        mirrorShield: state.thirdRow.mirrorShield, boomerang: state.thirdRow.boomerang, lensOfTruth: state.thirdRow.lensOfTruth,
-        magicBeans: state.thirdRow.magicBeans, megatonHammer: state.thirdRow.megatonHammer, lightArrows: state.thirdRow.lightArrows,
-        nayrusLove: state.thirdRow.nayrusLove, goronTunic: state.fourthRow.goronTunic, zoraTunic: state.fourthRow.zoraTunic,
-        wallet: state.wallet, skulltulas: state.fourthRow.skulltulas, emptyBottles: state.fourthRow.emptyBottles,
-        rutosLetter: state.fourthRow.rutosLetter, weirdEgg: state.fourthRow.weirdEgg, cucco: state.fourthRow.cucco, 
-        zeldasLetter: state.fourthRow.zeldasLetter, keatonMask: state.fourthRow.keatonMask, skullMask: state.fourthRow.skullMask, 
-        spookyMask: state.fourthRow.spookyMask, bunnyHood: state.fourthRow.bunnyHood, maskOfTruth: state.fourthRow.maskOfTruth,
+        faroresWind: state.secondRow.faroresWind, dekuShield: state.secondRow.dekuShield,
+        //Third Row Items 
+        hylianShield: state.thirdRow.hylianShield, mirrorShield: state.thirdRow.mirrorShield, boomerang: state.thirdRow.boomerang, 
+        lensOfTruth: state.thirdRow.lensOfTruth, magicBeans: state.thirdRow.magicBeans, megatonHammer: state.thirdRow.megatonHammer, 
+        lightArrows: state.thirdRow.lightArrows, nayrusLove: state.thirdRow.nayrusLove,
+        //Fourth Row Items 
+        goronTunic: state.fourthRow.goronTunic, zoraTunic: state.fourthRow.zoraTunic, wallet: state.wallet, 
+        skulltulas: state.fourthRow.skulltulas, emptyBottles: state.fourthRow.emptyBottles, rutosLetter: state.fourthRow.rutosLetter, 
+        weirdEgg: state.fourthRow.weirdEgg, cucco: state.fourthRow.cucco, zeldasLetter: state.fourthRow.zeldasLetter, 
+        keatonMask: state.fourthRow.keatonMask, skullMask: state.fourthRow.skullMask, spookyMask: state.fourthRow.spookyMask, 
+        bunnyHood: state.fourthRow.bunnyHood, maskOfTruth: state.fourthRow.maskOfTruth,
+        //Fifth Row Items
     }
 };
 
 export default compose(connect(mapStateToProps, {
-    addDekuSticks, removeDekuSticks, addDekuNuts, removeDekuNuts,
-    addBombs, removeBombs, addFairyBow, removeFairyBow,
-    addFireArrows, removeFireArrows, addDinsFire, removeDinsFire,
-    addKokiriSword, removeKokiriSword, addBiggoronSword, removeBiggoronSword,
-    addFairySlingshot, removeFairySlingshot, addFairyOcarina, removeFairyOcarina,
-    addOcarinaOfTime, removeOcarinaOfTime, addBombchus, removeBombchus,
-    addHookshot, removeHookshot, addLongshot, removeLongshot,
-    addIceArrows, removeIceArrows, addFaroresWind, removeFaroresWind,
-    addDekuShield, removeDekuShield, addHylianShield, removeHylianShield,
-    addMirrorShield, removeMirrorShield, addBoomerang, removeBoomerang,
-    addLensOfTruth, removeLensOfTruth, addMagicBeans, removeMagicBeans,
-    addMegatonHammer, removeMegatonHammer, addLightArrows, removeLightArrows,
-    addNayrusLove, removeNayrusLove, addGoronTunic, removeGoronTunic,
-    addZoraTunic, removeZoraTunic, addWallet, removeWallet,
-    addSkulltula, removeSkulltula, addEmptyBottle, removeEmptyBottle,
-    addRutosLetter, removeRutosLetter, addWeirdEgg, removeWeirdEgg,
-    addCucco, removeCucco, addZeldasLetter, removeZeldasLetter,
-    addKeatonMask, removeKeatonMask, addSkullMask, removeSkullMask,
-    addSpookyMask, removeSpookyMask, addBunnyHood, removeBunnyHood,
-    addMaskOfTruth, removeMaskOfTruth
+    //First Row Actions
+    addDekuSticks, removeDekuSticks, addDekuNuts, removeDekuNuts, addBombs, removeBombs, addFairyBow, removeFairyBow,
+    addFireArrows, removeFireArrows, addDinsFire, removeDinsFire, addKokiriSword, removeKokiriSword,
+    //Second Row Actions 
+    addBiggoronSword, removeBiggoronSword, addFairySlingshot, removeFairySlingshot, addFairyOcarina, removeFairyOcarina,
+    addOcarinaOfTime, removeOcarinaOfTime, addBombchus, removeBombchus, addHookshot, removeHookshot, 
+    addLongshot, removeLongshot, addIceArrows, removeIceArrows, addFaroresWind, removeFaroresWind, addDekuShield, removeDekuShield,
+    //Third Row Actions 
+    addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield, addBoomerang, removeBoomerang,
+    addLensOfTruth, removeLensOfTruth, addMagicBeans, removeMagicBeans, addMegatonHammer, removeMegatonHammer, 
+    addLightArrows, removeLightArrows, addNayrusLove, removeNayrusLove,
+    //Fourth Row Actions 
+    addGoronTunic, removeGoronTunic, addZoraTunic, removeZoraTunic, addWallet, removeWallet, addSkulltula, removeSkulltula, 
+    addEmptyBottle, removeEmptyBottle, addRutosLetter, removeRutosLetter, addWeirdEgg, removeWeirdEgg,
+    addCucco, removeCucco, addZeldasLetter, removeZeldasLetter, addKeatonMask, removeKeatonMask, addSkullMask, removeSkullMask,
+    addSpookyMask, removeSpookyMask, addBunnyHood, removeBunnyHood, addMaskOfTruth, removeMaskOfTruth
 }))(Home);
