@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import StoneOfAgonyIcon from "../../../assets/images/fifth-row/Shard-of-Agony.png";
+import StoneOfAgonyIcon from "../../../assets/images/sixth-row/Shard-of-Agony.png";
 
 const StoneOfAgony = () => {
     return (
