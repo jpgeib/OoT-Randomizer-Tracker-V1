@@ -7,6 +7,7 @@ import ZoraScale from "../../../components/Items/ZoraScale";
 import MagicMeter from "../../../components/Items/MagicMeter";
 import GoronBracelet from "../../../components/Items/GoronBracelet";
 import GerudoCard from "../../../components/Items/GerudoCard";
+import FutureTradeSequence from "../../../components/Items/FutureTradeSequence";
 
 const FifthRow = () => {
     return (
@@ -18,6 +19,7 @@ const FifthRow = () => {
             <MagicMeter />
             <GoronBracelet />
             <GerudoCard />
+            <FutureTradeSequence />
         </Grid.Row>
     );
 }
