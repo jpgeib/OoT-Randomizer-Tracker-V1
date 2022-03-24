@@ -3,6 +3,11 @@ import { Grid, Image } from "semantic-ui-react";
 import WeirdEggIcon from "../../../assets/images/fourth-row/Weird-Egg.png";
 import CuccoIcon from "../../../assets/images/fourth-row/Cucco-3D.png";
 import ZeldasLetterIcon from "../../../assets/images/fourth-row/Zeldas-Letter.png";
+import KeatonMaskIcon from "../../../assets/images/fourth-row/Keaton-Mask-Icon.png";
+import SkullMaskIcon from "../../../assets/images/fourth-row/Skull-Mask-Icon.png";
+import SpookyMaskIcon from "../../../assets/images/fourth-row/Spooky-Mask-Icon.png";
+import BunnyHoodIcon from "../../../assets/images/fourth-row/Bunny-Hood-Mask-Icon.png";
+import MaskOfTruthIcon from "../../../assets/images/fourth-row/Mask-of-Truth-Mask-Icon.png";
 
 const PastTradeSequence = (props) => {
 
@@ -27,25 +32,18 @@ const PastTradeSequence = (props) => {
             zeldasLetter === true && (keatonMask === false || keatonMask === null)
         ),
         keatonMask: (
-            weirdEgg === true && cucco === true && zeldasLetter === true && keatonMask === true &&
-            skullMask === false && spookyMask === false && bunnyHood === false && maskOfTruth === false
+            keatonMask === true && (skullMask === false || skullMask === null)
         ),
         skullMask: (
-            weirdEgg === true && cucco === true && zeldasLetter === true && keatonMask === true &&
-            skullMask === true && spookyMask === false && bunnyHood === false && maskOfTruth === false
+            skullMask === true && (spookyMask === false || spookyMask === null)
         ),
         spookyMask: (
-            weirdEgg === true && cucco === true && zeldasLetter === true && keatonMask === true &&
-            skullMask === true && spookyMask === true && bunnyHood === false && maskOfTruth === false
+            spookyMask === true && (bunnyHood === false || bunnyHood === null)
         ),
         bunnyHood: (
-            weirdEgg === true && cucco === true && zeldasLetter === true && keatonMask === true &&
-            skullMask === true && spookyMask === true && bunnyHood === true && maskOfTruth === false
+            bunnyHood === true && (maskOfTruth === false || maskOfTruth === null)
         ),
-        maskOfTruth: (
-            weirdEgg === true && cucco === true && zeldasLetter === true && keatonMask === true &&
-            skullMask === true && spookyMask === true && bunnyHood === true && maskOfTruth === true
-        )
+        maskOfTruth: maskOfTruth === true
     };
 
     let add;
@@ -55,6 +53,16 @@ const PastTradeSequence = (props) => {
         add = addCucco;
     } else if (conditionals.cucco) {
         add = addZeldasLetter;
+    } else if (conditionals.zeldasLetter) {
+        add = addKeatonMask;
+    } else if (conditionals.keatonMask) {
+        add = addSkullMask;
+    } else if (conditionals.skullMask) {
+        add = addSpookyMask;
+    } else if (conditionals.spookyMask) {
+        add = addBunnyHood;
+    } else if (conditionals.bunnyHood) {
+        add = addMaskOfTruth;
     }
 
     let remove;
@@ -64,6 +72,16 @@ const PastTradeSequence = (props) => {
         remove = removeCucco;
     } else if (conditionals.zeldasLetter) {
         remove = removeZeldasLetter;
+    } else if (conditionals.keatonMask) {
+        remove = removeKeatonMask;
+    } else if (conditionals.skullMask) {
+        remove = removeSkullMask;
+    } else if (conditionals.spookyMask) {
+        remove = removeSpookyMask;
+    } else if (conditionals.bunnyHood) {
+        remove = removeBunnyHood;
+    } else if (conditionals.maskOfTruth) {
+        remove = removeMaskOfTruth;
     }
 
     let icon;
@@ -73,6 +91,16 @@ const PastTradeSequence = (props) => {
         icon = CuccoIcon;
     } else if (conditionals.zeldasLetter) {
         icon = ZeldasLetterIcon;
+    } else if (conditionals.keatonMask) {
+        icon = KeatonMaskIcon;
+    } else if (conditionals.skullMask) {
+        icon = SkullMaskIcon;
+    } else if (conditionals.spookyMask) {
+        icon = SpookyMaskIcon;
+    } else if (conditionals.bunnyHood) {
+        icon = BunnyHoodIcon;
+    } else if (conditionals.maskOfTruth) {
+        icon = MaskOfTruthIcon;
     }
 
     return (
