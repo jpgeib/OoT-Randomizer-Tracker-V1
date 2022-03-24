@@ -4,6 +4,7 @@ import firstRowReducer from "./firstRowReducer";
 import secondRowReducer from "./secondRowReducer";
 import thirdRowReducer from "./thirdRowReducer";
 import fourthRowReducer from "./fourthRowReducer";
+import fifthRowReducer from "./fifthRowReducer";
 import walletReducer from "./walletReducer";
 
 export default combineReducers({
@@ -11,5 +12,6 @@ export default combineReducers({
     secondRow: secondRowReducer,
     thirdRow: thirdRowReducer,
     fourthRow: fourthRowReducer,
+    fifthRow: fifthRowReducer,
     wallet: walletReducer
 });

@@ -35,6 +35,19 @@ import {
     addSkullMask, removeSkullMask, addSpookyMask, removeSpookyMask,
     addBunnyHood, removeBunnyHood, addMaskOfTruth, removeMaskOfTruth
 } from "../../actions/fourthRow";
+import {
+    addIronBoots, removeIronBoots, addHoverBoots, removeHoverBoots,
+    addSilverScale, removeSilverScale, addGoldenScale, removeGoldenScale,
+    addMagic, removeMagic, addDoubleMagic, removeDoubleMagic,
+    addGoronsBracelet, removeGoronsBracelet, addSilverGauntlets, removeSilverGauntlets,
+    addGoldenGauntlets, removeGoldenGauntlets, addGerudoCard, removeGerudoCard,
+    addPocketEgg, removePocketEgg, addPocketCucco, removePocketCucco,
+    addCojiro, removeCojiro, addOddMushroom, removeOddMushroom,
+    addOddPotion, removeOddPotion, addPoachersSaw, removePoachersSaw,
+    addBrokenGoronsSword, removeBrokenGoronsSword, addPrescription, removePrescription,
+    addEyeballFrog, removeEyeballFrog, addEyeDrops, removeEyeDrops,
+    addClaimCheck, removeClaimCheck
+} from "../../actions/fifthRow";
 
 class Home extends Component {
 
@@ -601,6 +614,13 @@ function mapStateToProps(state) {
         keatonMask: state.fourthRow.keatonMask, skullMask: state.fourthRow.skullMask, spookyMask: state.fourthRow.spookyMask, 
         bunnyHood: state.fourthRow.bunnyHood, maskOfTruth: state.fourthRow.maskOfTruth,
         //Fifth Row Items
+        ironBoots: state.fifthRow.ironBoots, hoverBoots: state.fifthRow.hoverBoots, silverScale: state.fifthRow.silverScale,
+        goldenScale: state.fifthRow.goldenScale, magic: state.fifthRow.magic, doubleMagic: state.fifthRow.doubleMagic,
+        goronsBracelet: state.fifthRow.goronsBracelet, silverGauntlets: state.fifthRow.silverGauntlets, goldenGauntlets: state.fifthRow.goldenGauntlets,
+        gerudoCard: state.fifthRow.gerudoCard, pocketEgg: state.fifthRow.pocketEgg, pocketCucco: state.fifthRow.pocketCucco,
+        cojiro: state.fifthRow.cojiro, oddMushroom: state.fifthRow.oddMushroom, oddPotion: state.fifthRow.oddPotion,
+        poachersSaw: state.fifthRow.poachersSaw, brokenGoronsSword: state.fifthRow.brokenGoronsSword, prescription: state.fifthRow.prescription,
+        eyeballFrog: state.fifthRow.eyeballFrog, eyeDrops: state.fifthRow.eyeDrops, claimCheck: state.fifthRow.claimCheck
     }
 };
 
@@ -620,5 +640,13 @@ export default compose(connect(mapStateToProps, {
     addGoronTunic, removeGoronTunic, addZoraTunic, removeZoraTunic, addWallet, removeWallet, addSkulltula, removeSkulltula, 
     addEmptyBottle, removeEmptyBottle, addRutosLetter, removeRutosLetter, addWeirdEgg, removeWeirdEgg,
     addCucco, removeCucco, addZeldasLetter, removeZeldasLetter, addKeatonMask, removeKeatonMask, addSkullMask, removeSkullMask,
-    addSpookyMask, removeSpookyMask, addBunnyHood, removeBunnyHood, addMaskOfTruth, removeMaskOfTruth
+    addSpookyMask, removeSpookyMask, addBunnyHood, removeBunnyHood, addMaskOfTruth, removeMaskOfTruth,
+    //Fifth Row Actions
+    addIronBoots, removeIronBoots, addHoverBoots, removeHoverBoots, addSilverScale, removeSilverScale, 
+    addGoldenScale, removeGoldenScale, addMagic, removeMagic, addDoubleMagic, removeDoubleMagic,
+    addGoronsBracelet, removeGoronsBracelet, addSilverGauntlets, removeSilverGauntlets, addGoldenGauntlets, removeGoldenGauntlets, 
+    addGerudoCard, removeGerudoCard, addPocketEgg, removePocketEgg, addPocketCucco, removePocketCucco, addCojiro, removeCojiro, 
+    addOddMushroom, removeOddMushroom, addOddPotion, removeOddPotion, addPoachersSaw, removePoachersSaw,
+    addBrokenGoronsSword, removeBrokenGoronsSword, addPrescription, removePrescription, addEyeballFrog, removeEyeballFrog, 
+    addEyeDrops, removeEyeDrops, addClaimCheck, removeClaimCheck
 }))(Home);
