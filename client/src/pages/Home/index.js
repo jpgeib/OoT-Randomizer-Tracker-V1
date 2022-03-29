@@ -65,17 +65,7 @@ class Home extends Component {
         ganonKeys: 0,
         hasKokiriTunic: true,
         hasKokiriBoots: true,
-        // hasIronBoots: false,
-        // hasHoverBoots: false,
         hasMasterSword: true,
-        // hasClaimCheck: false,
-        // hasSilverScale: false,
-        // hasGoldenScale: false,
-        // hasMagic: false,
-        // hasGoronBracelet: false,
-        // hasSilverGauntlets: false,
-        // hasGoldenGauntlets: false,
-        // hasGerudoCard: false,
         hasStoneOfAgony: false,
         hasDoubleDefense: false,
         hasZeldasLullaby: false,
@@ -545,6 +535,108 @@ class Home extends Component {
             }
         };
 
+        const fifthRowLogic = {
+            ironBootsLogic: {
+                ironBoots: this.props.ironBoots,
+                addIronBoots: this.props.addIronBoots,
+                removeIronBoots: this.props.removeIronBoots
+            },
+            hoverBootsLogic: {
+                hoverBoots: this.props.hoverBoots,
+                addHoverBoots: this.props.addHoverBoots,
+                removeHoverBoots: this.props.removeHoverBoots
+            },
+            zoraScaleLogic: {
+                silverScale: this.props.silverScale,
+                addSilverScale: this.props.addSilverScale,
+                removeSilverScale: this.props.removeSilverScale,
+                goldenScale: this.props.goldenScale,
+                addGoldenScale: this.props.addGoldenScale,
+                removeGoldenScale: this.props.removeGoldenScale
+            },
+            magicLogic: {
+                magic: this.props.magic,
+                addMagic: this.props.addMagic,
+                removeMagic: this.props.removeMagic,
+                doubleMagic: this.props.doubleMagic,
+                addDoubleMagic: this.props.addDoubleMagic,
+                removeDoubleMagic: this.props.removeDoubleMagic
+            },
+            strengthEnhancerLogic: {
+                goronsBracelet: this.props.goronsBracelet,
+                addGoronsBracelet: this.props.addGoronsBracelet,
+                removeGoronsBracelet: this.props.removeGoronsBracelet,
+                silverGauntlets: this.props.silverGauntlets,
+                addSilverGauntlets: this.props.addSilverGauntlets,
+                removeSilverGauntlets: this.props.removeSilverGauntlets,
+                goldenGauntlets: this.props.goldenGauntlets,
+                addGoldenGauntlets: this.props.addGoldenGauntlets,
+                removeGoldenGauntlets: this.props.removeGoldenGauntlets
+            },
+            gerudoCardLogic: {
+                gerudoCard: this.props.gerudoCard,
+                addGerudoCard: this.props.addGerudoCard,
+                removeGerudoCard: this.props.removeGerudoCard
+            },
+            futureTradeLogic: {
+                pocketEggLogic: {
+                    pocketEgg: this.props.pocketEgg,
+                    addPocketEgg: this.props.addPocketEgg,
+                    removePocketEgg: this.props.removePocketEgg
+                },
+                pocketCuccoLogic: {
+                    pocketCucco: this.props.pocketCucco,
+                    addPocketCucco: this.props.addPocketCucco,
+                    removePocketCucco: this.props.removePocketCucco
+                },
+                cojiroLogic: {
+                    cojiro: this.props.cojiro,
+                    addCojiro: this.props.addCojiro,
+                    removeCojiro: this.props.removeCojiro
+                },
+                oddMushroomLogic: {
+                    oddMushroom: this.props.oddMushroom,
+                    addOddMushroom: this.props.addOddMushroom,
+                    removeOddMushroom: this.props.removeOddMushroom
+                },
+                oddPotion: {
+                    oddPotion: this.props.oddPotion,
+                    addOddPotion: this.props.addOddPotion,
+                    removeOddPotion: this.props.removeOddPotion
+                },
+                poachersSawLogic: {
+                    poachersSaw: this.props.poachersSaw,
+                    addPoachersSaw: this.props.addPoachersSaw,
+                    removePoachersSaw: this.props.removePoachersSaw
+                },
+                brokenGoronsSwordLogic: {
+                    brokenGoronsSword: this.props.brokenGoronsSword,
+                    addBrokenGoronsSword: this.props.addBrokenGoronsSword,
+                    removeBrokenGoronsSword: this.props.removeBrokenGoronsSword
+                },
+                prescriptionLogic: {
+                    prescription: this.props.prescription,
+                    addPrescription: this.props.addPrescription,
+                    removePrescription: this.props.removePrescription
+                },
+                eyeballFrogLogic: {
+                    eyeballFrog: this.props.eyeballFrog,
+                    addEyeballFrog: this.props.addEyeballFrog,
+                    removeEyeballFrog: this.props.removeEyeballFrog
+                },
+                eyeDropsLogic: {
+                    eyeDrops: this.props.eyeDrops,
+                    addEyeDrops: this.props.addEyeDrops,
+                    removeEyeDrops: this.props.removeEyeDrops
+                },
+                claimCheckLogic: {
+                    claimCheck: this.props.claimCheck,
+                    addClaimCheck: this.props.addClaimCheck,
+                    removeClaimCheck: this.props.removeClaimCheck
+                } 
+            }
+        };
+
         return (
             <Grid>
                 <Grid.Row>
@@ -558,6 +650,7 @@ class Home extends Component {
                                         secondRowLogic={secondRowLogic}
                                         thirdRowLogic={thirdRowLogic}
                                         fourthRowLogic={fourthRowLogic}
+                                        fifthRowLogic={fifthRowLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
