@@ -1,11 +1,21 @@
 import React from "react";
 import { Grid, Image } from "semantic-ui-react";
-import ZoraScaleIcon from "../../../assets/images/fifth-row/Silver-Scale-3D.png";
+import SilverScaleIcon from "../../../assets/images/fifth-row/Silver-Scale-3D.png";
+import GoldenScaleIcon from "../../../assets/images/fifth-row/Golden-Scale-3D.png";
 
-const ZoraScale = () => {
+const ZoraScale = (props) => {
+
+    const { silverScale, addSilverScale, removeSilverScale, goldenScale, addGoldenScale, removeGoldenScale } = props;
+
     return (
         <Grid.Column width={2}>
-            <Image size="mini" src={ZoraScaleIcon} />
+            <Image
+                onClick={(silverScale === true) ? addGoldenScale : addSilverScale}
+                onContextMenu={(silverScale === true && goldenScale === true) ? removeGoldenScale : removeSilverScale}
+                style={(silverScale === false || silverScale === null) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
+                size="mini" 
+                src={(silverScale === true && goldenScale === true) ? GoldenScaleIcon : SilverScaleIcon} 
+            />
         </Grid.Column>
     );
 }
