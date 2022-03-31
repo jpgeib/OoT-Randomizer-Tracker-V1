@@ -18,7 +18,8 @@ class ItemTracker extends Component {
             secondRowLogic,
             thirdRowLogic,
             fourthRowLogic,
-            fifthRowLogic
+            fifthRowLogic,
+            sixthRowLogic
         } = this.props;
 
         return (
@@ -28,7 +29,7 @@ class ItemTracker extends Component {
                 <ThirdRow thirdRowLogic={thirdRowLogic} />
                 <FourthRow fourthRowLogic={fourthRowLogic} />
                 <FifthRow fifthRowLogic={fifthRowLogic} />
-                <SixthRow />
+                <SixthRow sixthRowLogic={sixthRowLogic} />
                 <Grid.Row>
                     <HookShot />
                     <MasterSword />
