@@ -48,12 +48,14 @@ import {
     addEyeballFrog, removeEyeballFrog, addEyeDrops, removeEyeDrops,
     addClaimCheck, removeClaimCheck
 } from "../../actions/fifthRow";
+import {
+    addStoneOfAgony, removeStoneOfAgony, addPieceOfHeart, removePieceOfHeart,
+    addHeartContainer, removeHeartContainer, addDoubleDefense, removeDoubleDefense
+} from "../../actions/sixthRow";
 
 class Home extends Component {
 
     state = {
-        pieceOfHeartCounter: 0,
-        heartContainerCounter: 0,
         forestKeys: 0,
         fireKeys: 0,
         waterKeys: 0,
@@ -66,8 +68,6 @@ class Home extends Component {
         hasKokiriTunic: true,
         hasKokiriBoots: true,
         hasMasterSword: true,
-        hasStoneOfAgony: false,
-        hasDoubleDefense: false,
         hasZeldasLullaby: false,
         hasEponasSong: false,
         hasSariasSong: false,
@@ -637,6 +637,29 @@ class Home extends Component {
             }
         };
 
+        const sixthRowLogic = {
+            stoneOfAgonyLogic: {
+                stoneOfAgony: this.props.stoneOfAgony,
+                addStoneOfAgony: this.props.addStoneOfAgony,
+                removeStoneOfAgony: this.props.removeStoneOfAgony
+            },
+            piecesOfHeartLogic: {
+                piecesOfHeart: this.props.piecesOfHeart,
+                addPieceOfHeart: this.props.addPieceOfHeart,
+                removePieceOfHeart: this.props.removePieceOfHeart
+            },
+            heartContainersLogic: {
+                heartContainers: this.props.heartContainers,
+                addHeartContainer: this.props.addHeartContainer,
+                removeHeartContainer: this.props.removeHeartContainer
+            },
+            doubleDefenseLogic: {
+                doubleDefense: this.props.doubleDefense,
+                addDoubleDefense: this.props.addDoubleDefense,
+                removeDoubleDefense: this.props.removeDoubleDefense
+            }
+        };
+
         return (
             <Grid>
                 <Grid.Row>
@@ -651,6 +674,7 @@ class Home extends Component {
                                         thirdRowLogic={thirdRowLogic}
                                         fourthRowLogic={fourthRowLogic}
                                         fifthRowLogic={fifthRowLogic}
+                                        sixthRowLogic={sixthRowLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -713,7 +737,10 @@ function mapStateToProps(state) {
         gerudoCard: state.fifthRow.gerudoCard, pocketEgg: state.fifthRow.pocketEgg, pocketCucco: state.fifthRow.pocketCucco,
         cojiro: state.fifthRow.cojiro, oddMushroom: state.fifthRow.oddMushroom, oddPotion: state.fifthRow.oddPotion,
         poachersSaw: state.fifthRow.poachersSaw, brokenGoronsSword: state.fifthRow.brokenGoronsSword, prescription: state.fifthRow.prescription,
-        eyeballFrog: state.fifthRow.eyeballFrog, eyeDrops: state.fifthRow.eyeDrops, claimCheck: state.fifthRow.claimCheck
+        eyeballFrog: state.fifthRow.eyeballFrog, eyeDrops: state.fifthRow.eyeDrops, claimCheck: state.fifthRow.claimCheck,
+        //Sixth Row Items
+        stoneOfAgony: state.sixthRow.stoneOfAgony, piecesOfHeart: state.sixthRow.piecesOfHeart, heartContainers: state.sixthRow.heartContainers,
+        doubleDefense: state.sixthRow.doubleDefense
     }
 };
 
@@ -741,5 +768,8 @@ export default compose(connect(mapStateToProps, {
     addGerudoCard, removeGerudoCard, addPocketEgg, removePocketEgg, addPocketCucco, removePocketCucco, addCojiro, removeCojiro, 
     addOddMushroom, removeOddMushroom, addOddPotion, removeOddPotion, addPoachersSaw, removePoachersSaw,
     addBrokenGoronsSword, removeBrokenGoronsSword, addPrescription, removePrescription, addEyeballFrog, removeEyeballFrog, 
-    addEyeDrops, removeEyeDrops, addClaimCheck, removeClaimCheck
+    addEyeDrops, removeEyeDrops, addClaimCheck, removeClaimCheck,
+    //Sixth Row Actions
+    addStoneOfAgony, removeStoneOfAgony, addPieceOfHeart, removePieceOfHeart, addHeartContainer, removeHeartContainer,
+    addDoubleDefense, removeDoubleDefense
 }))(Home);
