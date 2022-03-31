@@ -599,7 +599,7 @@ class Home extends Component {
                     addOddMushroom: this.props.addOddMushroom,
                     removeOddMushroom: this.props.removeOddMushroom
                 },
-                oddPotion: {
+                oddPotionLogic: {
                     oddPotion: this.props.oddPotion,
                     addOddPotion: this.props.addOddPotion,
                     removeOddPotion: this.props.removeOddPotion
