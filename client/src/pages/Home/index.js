@@ -740,7 +740,8 @@ function mapStateToProps(state) {
         eyeballFrog: state.fifthRow.eyeballFrog, eyeDrops: state.fifthRow.eyeDrops, claimCheck: state.fifthRow.claimCheck,
         //Sixth Row Items
         stoneOfAgony: state.sixthRow.stoneOfAgony, piecesOfHeart: state.sixthRow.piecesOfHeart, heartContainers: state.sixthRow.heartContainers,
-        doubleDefense: state.sixthRow.doubleDefense
+        doubleDefense: state.sixthRow.doubleDefense,
+        //Dungeon Items
     }
 };
 
@@ -771,5 +772,6 @@ export default compose(connect(mapStateToProps, {
     addEyeDrops, removeEyeDrops, addClaimCheck, removeClaimCheck,
     //Sixth Row Actions
     addStoneOfAgony, removeStoneOfAgony, addPieceOfHeart, removePieceOfHeart, addHeartContainer, removeHeartContainer,
-    addDoubleDefense, removeDoubleDefense
+    addDoubleDefense, removeDoubleDefense,
+    //Dungeon Items
 }))(Home);
