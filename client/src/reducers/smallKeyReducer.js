@@ -60,5 +60,7 @@ export default function (state = INITIAL_STATE, action) {
             return { ...state, ganonKeys: Math.min(2, state.ganonKeys + 1) };
         case REMOVE_GANON_SMALL_KEY:
             return { ...state, ganonKeys: Math.max(0, state.ganonKeys - 1) };
+        default:
+            return state;
     }
 };
