@@ -9,6 +9,7 @@ import sixthRowReducer from "./sixthRowReducer";
 import walletReducer from "./walletReducer";
 import smallKeyReducer from "./smallKeyReducer";
 import bossKeyReducer from "./bossKeyReducer";
+import gemReducer from "./gemReducer";
 
 export default combineReducers({
     firstRow: firstRowReducer,
@@ -19,5 +20,6 @@ export default combineReducers({
     sixthRow: sixthRowReducer,
     wallet: walletReducer,
     smallKeys: smallKeyReducer,
-    bossKeys: bossKeyReducer
+    bossKeys: bossKeyReducer,
+    gems: gemReducer
 });
