@@ -48,7 +48,7 @@ class ShadowTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, bossKeys, medallions } = this.props;
+        const { state, smallKeys, bossKeys, shadowMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -81,9 +81,7 @@ class ShadowTempleItems extends Component {
                                 removeCompass={this.removeCompass}
                             />
                             <ShadowMedallion 
-                                hasShadowMedallion={state.hasShadowMedallion}
-                                addShadowMedallion={medallions.addShadowMedallion}
-                                removeShadowMedallion={medallions.removeShadowMedallion}
+                                shadowMedallionLogic={shadowMedallionLogic}
                             />
                         </Grid.Row>
                     </Grid>

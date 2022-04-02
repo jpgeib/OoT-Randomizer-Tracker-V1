@@ -48,7 +48,7 @@ class SpiritTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, bossKeys, medallions } = this.props;
+        const { state, smallKeys, bossKeys, spiritMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -81,9 +81,7 @@ class SpiritTempleItems extends Component {
                                 removeCompass={this.removeCompass}
                             />
                             <SpiritMedallion 
-                                hasSpiritMedallion={state.hasSpiritMedallion}
-                                addSpiritMedallion={medallions.addSpiritMedallion}
-                                removeSpiritMedallion={medallions.removeSpiritMedallion}
+                                spiritMedallionLogic={spiritMedallionLogic}
                             />
                         </Grid.Row>
                     </Grid>

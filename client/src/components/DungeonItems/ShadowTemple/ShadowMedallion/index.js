@@ -4,14 +4,14 @@ import ShadowMedallionIcon from "../../../../assets/images/dungeon-items/Shadow-
 
 const ShadowMedallion = (props) => {
     
-    const { hasShadowMedallion, addShadowMedallion, removeShadowMedallion} = props;
+    const { shadowMedallion, addShadowMedallion, removeShadowMedallion} = props.shadowMedallionLogic;
     
     return (
         <Grid.Column width={2}>
             <Image
                 onClick={addShadowMedallion}
                 onContextMenu={removeShadowMedallion}
-                style={(hasShadowMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}} 
+                style={(shadowMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}} 
                 size="mini" 
                 src={ShadowMedallionIcon} 
             />

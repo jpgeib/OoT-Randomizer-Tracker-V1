@@ -46,7 +46,7 @@ class JabuJabuItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { zoraSapphire, addZoraSapphire, removeZoraSapphire } = this.props.gemsLogic;
+        const { zoraSapphire, addZoraSapphire, removeZoraSapphire } = this.props.zoraSapphireLogic;
 
         return (
             <Modal

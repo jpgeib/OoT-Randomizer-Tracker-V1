@@ -4,15 +4,14 @@ import FireMedallionIcon from "../../../../assets/images/dungeon-items/Fire-Meda
 
 const FireMedallion = (props) => {
 
-    const { hasFireMedallion } = props;
-    const { addFireMedallion, removeFireMedallion } = props.medallions;
+    const { fireMedallion, addFireMedallion, removeFireMedallion } = props.fireMedallionLogic;
 
     return (
         <Grid.Column width={2}>
             <Image
                 onClick={addFireMedallion}
                 onContextMenu={removeFireMedallion} 
-                style={(hasFireMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}
+                style={(fireMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}
                 size="mini" 
                 src={FireMedallionIcon} 
             />

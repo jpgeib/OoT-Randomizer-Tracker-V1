@@ -88,12 +88,12 @@ class Home extends Component {
         hasSerenade: false,
         hasNocturne: false,
         hasRequiem: false,
-        hasLightMedallion: false,
-        hasForestMedallion: false,
-        hasFireMedallion: false,
-        hasWaterMedallion: false,
-        hasShadowMedallion: false,
-        hasSpiritMedallion: false,
+        // hasLightMedallion: false,
+        // hasForestMedallion: false,
+        // hasFireMedallion: false,
+        // hasWaterMedallion: false,
+        // hasShadowMedallion: false,
+        // hasSpiritMedallion: false,
         hasForestBossKey: false,
         hasFireBossKey: false,
         hasWaterBossKey: false,
@@ -261,50 +261,50 @@ class Home extends Component {
         }
     }
 
-    medallionLogic = {
-        addLightMedallion: (e) => {
-            this.setState({ hasLightMedallion: true });
-        },
-        removeLightMedallion: (e) => {
-            e.preventDefault();
-            this.setState({ hasLightMedallion: false });
-        },
-        addForestMedallion: (e) => {
-            this.setState({ hasForestMedallion: true });
-        },
-        removeForestMedallion: (e) => {
-            e.preventDefault();
-            this.setState({ hasForestMedallion: false });
-        },
-        addFireMedallion: (e) => {
-            this.setState({ hasFireMedallion: true });
-        },
-        removeFireMedallion: (e) => {
-            e.preventDefault();
-            this.setState({ hasFireMedallion: false });
-        },
-        addWaterMedallion: (e) => {
-            this.setState({ hasWaterMedallion: true });
-        },
-        removeWaterMedallion: (e) => {
-            e.preventDefault();
-            this.setState({ hasWaterMedallion: false });
-        },
-        addShadowMedallion: (e) => {
-            this.setState({ hasShadowMedallion: true });
-        },
-        removeShadowMedallion: (e) => {
-            e.preventDefault();
-            this.setState({ hasShadowMedallion: false });
-        },
-        addSpiritMedallion: (e) => {
-            this.setState({ hasSpiritMedallion: true });
-        },
-        removeSpiritMedallion: (e) => {
-            e.preventDefault();
-            this.setState({ hasSpiritMedallion: false });
-        }
-    }
+    // medallionLogic = {
+    //     addLightMedallion: (e) => {
+    //         this.setState({ hasLightMedallion: true });
+    //     },
+    //     removeLightMedallion: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasLightMedallion: false });
+    //     },
+    //     addForestMedallion: (e) => {
+    //         this.setState({ hasForestMedallion: true });
+    //     },
+    //     removeForestMedallion: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasForestMedallion: false });
+    //     },
+    //     addFireMedallion: (e) => {
+    //         this.setState({ hasFireMedallion: true });
+    //     },
+    //     removeFireMedallion: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasFireMedallion: false });
+    //     },
+    //     addWaterMedallion: (e) => {
+    //         this.setState({ hasWaterMedallion: true });
+    //     },
+    //     removeWaterMedallion: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasWaterMedallion: false });
+    //     },
+    //     addShadowMedallion: (e) => {
+    //         this.setState({ hasShadowMedallion: true });
+    //     },
+    //     removeShadowMedallion: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasShadowMedallion: false });
+    //     },
+    //     addSpiritMedallion: (e) => {
+    //         this.setState({ hasSpiritMedallion: true });
+    //     },
+    //     removeSpiritMedallion: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasSpiritMedallion: false });
+    //     }
+    // }
 
     render() {
 
@@ -613,7 +613,7 @@ class Home extends Component {
                     claimCheck: this.props.claimCheck,
                     addClaimCheck: this.props.addClaimCheck,
                     removeClaimCheck: this.props.removeClaimCheck
-                } 
+                }
             }
         };
 
@@ -641,16 +641,50 @@ class Home extends Component {
         };
 
         const dungeonItemLogic = {
-            gemsLogic: {
+            kokiriEmeraldLogic: {
                 kokiriEmerald: this.props.kokiriEmerald,
                 addKokiriEmerald: this.props.addKokiriEmerald,
                 removeKokiriEmerald: this.props.removeKokiriEmerald,
+            },
+            goronRubyLogic: {
                 goronRuby: this.props.goronRuby,
                 addGoronRuby: this.props.addGoronRuby,
                 removeGoronRuby: this.props.removeGoronRuby,
+            },
+            zoraSapphireLogic: {
                 zoraSapphire: this.props.zoraSapphire,
                 addZoraSapphire: this.props.addZoraSapphire,
                 removeZoraSapphire: this.props.removeZoraSapphire
+            },
+            lightMedallionLogic: {
+                lightMedallion: this.props.lightMedallion,
+                addLightMedallion: this.props.addLightMedallion,
+                removeLightMedallion: this.props.removeLightMedallion
+            },
+            forestMedallionLogic: {
+                forestMedallion: this.props.forestMedallion,
+                addForestMedallion: this.props.addForestMedallion,
+                removeForestMedallion: this.props.removeForestMedallion
+            },
+            fireMedallionLogic: {
+                fireMedallion: this.props.fireMedallion,
+                addFireMedallion: this.props.addFireMedallion,
+                removeFireMedallion: this.props.removeFireMedallion
+            },
+            waterMedallionLogic: {
+                waterMedallion: this.props.waterMedallion,
+                addWaterMedallion: this.props.addWaterMedallion,
+                removeWaterMedallion: this.props.removeWaterMedallion
+            },
+            shadowMedallionLogic: {
+                shadowMedallion: this.props.shadowMedallion,
+                addShadowMedallion: this.props.addShadowMedallion,
+                removeShadowMedallion: this.props.removeShadowMedallion
+            },
+            spiritMedallionLogic: {
+                spiritMedallion: this.props.spiritMedallion,
+                addSpiritMedallion: this.props.addSpiritMedallion,
+                removeSpiritMedallion: this.props.removeSpiritMedallion
             }
         };
 
@@ -680,7 +714,6 @@ class Home extends Component {
                                         state={this.state}
                                         smallKeys={this.smallKeyLogic}
                                         bossKeys={this.bossKeyLogic}
-                                        medallions={this.medallionLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -715,14 +748,14 @@ function mapStateToProps(state) {
         hookshot: state.secondRow.hookshot, longshot: state.secondRow.longshot, iceArrows: state.secondRow.iceArrows,
         faroresWind: state.secondRow.faroresWind, dekuShield: state.secondRow.dekuShield,
         //Third Row Items 
-        hylianShield: state.thirdRow.hylianShield, mirrorShield: state.thirdRow.mirrorShield, boomerang: state.thirdRow.boomerang, 
-        lensOfTruth: state.thirdRow.lensOfTruth, magicBeans: state.thirdRow.magicBeans, megatonHammer: state.thirdRow.megatonHammer, 
+        hylianShield: state.thirdRow.hylianShield, mirrorShield: state.thirdRow.mirrorShield, boomerang: state.thirdRow.boomerang,
+        lensOfTruth: state.thirdRow.lensOfTruth, magicBeans: state.thirdRow.magicBeans, megatonHammer: state.thirdRow.megatonHammer,
         lightArrows: state.thirdRow.lightArrows, nayrusLove: state.thirdRow.nayrusLove,
         //Fourth Row Items 
-        goronTunic: state.fourthRow.goronTunic, zoraTunic: state.fourthRow.zoraTunic, wallet: state.wallet, 
-        skulltulas: state.fourthRow.skulltulas, emptyBottles: state.fourthRow.emptyBottles, rutosLetter: state.fourthRow.rutosLetter, 
-        weirdEgg: state.fourthRow.weirdEgg, cucco: state.fourthRow.cucco, zeldasLetter: state.fourthRow.zeldasLetter, 
-        keatonMask: state.fourthRow.keatonMask, skullMask: state.fourthRow.skullMask, spookyMask: state.fourthRow.spookyMask, 
+        goronTunic: state.fourthRow.goronTunic, zoraTunic: state.fourthRow.zoraTunic, wallet: state.wallet,
+        skulltulas: state.fourthRow.skulltulas, emptyBottles: state.fourthRow.emptyBottles, rutosLetter: state.fourthRow.rutosLetter,
+        weirdEgg: state.fourthRow.weirdEgg, cucco: state.fourthRow.cucco, zeldasLetter: state.fourthRow.zeldasLetter,
+        keatonMask: state.fourthRow.keatonMask, skullMask: state.fourthRow.skullMask, spookyMask: state.fourthRow.spookyMask,
         bunnyHood: state.fourthRow.bunnyHood, maskOfTruth: state.fourthRow.maskOfTruth,
         //Fifth Row Items
         ironBoots: state.fifthRow.ironBoots, hoverBoots: state.fifthRow.hoverBoots, silverScale: state.fifthRow.silverScale,
@@ -737,6 +770,9 @@ function mapStateToProps(state) {
         doubleDefense: state.sixthRow.doubleDefense,
         //Dungeon Items
         kokiriEmerald: state.gems.kokiriEmerald, goronRuby: state.gems.goronRuby, zoraSapphire: state.gems.zoraSapphire,
+        lightMedallion: state.medallions.lightMedallion, forestMedallion: state.medallions.forestMedallion, fireMedallion: state.medallions.fireMedallion,
+        waterMedallion: state.medallions.waterMedallion, shadowMedallion: state.medallions.shadowMedallion, spiritMedallion: state.medallions.spiritMedallion,
+
     }
 };
 
@@ -746,28 +782,30 @@ export default compose(connect(mapStateToProps, {
     addFireArrows, removeFireArrows, addDinsFire, removeDinsFire, addKokiriSword, removeKokiriSword,
     //Second Row Actions 
     addBiggoronSword, removeBiggoronSword, addFairySlingshot, removeFairySlingshot, addFairyOcarina, removeFairyOcarina,
-    addOcarinaOfTime, removeOcarinaOfTime, addBombchus, removeBombchus, addHookshot, removeHookshot, 
+    addOcarinaOfTime, removeOcarinaOfTime, addBombchus, removeBombchus, addHookshot, removeHookshot,
     addLongshot, removeLongshot, addIceArrows, removeIceArrows, addFaroresWind, removeFaroresWind, addDekuShield, removeDekuShield,
     //Third Row Actions 
     addHylianShield, removeHylianShield, addMirrorShield, removeMirrorShield, addBoomerang, removeBoomerang,
-    addLensOfTruth, removeLensOfTruth, addMagicBeans, removeMagicBeans, addMegatonHammer, removeMegatonHammer, 
+    addLensOfTruth, removeLensOfTruth, addMagicBeans, removeMagicBeans, addMegatonHammer, removeMegatonHammer,
     addLightArrows, removeLightArrows, addNayrusLove, removeNayrusLove,
     //Fourth Row Actions 
-    addGoronTunic, removeGoronTunic, addZoraTunic, removeZoraTunic, addWallet, removeWallet, addSkulltula, removeSkulltula, 
+    addGoronTunic, removeGoronTunic, addZoraTunic, removeZoraTunic, addWallet, removeWallet, addSkulltula, removeSkulltula,
     addEmptyBottle, removeEmptyBottle, addRutosLetter, removeRutosLetter, addWeirdEgg, removeWeirdEgg,
     addCucco, removeCucco, addZeldasLetter, removeZeldasLetter, addKeatonMask, removeKeatonMask, addSkullMask, removeSkullMask,
     addSpookyMask, removeSpookyMask, addBunnyHood, removeBunnyHood, addMaskOfTruth, removeMaskOfTruth,
     //Fifth Row Actions
-    addIronBoots, removeIronBoots, addHoverBoots, removeHoverBoots, addSilverScale, removeSilverScale, 
+    addIronBoots, removeIronBoots, addHoverBoots, removeHoverBoots, addSilverScale, removeSilverScale,
     addGoldenScale, removeGoldenScale, addMagic, removeMagic, addDoubleMagic, removeDoubleMagic,
-    addGoronsBracelet, removeGoronsBracelet, addSilverGauntlets, removeSilverGauntlets, addGoldenGauntlets, removeGoldenGauntlets, 
-    addGerudoCard, removeGerudoCard, addPocketEgg, removePocketEgg, addPocketCucco, removePocketCucco, addCojiro, removeCojiro, 
+    addGoronsBracelet, removeGoronsBracelet, addSilverGauntlets, removeSilverGauntlets, addGoldenGauntlets, removeGoldenGauntlets,
+    addGerudoCard, removeGerudoCard, addPocketEgg, removePocketEgg, addPocketCucco, removePocketCucco, addCojiro, removeCojiro,
     addOddMushroom, removeOddMushroom, addOddPotion, removeOddPotion, addPoachersSaw, removePoachersSaw,
-    addBrokenGoronsSword, removeBrokenGoronsSword, addPrescription, removePrescription, addEyeballFrog, removeEyeballFrog, 
+    addBrokenGoronsSword, removeBrokenGoronsSword, addPrescription, removePrescription, addEyeballFrog, removeEyeballFrog,
     addEyeDrops, removeEyeDrops, addClaimCheck, removeClaimCheck,
     //Sixth Row Actions
     addStoneOfAgony, removeStoneOfAgony, addPieceOfHeart, removePieceOfHeart, addHeartContainer, removeHeartContainer,
     addDoubleDefense, removeDoubleDefense,
     //Dungeon Items
     addKokiriEmerald, removeKokiriEmerald, addGoronRuby, removeGoronRuby, addZoraSapphire, removeZoraSapphire,
+    addLightMedallion, removeLightMedallion, addForestMedallion, removeForestMedallion, addFireMedallion, removeFireMedallion,
+    addWaterMedallion, removeWaterMedallion, addShadowMedallion, removeShadowMedallion, addSpiritMedallion, removeSpiritMedallion,
 }))(Home);

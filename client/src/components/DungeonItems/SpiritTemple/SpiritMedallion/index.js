@@ -4,16 +4,16 @@ import SpiritMedallionIcon from "../../../../assets/images/dungeon-items/Spirit-
 
 const SpiritMedallion = (props) => {
     
-    const { hasSpiritMedallion, addSpiritMedallion, removeSpiritMedallion} = props;
+    const { spiritMedallion, addSpiritMedallion, removeSpiritMedallion} = props.spiritMedallionLogic;
     
     return (
         <Grid.Column width={2}>
             <Image
                 onClick={addSpiritMedallion}
                 onContextMenu={removeSpiritMedallion}
-                style={(hasSpiritMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}} 
-                size="mini" 
-                src={SpiritMedallionIcon} 
+                style={spiritMedallion === false ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}}
+                size="mini"
+                src={SpiritMedallionIcon}
             />
         </Grid.Column>
     );

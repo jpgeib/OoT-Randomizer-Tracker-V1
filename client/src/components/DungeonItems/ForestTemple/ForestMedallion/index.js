@@ -4,15 +4,14 @@ import ForestMedallionIcon from "../../../../assets/images/dungeon-items/Forest-
 
 const ForestMedallion = (props) => {
 
-    const { hasForestMedallion } = props;
-    const { addForestMedallion, removeForestMedallion } = props.medallions;
+    const { forestMedallion, addForestMedallion, removeForestMedallion } = props.forestMedallionLogic;
 
     return (
         <Grid.Column width={2}>
             <Image
             onClick={addForestMedallion}
             onContextMenu={removeForestMedallion} 
-            style={(hasForestMedallion === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
+            style={(forestMedallion === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
             size="mini" 
             src={ForestMedallionIcon} 
             />

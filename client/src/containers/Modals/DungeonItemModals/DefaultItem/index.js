@@ -15,6 +15,7 @@ class DefaultItem extends Component {
     render() {
 
         const { open } = this.state;
+        const { lightMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -26,7 +27,7 @@ class DefaultItem extends Component {
                 <Modal.Content>
                     <Grid>
                         <Grid.Row>
-                            <LightMedallion />
+                            <LightMedallion lightMedallionLogic={lightMedallionLogic} />
                         </Grid.Row>
                     </Grid>
                 </Modal.Content>

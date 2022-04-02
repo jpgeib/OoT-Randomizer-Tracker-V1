@@ -46,7 +46,7 @@ class DodongosCavernItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { goronRuby, addGoronRuby, removeGoronRuby } = this.props.gemsLogic;
+        const { goronRuby, addGoronRuby, removeGoronRuby } = this.props.goronRubyLogic;
 
         return (
             <Modal

@@ -48,7 +48,7 @@ class WaterTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, bossKeys, medallions } = this.props;
+        const { state, smallKeys, bossKeys, waterMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -81,9 +81,7 @@ class WaterTempleItems extends Component {
                                 removeCompass={this.removeCompass}
                             />
                             <WaterMedallion 
-                                hasWaterMedallion={state.hasWaterMedallion}
-                                addWaterMedallion={medallions.addWaterMedallion}
-                                removeWaterMedallion={medallions.removeWaterMedallion}
+                                waterMedallionLogic={waterMedallionLogic}
                             />
                         </Grid.Row>
                     </Grid>

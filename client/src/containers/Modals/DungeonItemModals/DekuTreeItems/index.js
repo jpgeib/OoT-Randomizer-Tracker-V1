@@ -46,7 +46,7 @@ class DekuTreeItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { kokiriEmerald, addKokiriEmerald, removeKokiriEmerald } = this.props.gemsLogic;
+        const { kokiriEmerald, addKokiriEmerald, removeKokiriEmerald } = this.props.kokiriEmeraldLogic;
 
         return (
             <Modal
