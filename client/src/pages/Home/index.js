@@ -60,7 +60,11 @@ import {
     addSpiritMedallion, removeSpiritMedallion, addForestBossKey, removeForestBossKey,
     addFireBossKey, removeFireBossKey, addWaterBossKey, removeWaterBossKey,
     addShadowBossKey, removeShadowBossKey, addSpiritBossKey, removeSpiritBossKey,
-    addGanonBossKey, removeGanonBossKey,
+    addGanonBossKey, removeGanonBossKey, addForestKey, removeForestKey,
+    addFireKey, removeFireKey, addWaterKey, removeWaterKey,
+    addShadowKey, removeShadowKey, addSpiritKey, removeSpiritKey,
+    addWellKey, removeWellKey, addFortressKey, removeFortressKey,
+    addTrainingKey, removeTrainingKey, addGanonKey, removeGanonKey
 } from "../../actions/dungeonItems";
 
 class Home extends Component {
@@ -105,107 +109,107 @@ class Home extends Component {
 
     //Dungeon Item Logic
 
-    smallKeyLogic = {
-        addForestKey: (e) => {
-            this.setState(prevState => ({
-                forestKeys: Math.min(5, prevState.forestKeys + 1)
-            }));
-        },
-        removeForestKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                forestKeys: Math.max(0, prevState.forestKeys - 1)
-            }));
-        },
-        addFireKey: (e) => {
-            this.setState(prevState => ({
-                fireKeys: Math.min(8, prevState.fireKeys + 1)
-            }));
-        },
-        removeFireKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                fireKeys: Math.max(0, prevState.fireKeys - 1)
-            }));
-        },
-        addWaterKey: (e) => {
-            this.setState(prevState => ({
-                waterKeys: Math.min(6, prevState.waterKeys + 1)
-            }));
-        },
-        removeWaterKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                waterKeys: Math.max(0, prevState.waterKeys - 1)
-            }));
-        },
-        addShadowKey: (e) => {
-            this.setState(prevState => ({
-                shadowKeys: Math.min(5, prevState.shadowKeys + 1)
-            }));
-        },
-        removeShadowKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                shadowKeys: Math.max(0, prevState.shadowKeys - 1)
-            }));
-        },
-        addSpiritKey: (e) => {
-            this.setState(prevState => ({
-                spiritKeys: Math.min(5, prevState.spiritKeys + 1)
-            }));
-        },
-        removeSpiritKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                spiritKeys: Math.max(0, prevState.spiritKeys - 1)
-            }));
-        },
-        addWellKey: (e) => {
-            this.setState(prevState => ({
-                wellKeys: Math.min(3, prevState.wellKeys + 1)
-            }));
-        },
-        removeWellKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                wellKeys: Math.max(0, prevState.wellKeys - 1)
-            }));
-        },
-        addFortressKey: (e) => {
-            this.setState(prevState => ({
-                fortressKeys: Math.min(4, prevState.fortressKeys + 1)
-            }));
-        },
-        removeFortressKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                fortressKeys: Math.max(0, prevState.fortressKeys - 1)
-            }));
-        },
-        addTrainingKey: (e) => {
-            this.setState(prevState => ({
-                trainingKeys: Math.min(9, prevState.trainingKeys + 1)
-            }));
-        },
-        removeTrainingKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                trainingKeys: Math.max(0, prevState.trainingKeys - 1)
-            }));
-        },
-        addGanonKey: (e) => {
-            this.setState(prevState => ({
-                ganonKeys: Math.min(2, prevState.ganonKeys + 1)
-            }));
-        },
-        removeGanonKey: (e) => {
-            e.preventDefault();
-            this.setState(prevState => ({
-                ganonKeys: Math.max(0, prevState.ganonKeys - 1)
-            }));
-        }
-    }
+    // smallKeyLogic = {
+    //     addForestKey: (e) => {
+    //         this.setState(prevState => ({
+    //             forestKeys: Math.min(5, prevState.forestKeys + 1)
+    //         }));
+    //     },
+    //     removeForestKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             forestKeys: Math.max(0, prevState.forestKeys - 1)
+    //         }));
+    //     },
+    //     addFireKey: (e) => {
+    //         this.setState(prevState => ({
+    //             fireKeys: Math.min(8, prevState.fireKeys + 1)
+    //         }));
+    //     },
+    //     removeFireKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             fireKeys: Math.max(0, prevState.fireKeys - 1)
+    //         }));
+    //     },
+    //     addWaterKey: (e) => {
+    //         this.setState(prevState => ({
+    //             waterKeys: Math.min(6, prevState.waterKeys + 1)
+    //         }));
+    //     },
+    //     removeWaterKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             waterKeys: Math.max(0, prevState.waterKeys - 1)
+    //         }));
+    //     },
+    //     addShadowKey: (e) => {
+    //         this.setState(prevState => ({
+    //             shadowKeys: Math.min(5, prevState.shadowKeys + 1)
+    //         }));
+    //     },
+    //     removeShadowKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             shadowKeys: Math.max(0, prevState.shadowKeys - 1)
+    //         }));
+    //     },
+    //     addSpiritKey: (e) => {
+    //         this.setState(prevState => ({
+    //             spiritKeys: Math.min(5, prevState.spiritKeys + 1)
+    //         }));
+    //     },
+    //     removeSpiritKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             spiritKeys: Math.max(0, prevState.spiritKeys - 1)
+    //         }));
+    //     },
+    //     addWellKey: (e) => {
+    //         this.setState(prevState => ({
+    //             wellKeys: Math.min(3, prevState.wellKeys + 1)
+    //         }));
+    //     },
+    //     removeWellKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             wellKeys: Math.max(0, prevState.wellKeys - 1)
+    //         }));
+    //     },
+    //     addFortressKey: (e) => {
+    //         this.setState(prevState => ({
+    //             fortressKeys: Math.min(4, prevState.fortressKeys + 1)
+    //         }));
+    //     },
+    //     removeFortressKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             fortressKeys: Math.max(0, prevState.fortressKeys - 1)
+    //         }));
+    //     },
+    //     addTrainingKey: (e) => {
+    //         this.setState(prevState => ({
+    //             trainingKeys: Math.min(9, prevState.trainingKeys + 1)
+    //         }));
+    //     },
+    //     removeTrainingKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             trainingKeys: Math.max(0, prevState.trainingKeys - 1)
+    //         }));
+    //     },
+    //     addGanonKey: (e) => {
+    //         this.setState(prevState => ({
+    //             ganonKeys: Math.min(2, prevState.ganonKeys + 1)
+    //         }));
+    //     },
+    //     removeGanonKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState(prevState => ({
+    //             ganonKeys: Math.max(0, prevState.ganonKeys - 1)
+    //         }));
+    //     }
+    // }
 
     render() {
 
@@ -617,6 +621,51 @@ class Home extends Component {
                 addGanonBossKey: this.props.addGanonBossKey,
                 removeGanonBossKey: this.props.removeGanonBossKey
             },
+            forestKeysLogic: {
+                forestKeys: this.props.forestKeys,
+                addForestKey: this.props.addForestKey,
+                removeForestKey: this.props.removeForestKey
+            },
+            fireKeysLogic: {
+                fireKeys: this.props.fireKeys,
+                addFireKey: this.props.addFireKey,
+                removeFireKey: this.props.removeFireKey
+            },
+            waterKeysLogic: {
+                waterKeys: this.props.waterKeys,
+                addWaterKey: this.props.addWaterKey,
+                removeWaterKey: this.props.removeWaterKey
+            },
+            shadowKeysLogic: {
+                shadowKeys: this.props.shadowKeys,
+                addShadowKey: this.props.addShadowKey,
+                removeShadowKey: this.props.removeShadowKey
+            },
+            spiritKeysLogic: {
+                spiritKeys: this.props.spiritKeys,
+                addSpiritKey: this.props.addSpiritKey,
+                removeSpiritKey: this.props.removeSpiritKey
+            },
+            wellKeysLogic: {
+                wellKeys: this.props.wellKeys,
+                addWellKey: this.props.addWellKey,
+                removeWellKey: this.props.removeWellKey
+            },
+            fortressKeysLogic: {
+                fortressKeys: this.props.fortressKeys,
+                addFortressKey: this.props.addFortressKey,
+                removeFortressKey: this.props.removeFortressKey
+            },
+            trainingKeysLogic: {
+                trainingKeys: this.props.trainingKeys,
+                addTrainingKey: this.props.addTrainingKey,
+                removeTrainingKey: this.props.removeTrainingKey
+            },
+            ganonKeysLogic: {
+                ganonKeys: this.props.ganonKeys,
+                addGanonKey: this.props.addGanonKey,
+                removeGanonKey: this.props.removeGanonKey
+            }
         };
 
         return (
@@ -704,6 +753,9 @@ function mapStateToProps(state) {
         waterMedallion: state.medallions.waterMedallion, shadowMedallion: state.medallions.shadowMedallion, spiritMedallion: state.medallions.spiritMedallion,
         forestBossKey: state.bossKeys.forestBossKey, fireBossKey: state.bossKeys.fireBossKey, waterBossKey: state.bossKeys.waterBossKey,
         shadowBossKey: state.bossKeys.shadowBossKey, spiritBossKey: state.bossKeys.spiritBossKey, ganonBossKey: state.bossKeys.ganonBossKey,
+        forestKeys: state.smallKeys.forestKeys, fireKeys: state.smallKeys.fireKeys, waterKeys: state.smallKeys.waterKeys,
+        shadowKeys: state.smallKeys.shadowKeys, spiritKeys: state.smallKeys.spiritKeys, wellKeys: state.smallKeys.wellKeys,
+        fortressKeys: state.smallKeys.fortressKeys, trainingKeys: state.smallKeys.trainingKeys, ganonKeys: state.smallKeys.ganonKeys
     }
 };
 
@@ -740,5 +792,8 @@ export default compose(connect(mapStateToProps, {
     addLightMedallion, removeLightMedallion, addForestMedallion, removeForestMedallion, addFireMedallion, removeFireMedallion,
     addWaterMedallion, removeWaterMedallion, addShadowMedallion, removeShadowMedallion, addSpiritMedallion, removeSpiritMedallion,
     addForestBossKey, removeForestBossKey, addFireBossKey, removeFireBossKey, addWaterBossKey, removeWaterBossKey,
-    addShadowBossKey, removeShadowBossKey, addSpiritBossKey, removeSpiritBossKey, addGanonBossKey, removeGanonBossKey
+    addShadowBossKey, removeShadowBossKey, addSpiritBossKey, removeSpiritBossKey, addGanonBossKey, removeGanonBossKey,
+    addForestKey, removeForestKey, addFireKey, removeFireKey, addWaterKey, removeWaterKey,
+    addShadowKey, removeShadowKey, addSpiritKey, removeSpiritKey, addWellKey, removeWellKey, 
+    addFortressKey, removeFortressKey, addTrainingKey, removeTrainingKey, addGanonKey, removeGanonKey
 }))(Home);
