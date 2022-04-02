@@ -88,12 +88,6 @@ class Home extends Component {
         hasSerenade: false,
         hasNocturne: false,
         hasRequiem: false,
-        // hasLightMedallion: false,
-        // hasForestMedallion: false,
-        // hasFireMedallion: false,
-        // hasWaterMedallion: false,
-        // hasShadowMedallion: false,
-        // hasSpiritMedallion: false,
         hasForestBossKey: false,
         hasFireBossKey: false,
         hasWaterBossKey: false,
@@ -260,51 +254,6 @@ class Home extends Component {
             this.setState({ hasGanonBossKey: false });
         }
     }
-
-    // medallionLogic = {
-    //     addLightMedallion: (e) => {
-    //         this.setState({ hasLightMedallion: true });
-    //     },
-    //     removeLightMedallion: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasLightMedallion: false });
-    //     },
-    //     addForestMedallion: (e) => {
-    //         this.setState({ hasForestMedallion: true });
-    //     },
-    //     removeForestMedallion: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasForestMedallion: false });
-    //     },
-    //     addFireMedallion: (e) => {
-    //         this.setState({ hasFireMedallion: true });
-    //     },
-    //     removeFireMedallion: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasFireMedallion: false });
-    //     },
-    //     addWaterMedallion: (e) => {
-    //         this.setState({ hasWaterMedallion: true });
-    //     },
-    //     removeWaterMedallion: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasWaterMedallion: false });
-    //     },
-    //     addShadowMedallion: (e) => {
-    //         this.setState({ hasShadowMedallion: true });
-    //     },
-    //     removeShadowMedallion: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasShadowMedallion: false });
-    //     },
-    //     addSpiritMedallion: (e) => {
-    //         this.setState({ hasSpiritMedallion: true });
-    //     },
-    //     removeSpiritMedallion: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasSpiritMedallion: false });
-    //     }
-    // }
 
     render() {
 
