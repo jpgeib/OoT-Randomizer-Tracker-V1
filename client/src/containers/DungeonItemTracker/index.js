@@ -20,13 +20,16 @@ import GanonsCastleItems from "../Modals/DungeonItemModals/GanonsCastleItems";
 class DungeonItemTracker extends Component {
     render() {
 
-        const { dungeons, smallKeys, state } = this.props;
+        const { dungeons } = this.props;
         const { 
             kokiriEmeraldLogic, goronRubyLogic, zoraSapphireLogic,
             lightMedallionLogic, forestMedallionLogic, fireMedallionLogic,
             waterMedallionLogic, shadowMedallionLogic, spiritMedallionLogic,
             forestBossKeyLogic, fireBossKeyLogic, waterBossKeyLogic,
-            shadowBossKeyLogic, spiritBossKeyLogic, ganonBossKeyLogic
+            shadowBossKeyLogic, spiritBossKeyLogic, ganonBossKeyLogic,
+            forestKeysLogic, fireKeysLogic, waterKeysLogic,
+            shadowKeysLogic, spiritKeysLogic, wellKeysLogic,
+            fortressKeysLogic, trainingKeysLogic, ganonKeysLogic
         } = this.props.dungeonItemLogic;
 
         return (
@@ -37,8 +40,7 @@ class DungeonItemTracker extends Component {
                     </Grid.Column>
                     <Grid.Column width={8}>
                         <GanonsCastleItems 
-                            state={state} 
-                            smallKeys={smallKeys} 
+                            ganonKeysLogic={ganonKeysLogic} 
                             ganonBossKeyLogic={ganonBossKeyLogic} 
                         />
                     </Grid.Column>
@@ -55,8 +57,7 @@ class DungeonItemTracker extends Component {
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <ForestTempleItems 
-                            state={state} 
-                            smallKeys={smallKeys} 
+                            forestKeysLogic={forestKeysLogic} 
                             forestBossKeyLogic={forestBossKeyLogic} 
                             forestMedallionLogic={forestMedallionLogic} 
                         />
@@ -65,32 +66,28 @@ class DungeonItemTracker extends Component {
                 <Grid.Row centered>
                     <Grid.Column width={4}>
                         <FireTempleItems 
-                            state={state} 
-                            smallKeys={smallKeys} 
+                            fireKeysLogic={fireKeysLogic} 
                             fireBossKeyLogic={fireBossKeyLogic} 
                             fireMedallionLogic={fireMedallionLogic} 
                         />
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <WaterTempleItems 
-                            state={state} 
-                            smallKeys={smallKeys} 
+                            waterKeysLogic={waterKeysLogic} 
                             waterBossKeyLogic={waterBossKeyLogic} 
                             waterMedallionLogic={waterMedallionLogic} 
                         />
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <ShadowTempleItems 
-                            state={state} 
-                            smallKeys={smallKeys} 
+                            shadowKeysLogic={shadowKeysLogic} 
                             shadowBossKeyLogic={shadowBossKeyLogic} 
                             shadowMedallionLogic={shadowMedallionLogic} 
                         />
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <SpiritTempleItems 
-                            state={state} 
-                            smallKeys={smallKeys} 
+                            spiritKeysLogic={spiritKeysLogic} 
                             spiritBossKeyLogic={spiritBossKeyLogic} 
                             spiritMedallionLogic={spiritMedallionLogic} 
                         />
@@ -98,16 +95,16 @@ class DungeonItemTracker extends Component {
                 </Grid.Row>
                 <Grid.Row centered>
                     <Grid.Column width={4}>
-                        <BottomOfTheWellItems state={state} smallKeys={smallKeys} />
+                        <BottomOfTheWellItems wellKeysLogic={wellKeysLogic} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <IceCavernItems state={state} />
+                        <IceCavernItems />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <GerudoFortressItems state={state} smallKeys={smallKeys} />
+                        <GerudoFortressItems fortressKeysLogic={fortressKeysLogic} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <GerudoTrainingItems state={state} smallKeys={smallKeys} />
+                        <GerudoTrainingItems trainingKeysLogic={trainingKeysLogic} />
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
