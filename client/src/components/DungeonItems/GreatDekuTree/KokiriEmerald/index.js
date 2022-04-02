@@ -4,14 +4,14 @@ import KokiriEmeraldIcon from "../../../../assets/images/dungeon-items/Kokiris-E
 
 const KokiriEmerald = (props) => {
 
-    const { hasKokiriEmerald, addKokiriEmerald, removeKokiriEmerald } = props;
+    const { kokiriEmerald, addKokiriEmerald, removeKokiriEmerald } = props;
 
     return (
         <Grid.Column width={2}>
             <Image
                 onClick={addKokiriEmerald}
                 onContextMenu={removeKokiriEmerald}
-                style={(hasKokiriEmerald === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}  
+                style={(kokiriEmerald === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}  
                 size="mini" 
                 src={KokiriEmeraldIcon} 
             />

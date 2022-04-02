@@ -52,6 +52,10 @@ import {
     addStoneOfAgony, removeStoneOfAgony, addPieceOfHeart, removePieceOfHeart,
     addHeartContainer, removeHeartContainer, addDoubleDefense, removeDoubleDefense
 } from "../../actions/sixthRow";
+import {
+    addKokiriEmerald, removeKokiriEmerald, addGoronRuby, removeGoronRuby,
+    addZoraSapphire, removeZoraSapphire
+} from "../../actions/dungeonItems";
 
 class Home extends Component {
 
@@ -81,9 +85,9 @@ class Home extends Component {
         hasSerenade: false,
         hasNocturne: false,
         hasRequiem: false,
-        hasKokiriEmerald: false,
-        hasGoronRuby: false,
-        hasZoraSapphire: false,
+        // hasKokiriEmerald: false,
+        // hasGoronRuby: false,
+        // hasZoraSapphire: false,
         hasLightMedallion: false,
         hasForestMedallion: false,
         hasFireMedallion: false,
@@ -257,29 +261,29 @@ class Home extends Component {
         }
     }
 
-    jewelLogic = {
-        addKokiriEmerald: (e) => {
-            this.setState({ hasKokiriEmerald: true });
-        },
-        removeKokiriEmerald: (e) => {
-            e.preventDefault();
-            this.setState({ hasKokiriEmerald: false });
-        },
-        addGoronRuby: (e) => {
-            this.setState({ hasGoronRuby: true });
-        },
-        removeGoronRuby: (e) => {
-            e.preventDefault();
-            this.setState({ hasGoronRuby: false });
-        },
-        addZoraSapphire: (e) => {
-            this.setState({ hasZoraSapphire: true });
-        },
-        removeZoraSapphire: (e) => {
-            e.preventDefault();
-            this.setState({ hasZoraSapphire: false });
-        }
-    }
+    // jewelLogic = {
+    //     addKokiriEmerald: (e) => {
+    //         this.setState({ hasKokiriEmerald: true });
+    //     },
+    //     removeKokiriEmerald: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasKokiriEmerald: false });
+    //     },
+    //     addGoronRuby: (e) => {
+    //         this.setState({ hasGoronRuby: true });
+    //     },
+    //     removeGoronRuby: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasGoronRuby: false });
+    //     },
+    //     addZoraSapphire: (e) => {
+    //         this.setState({ hasZoraSapphire: true });
+    //     },
+    //     removeZoraSapphire: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasZoraSapphire: false });
+    //     }
+    // }
 
     medallionLogic = {
         addLightMedallion: (e) => {
@@ -660,6 +664,20 @@ class Home extends Component {
             }
         };
 
+        const dungeonItemLogic = {
+            gemsLogic: {
+                kokiriEmerald: this.props.kokiriEmerald,
+                addKokiriEmerald: this.props.addKokiriEmerald,
+                removeKokiriEmerald: this.props.removeKokiriEmerald,
+                goronRuby: this.props.goronRuby,
+                addGoronRuby: this.props.addGoronRuby,
+                removeGoronRuby: this.props.removeGoronRuby,
+                zoraSapphire: this.props.zoraSapphire,
+                addZoraSapphire: this.props.addZoraSapphire,
+                removeZoraSapphire: this.props.removeZoraSapphire
+            }
+        };
+
         return (
             <Grid>
                 <Grid.Row>
@@ -682,10 +700,11 @@ class Home extends Component {
                                 <Grid.Column width={16}>
                                     <DungeonItemTracker
                                         dungeons={dungeonStyle}
+                                        dungeonItemLogic={dungeonItemLogic}
                                         state={this.state}
                                         smallKeys={this.smallKeyLogic}
                                         bossKeys={this.bossKeyLogic}
-                                        jewels={this.jewelLogic}
+                                        // jewels={this.jewelLogic}
                                         medallions={this.medallionLogic}
                                     />
                                 </Grid.Column>
@@ -742,6 +761,7 @@ function mapStateToProps(state) {
         stoneOfAgony: state.sixthRow.stoneOfAgony, piecesOfHeart: state.sixthRow.piecesOfHeart, heartContainers: state.sixthRow.heartContainers,
         doubleDefense: state.sixthRow.doubleDefense,
         //Dungeon Items
+        kokiriEmerald: state.gems.kokiriEmerald, goronRuby: state.gems.goronRuby, zoraSapphire: state.gems.zoraSapphire,
     }
 };
 
@@ -774,4 +794,5 @@ export default compose(connect(mapStateToProps, {
     addStoneOfAgony, removeStoneOfAgony, addPieceOfHeart, removePieceOfHeart, addHeartContainer, removeHeartContainer,
     addDoubleDefense, removeDoubleDefense,
     //Dungeon Items
+    addKokiriEmerald, removeKokiriEmerald, addGoronRuby, removeGoronRuby, addZoraSapphire, removeZoraSapphire,
 }))(Home);

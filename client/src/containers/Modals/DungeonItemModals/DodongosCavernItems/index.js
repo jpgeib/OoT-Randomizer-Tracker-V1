@@ -46,8 +46,7 @@ class DodongosCavernItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { hasGoronRuby } = this.props.state;
-        const { addGoronRuby, removeGoronRuby } = this.props.jewels;
+        const { goronRuby, addGoronRuby, removeGoronRuby } = this.props.gemsLogic;
 
         return (
             <Modal
@@ -70,7 +69,7 @@ class DodongosCavernItems extends Component {
                                 removeCompass={this.removeCompass}
                             />
                             <GoronRuby 
-                                hasGoronRuby={hasGoronRuby}
+                                goronRuby={goronRuby}
                                 addGoronRuby={addGoronRuby}
                                 removeGoronRuby={removeGoronRuby}
                             />

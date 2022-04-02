@@ -46,8 +46,7 @@ class JabuJabuItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { hasZoraSapphire } = this.props.state;
-        const { addZoraSapphire, removeZoraSapphire } = this.props.jewels;
+        const { zoraSapphire, addZoraSapphire, removeZoraSapphire } = this.props.gemsLogic;
 
         return (
             <Modal
@@ -70,7 +69,7 @@ class JabuJabuItems extends Component {
                                 removeCompass={this.removeCompass}
                             />
                             <ZoraSapphire
-                                hasZoraSapphire={hasZoraSapphire}
+                                zoraSapphire={zoraSapphire}
                                 addZoraSapphire={addZoraSapphire}
                                 removeZoraSapphire={removeZoraSapphire}
                             />

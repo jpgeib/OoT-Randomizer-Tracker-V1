@@ -46,8 +46,7 @@ class DekuTreeItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { hasKokiriEmerald } = this.props.state;
-        const { addKokiriEmerald, removeKokiriEmerald } = this.props.jewels;
+        const { kokiriEmerald, addKokiriEmerald, removeKokiriEmerald } = this.props.gemsLogic;
 
         return (
             <Modal
@@ -70,7 +69,7 @@ class DekuTreeItems extends Component {
                                 removeCompass={this.removeCompass}
                             />
                             <KokiriEmerald 
-                                hasKokiriEmerald={hasKokiriEmerald}
+                                kokiriEmerald={kokiriEmerald}
                                 addKokiriEmerald={addKokiriEmerald}
                                 removeKokiriEmerald={removeKokiriEmerald} 
                             />

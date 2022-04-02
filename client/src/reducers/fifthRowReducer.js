@@ -46,8 +46,6 @@ let INITIAL_STATE = {
     claimCheck: null
 };
 
-console.log(INITIAL_STATE);
-
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
         case ADD_IRON_BOOTS:

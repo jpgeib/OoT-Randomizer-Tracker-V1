@@ -29,7 +29,7 @@ let INITIAL_STATE = {
     bunnyHood: null,
     maskOfTruth: null
 };
-console.log(INITIAL_STATE);
+
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
         case ADD_GORON_TUNIC:

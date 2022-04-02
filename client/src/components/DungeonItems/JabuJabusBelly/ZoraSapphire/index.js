@@ -4,14 +4,14 @@ import ZoraSapphireIcon from "../../../../assets/images/dungeon-items/Zoras-Sapp
 
 const ZoraSapphire = (props) => {
 
-    const { hasZoraSapphire, addZoraSapphire, removeZoraSapphire } = props;
+    const { zoraSapphire, addZoraSapphire, removeZoraSapphire } = props;
 
     return (
         <Grid.Column width={2}>
             <Image
                 onClick={addZoraSapphire}
                 onContextMenu={removeZoraSapphire}
-                style={(hasZoraSapphire === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
+                style={(zoraSapphire === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={ZoraSapphireIcon} 
             />
