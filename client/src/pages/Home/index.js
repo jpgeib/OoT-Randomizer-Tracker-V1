@@ -54,7 +54,10 @@ import {
 } from "../../actions/sixthRow";
 import {
     addKokiriEmerald, removeKokiriEmerald, addGoronRuby, removeGoronRuby,
-    addZoraSapphire, removeZoraSapphire
+    addZoraSapphire, removeZoraSapphire, addLightMedallion, removeLightMedallion,
+    addForestMedallion, removeForestMedallion, addFireMedallion, removeFireMedallion,
+    addWaterMedallion, removeWaterMedallion, addShadowMedallion, removeShadowMedallion,
+    addSpiritMedallion, removeSpiritMedallion
 } from "../../actions/dungeonItems";
 
 class Home extends Component {
@@ -85,9 +88,6 @@ class Home extends Component {
         hasSerenade: false,
         hasNocturne: false,
         hasRequiem: false,
-        // hasKokiriEmerald: false,
-        // hasGoronRuby: false,
-        // hasZoraSapphire: false,
         hasLightMedallion: false,
         hasForestMedallion: false,
         hasFireMedallion: false,
@@ -260,30 +260,6 @@ class Home extends Component {
             this.setState({ hasGanonBossKey: false });
         }
     }
-
-    // jewelLogic = {
-    //     addKokiriEmerald: (e) => {
-    //         this.setState({ hasKokiriEmerald: true });
-    //     },
-    //     removeKokiriEmerald: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasKokiriEmerald: false });
-    //     },
-    //     addGoronRuby: (e) => {
-    //         this.setState({ hasGoronRuby: true });
-    //     },
-    //     removeGoronRuby: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasGoronRuby: false });
-    //     },
-    //     addZoraSapphire: (e) => {
-    //         this.setState({ hasZoraSapphire: true });
-    //     },
-    //     removeZoraSapphire: (e) => {
-    //         e.preventDefault();
-    //         this.setState({ hasZoraSapphire: false });
-    //     }
-    // }
 
     medallionLogic = {
         addLightMedallion: (e) => {
@@ -704,7 +680,6 @@ class Home extends Component {
                                         state={this.state}
                                         smallKeys={this.smallKeyLogic}
                                         bossKeys={this.bossKeyLogic}
-                                        // jewels={this.jewelLogic}
                                         medallions={this.medallionLogic}
                                     />
                                 </Grid.Column>

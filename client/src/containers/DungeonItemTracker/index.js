@@ -35,13 +35,13 @@ class DungeonItemTracker extends Component {
                 </Grid.Row>
                 <Grid.Row centered>
                     <Grid.Column width={4}>
-                        <DekuTreeItems state={state} gemsLogic={gemsLogic} />
+                        <DekuTreeItems gemsLogic={gemsLogic} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <DodongosCavernItems state={state} gemsLogic={gemsLogic} />
+                        <DodongosCavernItems gemsLogic={gemsLogic} />
                     </Grid.Column>
                     <Grid.Column width={4}>
-                        <JabuJabuItems state={state} gemsLogic={gemsLogic} />
+                        <JabuJabuItems gemsLogic={gemsLogic} />
                     </Grid.Column>
                     <Grid.Column width={4}>
                         <ForestTempleItems state={state} smallKeys={smallKeys} bossKeys={bossKeys} medallions={medallions} />
