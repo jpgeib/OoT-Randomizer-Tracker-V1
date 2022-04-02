@@ -4,18 +4,18 @@ import SmallKeyIcon from "../../../../assets/images/dungeon-items/Small_Key_3D.p
 
 const SmallKey = (props) => {
 
-    const { addForestKey, removeForestKey, counter } = props;
+    const { addForestKey, removeForestKey, forestKeys } = props.forestKeysLogic;
 
     return (
         <Grid.Column width={2}>
             <Image 
                 onClick={addForestKey}
                 onContextMenu={removeForestKey}
-                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
+                style={(forestKeys > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
                 size="mini" 
                 src={SmallKeyIcon} 
             />
-            <Header style={(counter === 5) ? { color: "red" } : { color: "black" } } as="h1"><span>{counter}</span></Header>
+            <Header style={(forestKeys === 5) ? { color: "red" } : { color: "black" } } as="h1"><span>{forestKeys}</span></Header>
         </Grid.Column>
     );
 }

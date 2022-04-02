@@ -46,7 +46,7 @@ class BottomOfTheWellItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys } = this.props;
+        const { wellKeysLogic } = this.props;
 
         return (
             <Modal
@@ -59,9 +59,7 @@ class BottomOfTheWellItems extends Component {
                     <Grid>
                         <Grid.Row>
                             <SmallKey 
-                                counter={state.wellKeys}
-                                addWellKey={smallKeys.addWellKey}
-                                removeWellKey={smallKeys.removeWellKey}
+                                wellKeysLogic={wellKeysLogic}
                             />
                             <DungeonMap 
                                 hasDungeonMap={this.state.hasDungeonMap}

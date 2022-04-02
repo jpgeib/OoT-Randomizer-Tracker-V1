@@ -4,18 +4,18 @@ import SmallKeyIcon from "../../../../assets/images/dungeon-items/Small_Key_3D.p
 
 const SmallKey = (props) => {
 
-    const { addFortressKey, removeFortressKey, counter } = props;
+    const { addFortressKey, removeFortressKey, fortressKeys } = props.fortressKeysLogic;
 
     return (
         <Grid.Column width={2}>
             <Image 
                 onClick={addFortressKey}
                 onContextMenu={removeFortressKey}
-                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"}}
+                style={(fortressKeys > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"}}
                 size="mini" 
                 src={SmallKeyIcon} 
             />
-            <Header style={(counter === 4) ? { color: "red" } : { color: "black" } } as="h1"><span>{counter}</span></Header>
+            <Header style={(fortressKeys === 4) ? { color: "red" } : { color: "black" } } as="h1"><span>{fortressKeys}</span></Header>
         </Grid.Column>
     );
 }

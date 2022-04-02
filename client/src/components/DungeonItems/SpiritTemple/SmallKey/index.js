@@ -4,18 +4,18 @@ import SmallKeyIcon from "../../../../assets/images/dungeon-items/Small_Key_3D.p
 
 const SmallKey = (props) => {
 
-    const { addSpiritKey, removeSpiritKey, counter } = props;
+    const { addSpiritKey, removeSpiritKey, spiritKeys } = props.spiritKeysLogic;
 
     return (
         <Grid.Column width={2}>
             <Image 
                 onClick={addSpiritKey}
                 onContextMenu={removeSpiritKey}
-                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
+                style={(spiritKeys > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
                 size="mini" 
                 src={SmallKeyIcon} 
             />
-            <Header style={(counter === 5) ? { color: "red" } : { color: "black" } } as="h1"><span>{counter}</span></Header>
+            <Header style={(spiritKeys === 5) ? { color: "red" } : { color: "black" } } as="h1"><span>{spiritKeys}</span></Header>
         </Grid.Column>
     );
 }

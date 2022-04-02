@@ -4,18 +4,18 @@ import SmallKeyIcon from "../../../../assets/images/dungeon-items/Small_Key_3D.p
 
 const SmallKey = (props) => {
 
-    const { addTrainingKey, removeTrainingKey, counter } = props;
+    const { addTrainingKey, removeTrainingKey, trainingKeys } = props.trainingKeysLogic;
 
     return (
         <Grid.Column width={2}>
             <Image 
                 onClick={addTrainingKey}
                 onContextMenu={removeTrainingKey}
-                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
+                style={(trainingKeys > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
                 size="mini" 
                 src={SmallKeyIcon} 
             />
-            <Header style={(counter === 9) ? { color: "red" } : { color: "black" } } as="h1"><span>{counter}</span></Header>
+            <Header style={(trainingKeys === 9) ? { color: "red" } : { color: "black" } } as="h1"><span>{trainingKeys}</span></Header>
         </Grid.Column>
     );
 }

@@ -48,7 +48,7 @@ class FireTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, fireBossKeyLogic, smallKeys, fireMedallionLogic } = this.props;
+        const { fireBossKeyLogic, fireKeysLogic, fireMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -61,9 +61,7 @@ class FireTempleItems extends Component {
                     <Grid>
                         <Grid.Row>
                             <SmallKey 
-                                counter={state.fireKeys}
-                                addFireKey={smallKeys.addFireKey}
-                                removeFireKey={smallKeys.removeFireKey}
+                                fireKeysLogic={fireKeysLogic}
                             />
                             <BossKey 
                                 fireBossKeyLogic={fireBossKeyLogic} 

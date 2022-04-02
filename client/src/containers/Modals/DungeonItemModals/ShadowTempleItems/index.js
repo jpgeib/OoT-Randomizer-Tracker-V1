@@ -48,7 +48,7 @@ class ShadowTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, shadowBossKeyLogic, shadowMedallionLogic } = this.props;
+        const { shadowKeysLogic, shadowBossKeyLogic, shadowMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -61,9 +61,7 @@ class ShadowTempleItems extends Component {
                     <Grid>
                         <Grid.Row>
                             <SmallKey 
-                                counter={state.shadowKeys}
-                                addShadowKey={smallKeys.addShadowKey}
-                                removeShadowKey={smallKeys.removeShadowKey}
+                                shadowKeysLogic={shadowKeysLogic}
                             />
                             <BossKey 
                                 shadowBossKeyLogic={shadowBossKeyLogic}

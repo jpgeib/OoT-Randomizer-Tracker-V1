@@ -48,7 +48,7 @@ class SpiritTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, spiritBossKeyLogic, spiritMedallionLogic } = this.props;
+        const { spiritKeysLogic, spiritBossKeyLogic, spiritMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -61,9 +61,7 @@ class SpiritTempleItems extends Component {
                     <Grid>
                         <Grid.Row>
                             <SmallKey 
-                                counter={state.spiritKeys}
-                                addSpiritKey={smallKeys.addSpiritKey}
-                                removeSpiritKey={smallKeys.removeSpiritKey}
+                                spiritKeysLogic={spiritKeysLogic}
                             />
                             <BossKey 
                                 spiritBossKeyLogic={spiritBossKeyLogic}

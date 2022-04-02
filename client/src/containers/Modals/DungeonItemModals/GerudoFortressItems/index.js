@@ -24,7 +24,7 @@ class GerudoFortressItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys } = this.props;
+        const { fortressKeysLogic } = this.props;
 
         return (
             <Modal
@@ -37,9 +37,7 @@ class GerudoFortressItems extends Component {
                     <Grid>
                         <Grid.Row>
                             <SmallKey 
-                                counter={state.fortressKeys}
-                                addFortressKey={smallKeys.addFortressKey}
-                                removeFortressKey={smallKeys.removeFortressKey}
+                                fortressKeysLogic={fortressKeysLogic}
                             />
                         </Grid.Row>
                     </Grid>

@@ -4,18 +4,18 @@ import SmallKeyIcon from "../../../../assets/images/dungeon-items/Small_Key_3D.p
 
 const SmallKey = (props) => {
 
-    const { addGanonKey, removeGanonKey, counter } = props;
+    const { addGanonKey, removeGanonKey, ganonKeys } = props.ganonKeysLogic;
 
     return (
         <Grid.Column width={2}>
             <Image 
                 onClick={addGanonKey}
                 onContextMenu={removeGanonKey}
-                style={(counter > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
+                style={(ganonKeys > 0) ? { filter: "grayscale(0%)" } : { filter: "grayscale(100%)"} }
                 size="mini" 
                 src={SmallKeyIcon} 
             />
-            <Header style={(counter === 2) ? { color: "red" } : { color: "black" } } as="h1"><span>{counter}</span></Header>
+            <Header style={(ganonKeys === 2) ? { color: "red" } : { color: "black" } } as="h1"><span>{ganonKeys}</span></Header>
         </Grid.Column>
     );
 }
