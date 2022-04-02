@@ -48,7 +48,7 @@ class ShadowTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, bossKeys, shadowMedallionLogic } = this.props;
+        const { state, smallKeys, shadowBossKeyLogic, shadowMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -66,9 +66,7 @@ class ShadowTempleItems extends Component {
                                 removeShadowKey={smallKeys.removeShadowKey}
                             />
                             <BossKey 
-                                hasShadowBossKey={state.hasShadowBossKey}
-                                addShadowBossKey={bossKeys.addShadowBossKey}
-                                removeShadowBossKey={bossKeys.removeShadowBossKey}
+                                shadowBossKeyLogic={shadowBossKeyLogic}
                             />
                             <DungeonMap 
                                 hasDungeonMap={this.state.hasDungeonMap}

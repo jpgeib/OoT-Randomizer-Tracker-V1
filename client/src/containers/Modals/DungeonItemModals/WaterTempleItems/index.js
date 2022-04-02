@@ -48,7 +48,7 @@ class WaterTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, bossKeys, waterMedallionLogic } = this.props;
+        const { state, smallKeys, waterBossKeyLogic, waterMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -66,9 +66,7 @@ class WaterTempleItems extends Component {
                                 removeWaterKey={smallKeys.removeWaterKey}
                             />
                             <BossKey 
-                                hasWaterBossKey={state.hasWaterBossKey}
-                                addWaterBossKey={bossKeys.addWaterBossKey}
-                                removeWaterBossKey={bossKeys.removeWaterBossKey}
+                                waterBossKeyLogic={waterBossKeyLogic}
                             />
                             <DungeonMap 
                                 hasDungeonMap={this.state.hasDungeonMap}

@@ -48,7 +48,7 @@ class SpiritTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, bossKeys, spiritMedallionLogic } = this.props;
+        const { state, smallKeys, spiritBossKeyLogic, spiritMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -66,9 +66,7 @@ class SpiritTempleItems extends Component {
                                 removeSpiritKey={smallKeys.removeSpiritKey}
                             />
                             <BossKey 
-                                hasSpiritBossKey={state.hasSpiritBossKey}
-                                addSpiritBossKey={bossKeys.addSpiritBossKey}
-                                removeSpiritBossKey={bossKeys.removeSpiritBossKey}
+                                spiritBossKeyLogic={spiritBossKeyLogic}
                             />
                             <DungeonMap 
                                 hasDungeonMap={this.state.hasDungeonMap}

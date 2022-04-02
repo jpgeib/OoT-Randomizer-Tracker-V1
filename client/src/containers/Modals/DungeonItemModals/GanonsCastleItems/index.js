@@ -25,7 +25,7 @@ class GanonsCastleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, smallKeys, bossKeys } = this.props;
+        const { state, smallKeys, ganonBossKeyLogic } = this.props;
 
         return (
             <Modal
@@ -43,9 +43,7 @@ class GanonsCastleItems extends Component {
                                 removeGanonKey={smallKeys.removeGanonKey}
                             />
                             <BossKey 
-                                hasGanonBossKey={state.hasGanonBossKey}
-                                addGanonBossKey={bossKeys.addGanonBossKey}
-                                removeGanonBossKey={bossKeys.removeGanonBossKey}
+                                ganonBossKeyLogic={ganonBossKeyLogic}
                             />
                         </Grid.Row>
                     </Grid>

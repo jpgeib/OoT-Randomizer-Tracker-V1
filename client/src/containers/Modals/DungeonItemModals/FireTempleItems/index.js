@@ -48,7 +48,7 @@ class FireTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { state, bossKeys, smallKeys, fireMedallionLogic } = this.props;
+        const { state, fireBossKeyLogic, smallKeys, fireMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -66,8 +66,7 @@ class FireTempleItems extends Component {
                                 removeFireKey={smallKeys.removeFireKey}
                             />
                             <BossKey 
-                                hasFireBossKey={state.hasFireBossKey} 
-                                bossKeys={bossKeys} 
+                                fireBossKeyLogic={fireBossKeyLogic} 
                             />
                             <DungeonMap 
                                 hasDungeonMap={this.state.hasDungeonMap}

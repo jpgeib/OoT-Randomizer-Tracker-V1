@@ -48,7 +48,7 @@ class ForestTempleItems extends Component {
     render() {
 
         const { open } = this.state;
-        const { smallKeys, state, bossKeys, forestMedallionLogic } = this.props;
+        const { smallKeys, state, forestBossKeyLogic, forestMedallionLogic } = this.props;
 
         return (
             <Modal
@@ -66,8 +66,7 @@ class ForestTempleItems extends Component {
                                 counter={state.forestKeys} 
                             />
                             <BossKey 
-                                hasForestBossKey={state.hasForestBossKey}
-                                bossKeys={bossKeys}
+                                forestBossKeyLogic={forestBossKeyLogic}
                             />
                             <DungeonMap
                                 hasDungeonMap={this.state.hasDungeonMap} 

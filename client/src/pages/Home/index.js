@@ -57,7 +57,10 @@ import {
     addZoraSapphire, removeZoraSapphire, addLightMedallion, removeLightMedallion,
     addForestMedallion, removeForestMedallion, addFireMedallion, removeFireMedallion,
     addWaterMedallion, removeWaterMedallion, addShadowMedallion, removeShadowMedallion,
-    addSpiritMedallion, removeSpiritMedallion
+    addSpiritMedallion, removeSpiritMedallion, addForestBossKey, removeForestBossKey,
+    addFireBossKey, removeFireBossKey, addWaterBossKey, removeWaterBossKey,
+    addShadowBossKey, removeShadowBossKey, addSpiritBossKey, removeSpiritBossKey,
+    addGanonBossKey, removeGanonBossKey,
 } from "../../actions/dungeonItems";
 
 class Home extends Component {
@@ -210,50 +213,50 @@ class Home extends Component {
         }
     }
 
-    bossKeyLogic = {
-        addForestBossKey: (e) => {
-            this.setState({ hasForestBossKey: true });
-        },
-        removeForestBossKey: (e) => {
-            e.preventDefault();
-            this.setState({ hasForestBossKey: false });
-        },
-        addFireBossKey: (e) => {
-            this.setState({ hasFireBossKey: true });
-        },
-        removeFireBossKey: (e) => {
-            e.preventDefault();
-            this.setState({ hasFireBossKey: false });
-        },
-        addWaterBossKey: (e) => {
-            this.setState({ hasWaterBossKey: true });
-        },
-        removeWaterBossKey: (e) => {
-            e.preventDefault();
-            this.setState({ hasWaterBossKey: false });
-        },
-        addShadowBossKey: (e) => {
-            this.setState({ hasShadowBossKey: true });
-        },
-        removeShadowBossKey: (e) => {
-            e.preventDefault();
-            this.setState({ hasShadowBossKey: false });
-        },
-        addSpiritBossKey: (e) => {
-            this.setState({ hasSpiritBossKey: true });
-        },
-        removeSpiritBossKey: (e) => {
-            e.preventDefault();
-            this.setState({ hasSpiritBossKey: false });
-        },
-        addGanonBossKey: (e) => {
-            this.setState({ hasGanonBossKey: true });
-        },
-        removeGanonBossKey: (e) => {
-            e.preventDefault();
-            this.setState({ hasGanonBossKey: false });
-        }
-    }
+    // bossKeyLogic = {
+    //     addForestBossKey: (e) => {
+    //         this.setState({ hasForestBossKey: true });
+    //     },
+    //     removeForestBossKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasForestBossKey: false });
+    //     },
+    //     addFireBossKey: (e) => {
+    //         this.setState({ hasFireBossKey: true });
+    //     },
+    //     removeFireBossKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasFireBossKey: false });
+    //     },
+    //     addWaterBossKey: (e) => {
+    //         this.setState({ hasWaterBossKey: true });
+    //     },
+    //     removeWaterBossKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasWaterBossKey: false });
+    //     },
+    //     addShadowBossKey: (e) => {
+    //         this.setState({ hasShadowBossKey: true });
+    //     },
+    //     removeShadowBossKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasShadowBossKey: false });
+    //     },
+    //     addSpiritBossKey: (e) => {
+    //         this.setState({ hasSpiritBossKey: true });
+    //     },
+    //     removeSpiritBossKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasSpiritBossKey: false });
+    //     },
+    //     addGanonBossKey: (e) => {
+    //         this.setState({ hasGanonBossKey: true });
+    //     },
+    //     removeGanonBossKey: (e) => {
+    //         e.preventDefault();
+    //         this.setState({ hasGanonBossKey: false });
+    //     }
+    // }
 
     render() {
 
@@ -634,7 +637,37 @@ class Home extends Component {
                 spiritMedallion: this.props.spiritMedallion,
                 addSpiritMedallion: this.props.addSpiritMedallion,
                 removeSpiritMedallion: this.props.removeSpiritMedallion
-            }
+            },
+            forestBossKeyLogic: {
+                forestBossKey: this.props.forestBossKey,
+                addForestBossKey: this.props.addForestBossKey,
+                removeForestBossKey: this.props.removeForestBossKey
+            },
+            fireBossKeyLogic: {
+                fireBossKey: this.props.fireBossKey,
+                addFireBossKey: this.props.addFireBossKey,
+                removeFireBossKey: this.props.removeFireBossKey
+            },
+            waterBossKeyLogic: {
+                waterBossKey: this.props.waterBossKey,
+                addWaterBossKey: this.props.addWaterBossKey,
+                removeWaterBossKey: this.props.removeWaterBossKey
+            },
+            shadowBossKeyLogic: {
+                shadowBossKey: this.props.shadowBossKey,
+                addShadowBossKey: this.props.addShadowBossKey,
+                removeShadowBossKey: this.props.removeShadowBossKey
+            },
+            spiritBossKeyLogic: {
+                spiritBossKey: this.props.spiritBossKey,
+                addSpiritBossKey: this.props.addSpiritBossKey,
+                removeSpiritBossKey: this.props.removeSpiritBossKey
+            },
+            ganonBossKeyLogic: {
+                ganonBossKey: this.props.ganonBossKey,
+                addGanonBossKey: this.props.addGanonBossKey,
+                removeGanonBossKey: this.props.removeGanonBossKey
+            },
         };
 
         return (
@@ -662,7 +695,7 @@ class Home extends Component {
                                         dungeonItemLogic={dungeonItemLogic}
                                         state={this.state}
                                         smallKeys={this.smallKeyLogic}
-                                        bossKeys={this.bossKeyLogic}
+                                        // bossKeys={this.bossKeyLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -721,7 +754,8 @@ function mapStateToProps(state) {
         kokiriEmerald: state.gems.kokiriEmerald, goronRuby: state.gems.goronRuby, zoraSapphire: state.gems.zoraSapphire,
         lightMedallion: state.medallions.lightMedallion, forestMedallion: state.medallions.forestMedallion, fireMedallion: state.medallions.fireMedallion,
         waterMedallion: state.medallions.waterMedallion, shadowMedallion: state.medallions.shadowMedallion, spiritMedallion: state.medallions.spiritMedallion,
-
+        forestBossKey: state.bossKeys.forestBossKey, fireBossKey: state.bossKeys.fireBossKey, waterBossKey: state.bossKeys.waterBossKey,
+        shadowBossKey: state.bossKeys.shadowBossKey, spiritBossKey: state.bossKeys.shadowBossKey, ganonBossKey: state.bossKeys.ganonBossKey,
     }
 };
 
@@ -757,4 +791,6 @@ export default compose(connect(mapStateToProps, {
     addKokiriEmerald, removeKokiriEmerald, addGoronRuby, removeGoronRuby, addZoraSapphire, removeZoraSapphire,
     addLightMedallion, removeLightMedallion, addForestMedallion, removeForestMedallion, addFireMedallion, removeFireMedallion,
     addWaterMedallion, removeWaterMedallion, addShadowMedallion, removeShadowMedallion, addSpiritMedallion, removeSpiritMedallion,
+    addForestBossKey, removeForestBossKey, addFireBossKey, removeFireBossKey, addWaterBossKey, removeWaterBossKey,
+    addShadowBossKey, removeShadowBossKey, addSpiritBossKey, removeSpiritBossKey, addGanonBossKey, removeGanonBossKey
 }))(Home);
