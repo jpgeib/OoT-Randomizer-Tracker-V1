@@ -11,7 +11,7 @@ const FireMedallion = (props) => {
             <Image
                 onClick={addFireMedallion}
                 onContextMenu={removeFireMedallion} 
-                style={(fireMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}
+                style={(fireMedallion === false || fireMedallion === null) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}
                 size="mini" 
                 src={FireMedallionIcon} 
             />

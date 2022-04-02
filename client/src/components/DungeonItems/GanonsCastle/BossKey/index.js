@@ -4,14 +4,14 @@ import BossKeyIcon from "../../../../assets/images/dungeon-items/Boss_Key_3D.png
 
 const BossKey = (props) => {
 
-    const { hasGanonBossKey, addGanonBossKey, removeGanonBossKey } = props;
+    const { ganonBossKey, addGanonBossKey, removeGanonBossKey } = props.ganonBossKeyLogic;
 
     return (
         <Grid.Column width={2}>
             <Image
                 onClick={addGanonBossKey}
                 onContextMenu={removeGanonBossKey}
-                style={(hasGanonBossKey === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
+                style={(ganonBossKey === false || ganonBossKey === null) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={BossKeyIcon} 
             />

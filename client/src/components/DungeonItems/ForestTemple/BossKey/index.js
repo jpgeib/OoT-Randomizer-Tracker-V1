@@ -4,15 +4,14 @@ import BossKeyIcon from "../../../../assets/images/dungeon-items/Boss_Key_3D.png
 
 const BossKey = (props) => {
 
-    const { hasForestBossKey } = props;
-    const { addForestBossKey, removeForestBossKey } = props.bossKeys;
+    const { forestBossKey, addForestBossKey, removeForestBossKey } = props.forestBossKeyLogic;
 
     return (
         <Grid.Column width={2}>
             <Image
                 onClick={addForestBossKey}
                 onContextMenu={removeForestBossKey}
-                style={(hasForestBossKey === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
+                style={(forestBossKey === false || forestBossKey === null ) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={BossKeyIcon} 
             />

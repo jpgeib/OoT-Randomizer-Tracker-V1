@@ -11,7 +11,7 @@ const ShadowMedallion = (props) => {
             <Image
                 onClick={addShadowMedallion}
                 onContextMenu={removeShadowMedallion}
-                style={(shadowMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}} 
+                style={(shadowMedallion === false || shadowMedallion === null) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}} 
                 size="mini" 
                 src={ShadowMedallionIcon} 
             />

@@ -11,7 +11,7 @@ const LightMedallion = (props) => {
             <Image
                 onClick={addLightMedallion}
                 onContextMenu={removeLightMedallion} 
-                style={(lightMedallion === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
+                style={(lightMedallion === false || lightMedallion === null) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={LightMedallionIcon} 
             />

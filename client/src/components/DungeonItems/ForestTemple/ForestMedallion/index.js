@@ -11,7 +11,7 @@ const ForestMedallion = (props) => {
             <Image
             onClick={addForestMedallion}
             onContextMenu={removeForestMedallion} 
-            style={(forestMedallion === false) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
+            style={(forestMedallion === false || forestMedallion === null) ? { filter: "grayscale(100%)"} : { filter: "grayscale(0%)" }}
             size="mini" 
             src={ForestMedallionIcon} 
             />

@@ -11,7 +11,7 @@ const ZoraSapphire = (props) => {
             <Image
                 onClick={addZoraSapphire}
                 onContextMenu={removeZoraSapphire}
-                style={(zoraSapphire === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
+                style={(zoraSapphire === false || zoraSapphire === null) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={ZoraSapphireIcon} 
             />

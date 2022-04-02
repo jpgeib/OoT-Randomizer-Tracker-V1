@@ -11,7 +11,7 @@ const GoronRuby = (props) => {
             <Image
                 onClick={addGoronRuby}
                 onContextMenu={removeGoronRuby}
-                style={(goronRuby === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
+                style={(goronRuby === false || goronRuby === null) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={GoronRubyIcon} 
             />

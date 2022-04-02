@@ -11,7 +11,7 @@ const KokiriEmerald = (props) => {
             <Image
                 onClick={addKokiriEmerald}
                 onContextMenu={removeKokiriEmerald}
-                style={(kokiriEmerald === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}  
+                style={(kokiriEmerald === false || kokiriEmerald === null) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }}  
                 size="mini" 
                 src={KokiriEmeraldIcon} 
             />

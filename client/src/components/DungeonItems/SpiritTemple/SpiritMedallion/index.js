@@ -11,7 +11,7 @@ const SpiritMedallion = (props) => {
             <Image
                 onClick={addSpiritMedallion}
                 onContextMenu={removeSpiritMedallion}
-                style={spiritMedallion === false ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}}
+                style={(spiritMedallion === false || spiritMedallion === null) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)"}}
                 size="mini"
                 src={SpiritMedallionIcon}
             />

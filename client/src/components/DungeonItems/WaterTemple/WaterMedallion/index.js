@@ -11,7 +11,7 @@ const WaterMedallion = (props) => {
             <Image
                 onClick={addWaterMedallion}
                 onContextMenu={removeWaterMedallion}
-                style={(waterMedallion === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
+                style={(waterMedallion === false || waterMedallion === null) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={WaterMedallionIcon} />
         </Grid.Column>
