@@ -16,7 +16,7 @@ let INITIAL_STATE = {
     ganonBossKey: null
 };
 
-export default function (state = INITIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case ADD_FOREST_BOSS_KEY:
             return { ...state, forestBossKey: true };

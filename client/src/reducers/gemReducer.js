@@ -10,7 +10,7 @@ let INITIAL_STATE = {
     zoraSapphire: null
 };
 
-export default function (state = INITIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case ADD_KOKIRI_EMERALD:
             return { ...state, kokiriEmerald: true };

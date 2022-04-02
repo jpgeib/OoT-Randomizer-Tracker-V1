@@ -10,6 +10,7 @@ import walletReducer from "./walletReducer";
 import smallKeyReducer from "./smallKeyReducer";
 import bossKeyReducer from "./bossKeyReducer";
 import gemReducer from "./gemReducer";
+import medallionReducer from "./medallionReducer";
 
 export default combineReducers({
     firstRow: firstRowReducer,
@@ -21,5 +22,6 @@ export default combineReducers({
     wallet: walletReducer,
     smallKeys: smallKeyReducer,
     bossKeys: bossKeyReducer,
-    gems: gemReducer
+    gems: gemReducer,
+    medallions: medallionReducer
 });

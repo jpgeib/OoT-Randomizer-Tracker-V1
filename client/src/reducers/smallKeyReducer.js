@@ -22,7 +22,7 @@ let INITIAL_STATE = {
     ganonKeys: 0
 };
 
-export default function (state = INITIAL_STATE, action) {
+export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
         case ADD_FOREST_SMALL_KEY:
             return { ...state, forestKeys: Math.min(5, state.forestKeys + 1) };

@@ -12,8 +12,8 @@ let INITIAL_STATE = {
     doubleDefense: null
 };
 
-export default function (state = INITIAL_STATE, action) {
-    switch (action.type) {
+export default function(state = INITIAL_STATE, action) {
+    switch(action.type) {
         case ADD_STONE_OF_AGONY:
             return { ...state, stoneOfAgony: true };
         case REMOVE_STONE_OF_AGONY:
