@@ -4,14 +4,14 @@ import BossKeyIcon from "../../../../assets/images/dungeon-items/Boss_Key_3D.png
 
 const BossKey = (props) => {
 
-    const { hasSpiritBossKey, addSpiritBossKey, removeSpiritBossKey} = props;
+    const { spiritBossKey, addSpiritBossKey, removeSpiritBossKey} = props.spiritBossKeyLogic;
 
     return (
         <Grid.Column width={2}>
             <Image
                 onClick={addSpiritBossKey}
                 onContextMenu={removeSpiritBossKey}
-                style={(hasSpiritBossKey === false) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
+                style={(spiritBossKey === false || spiritBossKey === null) ? { filter: "grayscale(100%)" } : { filter: "grayscale(0%)" }} 
                 size="mini" 
                 src={BossKeyIcon} 
             />

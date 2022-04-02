@@ -755,7 +755,7 @@ function mapStateToProps(state) {
         lightMedallion: state.medallions.lightMedallion, forestMedallion: state.medallions.forestMedallion, fireMedallion: state.medallions.fireMedallion,
         waterMedallion: state.medallions.waterMedallion, shadowMedallion: state.medallions.shadowMedallion, spiritMedallion: state.medallions.spiritMedallion,
         forestBossKey: state.bossKeys.forestBossKey, fireBossKey: state.bossKeys.fireBossKey, waterBossKey: state.bossKeys.waterBossKey,
-        shadowBossKey: state.bossKeys.shadowBossKey, spiritBossKey: state.bossKeys.shadowBossKey, ganonBossKey: state.bossKeys.ganonBossKey,
+        shadowBossKey: state.bossKeys.shadowBossKey, spiritBossKey: state.bossKeys.spiritBossKey, ganonBossKey: state.bossKeys.ganonBossKey,
     }
 };
 
