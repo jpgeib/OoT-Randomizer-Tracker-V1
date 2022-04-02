@@ -70,15 +70,6 @@ import {
 class Home extends Component {
 
     state = {
-        forestKeys: 0,
-        fireKeys: 0,
-        waterKeys: 0,
-        shadowKeys: 0,
-        spiritKeys: 0,
-        wellKeys: 0,
-        fortressKeys: 0,
-        trainingKeys: 0,
-        ganonKeys: 0,
         hasKokiriTunic: true,
         hasKokiriBoots: true,
         hasMasterSword: true,
@@ -100,116 +91,11 @@ class Home extends Component {
     componentDidMount() {
         const trackerData = JSON.parse(window.localStorage.getItem("main"));
         this.setState(trackerData);
-        // console.log(trackerData);
     }
 
     componentDidUpdate() {
         window.localStorage.setItem("main", JSON.stringify(this.state));
     }
-
-    //Dungeon Item Logic
-
-    // smallKeyLogic = {
-    //     addForestKey: (e) => {
-    //         this.setState(prevState => ({
-    //             forestKeys: Math.min(5, prevState.forestKeys + 1)
-    //         }));
-    //     },
-    //     removeForestKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             forestKeys: Math.max(0, prevState.forestKeys - 1)
-    //         }));
-    //     },
-    //     addFireKey: (e) => {
-    //         this.setState(prevState => ({
-    //             fireKeys: Math.min(8, prevState.fireKeys + 1)
-    //         }));
-    //     },
-    //     removeFireKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             fireKeys: Math.max(0, prevState.fireKeys - 1)
-    //         }));
-    //     },
-    //     addWaterKey: (e) => {
-    //         this.setState(prevState => ({
-    //             waterKeys: Math.min(6, prevState.waterKeys + 1)
-    //         }));
-    //     },
-    //     removeWaterKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             waterKeys: Math.max(0, prevState.waterKeys - 1)
-    //         }));
-    //     },
-    //     addShadowKey: (e) => {
-    //         this.setState(prevState => ({
-    //             shadowKeys: Math.min(5, prevState.shadowKeys + 1)
-    //         }));
-    //     },
-    //     removeShadowKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             shadowKeys: Math.max(0, prevState.shadowKeys - 1)
-    //         }));
-    //     },
-    //     addSpiritKey: (e) => {
-    //         this.setState(prevState => ({
-    //             spiritKeys: Math.min(5, prevState.spiritKeys + 1)
-    //         }));
-    //     },
-    //     removeSpiritKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             spiritKeys: Math.max(0, prevState.spiritKeys - 1)
-    //         }));
-    //     },
-    //     addWellKey: (e) => {
-    //         this.setState(prevState => ({
-    //             wellKeys: Math.min(3, prevState.wellKeys + 1)
-    //         }));
-    //     },
-    //     removeWellKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             wellKeys: Math.max(0, prevState.wellKeys - 1)
-    //         }));
-    //     },
-    //     addFortressKey: (e) => {
-    //         this.setState(prevState => ({
-    //             fortressKeys: Math.min(4, prevState.fortressKeys + 1)
-    //         }));
-    //     },
-    //     removeFortressKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             fortressKeys: Math.max(0, prevState.fortressKeys - 1)
-    //         }));
-    //     },
-    //     addTrainingKey: (e) => {
-    //         this.setState(prevState => ({
-    //             trainingKeys: Math.min(9, prevState.trainingKeys + 1)
-    //         }));
-    //     },
-    //     removeTrainingKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             trainingKeys: Math.max(0, prevState.trainingKeys - 1)
-    //         }));
-    //     },
-    //     addGanonKey: (e) => {
-    //         this.setState(prevState => ({
-    //             ganonKeys: Math.min(2, prevState.ganonKeys + 1)
-    //         }));
-    //     },
-    //     removeGanonKey: (e) => {
-    //         e.preventDefault();
-    //         this.setState(prevState => ({
-    //             ganonKeys: Math.max(0, prevState.ganonKeys - 1)
-    //         }));
-    //     }
-    // }
 
     render() {
 
