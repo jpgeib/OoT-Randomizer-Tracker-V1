@@ -601,7 +601,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state.smallKeys);
+    console.log(state.secondRow);
     return {
         //First Row Items
         dekuSticks: state.firstRow.dekuSticks, dekuNuts: state.firstRow.dekuNuts, bombs: state.firstRow.bombs,
