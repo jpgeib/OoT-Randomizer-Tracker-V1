@@ -1,10 +1,10 @@
 const trackerStyle = {
-    padding: "0.2%",
+    padding: "1%",
     margin: "0 auto",
     marginTop: "2%",
     marginLeft: "3%",
     height: "100%",
-    width: "95%",
+    width: "50%",
     backgroundColor: "green",
     border: "solid 2px black"
 };
@@ -42,9 +42,18 @@ const itemStyle = {
     border: "solid 2px black"
 };
 
+const itemCounterStyle = {
+    fontSize: "12px",
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)"
+}
+
 export const webStyle = {
     trackerStyle,
     dungeonStyle,
     locationStyle,
-    itemStyle
+    itemStyle,
+    itemCounterStyle
 };

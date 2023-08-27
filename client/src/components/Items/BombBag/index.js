@@ -10,6 +10,7 @@ const BombBag = (props) => {
 
     return (
         <Grid.Column width={2}>
+            <div id="icon-container" style={{ position: "relative" }}>
             <Image
                 onClick={add}
                 onContextMenu={remove}
@@ -18,6 +19,7 @@ const BombBag = (props) => {
                 src={((counter <= 20 && BombBagIcon) || (counter === 30 && BigBombBagIcon) || (counter === 40 && BiggestBombBagIcon))} 
             />
             <Header style={(counter >= 40) ? { color: "red" } : { color: "white" } } as="h1"><span>{counter}</span></Header>
+            </div>
         </Grid.Column>
     );
 }
