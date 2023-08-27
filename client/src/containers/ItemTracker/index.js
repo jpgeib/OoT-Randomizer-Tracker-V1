@@ -14,6 +14,7 @@ class ItemTracker extends Component {
 
         const {
             tracker,
+            counterStyle,
             firstRowLogic,
             secondRowLogic,
             thirdRowLogic,
@@ -24,7 +25,7 @@ class ItemTracker extends Component {
 
         return (
             <Grid style={tracker}>
-                <FirstRow firstRowLogic={firstRowLogic} />
+                <FirstRow firstRowLogic={firstRowLogic} counterStyle={counterStyle} />
                 <SecondRow secondRowLogic={secondRowLogic} />
                 <ThirdRow thirdRowLogic={thirdRowLogic} />
                 <FourthRow fourthRowLogic={fourthRowLogic} />

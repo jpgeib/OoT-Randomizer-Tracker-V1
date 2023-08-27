@@ -21,10 +21,10 @@ const FirstRow = (props) => {
     
     return (
         <Grid.Row>
-            <DekuSticks counter={dekuSticks} add={addDekuSticks} remove={removeDekuSticks} />
-            <DekuNuts counter={dekuNuts} add={addDekuNuts} remove={removeDekuNuts} />
-            <BombBag counter={bombs} add={addBombs} remove={removeBombs} />
-            <FairyBow counter={fairyBow} add={addFairyBow} remove={removeFairyBow} />
+            <DekuSticks counter={dekuSticks} counterStyle={props.counterStyle} add={addDekuSticks} remove={removeDekuSticks} />
+            <DekuNuts counter={dekuNuts} counterStyle={props.counterStyle} add={addDekuNuts} remove={removeDekuNuts} />
+            <BombBag counter={bombs} counterStyle={props.counterStyle} add={addBombs} remove={removeBombs} />
+            <FairyBow counter={fairyBow} counterStyle={props.counterStyle} add={addFairyBow} remove={removeFairyBow} />
             <FireArrows fireArrows={fireArrows} add={addFireArrows} remove={removeFireArrows} />
             <DinsFire dinsFire={dinsFire} add={addDinsFire} remove={removeDinsFire} />
             <KokiriSword kokiriSword={kokiriSword} addKokiriSword={addKokiriSword} removeKokiriSword={removeKokiriSword} />

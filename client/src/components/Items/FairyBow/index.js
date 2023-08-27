@@ -4,10 +4,11 @@ import FairyBowIcon from "../../../assets/images/first-row/Bow-3D.png";
 
 const FairyBow = (props) => {
 
-    const { counter, add, remove } = props;
+    const { counter, add, remove, counterStyle } = props;
 
     return (
         <Grid.Column width={2}>
+            <div style={{position: "relative"}}>
             <Image
                 onClick={add}
                 onContextMenu={remove}
@@ -15,7 +16,8 @@ const FairyBow = (props) => {
                 size="mini" 
                 src={FairyBowIcon} 
             />
-            <Header style={(counter >= 50) ? { color: "red" } : { color: "white" } } as="h1"><span>{counter}</span></Header>
+            <Header style={(counter >= 50) ? { color: "red" } : { color: "white" } } as="h1"><span style={counterStyle}>{counter}</span></Header>
+            </div>
         </Grid.Column>
     );
 }

@@ -4,10 +4,11 @@ import DekuSticksIcon from "../../../assets/images/first-row/Deku-Stick-3D.png";
 
 const DekuSticks = (props) => {
 
-    const { counter, add, remove } = props;
+    const { counter, add, remove, counterStyle } = props;
 
     return (
         <Grid.Column width={2}>
+            <div style={{position: "relative"}}>
             <Image 
                 onClick={add} 
                 onContextMenu={remove}
@@ -15,7 +16,8 @@ const DekuSticks = (props) => {
                 size="mini" 
                 src={DekuSticksIcon} 
             />
-            <Header style={(counter >= 30) ? { color: "red" } : { color: "white" } } as="h1"><span>{counter}</span></Header>
+            <Header style={(counter >= 30) ? { color: "red" } : { color: "white" } } as="h1"><span style={counterStyle}>{counter}</span></Header>
+            </div>
         </Grid.Column>
     );
 }

@@ -45,9 +45,9 @@ const itemStyle = {
 const itemCounterStyle = {
     fontSize: "12px",
     position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)"
+    top: "45%",
+    left: "65%",
+    transform: "translate(-25%, -55%)"
 }
 
 export const webStyle = {

@@ -6,7 +6,7 @@ import BiggestBombBagIcon from "../../../assets/images/first-row/Bomb-Biggest-Ba
 
 const BombBag = (props) => {
 
-    const { counter, add, remove } = props;
+    const { counter, add, remove, counterStyle } = props;
 
     return (
         <Grid.Column width={2}>
@@ -18,7 +18,7 @@ const BombBag = (props) => {
                 size="mini" 
                 src={((counter <= 20 && BombBagIcon) || (counter === 30 && BigBombBagIcon) || (counter === 40 && BiggestBombBagIcon))} 
             />
-            <Header style={(counter >= 40) ? { color: "red" } : { color: "white" } } as="h1"><span>{counter}</span></Header>
+            <Header style={(counter >= 40) ? { color: "red" } : { color: "white" } } as="h1"><span style={counterStyle}>{counter}</span></Header>
             </div>
         </Grid.Column>
     );

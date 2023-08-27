@@ -99,7 +99,7 @@ class Home extends Component {
 
     render() {
 
-        const { trackerStyle, locationStyle, dungeonStyle } = this.props.styles;
+        const { trackerStyle, locationStyle, dungeonStyle, itemCounterStyle } = this.props.styles;
 
         const firstRowLogic = {
             dekuSticksLogic: {
@@ -563,6 +563,7 @@ class Home extends Component {
                                 <Grid.Column width={16}>
                                     <ItemTracker
                                         tracker={trackerStyle}
+                                        counterStyle={itemCounterStyle}
                                         firstRowLogic={firstRowLogic}
                                         secondRowLogic={secondRowLogic}
                                         thirdRowLogic={thirdRowLogic}
