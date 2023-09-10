@@ -31,26 +31,6 @@ class ItemTracker extends Component {
                 <FourthRow fourthRowLogic={fourthRowLogic} />
                 <FifthRow fifthRowLogic={fifthRowLogic} />
                 <SixthRow sixthRowLogic={sixthRowLogic} />
-                <Grid.Row>
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                </Grid.Row>
-                <Grid.Row>
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                    <HookShot />
-                    <MasterSword />
-                </Grid.Row>
             </Grid>
         );
     }
