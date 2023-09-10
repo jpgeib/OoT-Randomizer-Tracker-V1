@@ -20,12 +20,13 @@ class ItemTracker extends Component {
             thirdRowLogic,
             fourthRowLogic,
             fifthRowLogic,
-            sixthRowLogic
+            sixthRowLogic,
+            inventoryLogic
         } = this.props;
 
         return (
             <Grid style={tracker}>
-                <FirstRow firstRowLogic={firstRowLogic} counterStyle={counterStyle} />
+                <FirstRow inventoryLogic={inventoryLogic} firstRowLogic={firstRowLogic} counterStyle={counterStyle} />
                 <SecondRow secondRowLogic={secondRowLogic} />
                 <ThirdRow thirdRowLogic={thirdRowLogic} />
                 <FourthRow fourthRowLogic={fourthRowLogic} />

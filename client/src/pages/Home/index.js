@@ -7,6 +7,8 @@ import LocationList from "../../containers/LocationList";
 import { connect } from "react-redux";
 import { compose } from "redux";
 
+import { addItem, removeItem } from "../../actions/inventory";
+
 import {
     addDekuSticks, removeDekuSticks, addDekuNuts, removeDekuNuts,
     addBombs, removeBombs, addFairyBow, removeFairyBow,
@@ -554,6 +556,12 @@ class Home extends Component {
             }
         };
 
+        const inventoryLogic = {
+            inventory: this.props.inventory,
+            addItem: this.props.addItem,
+            removeItem: this.props.removeItem
+        };
+
         return (
             <Grid>
                 <Grid.Row>
@@ -570,6 +578,7 @@ class Home extends Component {
                                         fourthRowLogic={fourthRowLogic}
                                         fifthRowLogic={fifthRowLogic}
                                         sixthRowLogic={sixthRowLogic}
+                                        inventoryLogic={inventoryLogic}
                                     />
                                 </Grid.Column>
                             </Grid.Row>
@@ -604,6 +613,7 @@ class Home extends Component {
 function mapStateToProps(state) {
     console.log(state.secondRow);
     return {
+        inventory: state.inventory,
         //First Row Items
         dekuSticks: state.firstRow.dekuSticks, dekuNuts: state.firstRow.dekuNuts, bombs: state.firstRow.bombs,
         fairyBow: state.firstRow.fairyBow, fireArrows: state.firstRow.fireArrows, dinsFire: state.firstRow.dinsFire,
@@ -647,6 +657,7 @@ function mapStateToProps(state) {
 };
 
 export default compose(connect(mapStateToProps, {
+    addItem, removeItem,
     //First Row Actions
     addDekuSticks, removeDekuSticks, addDekuNuts, removeDekuNuts, addBombs, removeBombs, addFairyBow, removeFairyBow,
     addFireArrows, removeFireArrows, addDinsFire, removeDinsFire, addKokiriSword, removeKokiriSword,
