@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Grid } from "semantic-ui-react";
 import { items } from "../../items";
+import Item from "../../components/Item";
 import FirstRow from "./FirstRow";
 import SecondRow from "./SecondRow";
 import ThirdRow from "./ThirdRow";
@@ -14,7 +15,7 @@ class ItemTracker extends Component {
     render() {
 
         const {
-            // tracker,
+            tracker,
             // counterStyle,
             // firstRowLogic,
             // secondRowLogic,
@@ -22,13 +23,13 @@ class ItemTracker extends Component {
             // fourthRowLogic,
             // fifthRowLogic,
             // sixthRowLogic,
-            inventoryLogic
+            inventoryLogic,
         } = this.props;
 
-        let itemList = this.props.items.map(item => {
+        let itemList = items.map(item => {
             return (
                 <Grid.Column width={2} key={item.id}>
-
+                    <Item itemImg={item.image} />
                 </Grid.Column>
             );
         })
