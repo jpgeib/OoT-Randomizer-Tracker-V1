@@ -1,3 +1,6 @@
+export const ADD_ITEM = "ADD_ITEM";
+export const REMOVE_ITEM = "REMOVE_ITEM";
+
 //First Row
 //Deku Sticks
 export const ADD_DEKU_STICKS = "ADD_DEKU_STICKS";
