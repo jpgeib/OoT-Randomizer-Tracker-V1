@@ -6,6 +6,7 @@ import FireArrows from "./assets/images/first-row/Arrow-Fire-3D.png";
 import DinsFire from "./assets/images/first-row/Dins-Fire-3D.png";
 import KokiriSword from "./assets/images/first-row/Kokiri-Sword-3D.png";
 import MasterSword from "./assets/images/first-row/Master-Sword-3D.png";
+import BigGoronSword from "./components/Items/BigGoronSword";
 
 export const items = [
     { id: 1, name: "Deku Sticks", hasItem: null, image: DekuSticks, quantity: 0 },
