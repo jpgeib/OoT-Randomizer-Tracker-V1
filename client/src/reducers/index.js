@@ -12,6 +12,8 @@ import bossKeyReducer from "./bossKeyReducer";
 import gemReducer from "./gemReducer";
 import medallionReducer from "./medallionReducer";
 
+import inventoryReducer from "./inventoryReducer";
+
 export default combineReducers({
     firstRow: firstRowReducer,
     secondRow: secondRowReducer,
@@ -23,5 +25,6 @@ export default combineReducers({
     smallKeys: smallKeyReducer,
     bossKeys: bossKeyReducer,
     gems: gemReducer,
-    medallions: medallionReducer
+    medallions: medallionReducer,
+    inventory: inventoryReducer
 });
