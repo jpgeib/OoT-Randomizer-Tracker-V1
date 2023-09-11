@@ -29,7 +29,7 @@ class ItemTracker extends Component {
         let itemList = items.map(item => {
             return (
                 <Grid.Column width={2} key={item.id}>
-                    <Item itemImg={item.image} />
+                    <Item item={item} />
                 </Grid.Column>
             );
         })
