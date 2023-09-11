@@ -18,8 +18,8 @@ export default function(state = INITIAL_STATE, action) {
         case REMOVE_ITEM:
             // let itemToRemove = state.currentInventory.find(item => action.id === item.id);
             let reducedInventory = state.currentInventory.filter((item) => {
-                console.log(item[0].name);
-                return action.name !== item.name;
+                console.log(item);
+                return action.name !== item;
             });
             console.log(reducedInventory);
             return {
