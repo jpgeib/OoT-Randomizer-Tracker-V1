@@ -12,6 +12,15 @@ import MasterSword from "../../components/Items/MasterSword";
 import HookShot from "../../components/Items/HookShot";
 
 class ItemTracker extends Component {
+
+    handleAddItem = (id, name) => {
+        this.props.inventoryLogic.addItem(id, name);
+    }
+
+    handleRemoveItem = (id, name) => {
+        this.props.inventoryLogic.removeItem(id, name);
+    }
+
     render() {
 
         const {
@@ -29,7 +38,11 @@ class ItemTracker extends Component {
         let itemList = items.map(item => {
             return (
                 <Grid.Column width={2} key={item.id}>
-                    <Item item={item} />
+                    <Item 
+                        item={item} 
+                        addItem={() => this.handleAddItem(item.id, item.name)}
+                        removeItem={() => this.handleRemoveItem(item.id, item.name)}
+                    />
                 </Grid.Column>
             );
         })

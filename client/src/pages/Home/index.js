@@ -611,7 +611,7 @@ class Home extends Component {
 }
 
 function mapStateToProps(state) {
-    console.log(state.secondRow);
+    console.log(state.inventory);
     return {
         inventory: state.inventory,
         //First Row Items

@@ -3,11 +3,13 @@ import { Image, Header } from "semantic-ui-react";
 
 const Item = (props) => {
 
-    const { item } = props;
+    const { item, addItem, removeItem } = props;
 
     return (
         <div style={{ position: "relative" }}>
             <Image
+                onClick={addItem}
+                onContextMenu={removeItem}
                 size="mini"
                 src={item.image}
             />

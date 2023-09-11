@@ -1,20 +1,20 @@
 import { ADD_ITEM, REMOVE_ITEM } from "../types";
 
 export const addItem = (id, name) => {
-    console.log(`Added ${name}`);
+    console.log(`Added ${name} with ${id}`);
     return {
         type: ADD_ITEM,
-        id,
-        name
+        id: id,
+        name: name
     };
 };
 
-export const removeItem = (id, name, e) => {
-    e.preventDefault();
-    console.log(`Removed ${name}`);
+export const removeItem = (id, name) => {
+    console.log(`Removed ${name} with ${id}`);
+    // e.preventDefault();
     return {
         type: REMOVE_ITEM,
-        id,
-        name
+        id: id,
+        name: name
     };
 };
