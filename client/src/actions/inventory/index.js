@@ -9,9 +9,9 @@ export const addItem = (id, name) => {
     };
 };
 
-export const removeItem = (id, name) => {
+export const removeItem = (e, id, name) => {
     console.log(`Removed ${name} with ${id}`);
-    // e.preventDefault();
+    e.preventDefault();
     return {
         type: REMOVE_ITEM,
         id: id,
